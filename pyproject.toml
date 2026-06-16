@@ -1,0 +1,15 @@
+[project]
+name = "proshowpdf"
+version = "1.0.0"
+description = "Web-to-PDF converter (Windows x64) — PySide6 + Playwright"
+requires-python = ">=3.13"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3", "pytest-asyncio>=0.24", "pyinstaller>=6.11"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["proshowpdf*"]
