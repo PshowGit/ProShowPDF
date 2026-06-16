@@ -1,0 +1,19 @@
+* { font-family: "Segoe UI", sans-serif; font-size: 14px; color: #e6e6e6; }
+QWidget { background-color: #1e1f26; }
+QLineEdit, QPlainTextEdit, QSpinBox, QComboBox {
+    background: #2a2c36; border: 1px solid #3a3d4a; border-radius: 8px;
+    padding: 6px; selection-background-color: #5a6cff;
+}
+QPushButton {
+    background: #5a6cff; border: none; border-radius: 10px; padding: 10px 18px;
+    color: white; font-weight: 600;
+}
+QPushButton:hover { background: #6f7fff; }
+QPushButton:disabled { background: #3a3d4a; color: #888; }
+QPushButton#secondary { background: #2a2c36; border: 1px solid #3a3d4a; }
+QProgressBar {
+    border: none; border-radius: 8px; background: #2a2c36; height: 18px;
+    text-align: center;
+}
+QProgressBar::chunk { background: #5a6cff; border-radius: 8px; }
+QListWidget { background: #2a2c36; border: 1px solid #3a3d4a; border-radius: 8px; }
