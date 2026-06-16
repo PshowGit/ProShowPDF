@@ -1,3 +1,4 @@
 PySide6==6.8.1
 playwright==1.49.0
 openpyxl==3.1.2
+xlrd==2.0.1

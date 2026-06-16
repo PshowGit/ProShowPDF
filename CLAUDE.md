@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Purpose:** Desktop application (PySide6 GUI + Playwright/Chromium headless) that converts web pages to single-page continuous PDFs with high visual fidelity.
 
-**Stack:** Python 3.13, PySide6 6.8.1, Playwright 1.49 (Chromium headless), asyncio, pytest, PyInstaller (onedir).
+**Stack:** Python 3.13, PySide6 6.8.1, Playwright 1.49 (Chromium headless), asyncio, pytest, PyInstaller (onedir), openpyxl 3.1.2, xlrd 2.0.1.
 
 ---
 
@@ -26,8 +26,9 @@ python -m proshowpdf
 pytest -q
 
 # Build (onedir distributable)
-pyinstaller packaging/proshowpdf.spec --noconfirm
-# Output: dist\ProShowPDF\ProShowPDF.exe (with bundled Chromium)
+rebuild.bat
+# Or manually: pyinstaller packaging/proshowpdf.spec --noconfirm
+# Output: dist\ProShowPDF\ProShowPDF.exe + zip (312 MB) with bundled Chromium
 ```
 
 ---
@@ -37,21 +38,21 @@ pyinstaller packaging/proshowpdf.spec --noconfirm
 ### Three-Layer Design
 
 1. **Core (`proshowpdf/core/`)** — Pure Python, no Qt/Playwright imports in the UI layer
-   - `models.py` — Data classes (ConversionSettings, JobResult, JobStatus)
+   - `models.py` — Data classes (ConversionSettings, JobResult, JobStatus, JobItem with optional custom_filename)
    - `errors.py` — Typed exception hierarchy
-   - `url_utils.py` — URL validation, normalization, parsing (txt/csv/xlsx)
-   - `naming.py` — Windows-safe filenames, collision resolution
+   - `url_utils.py` — URL validation, normalization, parsing (txt/csv/xlsx/xls)
+   - `naming.py` — Windows-safe filenames, collision resolution, custom filename sanitization
    - `cookie_banner.py` — Heuristic banner dismissal (euristiques for common consent platforms)
-   - `page_converter.py` — Per-page conversion: navigate → dismiss cookies → scroll lazy-load → measure height → render PDF
+   - `page_converter.py` — Per-page conversion: navigate → dismiss cookies → scroll lazy-load → measure height → render PDF; supports optional custom_filename for per-URL naming
    - `browser_pool.py` — Single Chromium instance + isolated BrowserContext per URL + viewport sizing
-   - `converter_engine.py` — Batch orchestration: asyncio.Semaphore for concurrency cap, retry/backoff, progress callbacks, cancellation
+   - `converter_engine.py` — Batch orchestration: asyncio.Semaphore for concurrency cap, retry/backoff, progress callbacks, cancellation, supports optional custom_filenames for per-URL PDF naming
 
 2. **Bridge (`proshowpdf/bridge/`)** — Qt ↔ Async boundary
    - `controller.py` — ConversionController(QObject): QThread hosting asyncio event loop, emits Qt signals (progress, finished, failed, cancelled), accepts commands (start, cancel, shutdown)
 
 3. **UI (`proshowpdf/ui/`)** — Pure PySide6
    - `main_window.py` — Assembles widgets, wires controller signals/slots
-   - `widgets/` — UrlInput (drag-drop txt/csv/xlsx), OptionsPanel (settings form), ProgressView (realtime bar + status list), ResultsPanel (summary + CSV export + open-folder)
+   - `widgets/` — UrlInput (drag-drop txt/csv/xlsx/xls with optional custom filenames in column 2, real-time URL counter), OptionsPanel (settings form), ProgressView (realtime bar + status list), ResultsPanel (summary + CSV export + open-folder)
    - `theme.py` — Apply dark/light QSS stylesheets from `resources/qss/`
    - `animations.py` — fade_in helper (micro-interactions)
 
@@ -97,8 +98,15 @@ pyinstaller packaging/proshowpdf.spec --noconfirm
 4. Use in `convert_page()` or `ConverterEngine` (proshowpdf/core/page_converter.py or converter_engine.py).
 
 ### Add Support for a New File Format (URL Lists)
-- Extend `UrlInput._load_file()` (proshowpdf/ui/widgets/url_input.py) to detect file type and extract URLs.
+- Extend `DragDropPlainText._load_file()` and add a `_read_<format>()` method to extract URLs and optional custom filenames.
+- Return `(text, custom_names_dict)` where custom_names_dict maps URL → custom_pdf_name.
+- UrlInput.custom_filenames() returns a parallel list to urls() with None for URLs without custom names.
 - Update dialog filter in `_import_file()` QFileDialog.
+
+**Custom Filename Format (all file types):**
+- Column 1: URL
+- Column 2 (optional): Custom PDF filename (without .pdf extension)
+- Header row is auto-detected and skipped if it contains "url", "name", "filename"
 
 ### Improve Cookie Banner Heuristics
 - Edit `_KNOWN_SELECTORS` and `_ACCEPT_TEXTS` (proshowpdf/core/cookie_banner.py).
@@ -168,14 +176,22 @@ os.environ["QT_QPA_PLATFORM"] = "offscreen"
 
 ## Packaging & Distribution
 
-**Build:**
+**Build (automated):**
+```bash
+rebuild.bat
+```
+Automatically recompiles exe and creates ProShowPDF-v1.0.0-windows-x64.zip (312 MB).
+
+**Build (manual):**
 ```bash
 .venv\Scripts\pyinstaller packaging\proshowpdf.spec --noconfirm
+cd dist
+Compress-Archive -Path "ProShowPDF" -DestinationPath "..\ProShowPDF-v1.0.0-windows-x64.zip" -Force
 ```
 
 **Bundling:** The spec resolves pinned Chromium revision from `playwright/driver/package/browsers.json` and bundles only the active browser + headless shell + ffmpeg, then uses `packaging/rthook_playwright.py` to redirect `PLAYWRIGHT_BROWSERS_PATH` at runtime.
 
-**Distribution:** Deliver the entire `dist\ProShowPDF` folder (includes exe + DLLs + bundled Chromium, ~712 MB).
+**Distribution:** Deliver ProShowPDF-v1.0.0-windows-x64.zip (312 MB); users extract and run ProShowPDF.exe with no installation needed. See DOWNLOAD_GUIDE.html for user instructions.
 
 ---
 

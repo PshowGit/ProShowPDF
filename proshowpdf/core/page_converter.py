@@ -56,7 +56,7 @@ async def _scroll_to_bottom(page, max_steps: int = 40) -> None:
     await page.evaluate(_SCROLL_TOP_JS)
 
 
-async def convert_page(page, url: str, settings: ConversionSettings) -> str:
+async def convert_page(page, url: str, settings: ConversionSettings, custom_filename: str | None = None) -> str:
     """Convert one page to a single-page PDF; return the written file path."""
     output_dir = settings.output_dir
     if not os.path.isdir(output_dir) or not os.access(output_dir, os.W_OK):
@@ -75,8 +75,12 @@ async def convert_page(page, url: str, settings: ConversionSettings) -> str:
         measured = await page.evaluate(_HEIGHT_JS)
         height = compute_pdf_height(measured, settings.min_height_px)
 
-        title = await page.title()
-        filename = build_pdf_name(title, url)
+        if custom_filename:
+            from .naming import sanitize_filename
+            filename = sanitize_filename(custom_filename) + ".pdf"
+        else:
+            title = await page.title()
+            filename = build_pdf_name(title, url)
         target = resolve_collision(
             Path(settings.output_dir) / filename, settings.conflict_policy
         )

@@ -25,9 +25,13 @@ class ConverterEngine:
         self._semaphore = asyncio.Semaphore(settings.max_concurrency)
 
     async def run(
-        self, urls: list[str], on_progress: ProgressCallback
+        self, urls: list[str], on_progress: ProgressCallback,
+        custom_filenames: list[str | None] | None = None,
     ) -> list[JobResult]:
-        items = [JobItem(url=u, index=i) for i, u in enumerate(urls)]
+        items = [
+            JobItem(url=u, index=i, custom_filename=custom_filenames[i] if custom_filenames else None)
+            for i, u in enumerate(urls)
+        ]
         total = len(items)
         completed = 0
         results: list[JobResult] = []
@@ -65,7 +69,7 @@ class ConverterEngine:
         for attempt in range(self._settings.retries + 1):
             try:
                 async with pool.new_page() as page:
-                    path = await convert_page(page, item.url, self._settings)
+                    path = await convert_page(page, item.url, self._settings, item.custom_filename)
                 return JobResult(
                     item.url, item.index, JobStatus.DONE, output_path=path
                 )

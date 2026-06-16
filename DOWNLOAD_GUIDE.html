@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProShow PDF - Guida al Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .steps {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .step {
+            margin-bottom: 25px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            min-width: 45px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .step-content h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .step-content p {
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .step-content code {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d73a49;
+        }
+
+        .link-box {
+            background: #e8f0ff;
+            border: 2px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .link-box p {
+            margin-bottom: 12px;
+            color: #666;
+        }
+
+        .download-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .download-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .info-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .info-box strong {
+            color: #856404;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .success-box strong {
+            color: #155724;
+        }
+
+        .troubleshooting {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .troubleshooting h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .troubleshooting p {
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .system-requirements {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .req-item {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+
+        .req-item strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .step {
+                gap: 15px;
+            }
+
+            .system-requirements {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 ProShow PDF</h1>
+            <p>Guida Completa al Download e all'Installazione</p>
+        </div>
+
+        <div class="content">
+            <!-- Requisiti di Sistema -->
+            <div class="section">
+                <h2>✓ Requisiti di Sistema</h2>
+                <div class="system-requirements">
+                    <div class="req-item">
+                        <strong>Sistema Operativo:</strong><br>Windows 10 o 11 (64-bit)
+                    </div>
+                    <div class="req-item">
+                        <strong>Spazio Disco:</strong><br>Circa 750 MB disponibili
+                    </div>
+                    <div class="req-item">
+                        <strong>Memoria RAM:</strong><br>Minimo 4 GB (consigliato 8 GB)
+                    </div>
+                    <div class="req-item">
+                        <strong>Connessione:</strong><br>Internet per le conversioni
+                    </div>
+                </div>
+                <div class="info-box">
+                    <strong>ℹ️ Nota Importante:</strong> L'applicazione include il browser Chromium integrato. <strong>Non richiede installazione</strong> — potrai eseguirla direttamente.
+                </div>
+            </div>
+
+            <!-- Download -->
+            <div class="section">
+                <h2>⬇️ Passaggio 1: Scarica il File</h2>
+
+                <div class="link-box">
+                    <p><strong>Clicca il pulsante sottostante per scaricare:</strong></p>
+                    <a href="https://github.com/PshowGit/ProShowPDF/releases/download/v1.0.0/ProShowPDF-v1.0.0-windows-x64.zip" class="download-link">
+                        ⬇️ Scarica ProShowPDF v1.0.0 (312 MB)
+                    </a>
+                </div>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Clicca il pulsante di download sopra</h3>
+                            <p>Il browser inizierà automaticamente a scaricare il file <code>ProShowPDF-v1.0.0-windows-x64.zip</code></p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Aspetta il completamento</h3>
+                            <p>Il download richiede alcuni minuti (312 MB). Controlla la barra di avanzamento nella parte inferiore del browser.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Verifica il file scaricato</h3>
+                            <p>Apri la cartella <strong>Download</strong> e cerca il file <code>ProShowPDF-v1.0.0-windows-x64.zip</code></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estrazione -->
+            <div class="section">
+                <h2>📦 Passaggio 2: Estrai il File</h2>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Clicca destro sul file ZIP</h3>
+                            <p>Fai clic con il pulsante destro del mouse su <code>ProShowPDF-v1.0.0-windows-x64.zip</code></p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Seleziona "Estrai tutto..."</h3>
+                            <p>Dal menu contestuale, clicca su <strong>"Estrai tutto..."</strong> (o "Extract All" se Windows è in inglese)</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Scegli la cartella di destinazione</h3>
+                            <p>Una finestra chiederà dove estrarre. Consiglio: <strong>Desktop</strong> oppure <strong>Programmi (C:\)</strong> per facilità d'accesso.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Aspetta il completamento</h3>
+                            <p>L'estrazione creerà una cartella <strong>ProShowPDF</strong> con il programma all'interno.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Suggerimento:</strong> Se usi 7-Zip o WinRAR, funzionano allo stesso modo: clicca destro → "Estrai qui" o "Estrai in ProShowPDF\".
+                </div>
+            </div>
+
+            <!-- Esecuzione -->
+            <div class="section">
+                <h2>▶️ Passaggio 3: Esegui l'Applicazione</h2>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Apri la cartella estratta</h3>
+                            <p>Naviga fino alla cartella <strong>ProShowPDF</strong> che hai estratto.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Trova il file eseguibile</h3>
+                            <p>All'interno dovrai vedere il file <code>ProShowPDF.exe</code> (icona di un'applicazione).</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Avvia il programma</h3>
+                            <p>Fai doppio clic su <code>ProShowPDF.exe</code>.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Attendi il caricamento</h3>
+                            <p>Potrebbe impiegare qualche secondo alla prima esecuzione. Apparirà la finestra dell'applicazione.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="success-box">
+                    <strong>✅ Fatto!</strong> L'applicazione è ora pronta all'uso. Puoi iniziare a convertire pagine web in PDF.
+                </div>
+            </div>
+
+            <!-- Primo Utilizzo -->
+            <div class="section">
+                <h2>🚀 Primo Utilizzo</h2>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Incolla uno o più URL</h3>
+                            <p>Nel campo di input in alto, incolla gli indirizzi web che vuoi convertire in PDF. Puoi incollare un URL per riga oppure trascinare un file <code>.txt</code> o <code>.csv</code>.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Configura le impostazioni (opzionale)</h3>
+                            <p>Personalizza la larghezza della pagina, il numero di conversioni parallele, timeout e altri parametri secondo le tue necessità.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Scegli la cartella di output</h3>
+                            <p>Fai clic su "Sfoglia" per selezionare dove salvare i file PDF generati (di default: Desktop o Documenti).</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Clicca "Converti"</h3>
+                            <p>L'applicazione inizierà la conversione. Vedrai una barra di avanzamento in tempo reale.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Recupera i file PDF</h3>
+                            <p>Una volta completato, i file PDF saranno nella cartella di output scelta. Clicca "Apri cartella" per accedervi rapidamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="section">
+                <h2>🔧 Risoluzione dei Problemi</h2>
+
+                <div class="troubleshooting">
+                    <h4>❌ "L'applicazione non parte"</h4>
+                    <p><strong>Soluzione:</strong> Assicurati di avere Windows 10/11 64-bit. Scarica la versione completa (312 MB) che include Chromium integrato.</p>
+                </div>
+
+                <div class="troubleshooting">
+                    <h4>❌ "Windows dice che il file è pericoloso"</h4>
+                    <p><strong>Soluzione:</strong> È un avviso falso (SmartScreen di Windows). Clicca "Altre informazioni" → "Esegui comunque". L'applicazione è sicura.</p>
+                </div>
+
+                <div class="troubleshooting">
+                    <h4>❌ "La conversione non funziona"</h4>
+                    <p><strong>Soluzione:</strong> Verifica che tu abbia una connessione internet attiva. Alcuni siti potrebbero bloccare l'accesso automatico — prova con siti pubblici come example.com, wikipedia.org, ecc.</p>
+                </div>
+
+                <div class="troubleshooting">
+                    <h4>❌ "Il file ZIP è corrotto"</h4>
+                    <p><strong>Soluzione:</strong> Scarica di nuovo il file. Se il problema persiste, contatta lo sviluppatore sul repository GitHub.</p>
+                </div>
+
+                <div class="troubleshooting">
+                    <h4>❌ "Spazio disco insufficiente"</h4>
+                    <p><strong>Soluzione:</strong> Hai bisogno di almeno 750 MB liberi. Libera spazio eliminando file temporanei o vecchi scaricamenti.</p>
+                </div>
+            </div>
+
+            <!-- Supporto -->
+            <div class="section">
+                <h2>📞 Supporto e Contributi</h2>
+                <p>Per segnalare bug, chiedere aiuto o suggerire miglioramenti, visita il repository GitHub ufficiale:</p>
+                <div class="link-box">
+                    <a href="https://github.com/PshowGit/ProShowPDF" class="download-link" style="text-decoration: none;">
+                        🔗 ProShowPDF su GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>ProShow PDF v1.0.0</strong> — Web-to-PDF Converter per Windows x64</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">© 2026 ProfessionalShow. Tutti i diritti riservati.</p>
+        </div>
+    </div>
+</body>
+</html>

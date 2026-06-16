@@ -39,6 +39,7 @@ class JobItem:
     url: str
     index: int
     status: JobStatus = JobStatus.QUEUED
+    custom_filename: str | None = None
 
 
 @dataclass

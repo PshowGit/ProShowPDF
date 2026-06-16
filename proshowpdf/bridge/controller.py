@@ -44,21 +44,23 @@ class ConversionController(QObject):
         self._ready.set()
         self._loop.run_forever()
 
-    def start(self, urls: list[str], settings: ConversionSettings) -> None:
+    def start(self, urls: list[str], settings: ConversionSettings,
+              custom_filenames: list[str | None] | None = None) -> None:
         """Schedule a batch on the worker loop (returns immediately)."""
         assert self._loop is not None, "engine not started"
         self._run_task = asyncio.run_coroutine_threadsafe(
-            self._run(urls, settings), self._loop
+            self._run(urls, settings, custom_filenames), self._loop
         )
 
-    async def _run(self, urls: list[str], settings: ConversionSettings) -> None:
+    async def _run(self, urls: list[str], settings: ConversionSettings,
+                   custom_filenames: list[str | None] | None = None) -> None:
         engine = ConverterEngine(settings)
 
         def on_progress(result: JobResult, completed: int, total: int) -> None:
             self.progress.emit(result, completed, total)
 
         try:
-            results = await engine.run(urls, on_progress)
+            results = await engine.run(urls, on_progress, custom_filenames)
             self.finished.emit(results)
         except asyncio.CancelledError:
             self.cancelled.emit()

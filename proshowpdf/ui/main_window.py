@@ -95,7 +95,8 @@ class MainWindow(QMainWindow):
         self._progress.reset(len(urls))
         fade_in(self._progress)
         self._set_running(True)
-        self._controller.start(urls, settings)
+        custom_filenames = self._url_input.custom_filenames()
+        self._controller.start(urls, settings, custom_filenames)
 
     def _set_running(self, running: bool) -> None:
         self._start_btn.setEnabled(not running)
@@ -117,9 +118,12 @@ class MainWindow(QMainWindow):
     def _on_clear(self) -> None:
         """Reset form to default values."""
         self._url_input._editor.clear()
+        self._url_input._editor._custom_names.clear()
+        self._url_input._update_counter()
         default_out = str(Path.home() / "Documents")
         default_settings = ConversionSettings(output_dir=default_out)
         self._options.load(default_settings)
+        self._progress.reset(0)
         self._results.set_enabled(False)
 
     def _toggle_theme(self) -> None:
