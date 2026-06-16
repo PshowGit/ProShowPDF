@@ -1,0 +1,122 @@
+# Progetto: ProShow PDF — Web-to-PDF Converter (Desktop Windows x64) — PySide6 + Playwright
+
+## Ruolo e contesto
+Agisci come sviluppatore senior Python con esperienza in applicazioni desktop, 
+packaging Windows e rendering di pagine web tramite browser headless. Costruisci 
+un'applicazione desktop completa, production-ready, seguendo le specifiche qui sotto. 
+Procedi in modo incrementale: prima architettura e struttura del progetto, poi 
+l'implementazione file per file.
+
+## Stack tecnologico (vincolato)
+- **GUI**: PySide6 (Qt for Python), con QSS per il theming e QPropertyAnimation / 
+  Qt Quick per le animazioni. Abilita il supporto High-DPI per display ad alta 
+  risoluzione.
+- **Rendering & PDF**: Playwright (Chromium headless), usando `page.pdf()` con 
+  dimensioni custom per la fedeltà di rendering.
+- **Target**: Windows 64 bit (x64) esclusivamente. NON implementare supporto a 
+  32 bit: il Chromium di Playwright è distribuito solo per x64. Se l'app viene 
+  avviata su un sistema a 32 bit, mostra un messaggio d'errore chiaro che spiega 
+  che è richiesto Windows a 64 bit.
+- **Ambiente virtuale**: l'intero progetto deve girare in un ambiente virtuale 
+  Python (venv). Tutte le dipendenze vanno installate nel venv, mai a livello di 
+  sistema. Fornisci i comandi per crearlo e attivarlo su Windows.
+- **Concorrenza**: lavoro pesante (Playwright) fuori dal thread della GUI — usa 
+  l'API async di Playwright in un event loop dedicato oppure QThread/QRunnable + 
+  pool, mantenendo la UI sempre reattiva. Motiva la scelta adottata.
+
+## Obiettivo
+Applicazione desktop per Windows x64 che converte una pagina web in un file PDF, 
+preservando il più fedelmente possibile l'aspetto visivo originale (layout, font, 
+immagini, CSS, contenuti renderizzati via JS).
+
+## Requisiti funzionali
+1. **Input flessibile**: singolo URL oppure lista di URL (campo multilinea e/o 
+   import da file .txt/.csv). Validazione e normalizzazione degli URL prima 
+   dell'elaborazione.
+2. **Larghezza configurabile**: opzione per impostare la larghezza (px) della pagina 
+   PDF di output.
+3. **Altezza dinamica**: dopo il rendering, misura l'altezza reale del documento 
+   (es. `document.body.scrollHeight`) e genera il PDF con altezza custom 
+   corrispondente, così da ottenere un PDF a pagina unica/continua ed evitare tagli 
+   o suddivisioni indesiderate del contenuto. Attendi il completo caricamento 
+   (networkidle, lazy-load, web font) prima di misurare.
+4. **Fedeltà di rendering (critico)**: per riprodurre fedelmente l'aspetto reale 
+   della pagina:
+   - imposta `print_background=True` per non perdere colori e sfondi CSS;
+   - valuta `page.emulate_media(media="screen")` per ottenere l'aspetto a schermo 
+     anziché lo stile di stampa (motiva la scelta);
+   - imposta margini a 0 per un output edge-to-edge;
+   - gestisci lo `scale`/device scale factor in modo coerente con la larghezza scelta;
+   - prima della cattura, scrolla l'intera pagina per forzare il caricamento dei 
+     contenuti lazy-load, poi torna in cima.
+5. **Gestione cookie banner**: tenta di chiudere/accettare automaticamente i banner 
+   di consenso più comuni (sono la causa principale di PDF coperti da overlay), con 
+   possibilità di disattivare il comportamento.
+6. **Barra di avanzamento**: progress bar in tempo reale con stato di elaborazione, 
+   URL corrente e conteggio pagine elaborate sul totale (es. "3 / 12").
+7. **Pulsante di annullamento**: possibilità di interrompere in modo pulito un batch 
+   in corso, chiudendo correttamente pagine e contesti senza lasciare processi 
+   Chromium orfani.
+8. **Conversioni in parallelo configurabili**: opzione per impostare il numero 
+   massimo di conversioni simultanee (es. slider/spinbox, default ragionevole come 
+   3–4, con limite massimo sensato). Usa un semaforo/coda per non superare mai il 
+   limite impostato, riutilizzando un'unica istanza del browser con più contesti/
+   pagine. Questo serve a gestire liste di URL molto lunghe senza saturare CPU/RAM.
+9. **Gestione output**: selezione della cartella di destinazione; nomi file generati 
+   automaticamente in modo sicuro (da titolo pagina o dominio + timestamp, 
+   sanitizzati per Windows); gestione esplicita dei conflitti (sovrascrivi / 
+   rinomina). Pulsante per aprire la cartella di output a fine processo.
+10. **Gestione errori chiara**: in caso di errore identifica con precisione l'URL 
+    coinvolto, il tipo di errore e dettagli diagnostici utili (timeout, 404, errore 
+    di rendering/navigazione, ecc.). Un singolo URL fallito non interrompe il batch; 
+    gli URL falliti vengono riepilogati a fine processo ed esportabili in CSV 
+    (URL, tipo errore, messaggio, timestamp).
+11. **Persistenza impostazioni**: ricorda tra le sessioni le ultime preferenze 
+    (larghezza, parallelismo, cartella output, tema) usando QSettings.
+12. **Timeout e retry configurabili dalla UI**: timeout di navigazione/rendering e 
+    numero di tentativi con backoff, modificabili dall'utente.
+
+## Requisiti non funzionali
+- **Prestazioni**: elaborazione batch efficiente e concorrente entro il limite 
+  configurato; riutilizzo dell'istanza del browser tra un URL e l'altro.
+- **Stabilità e robustezza**: gestione completa delle eccezioni, retry configurabili, 
+  timeout per navigazione e rendering, chiusura pulita di pagine/contesti/browser 
+  (anche in caso di crash o annullamento, nessun processo Chromium orfano), logging 
+  strutturato su file con livelli e rotazione.
+- **Packaging**: fornisci istruzioni di build con PyInstaller per il target x64, 
+  eseguito dall'interno del venv, includendo come bundlare correttamente i browser 
+  di Playwright nell'eseguibile.
+
+## Interfaccia grafica
+- GUI moderna, intuitiva e professionale, con forte impatto visivo ("effetto wow").
+- Animazioni fluide, componenti moderni, tema scuro/chiaro commutabile, feedback 
+  visivi chiari per ogni stato (in coda, in corso, completato, errore).
+- Cura dell'esperienza utente: layout pulito, gerarchia visiva chiara, 
+  micro-interazioni. Sfrutta al meglio le capacità di styling di PySide6 (QSS, 
+  ombre, transizioni) senza appesantire le prestazioni.
+
+## Linee guida di implementazione
+- Architettura modulare con separazione netta tra UI (PySide6) e core di conversione 
+  (Playwright): la logica di conversione deve essere testabile in isolamento dalla GUI.
+- Codice tipizzato (type hints), commentato e organizzato; gestione corretta del 
+  ciclo di vita async di Playwright rispetto al thread Qt.
+- Includi alcuni test unitari per il core di conversione (validazione URL, 
+  sanitizzazione nomi file, logica di altezza dinamica) con pytest.
+- Includi requirements.txt e istruzioni di setup complete basate su venv:
+  1. Creazione del venv: `python -m venv .venv`
+  2. Attivazione su Windows: `.venv\Scripts\activate`
+  3. Installazione dipendenze: `pip install -r requirements.txt`
+  4. Installazione browser Playwright: `playwright install chromium`
+  Tutti i comandi di build e di esecuzione si intendono lanciati con il venv attivo.
+
+## Strumenti aggiuntivi
+Valuta e, se utili, integra skill, plugin o server MCP che migliorino funzionalità, 
+prestazioni, affidabilità o esperienza utente (es. per testing automatizzato della 
+conversione, gestione del browser headless, logging o packaging). Motiva ogni scelta.
+
+## Output atteso
+1. Proposta di architettura con motivazioni delle scelte di concorrenza e packaging.
+2. Struttura del progetto (albero file), incluso il venv nel `.gitignore`.
+3. Implementazione completa, file per file.
+4. Istruzioni di build per Windows x64 (eseguite dall'interno del venv).
+5. Note su limiti noti e possibili estensioni.
