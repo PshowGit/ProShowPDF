@@ -7,15 +7,25 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import os
 from pathlib import Path
 
 from playwright.async_api import Error as PlaywrightError
 from playwright.async_api import TimeoutError as PlaywrightTimeout
 
 from .cookie_banner import dismiss_cookie_banner
-from .errors import ConversionTimeoutError, NavigationError, RenderError
+from .errors import (
+    ConversionTimeoutError,
+    NavigationError,
+    OutputError,
+    RenderError,
+)
 from .models import ConversionSettings
 from .naming import build_pdf_name, resolve_collision
+
+# Substrings in a Playwright error that indicate a filesystem write failure
+# rather than a rendering problem (so we can classify it as OutputError).
+_OUTPUT_ERROR_HINTS = ("enoent", "eacces", "eperm", "enospc", "failed to write")
 
 log = logging.getLogger(__name__)
 
@@ -48,6 +58,9 @@ async def _scroll_to_bottom(page, max_steps: int = 40) -> None:
 
 async def convert_page(page, url: str, settings: ConversionSettings) -> str:
     """Convert one page to a single-page PDF; return the written file path."""
+    output_dir = settings.output_dir
+    if not os.path.isdir(output_dir) or not os.access(output_dir, os.W_OK):
+        raise OutputError(f"Output directory not writable: {output_dir}")
     try:
         await page.emulate_media(media="screen")
         await page.goto(url, wait_until="networkidle", timeout=settings.timeout_ms)
@@ -81,6 +94,9 @@ async def convert_page(page, url: str, settings: ConversionSettings) -> str:
         raise ConversionTimeoutError(str(exc)) from exc
     except PlaywrightError as exc:
         message = str(exc)
-        if "net::" in message or "navigat" in message.lower():
+        lowered = message.lower()
+        if any(hint in lowered for hint in _OUTPUT_ERROR_HINTS):
+            raise OutputError(message) from exc
+        if "net::" in message or "navigat" in lowered:
             raise NavigationError(message) from exc
         raise RenderError(message) from exc

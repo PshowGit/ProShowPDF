@@ -32,7 +32,11 @@ async def test_convert_page_measures_height_and_calls_pdf(tmp_path):
         return None
 
     page.evaluate = AsyncMock(side_effect=fake_evaluate)
-    settings = ConversionSettings(output_dir=str(tmp_path), width_px=1280)
+    # Disable the cookie path here: it is covered separately and a blanket
+    # AsyncMock page would otherwise leave unawaited locator coroutines.
+    settings = ConversionSettings(
+        output_dir=str(tmp_path), width_px=1280, handle_cookie_banners=False
+    )
 
     out_path = await convert_page(page, "https://x.com", settings)
 

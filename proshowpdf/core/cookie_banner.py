@@ -26,8 +26,13 @@ _KNOWN_SELECTORS = [
 ]
 
 
-async def dismiss_cookie_banner(page, timeout_ms: int = 2500) -> bool:
-    """Try to close/accept a consent banner. Returns True if something clicked."""
+async def dismiss_cookie_banner(page, timeout_ms: int = 800) -> bool:
+    """Try to close/accept a consent banner. Returns True if something clicked.
+
+    Each probe first checks whether the selector matches anything (a cheap,
+    non-blocking `count()`) before attempting a timed click, so banner-free
+    pages return almost immediately instead of paying a click timeout per probe.
+    """
     for selector in _KNOWN_SELECTORS:
         if await _try_click(page, selector, timeout_ms):
             return True
@@ -43,10 +48,16 @@ async def dismiss_cookie_banner(page, timeout_ms: int = 2500) -> bool:
 
 
 async def _try_click(target, selector: str, timeout_ms: int) -> bool:
-    """Click the first matching visible element; swallow any error."""
+    """Click the first matching visible element; swallow any error.
+
+    Skips the timed click entirely when the selector matches no element, which
+    keeps the common (no-banner) path fast.
+    """
     try:
-        locator = target.locator(selector).first
-        await locator.click(timeout=timeout_ms)
+        locator = target.locator(selector)
+        if await locator.count() == 0:
+            return False
+        await locator.first.click(timeout=timeout_ms)
         log.debug("Dismissed banner via %s", selector)
         return True
     except Exception:

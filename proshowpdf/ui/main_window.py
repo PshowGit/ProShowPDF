@@ -12,6 +12,7 @@ from PySide6.QtWidgets import (
 from proshowpdf.bridge.controller import ConversionController
 from proshowpdf.core.models import ConversionSettings, JobResult
 from proshowpdf.persistence.settings_store import SettingsStore
+from proshowpdf.ui.animations import fade_in
 from proshowpdf.ui.theme import apply_theme
 from proshowpdf.ui.widgets.options_panel import OptionsPanel
 from proshowpdf.ui.widgets.progress_view import ProgressView
@@ -80,6 +81,7 @@ class MainWindow(QMainWindow):
         self._store.save_settings(settings)
         self._results.set_enabled(False)
         self._progress.reset(len(urls))
+        fade_in(self._progress)
         self._set_running(True)
         self._controller.start(urls, settings)
 
@@ -90,6 +92,7 @@ class MainWindow(QMainWindow):
     def _on_finished(self, results: list[JobResult]) -> None:
         self._set_running(False)
         self._results.show_results(results, self._options.to_settings().output_dir)
+        fade_in(self._results)
 
     def _on_failed(self, message: str) -> None:
         self._set_running(False)
