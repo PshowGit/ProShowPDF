@@ -42,5 +42,5 @@ async def test_convert_page_measures_height_and_calls_pdf(tmp_path):
     assert kwargs["print_background"] is True
     assert kwargs["width"] == "1280px"
     assert kwargs["height"] == "1500px"
-    assert kwargs["margin"] == {"top": 0, "right": 0, "bottom": 0, "left": 0}
+    assert kwargs["margin"] == {"top": "0", "right": "0", "bottom": "0", "left": "0"}
     assert out_path.endswith(".pdf")
