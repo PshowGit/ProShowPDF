@@ -41,6 +41,16 @@ class MainWindow(QMainWindow):
 
         central = QWidget()
         root = QVBoxLayout(central)
+
+        # Top bar: theme button in top-right
+        top_bar = QHBoxLayout()
+        top_bar.addStretch()
+        self._theme_btn = QPushButton("🌙")
+        self._theme_btn.setObjectName("secondary")
+        self._theme_btn.setFixedWidth(40)
+        top_bar.addWidget(self._theme_btn)
+        root.addLayout(top_bar)
+
         root.addWidget(self._url_input)
         root.addWidget(self._options)
 
@@ -49,12 +59,9 @@ class MainWindow(QMainWindow):
         self._cancel_btn = QPushButton("Annulla")
         self._cancel_btn.setObjectName("secondary")
         self._cancel_btn.setEnabled(False)
-        self._theme_btn = QPushButton("Tema chiaro/scuro")
-        self._theme_btn.setObjectName("secondary")
         buttons.addWidget(self._start_btn)
         buttons.addWidget(self._cancel_btn)
         buttons.addStretch()
-        buttons.addWidget(self._theme_btn)
         root.addLayout(buttons)
 
         root.addWidget(self._progress)

@@ -31,7 +31,18 @@ QPushButton {
 }
 QPushButton:hover { background: #4a5cef; }
 QPushButton:disabled { background: #d4d7e0; color: #999; }
-QPushButton#secondary { background: #ffffff; border: 1px solid #d4d7e0; color: #1e1f26; }
+QPushButton#secondary {
+    background: #ffffff;
+    border: 1px solid #b9c0d0;
+    color: #1e1f26;
+}
+QPushButton#secondary:hover {
+    background: #f0f2f7;
+    border: 1px solid #9aa3ba;
+}
+QPushButton#secondary:pressed {
+    background: #eaecf2;
+}
 QProgressBar {
     border: none; border-radius: 8px; background: #e4e6ef; height: 18px;
     text-align: center; color: #1e1f26;
