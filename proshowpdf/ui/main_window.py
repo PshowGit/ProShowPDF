@@ -60,8 +60,11 @@ class MainWindow(QMainWindow):
         self._cancel_btn = QPushButton("Annulla")
         self._cancel_btn.setObjectName("secondary")
         self._cancel_btn.setEnabled(False)
+        self._clear_btn = QPushButton("Pulisci")
+        self._clear_btn.setObjectName("secondary")
         buttons.addWidget(self._start_btn)
         buttons.addWidget(self._cancel_btn)
+        buttons.addWidget(self._clear_btn)
         buttons.addStretch()
         root.addLayout(buttons)
 
@@ -71,6 +74,7 @@ class MainWindow(QMainWindow):
 
         self._start_btn.clicked.connect(self._on_start)
         self._cancel_btn.clicked.connect(self._controller.cancel)
+        self._clear_btn.clicked.connect(self._on_clear)
         self._theme_btn.clicked.connect(self._toggle_theme)
         controller.progress.connect(self._progress.update)
         controller.finished.connect(self._on_finished)
@@ -109,6 +113,14 @@ class MainWindow(QMainWindow):
     def _on_cancelled(self) -> None:
         self._set_running(False)
         QMessageBox.information(self, "Annullato", "Batch annullato.")
+
+    def _on_clear(self) -> None:
+        """Reset form to default values."""
+        self._url_input._editor.clear()
+        default_out = str(Path.home() / "Documents")
+        default_settings = ConversionSettings(output_dir=default_out)
+        self._options.load(default_settings)
+        self._results.set_enabled(False)
 
     def _toggle_theme(self) -> None:
         self._theme = "light" if self._theme == "dark" else "dark"
