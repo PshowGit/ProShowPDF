@@ -559,7 +559,7 @@ git commit -m "feat(core): cookie banner heuristics"
 
 ```python
 # tests/test_page_converter.py
-from unittest.mock import AsyncMock, MagicMock
+from unittest.mock import AsyncMock
 
 import pytest
 
@@ -580,8 +580,19 @@ def test_compute_pdf_height_enforces_minimum():
 async def test_convert_page_measures_height_and_calls_pdf(tmp_path):
     page = AsyncMock()
     page.title = AsyncMock(return_value="Hello")
-    # scroll loop returns increasing then stable height; final measure = 1500
-    page.evaluate = AsyncMock(side_effect=[800, 1500, 1500, 1500])
+
+    # The mock distinguishes height-measuring evaluate() calls (the JS contains
+    # "scrollHeight") from scroll calls (scrollBy/scrollTo), which return None.
+    # Heights: 800 then stable 1500 -> the scroll loop stops when height stops
+    # growing; the last value is the final measurement used for the PDF.
+    heights = iter([800, 1500, 1500, 1500])
+
+    async def fake_evaluate(script, *args, **kwargs):
+        if "scrollHeight" in script:
+            return next(heights)
+        return None
+
+    page.evaluate = AsyncMock(side_effect=fake_evaluate)
     settings = ConversionSettings(output_dir=str(tmp_path), width_px=1280)
 
     out_path = await convert_page(page, "https://x.com", settings)
@@ -596,10 +607,11 @@ async def test_convert_page_measures_height_and_calls_pdf(tmp_path):
     assert out_path.endswith(".pdf")
 ```
 
-> Note: `convert_page` calls `page.evaluate` for scroll steps and the final
-> height read. The mock's `side_effect` list models those sequential calls; the
-> implementation below reads height via `evaluate` and stops scrolling when it
-> stops growing.
+> Note: `_scroll_to_bottom` calls `evaluate` twice per iteration (height read +
+> `scrollBy`) plus a final `scrollTo(0,0)`; `convert_page` then does one final
+> height read. The mock keys off `"scrollHeight"` in the JS so only the four
+> genuine height reads (`800, 1500, 1500, 1500`) consume the `heights` iterator —
+> robust to the exact number of scroll calls.
 
 - [ ] **Step 2: Run to verify it fails**
 
