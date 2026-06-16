@@ -29,7 +29,7 @@ class MainWindow(QMainWindow):
         self._store = store
         self._theme = store.load_theme()
         self.setWindowTitle("ProShow PDF")
-        self.resize(900, 760)
+        self.resize(900, 950)
 
         self._url_input = UrlInput()
         self._options = OptionsPanel()
@@ -45,9 +45,10 @@ class MainWindow(QMainWindow):
         # Top bar: theme button in top-right
         top_bar = QHBoxLayout()
         top_bar.addStretch()
-        self._theme_btn = QPushButton("🌙")
+        self._theme_btn = QPushButton("🌙 Tema")
         self._theme_btn.setObjectName("secondary")
-        self._theme_btn.setFixedWidth(40)
+        self._theme_btn.setFixedWidth(110)
+        self._theme_btn.setFixedHeight(36)
         top_bar.addWidget(self._theme_btn)
         root.addLayout(top_bar)
 
