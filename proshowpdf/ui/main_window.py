@@ -17,7 +17,9 @@ from proshowpdf.persistence.settings_store import SettingsStore
 from proshowpdf.ui.animations import cross_fade_swap, fade_in, slide_fade_in
 from proshowpdf.ui.theme import apply_theme
 from proshowpdf.ui.widgets.card import Card
+from proshowpdf.ui.widgets.collapsible_card import CollapsibleCard
 from proshowpdf.ui.widgets.options_panel import OptionsPanel
+from proshowpdf.ui.widgets.output_picker import OutputPicker
 from proshowpdf.ui.widgets.progress_view import ProgressView
 from proshowpdf.ui.widgets.results_panel import ResultsPanel
 from proshowpdf.ui.widgets.url_input import UrlInput
@@ -37,19 +39,20 @@ class MainWindow(QMainWindow):
         icon_path = _RESOURCES / "ProShowPDF.ico"
         if icon_path.exists():
             self.setWindowIcon(QIcon(str(icon_path)))
-        self.resize(1000, 820)
-        self.setMinimumSize(880, 680)
+        self.resize(1000, 940)
+        self.setMinimumSize(880, 780)
 
         self._url_input = UrlInput()
+        self._output_picker = OutputPicker()
         self._options = OptionsPanel()
         self._progress = ProgressView()
         self._results = ResultsPanel()
 
         default_out = str(Path.home() / "Documents")
-        self._options.load(store.load_settings(default_out))
+        initial = store.load_settings(default_out)
+        self._options.load(initial)
+        self._output_picker.set_path(initial.output_dir)
 
-        # Everything fits in one window — no scrolling. The activity card at the
-        # bottom absorbs spare vertical space so the layout breathes on resize.
         central = QWidget()
         root = QVBoxLayout(central)
         root.setContentsMargins(24, 20, 24, 22)
@@ -57,19 +60,22 @@ class MainWindow(QMainWindow):
 
         root.addLayout(self._build_header())
 
-        # Two columns: URL input (primary, wider) beside the compact options.
-        top = QHBoxLayout()
-        top.setSpacing(14)
+        # Full-width URL box (the primary input), then the output folder.
         input_card = Card(
             "URL da convertire",
             "Uno per riga · trascina file txt/csv/xlsx · 2ª colonna = nome PDF",
         )
         input_card.add(self._url_input)
-        options_card = Card("Opzioni di conversione")
-        options_card.add(self._options)
-        top.addWidget(input_card, 3)
-        top.addWidget(options_card, 2)
-        root.addLayout(top)
+        root.addWidget(input_card, 2)
+
+        output_card = Card("Cartella di output")
+        output_card.add(self._output_picker)
+        root.addWidget(output_card)
+
+        # Conversion options collapse into an accordion below.
+        self._options_card = CollapsibleCard("Opzioni di conversione", expanded=True)
+        self._options_card.add(self._options)
+        root.addWidget(self._options_card)
 
         root.addLayout(self._build_actions())
 
@@ -155,7 +161,7 @@ class MainWindow(QMainWindow):
         if not urls:
             QMessageBox.warning(self, "Nessun URL", "Inserisci almeno un URL valido.")
             return
-        settings = self._options.to_settings()
+        settings = self._options.to_settings(self._output_picker.path())
         if not settings.output_dir or not Path(settings.output_dir).is_dir():
             QMessageBox.warning(self, "Output", "Seleziona una cartella di output valida.")
             return
@@ -174,7 +180,7 @@ class MainWindow(QMainWindow):
 
     def _on_finished(self, results: list[JobResult]) -> None:
         self._set_running(False)
-        self._results.show_results(results, self._options.to_settings().output_dir)
+        self._results.show_results(results, self._output_picker.path())
         fade_in(self._results)
 
     def _on_failed(self, message: str) -> None:
@@ -193,6 +199,7 @@ class MainWindow(QMainWindow):
         default_out = str(Path.home() / "Documents")
         default_settings = ConversionSettings(output_dir=default_out)
         self._options.load(default_settings)
+        self._output_picker.set_path(default_out)
         self._progress.reset(0)
         self._results.set_enabled(False)
 

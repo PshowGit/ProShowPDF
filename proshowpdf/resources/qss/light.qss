@@ -95,7 +95,35 @@ QComboBox QAbstractItemView {
     border-radius: 8px; padding: 4px;
     selection-background-color: #5a6cff; selection-color: #ffffff; outline: none;
 }
-QSpinBox::up-button, QSpinBox::down-button { width: 18px; border: none; }
+QSpinBox::up-button {
+    subcontrol-origin: border; subcontrol-position: top right;
+    width: 20px; background: #f3efe6; border-left: 1px solid #e6e0d3;
+    border-top-right-radius: 10px;
+}
+QSpinBox::down-button {
+    subcontrol-origin: border; subcontrol-position: bottom right;
+    width: 20px; background: #f3efe6; border-left: 1px solid #e6e0d3;
+    border-bottom-right-radius: 10px;
+}
+QSpinBox::up-button:hover, QSpinBox::down-button:hover { background: #ece6da; }
+QSpinBox::up-arrow {
+    width: 0; height: 0;
+    border-left: 4px solid transparent; border-right: 4px solid transparent;
+    border-bottom: 5px solid #8a8474;
+}
+QSpinBox::down-arrow {
+    width: 0; height: 0;
+    border-left: 4px solid transparent; border-right: 4px solid transparent;
+    border-top: 5px solid #8a8474;
+}
+
+/* ---- Accordion header (collapsible card) ----------------------------- */
+QPushButton#accordionHeader {
+    background: transparent; border: none; text-align: left;
+    padding: 8px 6px; color: #5a5cff;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
+}
+QPushButton#accordionHeader:hover { color: #4548d6; }
 
 /* ---- Primary button (gradient, the hero action) ---------------------- */
 QPushButton {

@@ -47,7 +47,7 @@ class ProgressView(QWidget):
         layout.addWidget(self._bar)
 
         self._list = QListWidget()
-        self._list.setMinimumHeight(120)
+        self._list.setMinimumHeight(100)
         self._list.itemDoubleClicked.connect(self._on_item_activated)
         layout.addWidget(self._list)
 
