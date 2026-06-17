@@ -59,12 +59,27 @@ class DragDropPlainText(QPlainTextEdit):
         super().__init__()
         self.setAcceptDrops(True)
         self._custom_names: dict[str, str] = {}
+        self.setProperty("dragActive", False)
+
+    def _set_drag_active(self, active: bool) -> None:
+        """Toggle the dragActive property and repolish so QSS reacts live."""
+        if self.property("dragActive") == active:
+            return
+        self.setProperty("dragActive", active)
+        self.style().unpolish(self)
+        self.style().polish(self)
 
     def dragEnterEvent(self, event: QDragEnterEvent) -> None:
         if event.mimeData().hasUrls():
+            self._set_drag_active(True)
             event.acceptProposedAction()
 
+    def dragLeaveEvent(self, event) -> None:
+        self._set_drag_active(False)
+        super().dragLeaveEvent(event)
+
     def dropEvent(self, event: QDropEvent) -> None:
+        self._set_drag_active(False)
         for url in event.mimeData().urls():
             path = Path(url.toLocalFile())
             if path.suffix.lower() in (".txt", ".csv", ".xlsx", ".xls"):
@@ -188,6 +203,7 @@ class UrlInput(QWidget):
         layout.setSpacing(10)
 
         self._editor = DragDropPlainText()
+        self._editor.setObjectName("dropZone")
         self._editor.setPlaceholderText(
             "https://example.com\nexample.org/page\n\n…oppure trascina qui un file txt / csv / xlsx"
         )

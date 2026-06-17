@@ -69,6 +69,16 @@ QLineEdit:focus, QPlainTextEdit:focus, QSpinBox:focus, QComboBox:focus {
 QLineEdit:disabled, QPlainTextEdit:disabled, QSpinBox:disabled, QComboBox:disabled {
     color: #9bb0aa; background: #e7eeec; border: 1px solid #d9e3e0;
 }
+
+/* Drop zone: dashed at rest, glows teal while a file hovers over it. */
+QPlainTextEdit#dropZone {
+    border: 2px dashed #cdded9;
+}
+QPlainTextEdit#dropZone:hover { border: 2px dashed #b3ccc6; }
+QPlainTextEdit#dropZone[dragActive="true"] {
+    border: 2px dashed #14b8a6;
+    background: #ecfbf7;
+}
 QComboBox::drop-down { border: none; width: 28px; }
 QComboBox QAbstractItemView {
     background: #ffffff; border: 1px solid #d3e0dc; color: #0d1f1b;
