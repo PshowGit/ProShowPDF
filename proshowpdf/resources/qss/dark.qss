@@ -97,25 +97,18 @@ QComboBox QAbstractItemView {
 }
 QSpinBox::up-button {
     subcontrol-origin: border; subcontrol-position: top right;
-    width: 20px; background: #131826; border-left: 1px solid #232a3a;
+    width: 24px; background: #28324c; border-left: 1px solid #2c3650;
     border-top-right-radius: 10px;
 }
 QSpinBox::down-button {
     subcontrol-origin: border; subcontrol-position: bottom right;
-    width: 20px; background: #131826; border-left: 1px solid #232a3a;
+    width: 24px; background: #28324c; border-left: 1px solid #2c3650;
     border-bottom-right-radius: 10px;
 }
-QSpinBox::up-button:hover, QSpinBox::down-button:hover { background: #1c2336; }
-QSpinBox::up-arrow {
-    width: 0; height: 0;
-    border-left: 4px solid transparent; border-right: 4px solid transparent;
-    border-bottom: 5px solid #9aa6c5;
-}
-QSpinBox::down-arrow {
-    width: 0; height: 0;
-    border-left: 4px solid transparent; border-right: 4px solid transparent;
-    border-top: 5px solid #9aa6c5;
-}
+QSpinBox::up-button:hover, QSpinBox::down-button:hover { background: #34416a; }
+QSpinBox::up-button:pressed, QSpinBox::down-button:pressed { background: #3f5084; }
+QSpinBox::up-arrow { image: url(__ICONS__/arrow_up_light.svg); width: 10px; height: 7px; }
+QSpinBox::down-arrow { image: url(__ICONS__/arrow_down_light.svg); width: 10px; height: 7px; }
 
 /* ---- Accordion header (collapsible card) ----------------------------- */
 QPushButton#accordionHeader {

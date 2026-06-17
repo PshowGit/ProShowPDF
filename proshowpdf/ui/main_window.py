@@ -17,7 +17,6 @@ from proshowpdf.persistence.settings_store import SettingsStore
 from proshowpdf.ui.animations import cross_fade_swap, fade_in, slide_fade_in
 from proshowpdf.ui.theme import apply_theme
 from proshowpdf.ui.widgets.card import Card
-from proshowpdf.ui.widgets.collapsible_card import CollapsibleCard
 from proshowpdf.ui.widgets.options_panel import OptionsPanel
 from proshowpdf.ui.widgets.output_picker import OutputPicker
 from proshowpdf.ui.widgets.progress_view import ProgressView
@@ -72,10 +71,9 @@ class MainWindow(QMainWindow):
         output_card.add(self._output_picker)
         root.addWidget(output_card)
 
-        # Conversion options collapse into an accordion below.
-        self._options_card = CollapsibleCard("Opzioni di conversione", expanded=False)
-        self._options_card.add(self._options)
-        root.addWidget(self._options_card)
+        options_card = Card("Opzioni di conversione")
+        options_card.add(self._options)
+        root.addWidget(options_card)
 
         root.addLayout(self._build_actions())
 
