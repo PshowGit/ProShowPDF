@@ -47,6 +47,15 @@ QLabel#counter {
     font-size: 13px;
     font-weight: 700;
 }
+QLabel#emptyIcon {
+    font-size: 40px;
+    color: #b3ccc6;
+}
+QLabel#emptyTitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: #14534a;
+}
 
 /* ---- Inputs ---------------------------------------------------------- */
 QLineEdit, QPlainTextEdit, QSpinBox, QComboBox {
