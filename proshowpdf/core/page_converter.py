@@ -68,6 +68,17 @@ def compute_pdf_dimensions(
     return f"{scaled_width_in}in", f"{_MAX_PDF_INCHES}in"
 
 
+async def _wait_settled(page, timeout_ms: int) -> None:
+    """Wait for the page to go quiet again (e.g. after a consent reload)."""
+    try:
+        await page.wait_for_load_state(
+            "networkidle", timeout=min(timeout_ms, 10_000)
+        )
+    except PlaywrightTimeout:
+        log.debug("networkidle wait timed out after banner dismissal")
+    await asyncio.sleep(0.3)
+
+
 async def _scroll_to_bottom(page, max_steps: int = 40) -> None:
     """Scroll the page to trigger lazy-loaded content, then return to top."""
     previous = -1
@@ -90,7 +101,11 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
         await page.emulate_media(media="screen")
         await page.goto(url, wait_until="networkidle", timeout=settings.timeout_ms)
         if settings.handle_cookie_banners:
-            await dismiss_cookie_banner(page)
+            if await dismiss_cookie_banner(page):
+                # Accepting can reload the page or load deferred content; wait
+                # for it to settle, then sweep again for banners shown after.
+                await _wait_settled(page, settings.timeout_ms)
+                await dismiss_cookie_banner(page)
         await _scroll_to_bottom(page)
         try:
             await page.wait_for_function("document.fonts.ready", timeout=5000)
