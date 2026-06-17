@@ -79,6 +79,37 @@ async def _wait_settled(page, timeout_ms: int) -> None:
     await asyncio.sleep(0.3)
 
 
+# Markers of an anti-bot interstitial (Cloudflare "Just a moment…" etc.) that
+# precedes the real page; we wait for it to clear before measuring/rendering.
+_CHALLENGE_MARKERS = (
+    "just a moment",
+    "performing security verification",
+    "checking your browser",
+    "verifying you are",
+    "verifica di sicurezza",
+)
+
+
+async def _await_challenge_cleared(page, timeout_ms: int) -> None:
+    """Poll until an anti-bot challenge page transitions to real content.
+
+    Bounded by the page timeout (capped at 25s). Returns quietly if no challenge
+    is present or it never clears — rendering then captures whatever is shown.
+    """
+    deadline = asyncio.get_event_loop().time() + min(timeout_ms / 1000, 25.0)
+    while asyncio.get_event_loop().time() < deadline:
+        try:
+            title = (await page.title()).lower()
+            body = (await page.inner_text("body"))[:400].lower()
+        except Exception:
+            await asyncio.sleep(0.5)
+            continue
+        if not any(m in title or m in body for m in _CHALLENGE_MARKERS):
+            return
+        await asyncio.sleep(1.0)
+    log.debug("anti-bot challenge did not clear within budget")
+
+
 async def _scroll_to_bottom(page, max_steps: int = 40) -> None:
     """Scroll the page to trigger lazy-loaded content, then return to top."""
     previous = -1
@@ -99,7 +130,10 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
         raise OutputError(f"Output directory not writable: {output_dir}")
     try:
         await page.emulate_media(media="screen")
-        await page.goto(url, wait_until="networkidle", timeout=settings.timeout_ms)
+        await page.goto(url, wait_until="domcontentloaded", timeout=settings.timeout_ms)
+        # Sit through any anti-bot interstitial, then wait for the real page.
+        await _await_challenge_cleared(page, settings.timeout_ms)
+        await _wait_settled(page, settings.timeout_ms)
         if settings.handle_cookie_banners:
             if await dismiss_cookie_banner(page):
                 # Accepting can reload the page or load deferred content; wait

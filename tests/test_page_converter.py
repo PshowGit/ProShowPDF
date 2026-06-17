@@ -40,6 +40,9 @@ def test_compute_pdf_dimensions_clamps_tall_pages_within_limit():
 async def test_convert_page_measures_height_and_calls_pdf(tmp_path):
     page = AsyncMock()
     page.title = AsyncMock(return_value="Hello")
+    # Real body text with no anti-bot markers, so the challenge wait returns at
+    # once instead of treating the mock's default return as a challenge page.
+    page.inner_text = AsyncMock(return_value="hello world")
 
     # The mock distinguishes height-measuring evaluate() calls (the JS contains
     # "scrollHeight") from scroll calls (scrollBy/scrollTo), which return None.
