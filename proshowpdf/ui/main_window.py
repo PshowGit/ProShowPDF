@@ -14,7 +14,7 @@ from PySide6.QtWidgets import (
 from proshowpdf.bridge.controller import ConversionController
 from proshowpdf.core.models import ConversionSettings, JobResult
 from proshowpdf.persistence.settings_store import SettingsStore
-from proshowpdf.ui.animations import fade_in, slide_fade_in
+from proshowpdf.ui.animations import cross_fade_swap, fade_in, slide_fade_in
 from proshowpdf.ui.theme import apply_theme
 from proshowpdf.ui.widgets.card import Card
 from proshowpdf.ui.widgets.options_panel import OptionsPanel
@@ -202,11 +202,13 @@ class MainWindow(QMainWindow):
         self._theme_btn.setText(f"{icon}  {label}")
 
     def _toggle_theme(self) -> None:
-        self._theme = "light" if self._theme == "dark" else "dark"
-        apply_theme(QApplication.instance(), self._theme)
-        self._update_theme_btn_text()
-        self._store.save_theme(self._theme)
-        fade_in(self.centralWidget(), duration_ms=200)
+        def swap() -> None:
+            self._theme = "light" if self._theme == "dark" else "dark"
+            apply_theme(QApplication.instance(), self._theme)
+            self._update_theme_btn_text()
+            self._store.save_theme(self._theme)
+
+        cross_fade_swap(self.centralWidget(), swap)
 
     def closeEvent(self, event) -> None:  # noqa: N802 — Qt override
         self._controller.shutdown()

@@ -1,10 +1,12 @@
 """Lightweight QPropertyAnimation helpers for micro-interactions."""
 from __future__ import annotations
 
+from collections.abc import Callable
+
 from PySide6.QtCore import (
     QEasingCurve, QParallelAnimationGroup, QPoint, QPropertyAnimation,
 )
-from PySide6.QtWidgets import QGraphicsOpacityEffect, QWidget
+from PySide6.QtWidgets import QGraphicsOpacityEffect, QLabel, QWidget
 
 
 def fade_in(widget: QWidget, duration_ms: int = 250) -> QPropertyAnimation:
@@ -46,3 +48,33 @@ def slide_fade_in(
     group.addAnimation(slide)
     group.start(QParallelAnimationGroup.DeletionPolicy.DeleteWhenStopped)
     return group
+
+
+def cross_fade_swap(
+    widget: QWidget, swap: Callable[[], None], duration_ms: int = 300
+) -> QPropertyAnimation:
+    """Cross-fade a widget through a visual change (e.g. a theme switch).
+
+    Snapshots the widget's current pixels into an overlay, runs ``swap`` to
+    apply the change underneath, then fades the snapshot out to reveal the new
+    look — so the transition dissolves smoothly instead of flashing.
+    """
+    snapshot = widget.grab()
+    overlay = QLabel(widget)
+    overlay.setPixmap(snapshot)
+    overlay.setGeometry(widget.rect())
+    overlay.show()
+    overlay.raise_()
+
+    swap()
+
+    effect = QGraphicsOpacityEffect(overlay)
+    overlay.setGraphicsEffect(effect)
+    anim = QPropertyAnimation(effect, b"opacity", overlay)
+    anim.setDuration(duration_ms)
+    anim.setStartValue(1.0)
+    anim.setEndValue(0.0)
+    anim.setEasingCurve(QEasingCurve.Type.InOutCubic)
+    anim.finished.connect(overlay.deleteLater)
+    anim.start(QPropertyAnimation.DeletionPolicy.DeleteWhenStopped)
+    return anim
