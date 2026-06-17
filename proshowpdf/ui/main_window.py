@@ -49,9 +49,10 @@ class MainWindow(QMainWindow):
         # Top bar: theme button in top-right
         top_bar = QHBoxLayout()
         top_bar.addStretch()
-        self._theme_btn = QPushButton("🌙 Tema")
+        self._theme_btn = QPushButton()
         self._theme_btn.setObjectName("secondary")
         self._theme_btn.setFixedWidth(110)
+        self._update_theme_btn_text()
         self._theme_btn.setFixedHeight(36)
         top_bar.addWidget(self._theme_btn)
         root.addLayout(top_bar)
@@ -130,9 +131,14 @@ class MainWindow(QMainWindow):
         self._progress.reset(0)
         self._results.set_enabled(False)
 
+    def _update_theme_btn_text(self) -> None:
+        icon = "☀️" if self._theme == "dark" else "🌙"
+        self._theme_btn.setText(f"{icon} Tema")
+
     def _toggle_theme(self) -> None:
         self._theme = "light" if self._theme == "dark" else "dark"
         apply_theme(QApplication.instance(), self._theme)
+        self._update_theme_btn_text()
         self._store.save_theme(self._theme)
 
     def closeEvent(self, event) -> None:  # noqa: N802 — Qt override

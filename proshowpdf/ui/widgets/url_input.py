@@ -147,7 +147,7 @@ class UrlInput(QWidget):
 
         row = QHBoxLayout()
         self._url_counter = QLabel("URL caricate: 0")
-        self._url_counter.setStyleSheet("color: #666; font-size: 12px;")
+        self._url_counter.setStyleSheet("color: #333; font-size: 14px; font-weight: bold;")
         row.addWidget(self._url_counter)
         row.addStretch()
         import_btn = QPushButton("Importa da file…")
