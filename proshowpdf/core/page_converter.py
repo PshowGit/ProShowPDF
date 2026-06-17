@@ -38,9 +38,34 @@ _SCROLL_STEP_JS = "window.scrollBy(0, window.innerHeight)"
 _SCROLL_TOP_JS = "window.scrollTo(0, 0)"
 
 
+# PDF pages cannot exceed 200 inches (14400 pt) per side or viewers like Adobe
+# Reader treat the file as damaged. Stay just under to absorb rounding.
+_MAX_PDF_INCHES = 199.0
+_CSS_PX_PER_INCH = 96.0
+
+
 def compute_pdf_height(measured: int, min_height: int) -> int:
     """Clamp a measured scrollHeight to at least `min_height`."""
     return max(int(measured), min_height)
+
+
+def compute_pdf_dimensions(
+    measured: int, width_px: int, min_height: int
+) -> tuple[str, str]:
+    """Return (width, height) strings for page.pdf, scaled to stay within the
+    PDF 200-inch page limit so tall pages don't produce 'corrupted' files.
+
+    Chrome lays the page out at the browser viewport width and scales that
+    rendering to the paper size, so shrinking both paper dimensions by the same
+    factor keeps the whole page on one valid page, just at a smaller scale.
+    """
+    height = compute_pdf_height(measured, min_height)
+    height_in = height / _CSS_PX_PER_INCH
+    if height_in <= _MAX_PDF_INCHES:
+        return f"{width_px}px", f"{height}px"
+    scale = _MAX_PDF_INCHES / height_in
+    scaled_width_in = (width_px / _CSS_PX_PER_INCH) * scale
+    return f"{scaled_width_in}in", f"{_MAX_PDF_INCHES}in"
 
 
 async def _scroll_to_bottom(page, max_steps: int = 40) -> None:
@@ -73,7 +98,9 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
             log.debug("fonts.ready timed out for %s", url)
 
         measured = await page.evaluate(_HEIGHT_JS)
-        height = compute_pdf_height(measured, settings.min_height_px)
+        pdf_width, pdf_height = compute_pdf_dimensions(
+            measured, settings.width_px, settings.min_height_px
+        )
 
         if custom_filename:
             from .naming import sanitize_filename
@@ -87,8 +114,8 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
 
         await page.pdf(
             path=str(target),
-            width=f"{settings.width_px}px",
-            height=f"{height}px",
+            width=pdf_width,
+            height=pdf_height,
             print_background=True,
             margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
             scale=1.0,

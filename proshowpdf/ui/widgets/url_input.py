@@ -13,6 +13,14 @@ from PySide6.QtWidgets import (
 from proshowpdf.core.url_utils import parse_urls, normalize_url
 
 
+def _cell_to_str(value: object) -> str:
+    """Stringify an Excel cell, dropping the trailing '.0' that openpyxl/xlrd
+    add to whole numbers (a numeric filename like 98888 reads back as 98888.0)."""
+    if isinstance(value, float) and value.is_integer():
+        return str(int(value))
+    return str(value)
+
+
 class DragDropPlainText(QPlainTextEdit):
     """PlainTextEdit with drag-and-drop for txt/csv/xlsx files."""
 
@@ -71,13 +79,13 @@ class DragDropPlainText(QPlainTextEdit):
             for row_idx, row in enumerate(ws.iter_rows(min_col=1, max_col=2, values_only=True)):
                 url = row[0]
                 custom_name = row[1] if len(row) > 1 else None
-                if url:
-                    url_str = str(url).strip()
+                if url is not None and str(url).strip():
+                    url_str = _cell_to_str(url).strip()
                     if url_str.lower() != "url":
                         normalized_url = normalize_url(url_str)
                         lines.append(url_str)
-                        if custom_name:
-                            custom_name_str = str(custom_name).strip()
+                        if custom_name is not None and str(custom_name).strip():
+                            custom_name_str = _cell_to_str(custom_name).strip()
                             if custom_name_str.lower() not in ("name", "filename"):
                                 custom_names[normalized_url] = custom_name_str
             return "\n".join(lines), custom_names
@@ -96,13 +104,13 @@ class DragDropPlainText(QPlainTextEdit):
             for row_num in range(sheet.nrows):
                 url = sheet.cell_value(row_num, 0)
                 custom_name = sheet.cell_value(row_num, 1) if sheet.ncols > 1 else None
-                if url:
-                    url_str = str(url).strip()
+                if url is not None and str(url).strip():
+                    url_str = _cell_to_str(url).strip()
                     if url_str.lower() != "url":
                         normalized_url = normalize_url(url_str)
                         lines.append(url_str)
-                        if custom_name:
-                            custom_name_str = str(custom_name).strip()
+                        if custom_name is not None and str(custom_name).strip():
+                            custom_name_str = _cell_to_str(custom_name).strip()
                             if custom_name_str.lower() not in ("name", "filename"):
                                 custom_names[normalized_url] = custom_name_str
             return "\n".join(lines), custom_names

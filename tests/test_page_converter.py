@@ -3,7 +3,11 @@ from unittest.mock import AsyncMock
 import pytest
 
 from proshowpdf.core.models import ConversionSettings
-from proshowpdf.core.page_converter import compute_pdf_height, convert_page
+from proshowpdf.core.page_converter import (
+    compute_pdf_dimensions,
+    compute_pdf_height,
+    convert_page,
+)
 
 
 def test_compute_pdf_height_uses_measured_value():
@@ -13,6 +17,23 @@ def test_compute_pdf_height_uses_measured_value():
 def test_compute_pdf_height_enforces_minimum():
     assert compute_pdf_height(0, min_height=100) == 100
     assert compute_pdf_height(-5, min_height=100) == 100
+
+
+def test_compute_pdf_dimensions_passes_through_short_pages():
+    # A page well under 200in keeps native px dimensions.
+    assert compute_pdf_dimensions(1500, width_px=1280, min_height=100) == (
+        "1280px",
+        "1500px",
+    )
+
+
+def test_compute_pdf_dimensions_clamps_tall_pages_within_limit():
+    # 31105px == 324in, over the 200in PDF page limit -> scaled to 199in.
+    width, height = compute_pdf_dimensions(31105, width_px=1280, min_height=100)
+    assert height == "199.0in"
+    # Width scales by the same factor so the whole page stays on one page.
+    assert width.endswith("in")
+    assert float(width[:-2]) < 1280 / 96
 
 
 @pytest.mark.asyncio
