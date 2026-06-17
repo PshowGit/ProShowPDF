@@ -10,7 +10,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from proshowpdf.core.url_utils import parse_urls
+from proshowpdf.core.url_utils import parse_urls, normalize_url
 
 
 class DragDropPlainText(QPlainTextEdit):
@@ -74,11 +74,12 @@ class DragDropPlainText(QPlainTextEdit):
                 if url:
                     url_str = str(url).strip()
                     if url_str.lower() != "url":
+                        normalized_url = normalize_url(url_str)
                         lines.append(url_str)
                         if custom_name:
                             custom_name_str = str(custom_name).strip()
                             if custom_name_str.lower() not in ("name", "filename"):
-                                custom_names[url_str] = custom_name_str
+                                custom_names[normalized_url] = custom_name_str
             return "\n".join(lines), custom_names
         except ImportError:
             text = path.read_text(encoding="utf-8", errors="ignore")
@@ -98,11 +99,12 @@ class DragDropPlainText(QPlainTextEdit):
                 if url:
                     url_str = str(url).strip()
                     if url_str.lower() != "url":
+                        normalized_url = normalize_url(url_str)
                         lines.append(url_str)
                         if custom_name:
                             custom_name_str = str(custom_name).strip()
                             if custom_name_str.lower() not in ("name", "filename"):
-                                custom_names[url_str] = custom_name_str
+                                custom_names[normalized_url] = custom_name_str
             return "\n".join(lines), custom_names
         except ImportError:
             text = path.read_text(encoding="utf-8", errors="ignore")
@@ -127,11 +129,12 @@ class DragDropPlainText(QPlainTextEdit):
                         continue
                     url = row[0].strip()
                     if url.lower() != "url":
+                        normalized_url = normalize_url(url)
                         lines.append(url)
                         if len(row) > 1:
                             custom_name = row[1].strip()
                             if custom_name.lower() not in ("name", "filename"):
-                                custom_names[url] = custom_name
+                                custom_names[normalized_url] = custom_name
             return "\n".join(lines), custom_names
         except Exception:
             text = path.read_text(encoding="utf-8", errors="ignore")
