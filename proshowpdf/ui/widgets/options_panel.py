@@ -51,19 +51,21 @@ class OptionsPanel(QWidget):
         self._conflict.setMinimumWidth(112)
         self._conflict.setToolTip("Cosa fare se un file con lo stesso nome esiste già")
 
-        # Two label/field pairs per row.
-        self._add_field(grid, 0, 0, "Larghezza PDF", self._width)
-        self._add_field(grid, 0, 2, "Conversioni parallele", self._concurrency)
-        self._add_field(grid, 1, 0, "Timeout per pagina", self._timeout)
-        self._add_field(grid, 1, 2, "Tentativi (retry)", self._retries)
-        self._add_field(grid, 2, 0, "Conflitti file", self._conflict)
+        # Two label/field pairs per row. Fields live in rows 1-4 with elastic
+        # rows above and below, so the block centers vertically and stays
+        # balanced against the taller URL card beside it.
+        self._add_field(grid, 1, 0, "Larghezza PDF", self._width)
+        self._add_field(grid, 1, 2, "Conversioni parallele", self._concurrency)
+        self._add_field(grid, 2, 0, "Timeout per pagina", self._timeout)
+        self._add_field(grid, 2, 2, "Tentativi (retry)", self._retries)
+        self._add_field(grid, 3, 0, "Conflitti file", self._conflict)
 
         self._cookies = QCheckBox("Chiudi banner cookie")
         self._cookies.setToolTip("Prova a chiudere automaticamente i banner di consenso")
-        grid.addWidget(self._cookies, 2, 2, 1, 2)
+        grid.addWidget(self._cookies, 3, 2, 1, 2)
 
         out_label = QLabel("Cartella output")
-        grid.addWidget(out_label, 3, 0)
+        grid.addWidget(out_label, 4, 0)
         out_row = QHBoxLayout()
         out_row.setSpacing(8)
         self._output = QLineEdit()
@@ -75,11 +77,10 @@ class OptionsPanel(QWidget):
         browse.clicked.connect(self._pick_output)
         out_row.addWidget(self._output)
         out_row.addWidget(browse)
-        grid.addLayout(out_row, 3, 1, 1, 3)
+        grid.addLayout(out_row, 4, 1, 1, 3)
 
-        # Absorb spare vertical space below the fields so they stay top-aligned
-        # when the options card is as tall as the URL card beside it.
-        grid.setRowStretch(4, 1)
+        grid.setRowStretch(0, 1)
+        grid.setRowStretch(5, 1)
 
     @staticmethod
     def _add_field(grid: QGridLayout, row: int, col: int, label: str, field: QWidget) -> None:

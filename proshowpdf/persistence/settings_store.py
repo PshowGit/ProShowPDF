@@ -38,7 +38,7 @@ class SettingsStore:
         qs.setValue("conflict", s.conflict_policy.value)
 
     def load_theme(self) -> str:
-        return self._qs.value("theme", "dark", str)
+        return self._qs.value("theme", "light", str)
 
     def save_theme(self, theme: str) -> None:
         self._qs.setValue("theme", theme)
