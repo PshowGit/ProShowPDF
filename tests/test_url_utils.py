@@ -16,6 +16,14 @@ def test_is_valid_url():
     assert not is_valid_url("not a url")
     assert not is_valid_url("")
     assert not is_valid_url("ftp://example.com")
+    # A host with whitespace (the typical "two words" typo) is rejected even
+    # after a scheme is prepended, so it is not silently accepted as a host.
+    assert not is_valid_url("https://not a url")
+
+
+def test_parse_urls_drops_lines_with_whitespace_hosts():
+    text = "example.com\nnot a url\nhttps://b.com"
+    assert parse_urls(text) == ["https://example.com", "https://b.com"]
 
 
 def test_parse_urls_dedups_and_skips_blanks_and_comments():

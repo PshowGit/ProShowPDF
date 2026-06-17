@@ -4,13 +4,15 @@ from __future__ import annotations
 from pathlib import Path
 
 from PySide6.QtCore import Qt, Signal
-from PySide6.QtGui import QDragEnterEvent, QDropEvent
+from PySide6.QtGui import (
+    QColor, QDragEnterEvent, QDropEvent, QSyntaxHighlighter, QTextCharFormat,
+)
 from PySide6.QtWidgets import (
     QFileDialog, QHBoxLayout, QLabel, QPlainTextEdit, QPushButton, QVBoxLayout,
     QWidget,
 )
 
-from proshowpdf.core.url_utils import parse_urls, normalize_url
+from proshowpdf.core.url_utils import is_valid_url, normalize_url, parse_urls
 
 
 def _cell_to_str(value: object) -> str:
@@ -19,6 +21,33 @@ def _cell_to_str(value: object) -> str:
     if isinstance(value, float) and value.is_integer():
         return str(int(value))
     return str(value)
+
+
+def _line_is_invalid(line: str) -> bool:
+    """A line counts as invalid only when it carries content that cannot become
+    a URL. Blank lines and '#' comments are skipped (not flagged)."""
+    stripped = line.strip()
+    if not stripped or stripped.startswith("#"):
+        return False
+    cell = stripped.split(",", 1)[0].split(";", 1)[0].strip()
+    if cell.lower() == "url":
+        return False
+    return not is_valid_url(normalize_url(cell))
+
+
+class UrlHighlighter(QSyntaxHighlighter):
+    """Underlines invalid URL lines in red as the user types."""
+
+    def __init__(self, document) -> None:
+        super().__init__(document)
+        self._fmt = QTextCharFormat()
+        self._fmt.setUnderlineStyle(QTextCharFormat.UnderlineStyle.WaveUnderline)
+        self._fmt.setUnderlineColor(QColor("#ff6b6b"))
+        self._fmt.setForeground(QColor("#ff8585"))
+
+    def highlightBlock(self, text: str) -> None:
+        if _line_is_invalid(text):
+            self.setFormat(0, len(text), self._fmt)
 
 
 class DragDropPlainText(QPlainTextEdit):
@@ -163,6 +192,7 @@ class UrlInput(QWidget):
             "https://example.com\nexample.org/page\n\n…oppure trascina qui un file txt / csv / xlsx"
         )
         self._editor.setMinimumHeight(150)
+        self._highlighter = UrlHighlighter(self._editor.document())
         self._editor.textChanged.connect(self._update_counter)
         layout.addWidget(self._editor)
 
@@ -186,11 +216,21 @@ class UrlInput(QWidget):
             self._editor._load_file(Path(path))
 
     def _update_counter(self) -> None:
-        """Update URL counter display."""
-        text = self._editor.toPlainText()
-        url_count = len([l for l in text.split("\n") if l.strip()])
-        suffix = "URL caricata" if url_count == 1 else "URL caricate"
-        self._url_counter.setText(f"{url_count} {suffix}")
+        """Update URL counter: how many lines are valid vs. need fixing."""
+        valid = len(self.urls())
+        invalid = sum(
+            1 for line in self._editor.toPlainText().splitlines()
+            if _line_is_invalid(line)
+        )
+        suffix = "URL valida" if valid == 1 else "URL valide"
+        text = f"{valid} {suffix}"
+        if invalid:
+            plural = "riga" if invalid == 1 else "righe"
+            text += (
+                f"<span style='color:#ff6b6b'>"
+                f"&nbsp;&nbsp;·&nbsp;&nbsp;{invalid} {plural} da correggere</span>"
+            )
+        self._url_counter.setText(text)
 
     def urls(self) -> list[str]:
         """Return normalized, validated, de-duplicated URLs."""

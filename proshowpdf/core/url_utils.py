@@ -17,12 +17,19 @@ def normalize_url(raw: str) -> str:
 
 
 def is_valid_url(raw: str) -> bool:
-    """True for syntactically valid http(s) URLs with a network location."""
+    """True for syntactically valid http(s) URLs with a network location.
+
+    The host must be non-empty and whitespace-free, so a typo like "not a url"
+    (which would otherwise normalize to "https://not a url") is rejected rather
+    than silently treated as a host.
+    """
     try:
         parsed = urlparse(raw)
     except ValueError:
         return False
-    return parsed.scheme in _ALLOWED_SCHEMES and bool(parsed.netloc)
+    if parsed.scheme not in _ALLOWED_SCHEMES or not parsed.netloc:
+        return False
+    return not any(ch.isspace() for ch in parsed.netloc)
 
 
 def parse_urls(text: str) -> list[str]:
