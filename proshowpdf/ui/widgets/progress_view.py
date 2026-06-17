@@ -76,6 +76,8 @@ class ProgressView(QWidget):
         item.setData(_DATA_ROLE, (result.status, result.url, result.output_path))
         if result.status is JobStatus.ERROR:
             item.setToolTip("Doppio clic per aprire l'URL nel browser e diagnosticare")
+        elif result.status is JobStatus.DONE and result.output_path:
+            item.setToolTip("Doppio clic per aprire il PDF")
         else:
             item.setToolTip("")
         if result.status is JobStatus.RUNNING:
@@ -87,10 +89,12 @@ class ProgressView(QWidget):
         self._counter.setText(f"{completed} / {total}  ·  {pct}%")
 
     def _on_item_activated(self, item: QListWidgetItem) -> None:
-        """Double-clicking a failed row opens its URL in the default browser."""
+        """Double-clicking a row opens the PDF (success) or the URL (error)."""
         data = item.data(_DATA_ROLE)
         if not data:
             return
-        status, url, _output_path = data
-        if status is JobStatus.ERROR and url:
+        status, url, output_path = data
+        if status is JobStatus.DONE and output_path:
+            QDesktopServices.openUrl(QUrl.fromLocalFile(output_path))
+        elif status is JobStatus.ERROR and url:
             QDesktopServices.openUrl(QUrl(url))
