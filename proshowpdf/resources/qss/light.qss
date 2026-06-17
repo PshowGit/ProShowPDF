@@ -1,35 +1,35 @@
 /* ===================================================================
-   ProShow PDF — Light theme  ·  "Aurora Pro" (Violet → Blue)
+   ProShow PDF — Light theme  ·  "Aurora Pro" warm (cream + violet→blue)
    Design tokens
-     bg base      #eef0f6      surface     #ffffff / #f6f8fd
-     border       #dce1ee      border-hi   #c2cbe0
-     accent       #6d5cff  →   #4a7cff     (gradient)
-     text         #14182a      muted       #5a6588
+     bg base      #f3f1ea      surface     #fffdf8 / #faf7f0
+     border       #e6e0d3      border-hi   #cfc7b6
+     accent       #6d5cff  →   #4a7cff     (gradient, cool)
+     text         #221f18      muted       #6e685b
    =================================================================== */
 
 * {
     font-family: "Segoe UI", "Inter", sans-serif;
     font-size: 14px;
-    color: #14182a;
+    color: #221f18;
 }
 
-QWidget { background-color: #eef0f6; }
+QWidget { background-color: #f3f1ea; }
 
 /* ---- App identity ---------------------------------------------------- */
 QLabel#appTitle {
     font-size: 22px;
     font-weight: 800;
-    color: #0f1426;
+    color: #161309;
 }
 QLabel#appSubtitle {
     font-size: 13px;
-    color: #5a6588;
+    color: #6e685b;
 }
 
 /* ---- Section cards --------------------------------------------------- */
 QFrame#card {
-    background-color: #ffffff;
-    border: 1px solid #dce1ee;
+    background-color: #fffdf8;
+    border: 1px solid #e6e0d3;
     border-radius: 16px;
 }
 QLabel#sectionTitle {
@@ -39,7 +39,7 @@ QLabel#sectionTitle {
     letter-spacing: 1px;
 }
 QLabel#hint, QLabel#fieldHint {
-    color: #6c769a;
+    color: #6e685b;
     font-size: 12px;
 }
 QLabel#counter {
@@ -49,7 +49,7 @@ QLabel#counter {
 }
 QLabel#emptyIcon {
     font-size: 40px;
-    color: #c2cbe0;
+    color: #cfc7b6;
 }
 QLabel#emptyTitle {
     font-size: 15px;
@@ -59,39 +59,39 @@ QLabel#emptyTitle {
 
 /* ---- Inputs ---------------------------------------------------------- */
 QLineEdit, QPlainTextEdit, QSpinBox, QComboBox {
-    background: #f6f8fd;
-    border: 1px solid #dce1ee;
+    background: #faf7f0;
+    border: 1px solid #e6e0d3;
     border-radius: 10px;
     padding: 9px 12px;
     min-height: 20px;
-    color: #14182a;
+    color: #221f18;
     selection-background-color: #5a6cff;
     selection-color: #ffffff;
 }
 QLineEdit:hover, QPlainTextEdit:hover, QSpinBox:hover, QComboBox:hover {
-    border: 1px solid #c2cbe0;
+    border: 1px solid #cfc7b6;
 }
 QLineEdit:focus, QPlainTextEdit:focus, QSpinBox:focus, QComboBox:focus {
     border: 1px solid #5a6cff;
-    background: #ffffff;
+    background: #fffdf8;
 }
 QLineEdit:disabled, QPlainTextEdit:disabled, QSpinBox:disabled, QComboBox:disabled {
-    color: #9aa1bd; background: #e8ebf3; border: 1px solid #d9dded;
+    color: #a59f90; background: #ebe7dd; border: 1px solid #ddd6c7;
 }
 
 /* Drop zone: dashed at rest, glows violet while a file hovers over it. */
 QPlainTextEdit#dropZone {
-    border: 2px dashed #d3d8ea;
+    border: 2px dashed #ddd6c7;
 }
-QPlainTextEdit#dropZone:hover { border: 2px dashed #c2cbe0; }
+QPlainTextEdit#dropZone:hover { border: 2px dashed #cfc7b6; }
 QPlainTextEdit#dropZone[dragActive="true"] {
     border: 2px dashed #5a6cff;
-    background: #f0f2ff;
+    background: #f1efff;
 }
 
 QComboBox::drop-down { border: none; width: 28px; }
 QComboBox QAbstractItemView {
-    background: #ffffff; border: 1px solid #dce1ee; color: #14182a;
+    background: #fffdf8; border: 1px solid #e6e0d3; color: #221f18;
     border-radius: 8px; padding: 4px;
     selection-background-color: #5a6cff; selection-color: #ffffff; outline: none;
 }
@@ -116,41 +116,41 @@ QPushButton:pressed {
     background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
                 stop:0 #5b4ce6, stop:1 #3d6ae6);
 }
-QPushButton:disabled { background: #d2d7e8; color: #969db8; }
+QPushButton:disabled { background: #e0dacd; color: #a89f8b; }
 
 /* ---- Secondary button (quiet, outlined) ------------------------------ */
 QPushButton#secondary {
-    background: #ffffff;
-    border: 1px solid #d2d8ea;
-    color: #353a66;
+    background: #fffdf8;
+    border: 1px solid #ddd6c7;
+    color: #4a4636;
     font-weight: 600;
 }
 QPushButton#secondary:hover {
-    background: #f2f4fc;
-    border: 1px solid #c2cbe0;
+    background: #f5f1e8;
+    border: 1px solid #cfc7b6;
 }
-QPushButton#secondary:pressed { background: #e9ecf8; }
+QPushButton#secondary:pressed { background: #efe9dc; }
 QPushButton#secondary:disabled {
-    background: #f1f3f9; border: 1px solid #e0e4f0; color: #a8aec6;
+    background: #f1ede3; border: 1px solid #e6e0d3; color: #b3ab99;
 }
 
 /* ---- Ghost button (theme toggle, minimal chrome) --------------------- */
 QPushButton#ghost {
     background: transparent;
-    border: 1px solid #d2d8ea;
+    border: 1px solid #ddd6c7;
     border-radius: 10px;
-    color: #353a66;
+    color: #4a4636;
     font-weight: 600;
     padding: 8px 14px;
 }
 QPushButton#ghost:hover {
-    background: #ffffff;
-    border: 1px solid #c2cbe0;
+    background: #fffdf8;
+    border: 1px solid #cfc7b6;
 }
 
 /* ---- Progress bar (gradient chunk) ----------------------------------- */
 QProgressBar {
-    border: none; border-radius: 9px; background: #e2e6f2; height: 12px;
+    border: none; border-radius: 9px; background: #e9e4d8; height: 12px;
     text-align: center; color: transparent;
 }
 QProgressBar::chunk {
@@ -161,8 +161,8 @@ QProgressBar::chunk {
 
 /* ---- Lists ----------------------------------------------------------- */
 QListWidget {
-    background: #f6f8fd;
-    border: 1px solid #dce1ee;
+    background: #faf7f0;
+    border: 1px solid #e6e0d3;
     border-radius: 12px;
     padding: 4px;
     outline: none;
@@ -172,16 +172,16 @@ QListWidget::item {
     border-radius: 8px;
     margin: 1px 2px;
 }
-QListWidget::item:hover { background: #eef1fb; }
-QListWidget::item:selected { background: #dde2ff; color: #14182a; }
+QListWidget::item:hover { background: #f3eee3; }
+QListWidget::item:selected { background: #e7e3ff; color: #221f18; }
 
 /* ---- Checkbox -------------------------------------------------------- */
 QCheckBox { spacing: 9px; }
 QCheckBox::indicator {
     width: 19px; height: 19px;
     border-radius: 6px;
-    border: 1px solid #c2cbe0;
-    background: #ffffff;
+    border: 1px solid #cfc7b6;
+    background: #faf7f0;
 }
 QCheckBox::indicator:hover { border: 1px solid #5a6cff; }
 QCheckBox::indicator:checked {
@@ -195,14 +195,14 @@ QScrollBar:vertical {
     background: transparent; width: 10px; margin: 2px;
 }
 QScrollBar::handle:vertical {
-    background: #c8cee2; border-radius: 5px; min-height: 28px;
+    background: #d2cbbb; border-radius: 5px; min-height: 28px;
 }
-QScrollBar::handle:vertical:hover { background: #c2cbe0; }
+QScrollBar::handle:vertical:hover { background: #cfc7b6; }
 QScrollBar::add-line, QScrollBar::sub-line { height: 0; }
 QScrollBar::add-page, QScrollBar::sub-page { background: transparent; }
 
 /* ---- Tooltip --------------------------------------------------------- */
 QToolTip {
-    background: #14182a; color: #ffffff;
+    background: #221f18; color: #ffffff;
     border: none; border-radius: 6px; padding: 6px 9px;
 }
