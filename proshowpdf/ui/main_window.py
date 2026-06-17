@@ -4,11 +4,11 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
-from PySide6.QtCore import Qt, QSize
+from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon, QPixmap
 from PySide6.QtWidgets import (
-    QApplication, QFrame, QHBoxLayout, QLabel, QMainWindow, QMessageBox,
-    QPushButton, QScrollArea, QVBoxLayout, QWidget,
+    QApplication, QHBoxLayout, QLabel, QMainWindow, QMessageBox,
+    QPushButton, QVBoxLayout, QWidget,
 )
 
 from proshowpdf.bridge.controller import ConversionController
@@ -37,8 +37,8 @@ class MainWindow(QMainWindow):
         icon_path = _RESOURCES / "ProShowPDF.ico"
         if icon_path.exists():
             self.setWindowIcon(QIcon(str(icon_path)))
-        self.resize(960, 980)
-        self.setMinimumWidth(640)
+        self.resize(1000, 820)
+        self.setMinimumSize(880, 680)
 
         self._url_input = UrlInput()
         self._options = OptionsPanel()
@@ -48,43 +48,39 @@ class MainWindow(QMainWindow):
         default_out = str(Path.home() / "Documents")
         self._options.load(store.load_settings(default_out))
 
-        # ---- Scrollable content column so the layout stays usable when the
-        # window is short or the result list grows. -----------------------
-        content = QWidget()
-        root = QVBoxLayout(content)
-        root.setContentsMargins(28, 24, 28, 28)
-        root.setSpacing(18)
+        # Everything fits in one window — no scrolling. The activity card at the
+        # bottom absorbs spare vertical space so the layout breathes on resize.
+        central = QWidget()
+        root = QVBoxLayout(central)
+        root.setContentsMargins(24, 20, 24, 22)
+        root.setSpacing(14)
 
         root.addLayout(self._build_header())
 
+        # Two columns: URL input (primary, wider) beside the compact options.
+        top = QHBoxLayout()
+        top.setSpacing(14)
         input_card = Card(
             "URL da convertire",
-            "Uno per riga · trascina qui file txt / csv / xlsx · 2ª colonna = nome PDF",
+            "Uno per riga · trascina file txt/csv/xlsx · 2ª colonna = nome PDF",
         )
         input_card.add(self._url_input)
-        root.addWidget(input_card)
-
         options_card = Card("Opzioni di conversione")
         options_card.add(self._options)
-        root.addWidget(options_card)
+        top.addWidget(input_card, 3)
+        top.addWidget(options_card, 2)
+        root.addLayout(top)
 
         root.addLayout(self._build_actions())
 
-        self._progress_card = Card("Avanzamento")
-        self._progress_card.add(self._progress)
-        root.addWidget(self._progress_card)
+        # Progress and results share one card: the per-item list already is the
+        # results detail, so a single "activity" area avoids a redundant panel.
+        self._activity_card = Card("Avanzamento e risultati")
+        self._activity_card.add(self._progress)
+        self._activity_card.add(self._results)
+        root.addWidget(self._activity_card, 1)
 
-        self._results_card = Card("Risultati")
-        self._results_card.add(self._results)
-        root.addWidget(self._results_card)
-
-        root.addStretch()
-
-        scroll = QScrollArea()
-        scroll.setWidgetResizable(True)
-        scroll.setFrameShape(QFrame.Shape.NoFrame)
-        scroll.setWidget(content)
-        self.setCentralWidget(scroll)
+        self.setCentralWidget(central)
 
         self._wire_signals(controller)
 
@@ -166,7 +162,7 @@ class MainWindow(QMainWindow):
         self._store.save_settings(settings)
         self._results.set_enabled(False)
         self._progress.reset(len(urls))
-        slide_fade_in(self._progress_card)
+        slide_fade_in(self._activity_card)
         self._set_running(True)
         custom_filenames = self._url_input.custom_filenames()
         self._controller.start(urls, settings, custom_filenames)
@@ -179,7 +175,7 @@ class MainWindow(QMainWindow):
     def _on_finished(self, results: list[JobResult]) -> None:
         self._set_running(False)
         self._results.show_results(results, self._options.to_settings().output_dir)
-        slide_fade_in(self._results_card)
+        fade_in(self._results)
 
     def _on_failed(self, message: str) -> None:
         self._set_running(False)

@@ -1,4 +1,4 @@
-"""End-of-batch summary: error table, CSV export, open output folder."""
+"""End-of-batch summary footer: counts, CSV export, open output folder."""
 from __future__ import annotations
 
 import csv
@@ -7,69 +7,31 @@ from pathlib import Path
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
-    QFileDialog, QHBoxLayout, QLabel, QPushButton, QStackedLayout, QVBoxLayout,
-    QWidget,
+    QFileDialog, QHBoxLayout, QLabel, QPushButton, QWidget,
 )
 
 from proshowpdf.core.models import JobResult, JobStatus
 
+_IDLE_HINT = (
+    "<span style='color:#7e8aa8'>I risultati appariranno qui al termine della "
+    "conversione.</span>"
+)
+
 
 class ResultsPanel(QWidget):
-    """Summarizes a finished batch and offers CSV export / open folder."""
+    """Compact footer: a summary line plus open-folder / export-CSV actions."""
 
     def __init__(self) -> None:
         super().__init__()
-        self._stack = QStackedLayout(self)
-        self._stack.setContentsMargins(0, 0, 0, 0)
-
-        self._empty = self._build_empty_state()
-        self._content = self._build_content()
-        self._stack.addWidget(self._empty)
-        self._stack.addWidget(self._content)
-
-        self._results: list[JobResult] = []
-        self._output_dir = ""
-        self.set_enabled(False)
-
-    # ---- Views ------------------------------------------------------------
-    def _build_empty_state(self) -> QWidget:
-        page = QWidget()
-        box = QVBoxLayout(page)
-        box.setContentsMargins(0, 18, 0, 18)
-        box.setSpacing(6)
-        box.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        icon = QLabel("📄")
-        icon.setObjectName("emptyIcon")
-        icon.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        title = QLabel("Ancora nessuna conversione")
-        title.setObjectName("emptyTitle")
-        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        hint = QLabel("Aggiungi degli URL e premi “Converti” per vedere qui i risultati.")
-        hint.setObjectName("hint")
-        hint.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        hint.setWordWrap(True)
-
-        box.addWidget(icon)
-        box.addWidget(title)
-        box.addWidget(hint)
-        return page
-
-    def _build_content(self) -> QWidget:
-        page = QWidget()
-        layout = QVBoxLayout(page)
-        layout.setContentsMargins(0, 0, 0, 0)
-        layout.setSpacing(12)
-
-        self._summary = QLabel("")
-        self._summary.setWordWrap(True)
-        layout.addWidget(self._summary)
-
-        row = QHBoxLayout()
+        row = QHBoxLayout(self)
+        row.setContentsMargins(0, 0, 0, 0)
         row.setSpacing(10)
-        self._open_btn = QPushButton("Apri cartella output")
+
+        self._summary = QLabel(_IDLE_HINT)
+        self._summary.setWordWrap(True)
+        row.addWidget(self._summary, 1)
+
+        self._open_btn = QPushButton("Apri cartella")
         self._open_btn.setObjectName("secondary")
         self._open_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         self._open_btn.clicked.connect(self._open_folder)
@@ -79,16 +41,16 @@ class ResultsPanel(QWidget):
         self._export_btn.clicked.connect(self._export_csv)
         row.addWidget(self._open_btn)
         row.addWidget(self._export_btn)
-        row.addStretch()
-        layout.addLayout(row)
-        return page
 
-    # ---- State ------------------------------------------------------------
+        self._results: list[JobResult] = []
+        self._output_dir = ""
+        self.set_enabled(False)
+
     def set_enabled(self, enabled: bool) -> None:
-        """Enabled means results exist; otherwise show the empty state."""
         self._export_btn.setEnabled(enabled)
         self._open_btn.setEnabled(enabled)
-        self._stack.setCurrentWidget(self._content if enabled else self._empty)
+        if not enabled:
+            self._summary.setText(_IDLE_HINT)
 
     def show_results(self, results: list[JobResult], output_dir: str) -> None:
         self._results = results
@@ -108,7 +70,6 @@ class ResultsPanel(QWidget):
             f"<span style='color:#8fb3ac'>{len(results)} totali</span>"
             f"</span>"
         )
-        self._stack.setCurrentWidget(self._content)
         self._export_btn.setEnabled(errors > 0)
         self._open_btn.setEnabled(True)
 
