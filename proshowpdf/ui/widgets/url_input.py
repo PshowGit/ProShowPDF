@@ -155,20 +155,25 @@ class UrlInput(QWidget):
     def __init__(self) -> None:
         super().__init__()
         layout = QVBoxLayout(self)
-        layout.addWidget(QLabel("URL (uno per riga, drag-and-drop file txt/csv/xlsx)"))
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(10)
 
         self._editor = DragDropPlainText()
-        self._editor.setPlaceholderText("https://example.com\nexample.org/page\n\no trascina file txt/csv/xlsx")
+        self._editor.setPlaceholderText(
+            "https://example.com\nexample.org/page\n\n…oppure trascina qui un file txt / csv / xlsx"
+        )
+        self._editor.setMinimumHeight(150)
         self._editor.textChanged.connect(self._update_counter)
         layout.addWidget(self._editor)
 
         row = QHBoxLayout()
-        self._url_counter = QLabel("URL caricate: 0")
-        self._url_counter.setStyleSheet("color: #333; font-size: 14px; font-weight: bold;")
+        self._url_counter = QLabel("0 URL caricate")
+        self._url_counter.setObjectName("counter")
         row.addWidget(self._url_counter)
         row.addStretch()
         import_btn = QPushButton("Importa da file…")
         import_btn.setObjectName("secondary")
+        import_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         import_btn.clicked.connect(self._import_file)
         row.addWidget(import_btn)
         layout.addLayout(row)
@@ -184,7 +189,8 @@ class UrlInput(QWidget):
         """Update URL counter display."""
         text = self._editor.toPlainText()
         url_count = len([l for l in text.split("\n") if l.strip()])
-        self._url_counter.setText(f"URL caricate: {url_count}")
+        suffix = "URL caricata" if url_count == 1 else "URL caricate"
+        self._url_counter.setText(f"{url_count} {suffix}")
 
     def urls(self) -> list[str]:
         """Return normalized, validated, de-duplicated URLs."""

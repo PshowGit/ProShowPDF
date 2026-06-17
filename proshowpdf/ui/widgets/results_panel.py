@@ -5,6 +5,7 @@ import csv
 import os
 from pathlib import Path
 
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QFileDialog, QHBoxLayout, QLabel, QPushButton, QVBoxLayout, QWidget,
 )
@@ -18,19 +19,26 @@ class ResultsPanel(QWidget):
     def __init__(self) -> None:
         super().__init__()
         layout = QVBoxLayout(self)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(12)
 
-        self._summary = QLabel("")
+        self._summary = QLabel("Nessuna conversione ancora eseguita.")
+        self._summary.setObjectName("hint")
+        self._summary.setWordWrap(True)
         layout.addWidget(self._summary)
 
         row = QHBoxLayout()
-        self._export_btn = QPushButton("Esporta errori CSV")
-        self._export_btn.setObjectName("secondary")
-        self._export_btn.clicked.connect(self._export_csv)
+        row.setSpacing(10)
         self._open_btn = QPushButton("Apri cartella output")
         self._open_btn.setObjectName("secondary")
+        self._open_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         self._open_btn.clicked.connect(self._open_folder)
-        row.addWidget(self._export_btn)
+        self._export_btn = QPushButton("Esporta errori CSV")
+        self._export_btn.setObjectName("secondary")
+        self._export_btn.setCursor(Qt.CursorShape.PointingHandCursor)
+        self._export_btn.clicked.connect(self._export_csv)
         row.addWidget(self._open_btn)
+        row.addWidget(self._export_btn)
         row.addStretch()
         layout.addLayout(row)
 
@@ -47,10 +55,19 @@ class ResultsPanel(QWidget):
         self._output_dir = output_dir
         done = sum(1 for r in results if r.status is JobStatus.DONE)
         errors = sum(1 for r in results if r.status is JobStatus.ERROR)
+        ok_color = "#22d3a8" if errors == 0 else "#9fd9cf"
+        err_color = "#ff6b6b" if errors else "#7c9b95"
         self._summary.setText(
-            f"Completate: {done} — Errori: {errors} — Totale: {len(results)}"
+            f"<span style='font-size:15px'>"
+            f"<b style='color:{ok_color}'>✓ {done} completate</b>"
+            f"&nbsp;&nbsp;·&nbsp;&nbsp;"
+            f"<b style='color:{err_color}'>✗ {errors} errori</b>"
+            f"&nbsp;&nbsp;·&nbsp;&nbsp;"
+            f"<span style='color:#8fb3ac'>{len(results)} totali</span>"
+            f"</span>"
         )
-        self.set_enabled(True)
+        self._export_btn.setEnabled(errors > 0)
+        self._open_btn.setEnabled(True)
 
     def _errors(self) -> list[JobResult]:
         return [r for r in self._results if r.status is JobStatus.ERROR]
