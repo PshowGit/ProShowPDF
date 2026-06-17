@@ -95,8 +95,8 @@ class ResultsPanel(QWidget):
         self._output_dir = output_dir
         done = sum(1 for r in results if r.status is JobStatus.DONE)
         errors = sum(1 for r in results if r.status is JobStatus.ERROR)
-        ok_color = "#22d3a8" if errors == 0 else "#9fd9cf"
-        err_color = "#ff6b6b" if errors else "#7c9b95"
+        ok_color = "#8ea2ff" if errors == 0 else "#aeb9e0"
+        err_color = "#ff6b6b" if errors else "#7e8aa8"
         done_word = "completata" if done == 1 else "completate"
         err_word = "errore" if errors == 1 else "errori"
         self._summary.setText(
