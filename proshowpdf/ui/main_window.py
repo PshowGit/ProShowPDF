@@ -73,7 +73,7 @@ class MainWindow(QMainWindow):
         root.addWidget(output_card)
 
         # Conversion options collapse into an accordion below.
-        self._options_card = CollapsibleCard("Opzioni di conversione", expanded=True)
+        self._options_card = CollapsibleCard("Opzioni di conversione", expanded=False)
         self._options_card.add(self._options)
         root.addWidget(self._options_card)
 
