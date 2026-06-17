@@ -109,13 +109,19 @@ class DragDropPlainText(QPlainTextEdit):
             return text, {}
 
     def _read_csv(self, path: Path) -> tuple[str, dict[str, str]]:
-        """Read .csv file. Returns (text, custom_names_dict)."""
+        """Read .csv file. Auto-detects delimiter (comma or semicolon). Returns (text, custom_names_dict)."""
         import csv
         lines = []
         custom_names = {}
         try:
             with open(path, encoding="utf-8", errors="ignore") as f:
-                reader = csv.reader(f)
+                sample = f.read(4096)
+                f.seek(0)
+                try:
+                    delimiter = csv.Sniffer().sniff(sample, delimiters=",;").delimiter
+                except csv.Error:
+                    delimiter = ","
+                reader = csv.reader(f, delimiter=delimiter)
                 for row in reader:
                     if not row or not row[0]:
                         continue
