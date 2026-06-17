@@ -1,12 +1,17 @@
 """Real-time progress: bar, counter, current URL, per-item status list."""
 from __future__ import annotations
 
+from PySide6.QtCore import Qt, QUrl
+from PySide6.QtGui import QDesktopServices
 from PySide6.QtWidgets import (
     QHBoxLayout, QLabel, QListWidget, QListWidgetItem, QProgressBar,
     QVBoxLayout, QWidget,
 )
 
 from proshowpdf.core.models import JobResult, JobStatus
+
+# Per-item payload stored under this role so a click can act on the row.
+_DATA_ROLE = Qt.ItemDataRole.UserRole
 
 _ICONS = {
     JobStatus.QUEUED: "⏳",
@@ -43,6 +48,7 @@ class ProgressView(QWidget):
 
         self._list = QListWidget()
         self._list.setMinimumHeight(120)
+        self._list.itemDoubleClicked.connect(self._on_item_activated)
         layout.addWidget(self._list)
 
         self._rows: dict[int, QListWidgetItem] = {}
@@ -60,12 +66,18 @@ class ProgressView(QWidget):
         if result.status is JobStatus.ERROR:
             label += f"  —  {result.error_type}: {result.error_message}"
         if result.index in self._rows:
-            self._rows[result.index].setText(label)
+            item = self._rows[result.index]
+            item.setText(label)
         else:
             item = QListWidgetItem(label)
             self._rows[result.index] = item
             self._list.addItem(item)
             self._list.scrollToItem(item)
+        item.setData(_DATA_ROLE, (result.status, result.url, result.output_path))
+        if result.status is JobStatus.ERROR:
+            item.setToolTip("Doppio clic per aprire l'URL nel browser e diagnosticare")
+        else:
+            item.setToolTip("")
         if result.status is JobStatus.RUNNING:
             self._current.setText(f"In corso · {result.url}")
         elif completed == total:
@@ -73,3 +85,12 @@ class ProgressView(QWidget):
         self._bar.setValue(completed)
         pct = int(completed / total * 100) if total else 0
         self._counter.setText(f"{completed} / {total}  ·  {pct}%")
+
+    def _on_item_activated(self, item: QListWidgetItem) -> None:
+        """Double-clicking a failed row opens its URL in the default browser."""
+        data = item.data(_DATA_ROLE)
+        if not data:
+            return
+        status, url, _output_path = data
+        if status is JobStatus.ERROR and url:
+            QDesktopServices.openUrl(QUrl(url))
