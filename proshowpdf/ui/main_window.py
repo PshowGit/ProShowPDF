@@ -4,6 +4,7 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import (
     QApplication, QHBoxLayout, QMainWindow, QMessageBox, QPushButton,
     QVBoxLayout, QWidget,
@@ -29,6 +30,9 @@ class MainWindow(QMainWindow):
         self._store = store
         self._theme = store.load_theme()
         self.setWindowTitle("ProShow PDF")
+        icon_path = Path(__file__).parent.parent / "resources" / "ProShowPDF.ico"
+        if icon_path.exists():
+            self.setWindowIcon(QIcon(str(icon_path)))
         self.resize(900, 950)
 
         self._url_input = UrlInput()

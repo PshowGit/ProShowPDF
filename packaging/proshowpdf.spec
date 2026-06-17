@@ -59,5 +59,6 @@ pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 exe = EXE(
     pyz, a.scripts, [], exclude_binaries=True, name="ProShowPDF",
     console=False, target_arch="x86_64",
+    icon="..\\proshowpdf\\resources\\ProShowPDF.ico",
 )
 coll = COLLECT(exe, a.binaries, a.datas, name="ProShowPDF")
