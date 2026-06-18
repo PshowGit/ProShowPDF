@@ -1,0 +1,1947 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - link "prime day Acquista ora" [ref=e6] [cursor=pointer]:
+        - /url: /activity_prime-day-2026
+        - generic [ref=e7]:
+          - generic [ref=e8]: prime day
+          - generic [ref=e9]: Acquista ora
+      - generic [ref=e10] [cursor=pointer]: 
+    - banner [ref=e11]:
+      - generic [ref=e15]:
+        - link "K&F Concept Italiano" [ref=e17] [cursor=pointer]:
+          - /url: https://www.kentfaith.it/
+          - img "K&F Concept Italiano" [ref=e18]
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]: K&F Concept Italiano
+            - paragraph [ref=e23]: Goditi la tua vita digitale selezionata
+            - generic [ref=e24]:
+              - generic [ref=e25]:
+                - link "VISTI DI RECENTE" [ref=e27] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - list [ref=e28]:
+                  - listitem [ref=e29]:
+                    - generic [ref=e30]: VISTI DI RECENTE
+                    - button "" [ref=e31] [cursor=pointer]:
+                      - generic [ref=e32]: 
+                  - listitem [ref=e33]:
+                    - paragraph [ref=e35]: Recently Viewed list is empty.
+              - generic [ref=e36]:
+                - link "Confronta prodotto (0)" [ref=e38] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/compare
+                - list [ref=e39]:
+                  - listitem [ref=e40]:
+                    - generic [ref=e41]: Compare
+                    - button "" [ref=e42] [cursor=pointer]:
+                      - generic [ref=e43]: 
+                  - listitem [ref=e44]:
+                    - paragraph [ref=e46]: Non hai scelto nessun prodotto da comparare.
+                  - listitem:
+                    - link "Compare" [ref=e48] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/compare
+          - generic [ref=e49]:
+            - generic [ref=e52]:
+              - textbox "Cerca" [ref=e53]
+              - button "" [ref=e55] [cursor=pointer]:
+                - generic [ref=e56]: 
+            - generic [ref=e57]:
+              - text:  
+              - generic [ref=e58]:
+                - button " Hello, Sign in My Account " [ref=e59] [cursor=pointer]:
+                  - generic [ref=e60]: 
+                  - generic [ref=e61]:
+                    - paragraph [ref=e62]: Hello, Sign in
+                    - generic [ref=e63]:
+                      - text: My Account
+                      - generic [ref=e64]: 
+                - text:   
+                - generic:
+                  - generic:
+                    - generic:
+                      - heading "Accesso" [level=4]
+                      - button "":
+                        - generic: 
+                    - generic:
+                      - generic:
+                        - generic: "Indirizzo E-Mail:"
+                        - textbox "Indirizzo E-Mail:"
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: "Password:"
+                          - paragraph:
+                            - link "Password Dimenticata?":
+                              - /url: https://www.kentfaith.it/forgotten
+                        - textbox "Password"
+                    - paragraph:
+                      - button "Accesso"
+                    - paragraph:
+                      - button "Registrazione Account"
+                    - paragraph:
+                      - text: Oppure connettiti con
+                      - generic:
+                        - generic: 
+                - generic:
+                  - generic:
+                    - generic:
+                      - heading "Registrazione Account" [level=4]
+                      - button "":
+                        - generic: 
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: "Indirizzo E-Mail:"
+                          - textbox "Indirizzo E-Mail:"
+                      - generic:
+                        - generic:
+                          - generic: "Password:"
+                          - textbox "Password:"
+                      - generic:
+                        - generic:
+                          - generic: Password Confirm
+                          - textbox "Password Confirm"
+                      - generic:
+                        - generic: Newsletter Subscribe
+                        - generic: Si
+                        - generic: "No"
+                      - paragraph:
+                        - button "Continua"
+                      - paragraph:
+                        - text: Already have an Account?
+                        - generic: Log In
+              - generic [ref=e65]:
+                - button " My Cart 0" [ref=e66] [cursor=pointer]:
+                  - generic [ref=e67]: 
+                  - generic [ref=e68]:
+                    - paragraph [ref=e69]
+                    - generic [ref=e70]: My Cart
+                  - generic [ref=e71]: "0"
+                - list [ref=e72]:
+                  - listitem [ref=e73]:
+                    - generic [ref=e74]: Carrello della Spesa
+                    - button "" [ref=e75] [cursor=pointer]:
+                      - generic [ref=e76]: 
+                  - listitem [ref=e77]:
+                    - table [ref=e78]:
+                      - rowgroup [ref=e79]:
+                        - row "Il carrello è vuoto!" [ref=e80]:
+                          - cell "Il carrello è vuoto!" [ref=e81]:
+                            - paragraph [ref=e82]: Il carrello è vuoto!
+                  - listitem [ref=e83]:
+                    - generic [ref=e84]:
+                      - generic [ref=e85]:
+                        - text: Registrati/Login per acquistare, guadagnare punti
+                        - link "" [ref=e86] [cursor=pointer]:
+                          - /url: https://www.kentfaith.it/membership
+                          - generic [ref=e87]: 
+                      - button "Acquisto" [ref=e88] [cursor=pointer]
+                      - button [ref=e89] [cursor=pointer]
+                - text: 
+              - generic:
+                - text: 
+                - list [ref=e91]:
+                  - listitem [ref=e92]:
+                    - generic [ref=e93]: Preferito
+                    - button "" [ref=e94] [cursor=pointer]:
+                      - generic [ref=e95]: 
+                  - listitem [ref=e96]:
+                    - paragraph [ref=e98]: La tua lista è vuota.
+                  - listitem [ref=e99]:
+                    - generic [ref=e100]:
+                      - text: Register/Login to like, earn points
+                      - link "" [ref=e101] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/membership
+                        - generic [ref=e102]: 
+      - generic [ref=e105]:
+        - button " All" [ref=e107] [cursor=pointer]:
+          - generic [ref=e108]: 
+          - generic [ref=e109]: All
+        - list [ref=e110]:
+          - listitem [ref=e111]:
+            - link "Filtro Lente" [ref=e112] [cursor=pointer]:
+              - /url: https://www.kentfaith.it/filtro-lente
+            - text: HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT
+          - listitem [ref=e113]:
+            - link "Treppiede" [ref=e114] [cursor=pointer]:
+              - /url: https://www.kentfaith.it/treppiede
+            - text: HOT HOT HOT
+          - listitem [ref=e115]:
+            - link "Borsa Fotografia" [ref=e116] [cursor=pointer]:
+              - /url: https://www.kentfaith.it/borsa-fotografia
+            - text: HOT
+          - listitem [ref=e117]:
+            - link "Batteria Fotocamera" [ref=e118] [cursor=pointer]:
+              - /url: https://www.kentfaith.it/batteria-fotocamera
+          - listitem [ref=e119]:
+            - link "Anello adattatore" [ref=e120] [cursor=pointer]:
+              - /url: https://www.kentfaith.it/anello-adattatore
+          - listitem [ref=e121]:
+            - link "Fotocamera" [ref=e122] [cursor=pointer]:
+              - /url: https://www.kentfaith.it/fotocamera
+            - text: HOT HOT HOT HOT HOT HOT
+          - listitem [ref=e123]:
+            - link "Astronomia e ottica" [ref=e124] [cursor=pointer]:
+              - /url: https://www.kentfaith.it/astronomia-e-ottica
+            - text: HOT
+          - listitem [ref=e125]:
+            - link "Endoscopio" [ref=e126] [cursor=pointer]:
+              - /url: https://www.kentfaith.it/Endoscopio
+          - listitem [ref=e127]:
+            - link "Di più" [ref=e128] [cursor=pointer]:
+              - /url: https://www.kentfaith.it/di-più
+            - text: HOT
+          - listitem [ref=e129]:
+            - link " Deals" [ref=e130] [cursor=pointer]:
+              - /url: /specials
+              - generic [ref=e131]: 
+              - text: Deals
+    - generic [ref=e132]:
+      - list [ref=e135]:
+        - listitem [ref=e136]:
+          - link "Casa" [ref=e137] [cursor=pointer]:
+            - /url: https://www.kentfaith.it/
+        - listitem [ref=e138]:
+          - text: ">"
+          - link "Fotocamera" [ref=e139] [cursor=pointer]:
+            - /url: https://www.kentfaith.it/fotocamera
+        - listitem [ref=e140]:
+          - text: ">"
+          - link "Obiettivi Fotocamera" [ref=e141] [cursor=pointer]:
+            - /url: https://www.kentfaith.it/camera-lenses
+        - listitem [ref=e142]:
+          - text: ">"
+          - generic [ref=e143]: GW21.0016
+      - generic [ref=e145]:
+        - generic [ref=e147]:
+          - generic [ref=e149]:
+            - img "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso" [ref=e151]
+            - generic [ref=e154]:
+              - generic [ref=e155]:
+                - list:
+                  - listitem [ref=e156]:
+                    - link "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso":
+                      - /url: "#"
+                      - img "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso" [ref=e157] [cursor=pointer]
+                  - listitem [ref=e158]:
+                    - link "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso":
+                      - /url: "#"
+                      - img "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso" [ref=e159] [cursor=pointer]
+                  - listitem [ref=e160]:
+                    - link "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso":
+                      - /url: "#"
+                      - img "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso" [ref=e161] [cursor=pointer]
+                  - listitem [ref=e162]:
+                    - link "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso":
+                      - /url: "#"
+                      - img "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso" [ref=e163] [cursor=pointer]
+                  - listitem [ref=e164]:
+                    - link "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso":
+                      - /url: "#"
+                      - img "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso" [ref=e165] [cursor=pointer]
+                  - listitem [ref=e166]:
+                    - link "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso":
+                      - /url: "#"
+                      - img "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso" [ref=e167] [cursor=pointer]
+                  - listitem [ref=e168]:
+                    - link "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso":
+                      - /url: "#"
+                      - img "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso" [ref=e169] [cursor=pointer]
+              - generic:
+                - generic:
+                  - link "" [ref=e170] [cursor=pointer]:
+                    - /url: ""
+                    - generic [ref=e171]: 
+                  - link "" [ref=e172] [cursor=pointer]:
+                    - /url: ""
+                    - generic [ref=e173]: 
+            - text:  
+          - generic [ref=e174]:
+            - heading "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso" [level=1] [ref=e175]
+            - generic [ref=e176]:
+              - generic [ref=e177]:
+                - generic [ref=e179]: 
+                - generic [ref=e181]: 
+                - generic [ref=e183]: 
+                - generic [ref=e185]: 
+                - generic [ref=e187]: 
+                - text: "5"
+                - link "34 recensioni" [ref=e189] [cursor=pointer]:
+                  - /url: "#"
+              - generic [ref=e190]: "Codice Prodotto: GW21.0016"
+            - generic [ref=e191]:
+              - generic [ref=e192]: Special
+              - generic [ref=e193]: Disponibile
+              - list [ref=e195]:
+                - listitem [ref=e196]:
+                  - generic [ref=e197]: "00"
+                  - text: days
+                - listitem [ref=e198]: ":"
+                - listitem [ref=e199]:
+                  - generic [ref=e200]: "15"
+                  - text: hours
+                - listitem [ref=e201]: ":"
+                - listitem [ref=e202]:
+                  - generic [ref=e203]: "26"
+                  - text: min
+                - listitem [ref=e204]: ":"
+                - listitem [ref=e205]:
+                  - generic [ref=e206]: "39"
+                  - text: sec
+            - generic [ref=e207]:
+              - generic [ref=e208]:
+                - generic [ref=e209]: 69,99€
+                - generic [ref=e210]: 129,99€
+                - generic [ref=e211]: 46% OFF
+                - generic [ref=e212]:
+                  - text: IVA inclusa
+                  - generic [ref=e213]: 
+              - generic [ref=e214]:
+                - text: New customer gift package
+                - button "" [ref=e215] [cursor=pointer]:
+                  - generic [ref=e216]: 
+            - text:       
+            - generic [ref=e217]:
+              - generic [ref=e218]: Caratteristiche
+              - list [ref=e219]:
+                - listitem [ref=e220]: "* 【Obiettivo Telefoto Regolabile 28X per Telefono】: Il nostro obiettivo telefoto per smartphone offre una grande apertura di 450 mm e una potente magnifica di 28X. Con un semplice giro dell'anello di messa a fuoco, puoi catturare facilmente immagini chiare a chilometri di distanza senza avvicinarti, creando un effetto di profondità di campo che sfoca lo sfondo e affina il soggetto in primo piano."
+                - listitem [ref=e221]: "* 【Costruzione Metallica & Obiettivo 4K HD】: Realizzato in alluminio di grado aeronautico e vetro ottico premium, il nostro obiettivo telefoto mobile è resistente ai graffi e durevole. Cattura scatti ravvicinati e a lunga distanza senza compromettere la qualità dell'immagine — niente angoli scuri come con altri obiettivi, solo immagini fedeli alla realtà. Perfetto per foto straordinarie di ritratti, scene di viaggio, animali domestici, paesaggi, edifici e altro ancora."
+                - listitem [ref=e222]: "* 【Portatile & Doppio Utilizzo Monoculare】: Questo obiettivo zoom per iPhone è compatto e facile da trasportare e riporre. Viene fornito con una borsa protettiva per salvaguardare l'obiettivo quando non viene utilizzato. Oltre alla fotografia, funge anche da telescopio monoculare per osservare oggetti lontani, rendendolo perfetto per campeggio, eventi sportivi, osservazione della luna, birdwatching, escursioni, golf, concerti e viaggi."
+                - listitem [ref=e223]: "* 【Con Treppiede & Ampia Compatibilità】: L'obiettivo telescopico 28x per telefono viene fornito con un treppiede e un clip per telefono. Il clip può essere usato da solo o con il treppiede per foto e video stabili e senza vibrazioni. Il treppiede può essere piegato come un bastone da mano. Il clip per telefono è compatibile con il 99% degli smartphone, inclusi iPhone, Google, Samsung, OnePlus, Sony, LG e altri."
+                - listitem [ref=e224]: "* 【Regalo Perfetto con Assistenza Clienti Dedicata】: Questo obiettivo zoom per iPhone è un regalo ideale per ogni appassionato di fotografia. La tua soddisfazione è la nostra massima priorità. Per qualsiasi domanda sull'installazione o sul funzionamento, non esitare a contattare il nostro team di assistenza clienti. Siamo qui per rispondere prontamente alle tue richieste e garantire un'esperienza fluida con il prodotto."
+            - generic [ref=e225]:
+              - generic [ref=e226]: Prodotti Collegati
+              - generic [ref=e227]:
+                - generic [ref=e228]:
+                  - link "Microscopio del telefono con CPL Lens/LED Light, il migliore portatile 200X Pocket Microscopio con clip universale compatibile con iPhone/Andriod Phone- per godere Microworld per bambini e adulti" [ref=e230] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0015_microscopio-del-telefono-con-cpl-lens-led-light-il-migliore-portatile-200x-pocket-microscopio-con-cl
+                    - img "Microscopio del telefono con CPL Lens/LED Light, il migliore portatile 200X Pocket Microscopio con clip universale compatibile con iPhone/Andriod Phone- per godere Microworld per bambini e adulti" [ref=e231]
+                  - generic [ref=e232]:
+                    - link "Microscopio del telefono con CPL Lens/LED Light, il migliore portatile 200X Pocket Microscopio con clip universale compatibile con iPhone/Andriod Phone- per godere Microworld per bambini e adulti" [ref=e234] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW21.0015_microscopio-del-telefono-con-cpl-lens-led-light-il-migliore-portatile-200x-pocket-microscopio-con-cl
+                    - generic [ref=e235]: 37,99€
+                - generic [ref=e236]:
+                  - link "12x42 Binocolo professionale HD con clip per cellulare e treppiede, visione notturna in condizioni di scarsa illuminazione, binocolo leggero impermeabile" [ref=e238] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF33.057_binocolo-professionale-hd-12x42-con-clip-per-telefono-e-treppiede-visione-notturna-in-condizioni-di-scarsa-illuminazione-binocolo-leggero-impermeabile
+                    - img "12x42 Binocolo professionale HD con clip per cellulare e treppiede, visione notturna in condizioni di scarsa illuminazione, binocolo leggero impermeabile" [ref=e239]
+                  - generic [ref=e240]:
+                    - link "12x42 Binocolo professionale HD con clip per cellulare e treppiede, visione notturna in condizioni di scarsa illuminazione, binocolo leggero impermeabile" [ref=e242] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/KF33.057_binocolo-professionale-hd-12x42-con-clip-per-telefono-e-treppiede-visione-notturna-in-condizioni-di-scarsa-illuminazione-binocolo-leggero-impermeabile
+                    - generic [ref=e243]: 29,99€
+                    - generic [ref=e245]:
+                      - generic [ref=e247]: 
+                      - generic [ref=e249]: 
+                      - generic [ref=e251]: 
+                      - generic [ref=e253]: 
+                      - generic [ref=e255]: 
+                      - generic [ref=e256]: "36"
+                - generic [ref=e257]:
+                  - link "Binocolo 12*50 HD Nero BAK4, con supporto per cellulare e staffa di conversione per treppiede" [ref=e259] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF33.084_binocolo-12-50-hd-nero-bak4-con-supporto-per-cellulare-e-sta
+                    - img "Binocolo 12*50 HD Nero BAK4, con supporto per cellulare e staffa di conversione per treppiede" [ref=e260]
+                  - generic [ref=e261]:
+                    - link "Binocolo 12*50 HD Nero BAK4, con supporto per cellulare e staffa di conversione per treppiede" [ref=e263] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/KF33.084_binocolo-12-50-hd-nero-bak4-con-supporto-per-cellulare-e-sta
+                    - generic [ref=e264]: 65,99€
+                    - generic [ref=e266]:
+                      - generic [ref=e268]: 
+                      - generic [ref=e270]: 
+                      - generic [ref=e272]: 
+                      - generic [ref=e274]: 
+                      - generic [ref=e276]: 
+                      - generic [ref=e277]: "45"
+                - text: 
+          - generic [ref=e279]:
+            - generic [ref=e281]: 69,99€
+            - generic [ref=e282]:
+              - generic [ref=e283]:
+                - generic [ref=e284]: 
+                - text: Shipping
+              - generic [ref=e285]: Spedizione gratuita in Italia
+            - generic [ref=e286]:
+              - generic [ref=e287]:
+                - generic [ref=e288]: 
+                - text: Sale
+              - generic [ref=e289]:
+                - text: "⚡Buono Sconto del 15%:"
+                - text: "Codice Sconto: SPR15"
+            - generic [ref=e290]:
+              - generic [ref=e291]: Qtà
+              - generic [ref=e292]:
+                - button "" [ref=e294] [cursor=pointer]:
+                  - generic [ref=e295]: 
+                - textbox "1" [ref=e296]
+                - button "" [ref=e298] [cursor=pointer]:
+                  - generic [ref=e299]: 
+            - generic [ref=e300]:
+              - button "Acquista" [ref=e301] [cursor=pointer]
+              - button "Compra ora" [ref=e302] [cursor=pointer]
+              - button [ref=e303] [cursor=pointer]
+            - generic [ref=e308] [cursor=pointer]:
+              - generic [ref=e309]: 
+              - text: Transazione sicura
+            - generic [ref=e310]:
+              - generic [ref=e311]: Accessories
+              - generic [ref=e312]:
+                - generic [ref=e313]:
+                  - link "Macchina Fotografica Subacquea da 33 FT, Fotocamera Impermeabile 4K 48 MP con Scheda da 64 GB, Messa a Fuoco Automatica, Doppio Schermo, Selfie, Fotocamera Digitale Subacquea per Snorkeling e Immersioni" [ref=e315] [cursor=pointer]:
+                    - /url: "#"
+                    - img "Macchina Fotografica Subacquea da 33 FT, Fotocamera Impermeabile 4K 48 MP con Scheda da 64 GB, Messa a Fuoco Automatica, Doppio Schermo, Selfie, Fotocamera Digitale Subacquea per Snorkeling e Immersioni" [ref=e316]
+                  - generic [ref=e317]:
+                    - link "Macchina Fotografica Subacquea da 33 FT, Fotocamera Impermeabile 4K 48 MP con Scheda da 64 GB, Messa a Fuoco Automatica, Doppio Schermo, Selfie, Fotocamera Digitale Subacquea per Snorkeling e Immersioni" [ref=e319] [cursor=pointer]:
+                      - /url: "#"
+                    - generic [ref=e321] [cursor=pointer]: 100,99€
+                - generic [ref=e322]:
+                  - link "Macchina fotografica d'azione tascabile 4K 30FPS Video Stabilizzazione EIS 210min Durata della batteria 64GB" [ref=e324] [cursor=pointer]:
+                    - /url: "#"
+                    - img "Macchina fotografica d'azione tascabile 4K 30FPS Video Stabilizzazione EIS 210min Durata della batteria 64GB" [ref=e325]
+                  - generic [ref=e326]:
+                    - link "Macchina fotografica d'azione tascabile 4K 30FPS Video Stabilizzazione EIS 210min Durata della batteria 64GB" [ref=e328] [cursor=pointer]:
+                      - /url: "#"
+                    - generic [ref=e330] [cursor=pointer]: 110,99€
+            - button "Aggiungi alla lista dei desideri" [ref=e332] [cursor=pointer]
+            - button "Confronta" [ref=e333] [cursor=pointer]
+        - generic [ref=e339]:
+          - generic [ref=e341]: Frequently Bought Together
+          - generic [ref=e343]:
+            - generic [ref=e345]:
+              - generic [ref=e347]:
+                - generic [ref=e349]:
+                  - img "28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso" [ref=e351]
+                  - generic [ref=e352]:
+                    - generic [ref=e353]: 28X Teleobiettivo per Smartphone con treppiede di lunghezza focale 450mm incluso
+                    - generic [ref=e355] [cursor=pointer]: 69,99€ 
+                - generic [ref=e357]:
+                  - generic [ref=e359]: 
+                  - generic [ref=e360]:
+                    - img "Obiettivo macro 32X per iPhone Android 40-90mm Distanza di messa a fuoco con CPL e filtro Starlight" [ref=e361]
+                    - generic [ref=e362]: "-45%"
+                  - generic [ref=e363]:
+                    - link "Obiettivo macro 32X per iPhone Android 40-90mm Distanza di messa a fuoco con CPL e filtro Starlight" [ref=e365] [cursor=pointer]:
+                      - /url: "#"
+                    - generic [ref=e367] [cursor=pointer]: 109,99€ 59,99€
+                - generic [ref=e369]:
+                  - text: 
+                  - generic [ref=e370]:
+                    - img "MS04 62''/1,58 m treppiede per telefono, selfie stick, nero e arancione con telecomando Bluetooth + adattatore Gopro" [ref=e371]
+                    - generic [ref=e372]: "-40%"
+                  - generic [ref=e373]:
+                    - link "MS04 62''/1,58 m treppiede per telefono, selfie stick, nero e arancione con telecomando Bluetooth + adattatore Gopro" [ref=e375] [cursor=pointer]:
+                      - /url: "#"
+                    - generic [ref=e377] [cursor=pointer]: 49,99€ 29,99€
+                - generic [ref=e379]:
+                  - text: 
+                  - generic [ref=e380]:
+                    - img "Obiettivo macro del telefono con obiettivo 100X/150X/200X in 1 kit incorporato CPL filtro LED luce" [ref=e381]
+                    - generic [ref=e382]: "-45%"
+                  - generic [ref=e383]:
+                    - link "Obiettivo macro del telefono con obiettivo 100X/150X/200X in 1 kit incorporato CPL filtro LED luce" [ref=e385] [cursor=pointer]:
+                      - /url: "#"
+                    - generic [ref=e387] [cursor=pointer]: 219,99€ 119,99€
+                - generic [ref=e389]:
+                  - text: 
+                  - generic [ref=e390]:
+                    - img "200cm Treppiede Professionale per Fotocamera DSLR con Monopiede + Testa a Sfera + Piastra di Sgancio, Carico 10 kg - K234A7+BH-28L (S210)" [ref=e391]
+                    - generic [ref=e392]: "-43%"
+                  - generic [ref=e393]:
+                    - link "200cm Treppiede Professionale per Fotocamera DSLR con Monopiede + Testa a Sfera + Piastra di Sgancio, Carico 10 kg - K234A7+BH-28L (S210)" [ref=e395] [cursor=pointer]:
+                      - /url: "#"
+                    - generic [ref=e397] [cursor=pointer]: 159,99€ 89,99€
+                - generic [ref=e399]:
+                  - text: 
+                  - generic [ref=e400]:
+                    - img "K&F Concept 230cm Treppiede per Video Camera con Colonna Centrale + Monopiede + Testa a Sfera + Piastra di Sgancio, Carico 10 kg - T254A7+BH28L" [ref=e401]
+                    - generic [ref=e402]: "-52%"
+                  - generic [ref=e403]:
+                    - link "K&F Concept 230cm Treppiede per Video Camera con Colonna Centrale + Monopiede + Testa a Sfera + Piastra di Sgancio, Carico 10 kg - T254A7+BH28L" [ref=e405] [cursor=pointer]:
+                      - /url: "#"
+                    - generic [ref=e407] [cursor=pointer]: 249,99€ 119,99€
+                - generic [ref=e409]:
+                  - text: 
+                  - generic [ref=e410]:
+                    - img "K&F Concept NP-FW50 Batteria della Fotocamera Caricabatteria Kit, Compatibile con Fotocamera Sony A6000, A6500, A7, A7II, A7RII, A7SII, A7S, A7S2, A7R, A7R2, A55, RX10, NEX-3/5/7 (2 Pezzi, 1100mAh)" [ref=e411]
+                    - generic [ref=e412]: "-59%"
+                  - generic [ref=e413]:
+                    - link "K&F Concept NP-FW50 Batteria della Fotocamera Caricabatteria Kit, Compatibile con Fotocamera Sony A6000, A6500, A7, A7II, A7RII, A7SII, A7S, A7S2, A7R, A7R2, A55, RX10, NEX-3/5/7 (2 Pezzi, 1100mAh)" [ref=e415] [cursor=pointer]:
+                      - /url: "#"
+                    - generic [ref=e417] [cursor=pointer]: 76,99€ 30,99€
+                - generic [ref=e419]:
+                  - text: 
+                  - generic [ref=e420]:
+                    - img "Testa per Treppiede Panoramica in Alluminio a 360°, Testa Cardanica per Birdwatching con Piastra a Sgancio Rapido da 1/4\" e Livella a Bolla | Carico Massimo 20 kg (44 lbs)" [ref=e421]
+                    - generic [ref=e422]: "-40%"
+                  - generic [ref=e423]:
+                    - link "Testa per Treppiede Panoramica in Alluminio a 360°, Testa Cardanica per Birdwatching con Piastra a Sgancio Rapido da 1/4\" e Livella a Bolla | Carico Massimo 20 kg (44 lbs)" [ref=e425] [cursor=pointer]:
+                      - /url: "#"
+                    - generic [ref=e427] [cursor=pointer]: 149,99€ 89,99€
+                - generic [ref=e428]: 
+              - generic:
+                - generic: 
+                - generic [ref=e429] [cursor=pointer]: 
+            - generic [ref=e430]:
+              - paragraph [ref=e431]: 1 items selected
+              - paragraph [ref=e432]:
+                - generic [ref=e433]: 69.99€
+              - button "Add Selected to Cart" [ref=e434] [cursor=pointer]
+        - generic [ref=e436]:
+          - list [ref=e439]:
+            - listitem [ref=e440]:
+              - link "Panoramica" [ref=e441]:
+                - /url: "#tab-description"
+            - listitem [ref=e442]:
+              - link "Recensioni (34)" [ref=e443] [cursor=pointer]:
+                - /url: "#tab-review"
+            - listitem [ref=e444]:
+              - link "FAQs" [ref=e445] [cursor=pointer]:
+                - /url: "#tab-faq"
+            - text: 
+          - generic [ref=e446]:
+            - generic [ref=e447]:
+              - generic [ref=e449]:
+                - generic [ref=e451]:
+                  - img
+                  - generic [ref=e452]:
+                    - generic [ref=e453]: Obiettivo Telefoto Kentfaith per Smartphone - Trasforma il Tuo Telefono in una Macchina Fotografica
+                    - generic [ref=e454]: Questo obiettivo zoom da 450 mm per iPhone trasforma il tuo smartphone in una potente macchina fotografica, liberandoti dalle limitazioni della fotografia mobile standard. Con una magnifica di 28x, puoi avvicinare scene lontane, catturando foto cristalline con profondità e dimensione, mentre sfoca magnificamente lo sfondo.
+                - generic [ref=e456]:
+                  - img
+                  - generic [ref=e457]:
+                    - generic [ref=e458]: Concentra l'Attenzione sui Distanziati
+                    - generic [ref=e459]: La lente ottica multicodificata garantisce una trasmissione della luce superiore e ripristina fedelmente i colori originali. La sua magnifica di 28X ti consente di catturare immagini straordinarie di soggetti lontani senza distorsioni. Include soprattutto un treppiede per scatti stabili ad alta magnifica. Che tu stia fotografando la fauna selvatica, persone, paesaggi o eventi sportivi, ti permette di inquadrare le tue foto con precisione, portando gli elementi distanti in un focus nitido.
+                - generic [ref=e461]:
+                  - img
+                  - generic [ref=e462]:
+                    - generic [ref=e463]: Documenta i dettagli invisibili
+                    - generic [ref=e464]: Focalizza a distanze molto ravvicinate e cattura scatti in primo piano vividi dei dettagli più piccoli, dalle vene delicate di una foglia ai motivi intricati sulle ali di una farfalla. Perfetto per gli amanti della natura e i fotografi attenti ai dettagli.
+                - generic [ref=e466]:
+                  - img
+                  - generic [ref=e468]: Crea un effetto professionale simile a una DSLR
+                - generic [ref=e470]:
+                  - img
+                  - generic [ref=e471]:
+                    - generic [ref=e472]: Portatile e multiuso
+                    - generic [ref=e473]: Con un design compatto e leggero, questo obiettivo zoom per iPhone è facile da imballare e trasportare, rendendolo il compagno perfetto per campeggio, eventi sportivi, osservazione della luna, bird watching, pesca, escursionismo, golf, concerti e viaggi. Può anche funzionare come telescopio monoculare, perfetto per avvistare la fauna selvatica e osservare paesaggi.
+                - generic [ref=e475]:
+                  - img
+                  - generic [ref=e476]:
+                    - generic [ref=e477]: Compatibile con il 99% degli Smart Phone
+                    - list [ref=e479]:
+                      - listitem [ref=e480]: Il nostro obiettivo telefoto mobile è dotato di un clip compatibile con il 99% degli smartphone sul mercato, come iPhone 15/15 Pro/15 Pro Max, iPhone 14/14 Pro/14 Pro Max, iPhone 13/13 Pro/13 Pro Max e altri; Samsung Galaxy e Note, Google Pixel, Huawei, OnePlus, ecc. Regalo perfetto per gli appassionati di fotografia macro.
+                      - listitem [ref=e481]: "Come Utilizzare:"
+                      - listitem [ref=e482]: 1. Installa il clip dell'obiettivo sul tuo telefono e regola il cursore per assicurarti che il foro sia allineato con la fotocamera principale del tuo telefono. (Copri ciascuna fotocamera a turno. Se l'immagine diventa nera, significa che quella coperta è la fotocamera principale.)
+                      - listitem [ref=e483]: 2. Installa l'obiettivo telefoto sul tuo telefono.
+                      - listitem [ref=e484]: 3. Installa il treppiede sul clip del telefono.
+                - generic [ref=e486]:
+                  - img
+                  - generic [ref=e487]:
+                    - generic [ref=e488]: Cosa otterrai
+                    - list [ref=e490]:
+                      - listitem [ref=e491]: Obiettivo teleobiettivo per telefono da 450mm x1
+                      - listitem [ref=e492]: Copertura Protettiva x 2
+                      - listitem [ref=e493]: Treppiede Pieghevole x 1
+                      - listitem [ref=e494]: Custodia per Obiettivo x 1
+                      - listitem [ref=e495]: Sacchetto per Accessori x 1
+                      - listitem [ref=e496]: Clip per Telefono x 1
+                      - listitem [ref=e497]: Clip per Obiettivo x 1
+                      - listitem [ref=e498]: Panno per Pulizia x 1
+                      - listitem [ref=e499]: Manuale dell'Utente x 1
+                      - listitem [ref=e500]: Acquisto Senza Preoccupazioni
+                      - listitem [ref=e501]: Se riscontri problemi con il nostro prodotto, non esitare a contattarci immediatamente. Il nostro team di assistenza clienti è pronto ad aiutarti con qualsiasi domanda o preoccupazione, e ci impegniamo a rispondere entro 1 giorno lavorativo. Ti ringraziamo per aver scelto Kentfaith e siamo impegnati a garantire la tua soddisfazione in ogni fase del processo.
+                - table [ref=e502]:
+                  - rowgroup [ref=e503]:
+                    - row "Specification" [ref=e504]:
+                      - columnheader "Specification" [ref=e505]:
+                        - strong [ref=e506]: Specification
+                  - rowgroup [ref=e507]:
+                    - row "Ingrandimento 28X" [ref=e508]:
+                      - cell "Ingrandimento" [ref=e509]
+                      - cell "28X" [ref=e510]
+                    - row "Lunghezza messa a fuoco 450mm" [ref=e511]:
+                      - cell "Lunghezza messa a fuoco" [ref=e512]
+                      - cell "450mm" [ref=e513]
+                    - row "Materiale Lega di alluminio + vetro ottico + ABS" [ref=e514]:
+                      - cell "Materiale" [ref=e515]
+                      - cell "Lega di alluminio + vetro ottico + ABS" [ref=e516]
+                    - row "Rivestimento Rivestimento multiplo bifacciale" [ref=e517]:
+                      - cell "Rivestimento" [ref=e518]
+                      - cell "Rivestimento multiplo bifacciale" [ref=e519]
+                    - row "Peso del prodotto 278g/9,81oz" [ref=e520]:
+                      - cell "Peso del prodotto" [ref=e521]
+                      - cell "278g/9,81oz" [ref=e522]
+              - generic [ref=e523] [cursor=pointer]: 
+            - generic [ref=e524]:
+              - generic [ref=e525]:
+                - generic [ref=e526]: Recensioni (34)
+                - generic [ref=e527]:
+                  - link "Valutazione complessiva      5" [ref=e528] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/reviews_41831
+                    - generic [ref=e529]: Valutazione complessiva
+                    - generic [ref=e530]:
+                      - generic [ref=e532]: 
+                      - generic [ref=e534]: 
+                      - generic [ref=e536]: 
+                      - generic [ref=e538]: 
+                      - generic [ref=e540]: 
+                      - generic [ref=e541]: "5"
+                  - button "" [ref=e542] [cursor=pointer]:
+                    - generic [ref=e543]: 
+              - generic [ref=e544]:
+                - generic [ref=e545]:
+                  - list [ref=e546]:
+                    - listitem [ref=e547] [cursor=pointer]: All Reviews
+                    - listitem [ref=e548] [cursor=pointer]: Image
+                    - listitem [ref=e549] [cursor=pointer]:
+                      - generic [ref=e550]:
+                        - generic [ref=e551]: All Star
+                        - generic [ref=e552]: 
+                      - text:               
+                  - list [ref=e553]:
+                    - listitem [ref=e554] [cursor=pointer]:
+                      - generic [ref=e555]:
+                        - generic [ref=e556]: "Sort by:"
+                        - generic [ref=e557]: Most Recent
+                        - generic [ref=e558]: 
+                - generic [ref=e559]:
+                  - generic [ref=e560]:
+                    - generic [ref=e561]:
+                      - generic [ref=e562]:
+                        - generic [ref=e564]: 
+                        - generic [ref=e566]: Doug Mills
+                      - generic [ref=e567]:
+                        - generic [ref=e569]: 
+                        - generic [ref=e571]: 
+                        - generic [ref=e573]: 
+                        - generic [ref=e575]: 
+                        - generic [ref=e577]: 
+                        - generic [ref=e578]: "5"
+                    - generic [ref=e579]:
+                      - generic [ref=e580]: Ottima lente
+                      - generic [ref=e581]: Questo set di obiettivi per fotocamera del cellulare offre una fantastica gamma di opzioni per gli appassionati di fotografia. Il teleobiettivo e gli obiettivi macro garantiscono immagini chiare e dettagliate.
+                    - emphasis [ref=e583]: 07/10/2024
+                  - generic [ref=e584]:
+                    - generic [ref=e585]:
+                      - generic [ref=e586]:
+                        - generic [ref=e588]: 
+                        - generic [ref=e590]: Le verdure di Gundar
+                      - generic [ref=e591]:
+                        - generic [ref=e593]: 
+                        - generic [ref=e595]: 
+                        - generic [ref=e597]: 
+                        - generic [ref=e599]: 
+                        - generic [ref=e601]: 
+                        - generic [ref=e602]: "5"
+                    - generic [ref=e603]:
+                      - generic [ref=e604]: 5 stelle
+                      - generic [ref=e605]: Vorrei condividere le mie esperienze con il teleobiettivo 28X per telefoni cellulari. Lo uso con il mio Xiaomi Mi 13t Pro e funziona benissimo. Funziona senza intoppi e cattura dettagli complessi in modo preciso e chiaro. Tuttavia, ci vuole un po’ di tempo e di pratica per padroneggiare questa funzione. Ma una volta capito, i risultati valgono la pena. Altamente raccomandato per chiunque lo desideri.
+                    - emphasis [ref=e607]: 06/10/2024
+                  - generic [ref=e608]:
+                    - generic [ref=e609]:
+                      - generic [ref=e610]:
+                        - generic [ref=e612]: 
+                        - generic [ref=e614]: Legno di melo
+                      - generic [ref=e615]:
+                        - generic [ref=e617]: 
+                        - generic [ref=e619]: 
+                        - generic [ref=e621]: 
+                        - generic [ref=e623]: 
+                        - generic [ref=e625]: 
+                        - generic [ref=e626]: "5"
+                    - generic [ref=e627]:
+                      - generic [ref=e628]: Buon insieme
+                      - generic [ref=e629]: Teleobiettivo e scatti macro sorprendentemente efficaci. Ho visto annunci sui social media di obiettivi clip-on che trasformano effettivamente il tuo telefono in una telecamera spia a lungo raggio. Sospettavo che gli annunci fossero irrealistici e per lo più clickbait. In realtà sono rimasto più colpito dalle prestazioni di questo piccolo kit di lenti di quanto pensassi possibile. Bisogna regolare un po' la posizione dell'obiettivo per ottenerlo perfettamente centrato e senza vignettatura, ma una volta posizionato e messo a fuoco, in realtà risaltava molto più lontano e più chiaramente di quanto mi aspettassi. Tuttavia, l'obiettivo a lungo raggio deve essere davvero stabile per ottenere un'immagine pulita, quindi è necessario un treppiede o un modo per montarlo o renderlo davvero stabile. Sono stato in grado di scattare una foto di una persona a circa 300 piedi di distanza e di identificarla facilmente, quando il miglior zoom del telefono era così lontano che a malapena si poteva dire che ci fosse una persona nella foto.
+                      - generic [ref=e630]:
+                        - link "Buon insieme" [ref=e631] [cursor=pointer]:
+                          - /url: https://tpc.googlesyndication.com/simgad/10967539413949949285
+                          - img "Buon insieme" [ref=e632]
+                        - link "Buon insieme" [ref=e633] [cursor=pointer]:
+                          - /url: https://tpc.googlesyndication.com/simgad/5753937420346306244
+                          - img "Buon insieme" [ref=e634]
+                    - emphasis [ref=e636]: 05/10/2024
+                  - generic [ref=e637]:
+                    - generic [ref=e638]:
+                      - generic [ref=e639]:
+                        - generic [ref=e641]: 
+                        - generic [ref=e643]: Cliente Amazon
+                      - generic [ref=e644]:
+                        - generic [ref=e646]: 
+                        - generic [ref=e648]: 
+                        - generic [ref=e650]: 
+                        - generic [ref=e652]: 
+                        - generic [ref=e654]: 
+                        - generic [ref=e655]: "5"
+                    - generic [ref=e656]:
+                      - generic [ref=e657]: I supporti sono utili
+                      - generic [ref=e658]: Molto sorprendente. Super soddisfatto, bellissime foto.
+                    - emphasis [ref=e660]: 05/10/2024
+                  - generic [ref=e661]:
+                    - generic [ref=e662]:
+                      - generic [ref=e663]:
+                        - generic [ref=e665]: 
+                        - generic [ref=e667]: Bernardo
+                      - generic [ref=e668]:
+                        - generic [ref=e670]: 
+                        - generic [ref=e672]: 
+                        - generic [ref=e674]: 
+                        - generic [ref=e676]: 
+                        - generic [ref=e678]: 
+                        - generic [ref=e679]: "5"
+                    - generic [ref=e680]:
+                      - generic [ref=e681]: Adatto al mio modello di cellulare
+                      - generic [ref=e682]: Queste foto sono state scattate con un cielo nuvoloso e una luce piuttosto scarsa, ma secondo me il risultato è venuto piuttosto bene. Le foto sono state scattate con l'iPhone 8 e non ho avuto problemi a collegare l'obiettivo macro all'iPhone. Ci vuole un po' di pratica e conoscenza della fotografia prima di poter utilizzare questo obiettivo abbastanza bene.
+                    - emphasis [ref=e684]: 30/09/2024
+                  - generic [ref=e685]:
+                    - generic [ref=e686]:
+                      - generic [ref=e687]:
+                        - generic [ref=e689]: 
+                        - generic [ref=e691]: Hendrik
+                      - generic [ref=e692]:
+                        - generic [ref=e694]: 
+                        - generic [ref=e696]: 
+                        - generic [ref=e698]: 
+                        - generic [ref=e700]: 
+                        - generic [ref=e702]: 
+                        - generic [ref=e703]: "5"
+                    - generic [ref=e704]:
+                      - generic [ref=e705]: Ingrandito ancora un po'.
+                      - generic [ref=e706]: Sono soddisfatto dell'obiettivo, le mie foto sono molto nitide
+                    - emphasis [ref=e708]: 29/09/2024
+                  - generic [ref=e709]:
+                    - generic [ref=e710]:
+                      - generic [ref=e711]:
+                        - generic [ref=e713]: 
+                        - generic [ref=e715]: Lynn T.
+                      - generic [ref=e716]:
+                        - generic [ref=e718]: 
+                        - generic [ref=e720]: 
+                        - generic [ref=e722]: 
+                        - generic [ref=e724]: 
+                        - generic [ref=e726]: 
+                        - generic [ref=e727]: "5"
+                    - generic [ref=e728]:
+                      - generic [ref=e729]: Funziona ed è come pubblicizzato.
+                      - generic [ref=e730]: È robusto e puoi aggiungere una protezione per lo schermo rinforzata per gli obiettivi della fotocamera anteriore e posteriore e si adatta ancora.
+                      - link "Funziona ed è come pubblicizzato." [ref=e732] [cursor=pointer]:
+                        - /url: https://tpc.googlesyndication.com/simgad/18172119991727008948
+                        - img "Funziona ed è come pubblicizzato." [ref=e733]
+                    - emphasis [ref=e735]: 27/09/2024
+                  - generic [ref=e736]:
+                    - generic [ref=e737]:
+                      - generic [ref=e738]:
+                        - generic [ref=e740]: 
+                        - generic [ref=e742]: Jenny
+                      - generic [ref=e743]:
+                        - generic [ref=e745]: 
+                        - generic [ref=e747]: 
+                        - generic [ref=e749]: 
+                        - generic [ref=e751]: 
+                        - generic [ref=e753]: 
+                        - generic [ref=e754]: "5"
+                    - generic [ref=e755]:
+                      - generic [ref=e756]: Funziona bene e ha un'ottima qualità
+                      - generic [ref=e757]: Sono molto soddisfatto del mio acquisto. Ho un iPhone X e tutti gli accessori funzionano perfettamente con il mio telefono. Mi piace molto il treppiede e il supporto per il telefono. Di tutti i miei supporti per telefono su treppiede, questo è l'unico che si apre abbastanza da contenere il mio telefono con la custodia!
+                      - generic [ref=e758]:
+                        - link "Funziona bene e ha un'ottima qualità" [ref=e759] [cursor=pointer]:
+                          - /url: https://tpc.googlesyndication.com/simgad/6510189113732243861
+                          - img "Funziona bene e ha un'ottima qualità" [ref=e760]
+                        - link "Funziona bene e ha un'ottima qualità" [ref=e761] [cursor=pointer]:
+                          - /url: https://tpc.googlesyndication.com/simgad/4172086522853708060
+                          - img "Funziona bene e ha un'ottima qualità" [ref=e762]
+                    - emphasis [ref=e764]: 27/09/2024
+                  - generic [ref=e765]:
+                    - generic [ref=e766]:
+                      - generic [ref=e767]:
+                        - generic [ref=e769]: 
+                        - generic [ref=e771]: Marc J Chabot
+                      - generic [ref=e772]:
+                        - generic [ref=e774]: 
+                        - generic [ref=e776]: 
+                        - generic [ref=e778]: 
+                        - generic [ref=e780]: 
+                        - generic [ref=e782]: 
+                        - generic [ref=e783]: "5"
+                    - generic [ref=e784]:
+                      - generic [ref=e785]: Ottimo zoom e immagine nitida
+                      - generic [ref=e786]: Questo set di obiettivi per fotocamera del cellulare è versatile e di alta qualità. Lo zoom ottico 28x e le funzionalità del teleobiettivo 4K HD migliorano notevolmente la fotografia con il cellulare. Il treppiede, il copriobiettivo e le clip inclusi offrono ulteriore comodità. Perfetto per fotografi dilettanti e professionisti. Altamente raccomandato!
+                      - generic [ref=e787]:
+                        - link "Ottimo zoom e immagine nitida" [ref=e788] [cursor=pointer]:
+                          - /url: https://tpc.googlesyndication.com/simgad/17681531795438095921
+                          - img "Ottimo zoom e immagine nitida" [ref=e789]
+                        - link "Ottimo zoom e immagine nitida" [ref=e790] [cursor=pointer]:
+                          - /url: https://tpc.googlesyndication.com/simgad/18172119991727008948
+                          - img "Ottimo zoom e immagine nitida" [ref=e791]
+                    - emphasis [ref=e793]: 22/09/2024
+                  - generic [ref=e794]:
+                    - generic [ref=e795]:
+                      - generic [ref=e796]:
+                        - generic [ref=e798]: 
+                        - generic [ref=e800]: Hans Schulte
+                      - generic [ref=e801]:
+                        - generic [ref=e803]: 
+                        - generic [ref=e805]: 
+                        - generic [ref=e807]: 
+                        - generic [ref=e809]: 
+                        - generic [ref=e811]: 
+                        - generic [ref=e812]: "5"
+                    - generic [ref=e813]:
+                      - generic [ref=e814]: funzione
+                      - generic [ref=e815]: ...davvero fantastico. Raccomandato...
+                    - emphasis [ref=e817]: 22/09/2024
+                - link " ... 1/4" [ref=e819] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e820]: 
+                  - text: ... 1/4
+            - generic [ref=e821]:
+              - generic [ref=e822]:
+                - generic [ref=e823]: FAQs
+                - button "" [ref=e825] [cursor=pointer]:
+                  - generic [ref=e826]: 
+              - generic [ref=e827]:
+                - generic [ref=e828]:
+                  - generic [ref=e829]:
+                    - generic [ref=e830]:
+                      - generic [ref=e831]: Q
+                      - link "Riuscirà a raggiungere la fotocamera sul nuovo iPhone 13?" [ref=e833] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/faq_20855
+                    - generic [ref=e834]:
+                      - generic [ref=e835]: A
+                      - generic [ref=e836]: Sì, è possibile collegare l'obiettivo del telefono alla fotocamera principale del telefono iPhone 13.
+                      - generic [ref=e837] [cursor=pointer]:
+                        - text: Show More
+                        - generic [ref=e838]: 
+                      - text: 
+                  - generic [ref=e839]:
+                    - generic [ref=e840]:
+                      - generic [ref=e841]: Q
+                      - link "Cercando di utilizzare a un concerto - funzionerà bene per zoomare verso il palco senza il treppiede e funzionare bene a tutti da lontano in questa situazione?" [ref=e843] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/faq_20856
+                    - generic [ref=e844]:
+                      - generic [ref=e845]: A
+                      - generic [ref=e846]: E' possibile. Ho fatto delle foto decenti ad un concerto.
+                      - generic [ref=e847] [cursor=pointer]:
+                        - text: Show More
+                        - generic [ref=e848]: 
+                      - text: 
+                  - generic [ref=e849]:
+                    - generic [ref=e850]:
+                      - generic [ref=e851]: Q
+                      - link "Questo teleobiettivo per smartphone è compatibile con un telefono Android?" [ref=e853] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/faq_20854
+                    - generic [ref=e854]:
+                      - generic [ref=e855]: A
+                      - generic [ref=e856]: Sì, è compatibile con la maggior parte degli smartphone sul mercato, inclusi iPhone e telefoni Android.
+                      - generic [ref=e857] [cursor=pointer]:
+                        - text: Show More
+                        - generic [ref=e858]: 
+                      - text: 
+                  - generic [ref=e859]:
+                    - generic [ref=e860]:
+                      - generic [ref=e861]: Q
+                      - link "Lo zoom 28X è fisso o possiamo regolarlo?" [ref=e863] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/faq_20853
+                    - generic [ref=e864]:
+                      - generic [ref=e865]: A
+                      - generic [ref=e866]: È regolabile ruotando l'anello di messa a fuoco.
+                      - generic [ref=e867] [cursor=pointer]:
+                        - text: Show More
+                        - generic [ref=e868]: 
+                      - text: 
+                - link " ... 1/1" [ref=e870] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e871]: 
+                  - text: ... 1/1
+        - generic [ref=e873]:
+          - generic [ref=e875]: New Releases
+          - generic [ref=e877]:
+            - generic [ref=e879]:
+              - generic [ref=e880]:
+                - generic:
+                  - generic [ref=e882]:
+                    - link "K&F CONCEPT Zaino Fotografico Professionale, Zaino Fotografico Ligera 5L Resistente al Agua para Uso Diario y Viajes, Compatible con Sony/Canon/Nikon, Compacto con Compartimento para iPad, Nero" [ref=e884] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/KF13.301_kf-concept-5l-borsa-a-tracolla-per-fotocamera-custodia-leggera-per-fotografi
+                      - img "K&F CONCEPT Zaino Fotografico Professionale, Zaino Fotografico Ligera 5L Resistente al Agua para Uso Diario y Viajes, Compatible con Sony/Canon/Nikon, Compacto con Compartimento para iPad, Nero" [ref=e885]
+                    - generic [ref=e886]:
+                      - link "K&F CONCEPT Zaino Fotografico Professionale, Zaino Fotografico Ligera 5L Resistente al Agua para Uso Diario y Viajes, Compatible con Sony/Canon/Nikon, Compacto con Compartimento para iPad, Nero" [ref=e888] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/KF13.301_kf-concept-5l-borsa-a-tracolla-per-fotocamera-custodia-leggera-per-fotografi
+                      - generic [ref=e889]:
+                        - text: 92,99€
+                        - generic [ref=e890]: 49,99€
+                  - generic [ref=e892]:
+                    - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline, Traduzione di Video e Chiamate Vocali, Autonomia di 40H, Design a Clip, Kentfaith" [ref=e894] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0038_auricolari-traduttore-in-tempo-reale-con-150-lingue-traduzione-offline-traduzione-di-video-e-chiam
+                      - img "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline, Traduzione di Video e Chiamate Vocali, Autonomia di 40H, Design a Clip, Kentfaith" [ref=e895]
+                    - generic [ref=e896]:
+                      - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline, Traduzione di Video e Chiamate Vocali, Autonomia di 40H, Design a Clip, Kentfaith" [ref=e898] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0038_auricolari-traduttore-in-tempo-reale-con-150-lingue-traduzione-offline-traduzione-di-video-e-chiam
+                      - generic [ref=e899]:
+                        - text: 189,99€
+                        - generic [ref=e900]: 99,99€
+                  - generic [ref=e902]:
+                    - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline Gratuita, Traduzione di Chiamate Vocali e Video, Schermo LCD Touch, Kentfaith" [ref=e904] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0037_auricolari-per-traduzione-in-tempo-reale-con-150-lingue-traduzione-offline-gratuita-traduzione-di
+                      - img "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline Gratuita, Traduzione di Chiamate Vocali e Video, Schermo LCD Touch, Kentfaith" [ref=e905]
+                    - generic [ref=e906]:
+                      - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline Gratuita, Traduzione di Chiamate Vocali e Video, Schermo LCD Touch, Kentfaith" [ref=e908] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0037_auricolari-per-traduzione-in-tempo-reale-con-150-lingue-traduzione-offline-gratuita-traduzione-di
+                      - generic [ref=e909]:
+                        - text: 215,99€
+                        - generic [ref=e910]: 115,99€
+                  - generic [ref=e912]:
+                    - link "Registratore vocale AI, dispositivo di registrazione con controllo tramite app, supporta trascrizione IA, riepilogo e mappe mentali in 134 lingue, 64 GB, cancellazione del rumore IA per lezioni, riunioni, chiamate, interviste – Kentfaith" [ref=e914] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6302.0001.0010_registratore-vocale-ai-dispositivo-di-registrazione-con-controllo-tramite-app-supporta-trascrizion
+                      - img "Registratore vocale AI, dispositivo di registrazione con controllo tramite app, supporta trascrizione IA, riepilogo e mappe mentali in 134 lingue, 64 GB, cancellazione del rumore IA per lezioni, riunioni, chiamate, interviste – Kentfaith" [ref=e915]
+                    - generic [ref=e916]:
+                      - link "Registratore vocale AI, dispositivo di registrazione con controllo tramite app, supporta trascrizione IA, riepilogo e mappe mentali in 134 lingue, 64 GB, cancellazione del rumore IA per lezioni, riunioni, chiamate, interviste – Kentfaith" [ref=e918] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6302.0001.0010_registratore-vocale-ai-dispositivo-di-registrazione-con-controllo-tramite-app-supporta-trascrizion
+                      - generic [ref=e919]:
+                        - text: 219,99€
+                        - generic [ref=e920]: 119,99€
+                  - generic [ref=e922]:
+                    - link "Microscopio Darkfield con schermo da 7 pollici, ingrandimento 40X-2500X, fotocamera 5MP per foto e video, obiettivi acromatici 195, tavolino meccanico a doppio strato, Kentfaith" [ref=e924] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6901.0001.0030_microscopio-darkfield-con-schermo-da-7-pollici-ingrandimento-40x-2500x-fotocamera-5mp-per-foto-e-v
+                      - img "Microscopio Darkfield con schermo da 7 pollici, ingrandimento 40X-2500X, fotocamera 5MP per foto e video, obiettivi acromatici 195, tavolino meccanico a doppio strato, Kentfaith" [ref=e925]
+                    - generic [ref=e926]:
+                      - link "Microscopio Darkfield con schermo da 7 pollici, ingrandimento 40X-2500X, fotocamera 5MP per foto e video, obiettivi acromatici 195, tavolino meccanico a doppio strato, Kentfaith" [ref=e928] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6901.0001.0030_microscopio-darkfield-con-schermo-da-7-pollici-ingrandimento-40x-2500x-fotocamera-5mp-per-foto-e-v
+                      - generic [ref=e929]:
+                        - text: 1.099,99€
+                        - generic [ref=e930]: 789,99€
+                  - generic [ref=e932]:
+                    - link "Microscopio composto per bambini con schermo da 4,3 pollici, da 80X a 800X, connessione WiFi, doppie sorgenti luminose, video 1080P, scheda da 32GB inclusa, Kentfaith" [ref=e934] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6903.0001.0010_microscopio-composto-per-bambini-con-schermo-da-43-pollici-da-80x-a-800x-connessione-wifi-doppie
+                      - img "Microscopio composto per bambini con schermo da 4,3 pollici, da 80X a 800X, connessione WiFi, doppie sorgenti luminose, video 1080P, scheda da 32GB inclusa, Kentfaith" [ref=e935]
+                    - generic [ref=e936]:
+                      - link "Microscopio composto per bambini con schermo da 4,3 pollici, da 80X a 800X, connessione WiFi, doppie sorgenti luminose, video 1080P, scheda da 32GB inclusa, Kentfaith" [ref=e938] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6903.0001.0010_microscopio-composto-per-bambini-con-schermo-da-43-pollici-da-80x-a-800x-connessione-wifi-doppie
+                      - generic [ref=e939]:
+                        - text: 399,99€
+                        - generic [ref=e940]: 169,99€
+              - generic [ref=e941]:
+                - generic:
+                  - generic [ref=e943]:
+                    - link "Dispositivo di traduzione AI con doppio schermo, 159 lingue, Traduzione e trascrizione di riunioni intelligenti, 28 lingue offline, Traduzione di videochiamate, Traduzione di foto, KentFaith" [ref=e945] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6801.0001.0010_dispositivo-di-traduzione-ai-con-doppio-schermo-159-lingue-traduzione-e-trascrizione-di-riunioni-i
+                      - img "Dispositivo di traduzione AI con doppio schermo, 159 lingue, Traduzione e trascrizione di riunioni intelligenti, 28 lingue offline, Traduzione di videochiamate, Traduzione di foto, KentFaith" [ref=e946]
+                    - generic [ref=e947]:
+                      - link "Dispositivo di traduzione AI con doppio schermo, 159 lingue, Traduzione e trascrizione di riunioni intelligenti, 28 lingue offline, Traduzione di videochiamate, Traduzione di foto, KentFaith" [ref=e949] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6801.0001.0010_dispositivo-di-traduzione-ai-con-doppio-schermo-159-lingue-traduzione-e-trascrizione-di-riunioni-i
+                      - generic [ref=e950]:
+                        - text: 299,99€
+                        - generic [ref=e951]: 199,99€
+                  - generic [ref=e953]:
+                    - link "Registratore vocale digitale con archiviazione 64Gb, 1536 kbps, registrazione attivata e in linea, durata della batteria 85H, memorizzazione 800 ore di registrazione, KentFaith" [ref=e955] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6301.0001.0010_registratore-vocale-digitale-con-archiviazione-64gb-1536-kbps-registrazione-attivata-e-in-linea-d
+                      - img "Registratore vocale digitale con archiviazione 64Gb, 1536 kbps, registrazione attivata e in linea, durata della batteria 85H, memorizzazione 800 ore di registrazione, KentFaith" [ref=e956]
+                    - generic [ref=e957]:
+                      - link "Registratore vocale digitale con archiviazione 64Gb, 1536 kbps, registrazione attivata e in linea, durata della batteria 85H, memorizzazione 800 ore di registrazione, KentFaith" [ref=e959] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6301.0001.0010_registratore-vocale-digitale-con-archiviazione-64gb-1536-kbps-registrazione-attivata-e-in-linea-d
+                      - generic [ref=e960]:
+                        - generic [ref=e962]: 
+                        - generic [ref=e964]: 
+                        - generic [ref=e966]: 
+                        - generic [ref=e968]: 
+                        - generic [ref=e970]: 
+                        - text: "18"
+                      - generic [ref=e971]:
+                        - text: 159,99€
+                        - generic [ref=e972]: 89,99€
+                  - generic [ref=e974]:
+                    - link "Dispositivo di traduttore AI, Nessun WiFi necessario, Traduttore online bidirezionale istantaneo in 142 lingue, Traduzione offline / registrazione / foto per viaggi d'affari, 16 GB di archiviazione, Bluetooth 4.0, KentFaith" [ref=e976] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0033_dispositivo-di-traduttore-ai-nessun-wifi-necessario-traduttore-online-bidirezionale-istantaneo-in
+                      - img "Dispositivo di traduttore AI, Nessun WiFi necessario, Traduttore online bidirezionale istantaneo in 142 lingue, Traduzione offline / registrazione / foto per viaggi d'affari, 16 GB di archiviazione, Bluetooth 4.0, KentFaith" [ref=e977]
+                    - generic [ref=e978]:
+                      - link "Dispositivo di traduttore AI, Nessun WiFi necessario, Traduttore online bidirezionale istantaneo in 142 lingue, Traduzione offline / registrazione / foto per viaggi d'affari, 16 GB di archiviazione, Bluetooth 4.0, KentFaith" [ref=e980] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0033_dispositivo-di-traduttore-ai-nessun-wifi-necessario-traduttore-online-bidirezionale-istantaneo-in
+                      - generic [ref=e981]:
+                        - generic [ref=e983]: 
+                        - generic [ref=e985]: 
+                        - generic [ref=e987]: 
+                        - generic [ref=e989]: 
+                        - generic [ref=e991]: 
+                        - text: "9"
+                      - generic [ref=e992]:
+                        - text: 199,99€
+                        - generic [ref=e993]: 109,99€
+                  - generic [ref=e995]:
+                    - link "Auricolari Traduttori in Tempo Reale con 142 Lingue/Accenti Bidirezionali, 6 Modalità di Traduzione, Traduzione Chiamate & Registrazione, Traduzione Video, Cancellazione Rumore ENC & ANC, Kentfaith" [ref=e997] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0035_auricolari-traduttore-in-tempo-reale-con-142-lingue-accenti-bidirezionali-6-modalità-di-traduzione
+                      - img "Auricolari Traduttori in Tempo Reale con 142 Lingue/Accenti Bidirezionali, 6 Modalità di Traduzione, Traduzione Chiamate & Registrazione, Traduzione Video, Cancellazione Rumore ENC & ANC, Kentfaith" [ref=e998]
+                    - generic [ref=e999]:
+                      - link "Auricolari Traduttori in Tempo Reale con 142 Lingue/Accenti Bidirezionali, 6 Modalità di Traduzione, Traduzione Chiamate & Registrazione, Traduzione Video, Cancellazione Rumore ENC & ANC, Kentfaith" [ref=e1001] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0035_auricolari-traduttore-in-tempo-reale-con-142-lingue-accenti-bidirezionali-6-modalità-di-traduzione
+                      - generic [ref=e1002]:
+                        - text: 219,99€
+                        - generic [ref=e1003]: 109,99€
+                  - generic [ref=e1005]:
+                    - link "Registratore Vocale AI, Trascrivi, Riassumi e Traduci con AI, Controllo App, Prendi Appunti per Riunioni e Chiamate, Supporta 100 Lingue, Ultra-Sottile con Display InstantView, Custodia Inclusa, Kentfaith" [ref=e1007] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW63.0019_registratore-vocale-ai-trascrivi-riassumi-e-traduci-con-ai-controllo-app-prendi-appunti-per-riun
+                      - img "Registratore Vocale AI, Trascrivi, Riassumi e Traduci con AI, Controllo App, Prendi Appunti per Riunioni e Chiamate, Supporta 100 Lingue, Ultra-Sottile con Display InstantView, Custodia Inclusa, Kentfaith" [ref=e1008]
+                    - generic [ref=e1009]:
+                      - link "Registratore Vocale AI, Trascrivi, Riassumi e Traduci con AI, Controllo App, Prendi Appunti per Riunioni e Chiamate, Supporta 100 Lingue, Ultra-Sottile con Display InstantView, Custodia Inclusa, Kentfaith" [ref=e1011] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW63.0019_registratore-vocale-ai-trascrivi-riassumi-e-traduci-con-ai-controllo-app-prendi-appunti-per-riun
+                      - generic [ref=e1012]:
+                        - text: 249,99€
+                        - generic [ref=e1013]: 129,99€
+                  - generic [ref=e1015]:
+                    - link "AI Dispositivo Traduttore, 142 Lingue Offline & Online, Supporto Connessione Internazionale 4G Gratuita, ChatGPT, Traduzione Offline/Foto/Registrazione per Viaggi di Lavoro Studio, Kentfaith" [ref=e1017] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0036_ai-traduttore-dispositivo-142-lingue-offline-online-supporto-connessione-internazionale-4g-g
+                      - img "AI Dispositivo Traduttore, 142 Lingue Offline & Online, Supporto Connessione Internazionale 4G Gratuita, ChatGPT, Traduzione Offline/Foto/Registrazione per Viaggi di Lavoro Studio, Kentfaith" [ref=e1018]
+                    - generic [ref=e1019]:
+                      - link "AI Dispositivo Traduttore, 142 Lingue Offline & Online, Supporto Connessione Internazionale 4G Gratuita, ChatGPT, Traduzione Offline/Foto/Registrazione per Viaggi di Lavoro Studio, Kentfaith" [ref=e1021] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0036_ai-traduttore-dispositivo-142-lingue-offline-online-supporto-connessione-internazionale-4g-g
+                      - generic [ref=e1022]:
+                        - text: 249,99€
+                        - generic [ref=e1023]: 149,99€
+              - generic [ref=e1024]:
+                - generic:
+                  - generic [ref=e1026]:
+                    - link "K&F CONCEPT Zaino Fotografico Professionale, Zaino Fotografico Ligera 5L Resistente al Agua para Uso Diario y Viajes, Compatible con Sony/Canon/Nikon, Compacto con Compartimento para iPad, Nero" [ref=e1028] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/KF13.301_kf-concept-5l-borsa-a-tracolla-per-fotocamera-custodia-leggera-per-fotografi
+                      - img "K&F CONCEPT Zaino Fotografico Professionale, Zaino Fotografico Ligera 5L Resistente al Agua para Uso Diario y Viajes, Compatible con Sony/Canon/Nikon, Compacto con Compartimento para iPad, Nero" [ref=e1029]
+                    - generic [ref=e1030]:
+                      - link "K&F CONCEPT Zaino Fotografico Professionale, Zaino Fotografico Ligera 5L Resistente al Agua para Uso Diario y Viajes, Compatible con Sony/Canon/Nikon, Compacto con Compartimento para iPad, Nero" [ref=e1032] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/KF13.301_kf-concept-5l-borsa-a-tracolla-per-fotocamera-custodia-leggera-per-fotografi
+                      - generic [ref=e1033]:
+                        - text: 92,99€
+                        - generic [ref=e1034]: 49,99€
+                  - generic [ref=e1036]:
+                    - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline, Traduzione di Video e Chiamate Vocali, Autonomia di 40H, Design a Clip, Kentfaith" [ref=e1038] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0038_auricolari-traduttore-in-tempo-reale-con-150-lingue-traduzione-offline-traduzione-di-video-e-chiam
+                      - img "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline, Traduzione di Video e Chiamate Vocali, Autonomia di 40H, Design a Clip, Kentfaith" [ref=e1039]
+                    - generic [ref=e1040]:
+                      - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline, Traduzione di Video e Chiamate Vocali, Autonomia di 40H, Design a Clip, Kentfaith" [ref=e1042] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0038_auricolari-traduttore-in-tempo-reale-con-150-lingue-traduzione-offline-traduzione-di-video-e-chiam
+                      - generic [ref=e1043]:
+                        - text: 189,99€
+                        - generic [ref=e1044]: 99,99€
+                  - generic [ref=e1046]:
+                    - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline Gratuita, Traduzione di Chiamate Vocali e Video, Schermo LCD Touch, Kentfaith" [ref=e1048] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0037_auricolari-per-traduzione-in-tempo-reale-con-150-lingue-traduzione-offline-gratuita-traduzione-di
+                      - img "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline Gratuita, Traduzione di Chiamate Vocali e Video, Schermo LCD Touch, Kentfaith" [ref=e1049]
+                    - generic [ref=e1050]:
+                      - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline Gratuita, Traduzione di Chiamate Vocali e Video, Schermo LCD Touch, Kentfaith" [ref=e1052] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0037_auricolari-per-traduzione-in-tempo-reale-con-150-lingue-traduzione-offline-gratuita-traduzione-di
+                      - generic [ref=e1053]:
+                        - text: 215,99€
+                        - generic [ref=e1054]: 115,99€
+                  - generic [ref=e1056]:
+                    - link "Registratore vocale AI, dispositivo di registrazione con controllo tramite app, supporta trascrizione IA, riepilogo e mappe mentali in 134 lingue, 64 GB, cancellazione del rumore IA per lezioni, riunioni, chiamate, interviste – Kentfaith" [ref=e1058] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6302.0001.0010_registratore-vocale-ai-dispositivo-di-registrazione-con-controllo-tramite-app-supporta-trascrizion
+                      - img "Registratore vocale AI, dispositivo di registrazione con controllo tramite app, supporta trascrizione IA, riepilogo e mappe mentali in 134 lingue, 64 GB, cancellazione del rumore IA per lezioni, riunioni, chiamate, interviste – Kentfaith" [ref=e1059]
+                    - generic [ref=e1060]:
+                      - link "Registratore vocale AI, dispositivo di registrazione con controllo tramite app, supporta trascrizione IA, riepilogo e mappe mentali in 134 lingue, 64 GB, cancellazione del rumore IA per lezioni, riunioni, chiamate, interviste – Kentfaith" [ref=e1062] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6302.0001.0010_registratore-vocale-ai-dispositivo-di-registrazione-con-controllo-tramite-app-supporta-trascrizion
+                      - generic [ref=e1063]:
+                        - text: 219,99€
+                        - generic [ref=e1064]: 119,99€
+                  - generic [ref=e1066]:
+                    - link "Microscopio Darkfield con schermo da 7 pollici, ingrandimento 40X-2500X, fotocamera 5MP per foto e video, obiettivi acromatici 195, tavolino meccanico a doppio strato, Kentfaith" [ref=e1068] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6901.0001.0030_microscopio-darkfield-con-schermo-da-7-pollici-ingrandimento-40x-2500x-fotocamera-5mp-per-foto-e-v
+                      - img "Microscopio Darkfield con schermo da 7 pollici, ingrandimento 40X-2500X, fotocamera 5MP per foto e video, obiettivi acromatici 195, tavolino meccanico a doppio strato, Kentfaith" [ref=e1069]
+                    - generic [ref=e1070]:
+                      - link "Microscopio Darkfield con schermo da 7 pollici, ingrandimento 40X-2500X, fotocamera 5MP per foto e video, obiettivi acromatici 195, tavolino meccanico a doppio strato, Kentfaith" [ref=e1072] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6901.0001.0030_microscopio-darkfield-con-schermo-da-7-pollici-ingrandimento-40x-2500x-fotocamera-5mp-per-foto-e-v
+                      - generic [ref=e1073]:
+                        - text: 1.099,99€
+                        - generic [ref=e1074]: 789,99€
+                  - generic [ref=e1076]:
+                    - link "Microscopio composto per bambini con schermo da 4,3 pollici, da 80X a 800X, connessione WiFi, doppie sorgenti luminose, video 1080P, scheda da 32GB inclusa, Kentfaith" [ref=e1078] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6903.0001.0010_microscopio-composto-per-bambini-con-schermo-da-43-pollici-da-80x-a-800x-connessione-wifi-doppie
+                      - img "Microscopio composto per bambini con schermo da 4,3 pollici, da 80X a 800X, connessione WiFi, doppie sorgenti luminose, video 1080P, scheda da 32GB inclusa, Kentfaith" [ref=e1079]
+                    - generic [ref=e1080]:
+                      - link "Microscopio composto per bambini con schermo da 4,3 pollici, da 80X a 800X, connessione WiFi, doppie sorgenti luminose, video 1080P, scheda da 32GB inclusa, Kentfaith" [ref=e1082] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6903.0001.0010_microscopio-composto-per-bambini-con-schermo-da-43-pollici-da-80x-a-800x-connessione-wifi-doppie
+                      - generic [ref=e1083]:
+                        - text: 399,99€
+                        - generic [ref=e1084]: 169,99€
+              - generic [ref=e1085]:
+                - generic:
+                  - generic [ref=e1087]:
+                    - link "Dispositivo di traduzione AI con doppio schermo, 159 lingue, Traduzione e trascrizione di riunioni intelligenti, 28 lingue offline, Traduzione di videochiamate, Traduzione di foto, KentFaith" [ref=e1089] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6801.0001.0010_dispositivo-di-traduzione-ai-con-doppio-schermo-159-lingue-traduzione-e-trascrizione-di-riunioni-i
+                      - img "Dispositivo di traduzione AI con doppio schermo, 159 lingue, Traduzione e trascrizione di riunioni intelligenti, 28 lingue offline, Traduzione di videochiamate, Traduzione di foto, KentFaith" [ref=e1090]
+                    - generic [ref=e1091]:
+                      - link "Dispositivo di traduzione AI con doppio schermo, 159 lingue, Traduzione e trascrizione di riunioni intelligenti, 28 lingue offline, Traduzione di videochiamate, Traduzione di foto, KentFaith" [ref=e1093] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6801.0001.0010_dispositivo-di-traduzione-ai-con-doppio-schermo-159-lingue-traduzione-e-trascrizione-di-riunioni-i
+                      - generic [ref=e1094]:
+                        - text: 299,99€
+                        - generic [ref=e1095]: 199,99€
+                  - generic [ref=e1097]:
+                    - link "Registratore vocale digitale con archiviazione 64Gb, 1536 kbps, registrazione attivata e in linea, durata della batteria 85H, memorizzazione 800 ore di registrazione, KentFaith" [ref=e1099] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6301.0001.0010_registratore-vocale-digitale-con-archiviazione-64gb-1536-kbps-registrazione-attivata-e-in-linea-d
+                      - img "Registratore vocale digitale con archiviazione 64Gb, 1536 kbps, registrazione attivata e in linea, durata della batteria 85H, memorizzazione 800 ore di registrazione, KentFaith" [ref=e1100]
+                    - generic [ref=e1101]:
+                      - link "Registratore vocale digitale con archiviazione 64Gb, 1536 kbps, registrazione attivata e in linea, durata della batteria 85H, memorizzazione 800 ore di registrazione, KentFaith" [ref=e1103] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6301.0001.0010_registratore-vocale-digitale-con-archiviazione-64gb-1536-kbps-registrazione-attivata-e-in-linea-d
+                      - generic [ref=e1104]:
+                        - generic [ref=e1106]: 
+                        - generic [ref=e1108]: 
+                        - generic [ref=e1110]: 
+                        - generic [ref=e1112]: 
+                        - generic [ref=e1114]: 
+                        - text: "18"
+                      - generic [ref=e1115]:
+                        - text: 159,99€
+                        - generic [ref=e1116]: 89,99€
+                  - generic [ref=e1118]:
+                    - link "Dispositivo di traduttore AI, Nessun WiFi necessario, Traduttore online bidirezionale istantaneo in 142 lingue, Traduzione offline / registrazione / foto per viaggi d'affari, 16 GB di archiviazione, Bluetooth 4.0, KentFaith" [ref=e1120] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0033_dispositivo-di-traduttore-ai-nessun-wifi-necessario-traduttore-online-bidirezionale-istantaneo-in
+                      - img "Dispositivo di traduttore AI, Nessun WiFi necessario, Traduttore online bidirezionale istantaneo in 142 lingue, Traduzione offline / registrazione / foto per viaggi d'affari, 16 GB di archiviazione, Bluetooth 4.0, KentFaith" [ref=e1121]
+                    - generic [ref=e1122]:
+                      - link "Dispositivo di traduttore AI, Nessun WiFi necessario, Traduttore online bidirezionale istantaneo in 142 lingue, Traduzione offline / registrazione / foto per viaggi d'affari, 16 GB di archiviazione, Bluetooth 4.0, KentFaith" [ref=e1124] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0033_dispositivo-di-traduttore-ai-nessun-wifi-necessario-traduttore-online-bidirezionale-istantaneo-in
+                      - generic [ref=e1125]:
+                        - generic [ref=e1127]: 
+                        - generic [ref=e1129]: 
+                        - generic [ref=e1131]: 
+                        - generic [ref=e1133]: 
+                        - generic [ref=e1135]: 
+                        - text: "9"
+                      - generic [ref=e1136]:
+                        - text: 199,99€
+                        - generic [ref=e1137]: 109,99€
+                  - generic [ref=e1139]:
+                    - link "Auricolari Traduttori in Tempo Reale con 142 Lingue/Accenti Bidirezionali, 6 Modalità di Traduzione, Traduzione Chiamate & Registrazione, Traduzione Video, Cancellazione Rumore ENC & ANC, Kentfaith" [ref=e1141] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0035_auricolari-traduttore-in-tempo-reale-con-142-lingue-accenti-bidirezionali-6-modalità-di-traduzione
+                      - img "Auricolari Traduttori in Tempo Reale con 142 Lingue/Accenti Bidirezionali, 6 Modalità di Traduzione, Traduzione Chiamate & Registrazione, Traduzione Video, Cancellazione Rumore ENC & ANC, Kentfaith" [ref=e1142]
+                    - generic [ref=e1143]:
+                      - link "Auricolari Traduttori in Tempo Reale con 142 Lingue/Accenti Bidirezionali, 6 Modalità di Traduzione, Traduzione Chiamate & Registrazione, Traduzione Video, Cancellazione Rumore ENC & ANC, Kentfaith" [ref=e1145] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0035_auricolari-traduttore-in-tempo-reale-con-142-lingue-accenti-bidirezionali-6-modalità-di-traduzione
+                      - generic [ref=e1146]:
+                        - text: 219,99€
+                        - generic [ref=e1147]: 109,99€
+                  - generic [ref=e1149]:
+                    - link "Registratore Vocale AI, Trascrivi, Riassumi e Traduci con AI, Controllo App, Prendi Appunti per Riunioni e Chiamate, Supporta 100 Lingue, Ultra-Sottile con Display InstantView, Custodia Inclusa, Kentfaith" [ref=e1151] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW63.0019_registratore-vocale-ai-trascrivi-riassumi-e-traduci-con-ai-controllo-app-prendi-appunti-per-riun
+                      - img "Registratore Vocale AI, Trascrivi, Riassumi e Traduci con AI, Controllo App, Prendi Appunti per Riunioni e Chiamate, Supporta 100 Lingue, Ultra-Sottile con Display InstantView, Custodia Inclusa, Kentfaith" [ref=e1152]
+                    - generic [ref=e1153]:
+                      - link "Registratore Vocale AI, Trascrivi, Riassumi e Traduci con AI, Controllo App, Prendi Appunti per Riunioni e Chiamate, Supporta 100 Lingue, Ultra-Sottile con Display InstantView, Custodia Inclusa, Kentfaith" [ref=e1155] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW63.0019_registratore-vocale-ai-trascrivi-riassumi-e-traduci-con-ai-controllo-app-prendi-appunti-per-riun
+                      - generic [ref=e1156]:
+                        - text: 249,99€
+                        - generic [ref=e1157]: 129,99€
+                  - generic [ref=e1159]:
+                    - link "AI Dispositivo Traduttore, 142 Lingue Offline & Online, Supporto Connessione Internazionale 4G Gratuita, ChatGPT, Traduzione Offline/Foto/Registrazione per Viaggi di Lavoro Studio, Kentfaith" [ref=e1161] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0036_ai-traduttore-dispositivo-142-lingue-offline-online-supporto-connessione-internazionale-4g-g
+                      - img "AI Dispositivo Traduttore, 142 Lingue Offline & Online, Supporto Connessione Internazionale 4G Gratuita, ChatGPT, Traduzione Offline/Foto/Registrazione per Viaggi di Lavoro Studio, Kentfaith" [ref=e1162]
+                    - generic [ref=e1163]:
+                      - link "AI Dispositivo Traduttore, 142 Lingue Offline & Online, Supporto Connessione Internazionale 4G Gratuita, ChatGPT, Traduzione Offline/Foto/Registrazione per Viaggi di Lavoro Studio, Kentfaith" [ref=e1165] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0036_ai-traduttore-dispositivo-142-lingue-offline-online-supporto-connessione-internazionale-4g-g
+                      - generic [ref=e1166]:
+                        - text: 249,99€
+                        - generic [ref=e1167]: 149,99€
+              - generic [ref=e1168]:
+                - generic:
+                  - generic [ref=e1170]:
+                    - link "K&F CONCEPT Zaino Fotografico Professionale, Zaino Fotografico Ligera 5L Resistente al Agua para Uso Diario y Viajes, Compatible con Sony/Canon/Nikon, Compacto con Compartimento para iPad, Nero" [ref=e1172] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/KF13.301_kf-concept-5l-borsa-a-tracolla-per-fotocamera-custodia-leggera-per-fotografi
+                      - img "K&F CONCEPT Zaino Fotografico Professionale, Zaino Fotografico Ligera 5L Resistente al Agua para Uso Diario y Viajes, Compatible con Sony/Canon/Nikon, Compacto con Compartimento para iPad, Nero" [ref=e1173]
+                    - generic [ref=e1174]:
+                      - link "K&F CONCEPT Zaino Fotografico Professionale, Zaino Fotografico Ligera 5L Resistente al Agua para Uso Diario y Viajes, Compatible con Sony/Canon/Nikon, Compacto con Compartimento para iPad, Nero" [ref=e1176] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/KF13.301_kf-concept-5l-borsa-a-tracolla-per-fotocamera-custodia-leggera-per-fotografi
+                      - generic [ref=e1177]:
+                        - text: 92,99€
+                        - generic [ref=e1178]: 49,99€
+                  - generic [ref=e1180]:
+                    - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline, Traduzione di Video e Chiamate Vocali, Autonomia di 40H, Design a Clip, Kentfaith" [ref=e1182] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0038_auricolari-traduttore-in-tempo-reale-con-150-lingue-traduzione-offline-traduzione-di-video-e-chiam
+                      - img "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline, Traduzione di Video e Chiamate Vocali, Autonomia di 40H, Design a Clip, Kentfaith" [ref=e1183]
+                    - generic [ref=e1184]:
+                      - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline, Traduzione di Video e Chiamate Vocali, Autonomia di 40H, Design a Clip, Kentfaith" [ref=e1186] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0038_auricolari-traduttore-in-tempo-reale-con-150-lingue-traduzione-offline-traduzione-di-video-e-chiam
+                      - generic [ref=e1187]:
+                        - text: 189,99€
+                        - generic [ref=e1188]: 99,99€
+                  - generic [ref=e1190]:
+                    - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline Gratuita, Traduzione di Chiamate Vocali e Video, Schermo LCD Touch, Kentfaith" [ref=e1192] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0037_auricolari-per-traduzione-in-tempo-reale-con-150-lingue-traduzione-offline-gratuita-traduzione-di
+                      - img "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline Gratuita, Traduzione di Chiamate Vocali e Video, Schermo LCD Touch, Kentfaith" [ref=e1193]
+                    - generic [ref=e1194]:
+                      - link "Auricolari Traduttori in Tempo Reale con 150 Lingue, Traduzione Offline Gratuita, Traduzione di Chiamate Vocali e Video, Schermo LCD Touch, Kentfaith" [ref=e1196] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0037_auricolari-per-traduzione-in-tempo-reale-con-150-lingue-traduzione-offline-gratuita-traduzione-di
+                      - generic [ref=e1197]:
+                        - text: 215,99€
+                        - generic [ref=e1198]: 115,99€
+                  - generic [ref=e1200]:
+                    - link "Registratore vocale AI, dispositivo di registrazione con controllo tramite app, supporta trascrizione IA, riepilogo e mappe mentali in 134 lingue, 64 GB, cancellazione del rumore IA per lezioni, riunioni, chiamate, interviste – Kentfaith" [ref=e1202] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6302.0001.0010_registratore-vocale-ai-dispositivo-di-registrazione-con-controllo-tramite-app-supporta-trascrizion
+                      - img "Registratore vocale AI, dispositivo di registrazione con controllo tramite app, supporta trascrizione IA, riepilogo e mappe mentali in 134 lingue, 64 GB, cancellazione del rumore IA per lezioni, riunioni, chiamate, interviste – Kentfaith" [ref=e1203]
+                    - generic [ref=e1204]:
+                      - link "Registratore vocale AI, dispositivo di registrazione con controllo tramite app, supporta trascrizione IA, riepilogo e mappe mentali in 134 lingue, 64 GB, cancellazione del rumore IA per lezioni, riunioni, chiamate, interviste – Kentfaith" [ref=e1206] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6302.0001.0010_registratore-vocale-ai-dispositivo-di-registrazione-con-controllo-tramite-app-supporta-trascrizion
+                      - generic [ref=e1207]:
+                        - text: 219,99€
+                        - generic [ref=e1208]: 119,99€
+                  - generic [ref=e1210]:
+                    - link "Microscopio Darkfield con schermo da 7 pollici, ingrandimento 40X-2500X, fotocamera 5MP per foto e video, obiettivi acromatici 195, tavolino meccanico a doppio strato, Kentfaith" [ref=e1212] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6901.0001.0030_microscopio-darkfield-con-schermo-da-7-pollici-ingrandimento-40x-2500x-fotocamera-5mp-per-foto-e-v
+                      - img "Microscopio Darkfield con schermo da 7 pollici, ingrandimento 40X-2500X, fotocamera 5MP per foto e video, obiettivi acromatici 195, tavolino meccanico a doppio strato, Kentfaith" [ref=e1213]
+                    - generic [ref=e1214]:
+                      - link "Microscopio Darkfield con schermo da 7 pollici, ingrandimento 40X-2500X, fotocamera 5MP per foto e video, obiettivi acromatici 195, tavolino meccanico a doppio strato, Kentfaith" [ref=e1216] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6901.0001.0030_microscopio-darkfield-con-schermo-da-7-pollici-ingrandimento-40x-2500x-fotocamera-5mp-per-foto-e-v
+                      - generic [ref=e1217]:
+                        - text: 1.099,99€
+                        - generic [ref=e1218]: 789,99€
+                  - generic [ref=e1220]:
+                    - link "Microscopio composto per bambini con schermo da 4,3 pollici, da 80X a 800X, connessione WiFi, doppie sorgenti luminose, video 1080P, scheda da 32GB inclusa, Kentfaith" [ref=e1222] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6903.0001.0010_microscopio-composto-per-bambini-con-schermo-da-43-pollici-da-80x-a-800x-connessione-wifi-doppie
+                      - img "Microscopio composto per bambini con schermo da 4,3 pollici, da 80X a 800X, connessione WiFi, doppie sorgenti luminose, video 1080P, scheda da 32GB inclusa, Kentfaith" [ref=e1223]
+                    - generic [ref=e1224]:
+                      - link "Microscopio composto per bambini con schermo da 4,3 pollici, da 80X a 800X, connessione WiFi, doppie sorgenti luminose, video 1080P, scheda da 32GB inclusa, Kentfaith" [ref=e1226] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6903.0001.0010_microscopio-composto-per-bambini-con-schermo-da-43-pollici-da-80x-a-800x-connessione-wifi-doppie
+                      - generic [ref=e1227]:
+                        - text: 399,99€
+                        - generic [ref=e1228]: 169,99€
+              - generic [ref=e1229]:
+                - generic:
+                  - generic [ref=e1231]:
+                    - link "Dispositivo di traduzione AI con doppio schermo, 159 lingue, Traduzione e trascrizione di riunioni intelligenti, 28 lingue offline, Traduzione di videochiamate, Traduzione di foto, KentFaith" [ref=e1233] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6801.0001.0010_dispositivo-di-traduzione-ai-con-doppio-schermo-159-lingue-traduzione-e-trascrizione-di-riunioni-i
+                      - img "Dispositivo di traduzione AI con doppio schermo, 159 lingue, Traduzione e trascrizione di riunioni intelligenti, 28 lingue offline, Traduzione di videochiamate, Traduzione di foto, KentFaith" [ref=e1234]
+                    - generic [ref=e1235]:
+                      - link "Dispositivo di traduzione AI con doppio schermo, 159 lingue, Traduzione e trascrizione di riunioni intelligenti, 28 lingue offline, Traduzione di videochiamate, Traduzione di foto, KentFaith" [ref=e1237] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6801.0001.0010_dispositivo-di-traduzione-ai-con-doppio-schermo-159-lingue-traduzione-e-trascrizione-di-riunioni-i
+                      - generic [ref=e1238]:
+                        - text: 299,99€
+                        - generic [ref=e1239]: 199,99€
+                  - generic [ref=e1241]:
+                    - link "Registratore vocale digitale con archiviazione 64Gb, 1536 kbps, registrazione attivata e in linea, durata della batteria 85H, memorizzazione 800 ore di registrazione, KentFaith" [ref=e1243] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW6301.0001.0010_registratore-vocale-digitale-con-archiviazione-64gb-1536-kbps-registrazione-attivata-e-in-linea-d
+                      - img "Registratore vocale digitale con archiviazione 64Gb, 1536 kbps, registrazione attivata e in linea, durata della batteria 85H, memorizzazione 800 ore di registrazione, KentFaith" [ref=e1244]
+                    - generic [ref=e1245]:
+                      - link "Registratore vocale digitale con archiviazione 64Gb, 1536 kbps, registrazione attivata e in linea, durata della batteria 85H, memorizzazione 800 ore di registrazione, KentFaith" [ref=e1247] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW6301.0001.0010_registratore-vocale-digitale-con-archiviazione-64gb-1536-kbps-registrazione-attivata-e-in-linea-d
+                      - generic [ref=e1248]:
+                        - generic [ref=e1250]: 
+                        - generic [ref=e1252]: 
+                        - generic [ref=e1254]: 
+                        - generic [ref=e1256]: 
+                        - generic [ref=e1258]: 
+                        - text: "18"
+                      - generic [ref=e1259]:
+                        - text: 159,99€
+                        - generic [ref=e1260]: 89,99€
+                  - generic [ref=e1262]:
+                    - link "Dispositivo di traduttore AI, Nessun WiFi necessario, Traduttore online bidirezionale istantaneo in 142 lingue, Traduzione offline / registrazione / foto per viaggi d'affari, 16 GB di archiviazione, Bluetooth 4.0, KentFaith" [ref=e1264] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0033_dispositivo-di-traduttore-ai-nessun-wifi-necessario-traduttore-online-bidirezionale-istantaneo-in
+                      - img "Dispositivo di traduttore AI, Nessun WiFi necessario, Traduttore online bidirezionale istantaneo in 142 lingue, Traduzione offline / registrazione / foto per viaggi d'affari, 16 GB di archiviazione, Bluetooth 4.0, KentFaith" [ref=e1265]
+                    - generic [ref=e1266]:
+                      - link "Dispositivo di traduttore AI, Nessun WiFi necessario, Traduttore online bidirezionale istantaneo in 142 lingue, Traduzione offline / registrazione / foto per viaggi d'affari, 16 GB di archiviazione, Bluetooth 4.0, KentFaith" [ref=e1268] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0033_dispositivo-di-traduttore-ai-nessun-wifi-necessario-traduttore-online-bidirezionale-istantaneo-in
+                      - generic [ref=e1269]:
+                        - generic [ref=e1271]: 
+                        - generic [ref=e1273]: 
+                        - generic [ref=e1275]: 
+                        - generic [ref=e1277]: 
+                        - generic [ref=e1279]: 
+                        - text: "9"
+                      - generic [ref=e1280]:
+                        - text: 199,99€
+                        - generic [ref=e1281]: 109,99€
+                  - generic [ref=e1283]:
+                    - link "Auricolari Traduttori in Tempo Reale con 142 Lingue/Accenti Bidirezionali, 6 Modalità di Traduzione, Traduzione Chiamate & Registrazione, Traduzione Video, Cancellazione Rumore ENC & ANC, Kentfaith" [ref=e1285] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0035_auricolari-traduttore-in-tempo-reale-con-142-lingue-accenti-bidirezionali-6-modalità-di-traduzione
+                      - img "Auricolari Traduttori in Tempo Reale con 142 Lingue/Accenti Bidirezionali, 6 Modalità di Traduzione, Traduzione Chiamate & Registrazione, Traduzione Video, Cancellazione Rumore ENC & ANC, Kentfaith" [ref=e1286]
+                    - generic [ref=e1287]:
+                      - link "Auricolari Traduttori in Tempo Reale con 142 Lingue/Accenti Bidirezionali, 6 Modalità di Traduzione, Traduzione Chiamate & Registrazione, Traduzione Video, Cancellazione Rumore ENC & ANC, Kentfaith" [ref=e1289] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0035_auricolari-traduttore-in-tempo-reale-con-142-lingue-accenti-bidirezionali-6-modalità-di-traduzione
+                      - generic [ref=e1290]:
+                        - text: 219,99€
+                        - generic [ref=e1291]: 109,99€
+                  - generic [ref=e1293]:
+                    - link "Registratore Vocale AI, Trascrivi, Riassumi e Traduci con AI, Controllo App, Prendi Appunti per Riunioni e Chiamate, Supporta 100 Lingue, Ultra-Sottile con Display InstantView, Custodia Inclusa, Kentfaith" [ref=e1295] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW63.0019_registratore-vocale-ai-trascrivi-riassumi-e-traduci-con-ai-controllo-app-prendi-appunti-per-riun
+                      - img "Registratore Vocale AI, Trascrivi, Riassumi e Traduci con AI, Controllo App, Prendi Appunti per Riunioni e Chiamate, Supporta 100 Lingue, Ultra-Sottile con Display InstantView, Custodia Inclusa, Kentfaith" [ref=e1296]
+                    - generic [ref=e1297]:
+                      - link "Registratore Vocale AI, Trascrivi, Riassumi e Traduci con AI, Controllo App, Prendi Appunti per Riunioni e Chiamate, Supporta 100 Lingue, Ultra-Sottile con Display InstantView, Custodia Inclusa, Kentfaith" [ref=e1299] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW63.0019_registratore-vocale-ai-trascrivi-riassumi-e-traduci-con-ai-controllo-app-prendi-appunti-per-riun
+                      - generic [ref=e1300]:
+                        - text: 249,99€
+                        - generic [ref=e1301]: 129,99€
+                  - generic [ref=e1303]:
+                    - link "AI Dispositivo Traduttore, 142 Lingue Offline & Online, Supporto Connessione Internazionale 4G Gratuita, ChatGPT, Traduzione Offline/Foto/Registrazione per Viaggi di Lavoro Studio, Kentfaith" [ref=e1305] [cursor=pointer]:
+                      - /url: https://www.kentfaith.it/GW68.0036_ai-traduttore-dispositivo-142-lingue-offline-online-supporto-connessione-internazionale-4g-g
+                      - img "AI Dispositivo Traduttore, 142 Lingue Offline & Online, Supporto Connessione Internazionale 4G Gratuita, ChatGPT, Traduzione Offline/Foto/Registrazione per Viaggi di Lavoro Studio, Kentfaith" [ref=e1306]
+                    - generic [ref=e1307]:
+                      - link "AI Dispositivo Traduttore, 142 Lingue Offline & Online, Supporto Connessione Internazionale 4G Gratuita, ChatGPT, Traduzione Offline/Foto/Registrazione per Viaggi di Lavoro Studio, Kentfaith" [ref=e1309] [cursor=pointer]:
+                        - /url: https://www.kentfaith.it/GW68.0036_ai-traduttore-dispositivo-142-lingue-offline-online-supporto-connessione-internazionale-4g-g
+                      - generic [ref=e1310]:
+                        - text: 249,99€
+                        - generic [ref=e1311]: 149,99€
+            - generic:
+              - generic [ref=e1312] [cursor=pointer]: 
+              - generic [ref=e1313] [cursor=pointer]: 
+        - generic [ref=e1315]:
+          - generic [ref=e1317]: I migliori prodotti più venduti
+          - generic [ref=e1318]:
+            - generic [ref=e1320]:
+              - generic [ref=e1322]:
+                - generic [ref=e1323]: "-29%"
+                - link "Obiettivo Yongnuo YN35mm F2 1:2 AF/MF Obiettivo grandangolare fisso/fisso con messa a fuoco AF per fotocamere EOS con attacco EF Canon" [ref=e1325] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0001_obiettivo-yongnuo-yn35mm-f2-12-af-mf-obiettivo-grandangolare
+                  - img "Obiettivo Yongnuo YN35mm F2 1:2 AF/MF Obiettivo grandangolare fisso/fisso con messa a fuoco AF per fotocamere EOS con attacco EF Canon" [ref=e1326]
+                - generic [ref=e1327]:
+                  - link "Obiettivo Yongnuo YN35mm F2 1:2 AF/MF Obiettivo grandangolare fisso/fisso con messa a fuoco AF per fotocamere EOS con attacco EF Canon" [ref=e1329] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0001_obiettivo-yongnuo-yn35mm-f2-12-af-mf-obiettivo-grandangolare
+                  - generic [ref=e1330]:
+                    - text: 169,99€
+                    - generic [ref=e1331]: 119,99€
+              - generic [ref=e1333]:
+                - generic [ref=e1334]: "-29%"
+                - link "Yongnuo YN 35mm f/2 Obiettivo a fuoco fisso standard Autofocus per fotocamere reflex digitali Nikon F-mount" [ref=e1336] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0002_yongnuo-yn-35mm-f-2-obiettivo-a-fuoco-fisso-standard-autofoc
+                  - img "Yongnuo YN 35mm f/2 Obiettivo a fuoco fisso standard Autofocus per fotocamere reflex digitali Nikon F-mount" [ref=e1337]
+                - generic [ref=e1338]:
+                  - link "Yongnuo YN 35mm f/2 Obiettivo a fuoco fisso standard Autofocus per fotocamere reflex digitali Nikon F-mount" [ref=e1340] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0002_yongnuo-yn-35mm-f-2-obiettivo-a-fuoco-fisso-standard-autofoc
+                  - generic [ref=e1341]:
+                    - text: 169,99€
+                    - generic [ref=e1342]: 119,99€
+              - generic [ref=e1344]:
+                - generic [ref=e1345]: "-30%"
+                - link "Yongnuo YN50mm F/1.4N Obiettivo a fuoco fisso standard Messa a fuoco automatica per fotocamere reflex digitali Nikon F-mount" [ref=e1347] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0009_yongnuo-yn50mm-f-1-4n-obiettivo-a-fuoco-fisso-standard-messa
+                  - img "Yongnuo YN50mm F/1.4N Obiettivo a fuoco fisso standard Messa a fuoco automatica per fotocamere reflex digitali Nikon F-mount" [ref=e1348]
+                - generic [ref=e1349]:
+                  - link "Yongnuo YN50mm F/1.4N Obiettivo a fuoco fisso standard Messa a fuoco automatica per fotocamere reflex digitali Nikon F-mount" [ref=e1351] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0009_yongnuo-yn50mm-f-1-4n-obiettivo-a-fuoco-fisso-standard-messa
+                  - generic [ref=e1352]:
+                    - text: 299,99€
+                    - generic [ref=e1353]: 209,99€
+              - generic [ref=e1355]:
+                - generic [ref=e1356]: "-30%"
+                - link "Yongnuo YN50mm F/1.4 Obiettivo a fuoco fisso standard Autofocus per fotocamere Canon EOS con innesto EF" [ref=e1358] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0008_yongnuo-yn50mm-f-1-4-obiettivo-a-fuoco-fisso-standard-autofo
+                  - img "Yongnuo YN50mm F/1.4 Obiettivo a fuoco fisso standard Autofocus per fotocamere Canon EOS con innesto EF" [ref=e1359]
+                - generic [ref=e1360]:
+                  - link "Yongnuo YN50mm F/1.4 Obiettivo a fuoco fisso standard Autofocus per fotocamere Canon EOS con innesto EF" [ref=e1362] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0008_yongnuo-yn50mm-f-1-4-obiettivo-a-fuoco-fisso-standard-autofo
+                  - generic [ref=e1363]:
+                    - text: 299,99€
+                    - generic [ref=e1364]: 209,99€
+              - generic [ref=e1366]:
+                - generic [ref=e1367]: "-31%"
+                - link "Yongnuo YN 50mm f/1.8N Obiettivo a fuoco fisso standard Autofocus per fotocamere reflex digitali Nikon F-mount" [ref=e1369] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0007_yongnuo-yn-50mm-f-1-8n-obiettivo-a-fuoco-fisso-standard-auto
+                  - img "Yongnuo YN 50mm f/1.8N Obiettivo a fuoco fisso standard Autofocus per fotocamere reflex digitali Nikon F-mount" [ref=e1370]
+                - generic [ref=e1371]:
+                  - link "Yongnuo YN 50mm f/1.8N Obiettivo a fuoco fisso standard Autofocus per fotocamere reflex digitali Nikon F-mount" [ref=e1373] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0007_yongnuo-yn-50mm-f-1-8n-obiettivo-a-fuoco-fisso-standard-auto
+                  - generic [ref=e1374]:
+                    - text: 159,99€
+                    - generic [ref=e1375]: 109,99€
+              - generic [ref=e1377]:
+                - generic [ref=e1378]: "-16%"
+                - link "Yongnuo YN 35mm f/1.4 obiettivo grandangolare a fuoco fisso autofocus per fotocamere Canon EOS con innesto EF" [ref=e1380] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0003_yongnuo-yn-35mm-f-1-4-obiettivo-grandangolare-a-fuoco-fisso-
+                  - img "Yongnuo YN 35mm f/1.4 obiettivo grandangolare a fuoco fisso autofocus per fotocamere Canon EOS con innesto EF" [ref=e1381]
+                - generic [ref=e1382]:
+                  - link "Yongnuo YN 35mm f/1.4 obiettivo grandangolare a fuoco fisso autofocus per fotocamere Canon EOS con innesto EF" [ref=e1384] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0003_yongnuo-yn-35mm-f-1-4-obiettivo-grandangolare-a-fuoco-fisso-
+                  - generic [ref=e1385]:
+                    - text: 599,99€
+                    - generic [ref=e1386]: 499,99€
+              - generic [ref=e1388]:
+                - generic [ref=e1389]: "-23%"
+                - link "Yongnuo YN 14mm f/2.8N Obiettivo a fuoco fisso super grandangolare Autofocus per fotocamere reflex digitali Nikon F-mount" [ref=e1391] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0005_yongnuo-yn-14mm-f-2-8n-obiettivo-a-fuoco-fisso-super-grandan
+                  - img "Yongnuo YN 14mm f/2.8N Obiettivo a fuoco fisso super grandangolare Autofocus per fotocamere reflex digitali Nikon F-mount" [ref=e1392]
+                - generic [ref=e1393]:
+                  - link "Yongnuo YN 14mm f/2.8N Obiettivo a fuoco fisso super grandangolare Autofocus per fotocamere reflex digitali Nikon F-mount" [ref=e1395] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0005_yongnuo-yn-14mm-f-2-8n-obiettivo-a-fuoco-fisso-super-grandan
+                  - generic [ref=e1396]:
+                    - text: 839,99€
+                    - generic [ref=e1397]: 639,99€
+              - generic [ref=e1399]:
+                - generic [ref=e1400]: "-23%"
+                - link "Yongnuo YN 14mm f/2.8 Obiettivo super grandangolare con messa a fuoco fissa Autofocus per fotocamere Canon EOS con innesto EF" [ref=e1402] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0004_yongnuo-yn-14mm-f-2-8-obiettivo-super-grandangolare-con-mess
+                  - img "Yongnuo YN 14mm f/2.8 Obiettivo super grandangolare con messa a fuoco fissa Autofocus per fotocamere Canon EOS con innesto EF" [ref=e1403]
+                - generic [ref=e1404]:
+                  - link "Yongnuo YN 14mm f/2.8 Obiettivo super grandangolare con messa a fuoco fissa Autofocus per fotocamere Canon EOS con innesto EF" [ref=e1406] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0004_yongnuo-yn-14mm-f-2-8-obiettivo-super-grandangolare-con-mess
+                  - generic [ref=e1407]:
+                    - text: 839,99€
+                    - generic [ref=e1408]: 639,99€
+              - generic [ref=e1410]:
+                - generic [ref=e1411]: "-45%"
+                - link "Obiettivo macro 32X per iPhone Android 40-90mm Distanza di messa a fuoco con CPL e filtro Starlight" [ref=e1413] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0017_32x-macro-lens-per-iphone-android-40-90mm-distanza-di-messa-a-fuoco-con-cpl-e-filtro-starlight
+                  - img "Obiettivo macro 32X per iPhone Android 40-90mm Distanza di messa a fuoco con CPL e filtro Starlight" [ref=e1414]
+                - generic [ref=e1415]:
+                  - link "Obiettivo macro 32X per iPhone Android 40-90mm Distanza di messa a fuoco con CPL e filtro Starlight" [ref=e1417] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0017_32x-macro-lens-per-iphone-android-40-90mm-distanza-di-messa-a-fuoco-con-cpl-e-filtro-starlight
+                  - generic [ref=e1418]:
+                    - text: 109,99€
+                    - generic [ref=e1419]: 59,99€
+              - generic [ref=e1421]:
+                - generic [ref=e1422]: "-50%"
+                - link "Kit Vlogging Video Rig con Gabbia per Telefono per iPhone 16 15 14 13 Pro Max Kentfaith" [ref=e1424] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0021_kit-vlogging-video-rig-con-gabbia-per-telefono-per-iphone-16-15-14-13-pro-max-kentfaith
+                  - img "Kit Vlogging Video Rig con Gabbia per Telefono per iPhone 16 15 14 13 Pro Max Kentfaith" [ref=e1425]
+                - generic [ref=e1426]:
+                  - link "Kit Vlogging Video Rig con Gabbia per Telefono per iPhone 16 15 14 13 Pro Max Kentfaith" [ref=e1428] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0021_kit-vlogging-video-rig-con-gabbia-per-telefono-per-iphone-16-15-14-13-pro-max-kentfaith
+                  - generic [ref=e1429]:
+                    - text: 199,99€
+                    - generic [ref=e1430]: 99,99€
+            - generic:
+              - generic: 
+              - generic [ref=e1431] [cursor=pointer]: 
+        - generic [ref=e1433]:
+          - generic [ref=e1435]: Prodotti correlati
+          - generic [ref=e1437]:
+            - generic [ref=e1439]:
+              - generic [ref=e1441]:
+                - link "Obiettivo Telefono Teleobiettivo, Zoom Super 30X, Lunghezza focale di 720mm, Treppiede Incluso, Compatibile con Filtri da 46mm Kentfaith" [ref=e1443] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW21.0022_obiettivo-telefono-teleobiettivo-zoom-super-30x-lunghezza-focale-di-720mm-treppiede-incluso-comp
+                  - img "Obiettivo Telefono Teleobiettivo, Zoom Super 30X, Lunghezza focale di 720mm, Treppiede Incluso, Compatibile con Filtri da 46mm Kentfaith" [ref=e1444]
+                - generic [ref=e1445]:
+                  - link "Obiettivo Telefono Teleobiettivo, Zoom Super 30X, Lunghezza focale di 720mm, Treppiede Incluso, Compatibile con Filtri da 46mm Kentfaith" [ref=e1447] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW21.0022_obiettivo-telefono-teleobiettivo-zoom-super-30x-lunghezza-focale-di-720mm-treppiede-incluso-comp
+                  - generic [ref=e1448]:
+                    - generic [ref=e1450]: 
+                    - generic [ref=e1452]: 
+                    - generic [ref=e1454]: 
+                    - generic [ref=e1456]: 
+                    - generic [ref=e1458]: 
+                    - text: "15"
+                  - generic [ref=e1459]:
+                    - text: 169,99€
+                    - generic [ref=e1460]: 89,99€
+              - generic [ref=e1462]:
+                - generic [ref=e1463]:
+                  - link "Telescopio astronomico adatto a bambini e principianti, telescopio rifrattore astronomico con apertura di 70 mm e lunghezza focale di 300 mm, telescopio da viaggio portatile con treppiede, supporto per smartphone e telecomando Bluetooth" [ref=e1464] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF33.036_telescopio-astronomico-adatto-a-bambini-e-principianti-telescopio-rifrattore-astronomico-con-apertura-di-70-mm-e-lunghezza-focale-di-300-mm-telescopio-da-viaggio-portatile-con-treppiede-supporto-per-smartphone-e-telecomando-bluetooth
+                    - img "Telescopio astronomico adatto a bambini e principianti, telescopio rifrattore astronomico con apertura di 70 mm e lunghezza focale di 300 mm, telescopio da viaggio portatile con treppiede, supporto per smartphone e telecomando Bluetooth" [ref=e1465]
+                  - generic [ref=e1467]:
+                    - generic [ref=e1468]: HOT
+                    - generic [ref=e1469]: Seller
+                    - generic [ref=e1470]: 
+                - generic [ref=e1471]:
+                  - link "Telescopio astronomico adatto a bambini e principianti, telescopio rifrattore astronomico con apertura di 70 mm e lunghezza focale di 300 mm, telescopio da viaggio portatile con treppiede, supporto per smartphone e telecomando Bluetooth" [ref=e1473] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF33.036_telescopio-astronomico-adatto-a-bambini-e-principianti-telescopio-rifrattore-astronomico-con-apertura-di-70-mm-e-lunghezza-focale-di-300-mm-telescopio-da-viaggio-portatile-con-treppiede-supporto-per-smartphone-e-telecomando-bluetooth
+                  - generic [ref=e1474]:
+                    - generic [ref=e1476]: 
+                    - generic [ref=e1478]: 
+                    - generic [ref=e1480]: 
+                    - generic [ref=e1482]: 
+                    - generic [ref=e1484]: 
+                    - text: "10"
+                  - generic [ref=e1485]:
+                    - text: 159,99€
+                    - generic [ref=e1486]: 75,99€
+              - generic [ref=e1488]:
+                - link "Telescopio portatile per Stargazing 80mm Apertura 600mm Lunghezza focale per Eclipse" [ref=e1490] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW33.0001_telescopio-portatile-per-stargazing-80mm-apertura-600mm-lunghezza-focale-per-eclipse
+                  - img "Telescopio portatile per Stargazing 80mm Apertura 600mm Lunghezza focale per Eclipse" [ref=e1491]
+                - generic [ref=e1492]:
+                  - link "Telescopio portatile per Stargazing 80mm Apertura 600mm Lunghezza focale per Eclipse" [ref=e1494] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW33.0001_telescopio-portatile-per-stargazing-80mm-apertura-600mm-lunghezza-focale-per-eclipse
+                  - generic [ref=e1495]:
+                    - generic [ref=e1497]: 
+                    - generic [ref=e1499]: 
+                    - generic [ref=e1501]: 
+                    - generic [ref=e1503]: 
+                    - generic [ref=e1505]: 
+                    - text: "13"
+                  - generic [ref=e1506]:
+                    - text: 289,99€
+                    - generic [ref=e1507]: 159,99€
+              - generic [ref=e1509]:
+                - link "Telescopio rifrattore astronomico per principianti con apertura da 70 mm per bambini con lunghezza focale 400 mm, con borsa per il trasporto, telescopio da viaggio con treppiede regolabile" [ref=e1511] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW01.0233_gw01.0233
+                  - img "Telescopio rifrattore astronomico per principianti con apertura da 70 mm per bambini con lunghezza focale 400 mm, con borsa per il trasporto, telescopio da viaggio con treppiede regolabile" [ref=e1512]
+                - generic [ref=e1513]:
+                  - link "Telescopio rifrattore astronomico per principianti con apertura da 70 mm per bambini con lunghezza focale 400 mm, con borsa per il trasporto, telescopio da viaggio con treppiede regolabile" [ref=e1515] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW01.0233_gw01.0233
+                  - generic [ref=e1516]:
+                    - generic [ref=e1518]: 
+                    - generic [ref=e1520]: 
+                    - generic [ref=e1522]: 
+                    - generic [ref=e1524]: 
+                    - generic [ref=e1526]: 
+                    - text: "10"
+                  - generic [ref=e1527]:
+                    - text: 179,99€
+                    - generic [ref=e1528]: 94,99€
+              - generic [ref=e1530]:
+                - link "Telescopio rifrattore astronomico,Apertura 50 mm Lunghezza focale 360 mm, adatto a bambini principianti, può ingrandire 90 volte, include 2 oculari e treppiede in lega di alluminio, telescopio portatile leggero e facile da usare" [ref=e1532] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF33.056_apertura-50-mm-lunghezza-focale-360-​​mm-telescopio-rifrattore-astronomico-adatto-a-bambini-principianti-può-ingrandire-90-volte-include-2-oculari-e-treppiede-in-lega-di-alluminio-telescopio-portatile-leggero-e-facile-da-usare
+                  - img "Telescopio rifrattore astronomico,Apertura 50 mm Lunghezza focale 360 mm, adatto a bambini principianti, può ingrandire 90 volte, include 2 oculari e treppiede in lega di alluminio, telescopio portatile leggero e facile da usare" [ref=e1533]
+                - generic [ref=e1534]:
+                  - link "Telescopio rifrattore astronomico,Apertura 50 mm Lunghezza focale 360 mm, adatto a bambini principianti, può ingrandire 90 volte, include 2 oculari e treppiede in lega di alluminio, telescopio portatile leggero e facile da usare" [ref=e1536] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF33.056_apertura-50-mm-lunghezza-focale-360-​​mm-telescopio-rifrattore-astronomico-adatto-a-bambini-principianti-può-ingrandire-90-volte-include-2-oculari-e-treppiede-in-lega-di-alluminio-telescopio-portatile-leggero-e-facile-da-usare
+                  - generic [ref=e1537]:
+                    - generic [ref=e1539]: 
+                    - generic [ref=e1541]: 
+                    - generic [ref=e1543]: 
+                    - generic [ref=e1545]: 
+                    - generic [ref=e1547]: 
+                    - text: "10"
+                  - generic [ref=e1548]:
+                    - text: 59,99€
+                    - generic [ref=e1549]: 39,99€
+              - generic [ref=e1551]:
+                - link "Cinturino per collana per Osmo Pocket 3, corda multifunzionale per smartphone, tripla protezione, lunghezza regolabile, installazione senza attrezzi, compatibile con smartphone e action camera, libera le mani e inizia a scattare rapidamente, Nero" [ref=e1553] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF14.014_kf-concept-cinturino-per-collana-per-osmo-pocket-3-corda-multifunzional
+                  - img "Cinturino per collana per Osmo Pocket 3, corda multifunzionale per smartphone, tripla protezione, lunghezza regolabile, installazione senza attrezzi, compatibile con smartphone e action camera, libera le mani e inizia a scattare rapidamente, Nero" [ref=e1554]
+                - generic [ref=e1555]:
+                  - link "Cinturino per collana per Osmo Pocket 3, corda multifunzionale per smartphone, tripla protezione, lunghezza regolabile, installazione senza attrezzi, compatibile con smartphone e action camera, libera le mani e inizia a scattare rapidamente, Nero" [ref=e1557] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF14.014_kf-concept-cinturino-per-collana-per-osmo-pocket-3-corda-multifunzional
+                  - generic [ref=e1558]:
+                    - text: 35,99€
+                    - generic [ref=e1559]: 25,99€
+              - generic [ref=e1561]:
+                - link "Cinturino per collana per Osmo Pocket 3, corda multifunzionale per smartphone, tripla protezione, lunghezza regolabile, installazione senza attrezzi, compatibile con smartphone e action camera, libera le mani e inizia a scattare rapidamente, Blu" [ref=e1563] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF14.015_kf-concept-cinturino-per-collana-per-osmo-pocket-3-corda-multifunzional
+                  - img "Cinturino per collana per Osmo Pocket 3, corda multifunzionale per smartphone, tripla protezione, lunghezza regolabile, installazione senza attrezzi, compatibile con smartphone e action camera, libera le mani e inizia a scattare rapidamente, Blu" [ref=e1564]
+                - generic [ref=e1565]:
+                  - link "Cinturino per collana per Osmo Pocket 3, corda multifunzionale per smartphone, tripla protezione, lunghezza regolabile, installazione senza attrezzi, compatibile con smartphone e action camera, libera le mani e inizia a scattare rapidamente, Blu" [ref=e1567] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF14.015_kf-concept-cinturino-per-collana-per-osmo-pocket-3-corda-multifunzional
+                  - generic [ref=e1568]:
+                    - text: 32,99€
+                    - generic [ref=e1569]: 25,99€
+              - generic [ref=e1571]:
+                - link "K&F Concept - Treppiede flessibile per smartphone e fotocamera, MS29, bastone per selfie retrattile, mini treppiede con telecomando, Tripod con supporto per treppiede, treppiede per iPhone/Sumsung" [ref=e1573] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF09.152_kf-concept-treppiede-flessibile-per-smartphone-e-fotocamera-ms29-bastone-per-selfie-retrattile-mini-treppiede-con-telecomando-tripod-con-supporto-per-treppiede-treppiede-per-iphone-umsung
+                  - img "K&F Concept - Treppiede flessibile per smartphone e fotocamera, MS29, bastone per selfie retrattile, mini treppiede con telecomando, Tripod con supporto per treppiede, treppiede per iPhone/Sumsung" [ref=e1574]
+                - generic [ref=e1575]:
+                  - link "K&F Concept - Treppiede flessibile per smartphone e fotocamera, MS29, bastone per selfie retrattile, mini treppiede con telecomando, Tripod con supporto per treppiede, treppiede per iPhone/Sumsung" [ref=e1577] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF09.152_kf-concept-treppiede-flessibile-per-smartphone-e-fotocamera-ms29-bastone-per-selfie-retrattile-mini-treppiede-con-telecomando-tripod-con-supporto-per-treppiede-treppiede-per-iphone-umsung
+                  - generic [ref=e1578]:
+                    - text: 59,99€
+                    - generic [ref=e1579]: 29,99€
+              - generic [ref=e1581]:
+                - link "K&F Concept Treppiede Fotocamera e Smartphone 48-190cm, Treppiede Leggero in Alluminio S255A3+BV01 con Telecomando Bluetooth, Treppiede Portatile e Compatto per DSLR/Cellulari/Ipad/Live Streaming" [ref=e1583] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF09.126_kf-concept-75-quot-treppiede-leggero-treppiede-compatto-per-fotocamera-con-telecomando-e-supporto-per-telefono-2-in-1
+                  - img "K&F Concept Treppiede Fotocamera e Smartphone 48-190cm, Treppiede Leggero in Alluminio S255A3+BV01 con Telecomando Bluetooth, Treppiede Portatile e Compatto per DSLR/Cellulari/Ipad/Live Streaming" [ref=e1584]
+                - generic [ref=e1585]:
+                  - link "K&F Concept Treppiede Fotocamera e Smartphone 48-190cm, Treppiede Leggero in Alluminio S255A3+BV01 con Telecomando Bluetooth, Treppiede Portatile e Compatto per DSLR/Cellulari/Ipad/Live Streaming" [ref=e1587] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF09.126_kf-concept-75-quot-treppiede-leggero-treppiede-compatto-per-fotocamera-con-telecomando-e-supporto-per-telefono-2-in-1
+                  - generic [ref=e1588]:
+                    - generic [ref=e1590]: 
+                    - generic [ref=e1592]: 
+                    - generic [ref=e1594]: 
+                    - generic [ref=e1596]: 
+                    - generic [ref=e1598]: 
+                    - text: "5"
+                  - generic [ref=e1599]:
+                    - text: 79,99€
+                    - generic [ref=e1600]: 35,99€
+              - generic [ref=e1602]:
+                - link "Anello step up da 55-77 mm Anello adattatore per filtro in alluminio di grado aeronautico confezione da 2 con panno per la pulizia" [ref=e1604] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF05.347_anello-step-up-da-55-77-mm-anello-adattatore-per-filtro-in-alluminio-di-grado-aeronautico-confezione-da-2-con-panno-per-la-pulizia
+                  - img "Anello step up da 55-77 mm Anello adattatore per filtro in alluminio di grado aeronautico confezione da 2 con panno per la pulizia" [ref=e1605]
+                - generic [ref=e1606]:
+                  - link "Anello step up da 55-77 mm Anello adattatore per filtro in alluminio di grado aeronautico confezione da 2 con panno per la pulizia" [ref=e1608] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF05.347_anello-step-up-da-55-77-mm-anello-adattatore-per-filtro-in-alluminio-di-grado-aeronautico-confezione-da-2-con-panno-per-la-pulizia
+                  - generic [ref=e1609]:
+                    - text: 7,05€
+                    - generic [ref=e1610]: 7,99€
+            - generic:
+              - generic: 
+              - generic [ref=e1611] [cursor=pointer]: 
+        - generic [ref=e1613]:
+          - generic [ref=e1615]: Prodotti consigliati
+          - generic [ref=e1617]:
+            - generic [ref=e1619]:
+              - generic [ref=e1621]:
+                - link "STARTRC Mini 3 /Mini 3 Pro RC Custodia protettiva in silicone per DJI Mini 3 /Mini 3 Pro RC telecomando,grigia" [ref=e1623] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW47.0037_startrc-mini3-mini3-pro-rc-custodia-protettiva-in-silicone-per-dji-mini3-mini3-pro-rc-telecomando-grigia
+                  - img "STARTRC Mini 3 /Mini 3 Pro RC Custodia protettiva in silicone per DJI Mini 3 /Mini 3 Pro RC telecomando,grigia" [ref=e1624]
+                - generic [ref=e1625]:
+                  - link "STARTRC Mini 3 /Mini 3 Pro RC Custodia protettiva in silicone per DJI Mini 3 /Mini 3 Pro RC telecomando,grigia" [ref=e1627] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW47.0037_startrc-mini3-mini3-pro-rc-custodia-protettiva-in-silicone-per-dji-mini3-mini3-pro-rc-telecomando-grigia
+                  - generic [ref=e1628]:
+                    - generic [ref=e1630]: 
+                    - generic [ref=e1632]: 
+                    - generic [ref=e1634]: 
+                    - generic [ref=e1636]: 
+                    - generic [ref=e1638]: 
+                    - text: "29"
+                  - generic [ref=e1639]:
+                    - text: 15,99€
+                    - generic [ref=e1640]: 14,99€
+              - generic [ref=e1642]:
+                - generic [ref=e1643]:
+                  - link "Telecamera per endoscopio industriale, telecamera a serpente 1080P con schermo HD da 4,3 pollici con luce a LED (2 m/6,5 piedi) Arancione" [ref=e1644] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW45.0023_kf-concept-telecamera-per-endoscopia-industriale-telecamera-per-endoscopia-da-39-mm-schermo-hd-da-43"-telecamera-a-serpente-1080p-con-luci-a-led-cavo-semirigido-per-automobili-motori-ispezione-di-scarico-39-mm-2-m-65-piedi-arancione
+                    - img "Telecamera per endoscopio industriale, telecamera a serpente 1080P con schermo HD da 4,3 pollici con luce a LED (2 m/6,5 piedi) Arancione" [ref=e1645]
+                  - generic [ref=e1647]:
+                    - generic [ref=e1648]: TOP
+                    - generic [ref=e1649]: Best
+                    - generic [ref=e1650]: 
+                - generic [ref=e1651]:
+                  - link "Telecamera per endoscopio industriale, telecamera a serpente 1080P con schermo HD da 4,3 pollici con luce a LED (2 m/6,5 piedi) Arancione" [ref=e1653] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW45.0023_kf-concept-telecamera-per-endoscopia-industriale-telecamera-per-endoscopia-da-39-mm-schermo-hd-da-43"-telecamera-a-serpente-1080p-con-luci-a-led-cavo-semirigido-per-automobili-motori-ispezione-di-scarico-39-mm-2-m-65-piedi-arancione
+                  - generic [ref=e1654]:
+                    - generic [ref=e1656]: 
+                    - generic [ref=e1658]: 
+                    - generic [ref=e1660]: 
+                    - generic [ref=e1662]: 
+                    - generic [ref=e1664]: 
+                    - text: "123"
+                  - generic [ref=e1665]:
+                    - text: 109,99€
+                    - generic [ref=e1666]: 69,99€
+              - generic [ref=e1668]:
+                - link "37mm Black Mist Filtro 1/4 Tappo e un Panni di Puliziaper per Obiettivo Fotocamera con 18 Rivestimenti, Nano-Klear" [ref=e1670] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF01.2346V2_kf-concept-filtro-black-mist-1-4-da-37-mm-tappo-e-un-panni-di-puliziaper-per-obiettivo-fotocamera-con-18-rivestimenti-nano-klear
+                  - img "37mm Black Mist Filtro 1/4 Tappo e un Panni di Puliziaper per Obiettivo Fotocamera con 18 Rivestimenti, Nano-Klear" [ref=e1671]
+                - generic [ref=e1672]:
+                  - link "37mm Black Mist Filtro 1/4 Tappo e un Panni di Puliziaper per Obiettivo Fotocamera con 18 Rivestimenti, Nano-Klear" [ref=e1674] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF01.2346V2_kf-concept-filtro-black-mist-1-4-da-37-mm-tappo-e-un-panni-di-puliziaper-per-obiettivo-fotocamera-con-18-rivestimenti-nano-klear
+                  - generic [ref=e1675]:
+                    - generic [ref=e1677]: 
+                    - generic [ref=e1679]: 
+                    - generic [ref=e1681]: 
+                    - generic [ref=e1683]: 
+                    - generic [ref=e1685]: 
+                    - text: "17"
+                  - generic [ref=e1686]:
+                    - text: 32,17€
+                    - generic [ref=e1687]: 24,99€
+              - generic [ref=e1689]:
+                - link "46mm Filtro 2 in 1 ND4-64 Variabile ( 2-6 Stop) + Polarizzatore CPL - Serie Nano-Xcel" [ref=e1691] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF01.1909_kf-concept-46mm-2-in-1-filtro-polarizzatore-variabile-nd4-64-2-6-stops-con-rivestimento-nano-a-28-strati-in-vetro-ottico-serie-nano-x
+                  - img "46mm Filtro 2 in 1 ND4-64 Variabile ( 2-6 Stop) + Polarizzatore CPL - Serie Nano-Xcel" [ref=e1692]
+                - generic [ref=e1693]:
+                  - link "46mm Filtro 2 in 1 ND4-64 Variabile ( 2-6 Stop) + Polarizzatore CPL - Serie Nano-Xcel" [ref=e1695] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF01.1909_kf-concept-46mm-2-in-1-filtro-polarizzatore-variabile-nd4-64-2-6-stops-con-rivestimento-nano-a-28-strati-in-vetro-ottico-serie-nano-x
+                  - generic [ref=e1696]:
+                    - generic [ref=e1698]: 
+                    - generic [ref=e1700]: 
+                    - generic [ref=e1702]: 
+                    - generic [ref=e1704]: 
+                    - generic [ref=e1706]: 
+                    - text: "112"
+                  - generic [ref=e1707]:
+                    - text: 88,49€
+                    - generic [ref=e1708]: 74,99€
+              - generic [ref=e1710]:
+                - link "Adattatore per Obiettivi Leica M a Fotocamere Canon EOS R" [ref=e1712] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF06.386_obiettivi-leica-m-per-canon-eos-r-mount-adapter-adapter
+                  - img "Adattatore per Obiettivi Leica M a Fotocamere Canon EOS R" [ref=e1713]
+                - generic [ref=e1714]:
+                  - link "Adattatore per Obiettivi Leica M a Fotocamere Canon EOS R" [ref=e1716] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF06.386_obiettivi-leica-m-per-canon-eos-r-mount-adapter-adapter
+                  - generic [ref=e1717]:
+                    - text: 69,99€
+                    - generic [ref=e1718]: 48,99€
+              - generic [ref=e1720]:
+                - link "K&F Concept Custodia per fotocamere compatte, Borsa per macchina fotografica reflex digitale impermeabile Guscio rigido antiurto protettiva piccola con 2 cinturino - Sling Bag Urban Wander 07 Nero" [ref=e1722] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF13.167_kf-concept-custodia-per-fotocamera-digitale-borsa-per-fotoca-camera-piccola-impermeabile-e-protettiva-borsa
+                  - img "K&F Concept Custodia per fotocamere compatte, Borsa per macchina fotografica reflex digitale impermeabile Guscio rigido antiurto protettiva piccola con 2 cinturino - Sling Bag Urban Wander 07 Nero" [ref=e1723]
+                - generic [ref=e1724]:
+                  - link "K&F Concept Custodia per fotocamere compatte, Borsa per macchina fotografica reflex digitale impermeabile Guscio rigido antiurto protettiva piccola con 2 cinturino - Sling Bag Urban Wander 07 Nero" [ref=e1726] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF13.167_kf-concept-custodia-per-fotocamera-digitale-borsa-per-fotoca-camera-piccola-impermeabile-e-protettiva-borsa
+                  - generic [ref=e1727]:
+                    - generic [ref=e1729]: 
+                    - generic [ref=e1731]: 
+                    - generic [ref=e1733]: 
+                    - generic [ref=e1735]: 
+                    - generic [ref=e1737]: 
+                    - text: "26"
+                  - generic [ref=e1738]:
+                    - text: 38,99€
+                    - generic [ref=e1739]: 19,99€
+              - generic [ref=e1741]:
+                - link "Rilevatore di metalli subacquei tenuto in mano, localizzatore di precisione impermeabile completo, rivelatore di metalli adulto e bambino, adatto per rilevare monete, metalli," [ref=e1743] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/GW50.0087_rilevatore-di-metalli-subacquei-tenuto-in-mano-localizzatore-di-precisione-impermeabile-completo-riv
+                  - img "Rilevatore di metalli subacquei tenuto in mano, localizzatore di precisione impermeabile completo, rivelatore di metalli adulto e bambino, adatto per rilevare monete, metalli," [ref=e1744]
+                - generic [ref=e1745]:
+                  - link "Rilevatore di metalli subacquei tenuto in mano, localizzatore di precisione impermeabile completo, rivelatore di metalli adulto e bambino, adatto per rilevare monete, metalli," [ref=e1747] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/GW50.0087_rilevatore-di-metalli-subacquei-tenuto-in-mano-localizzatore-di-precisione-impermeabile-completo-riv
+                  - generic [ref=e1748]:
+                    - text: 199,99€
+                    - generic [ref=e1749]: 108,99€
+              - generic [ref=e1751]:
+                - link "Adattatore per Obiettivi Minolta MD a Fotocamere Sony E Mount" [ref=e1753] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF06.308_minolta-md-obiettivi-per-sony-nex-e-adattatore
+                  - img "Adattatore per Obiettivi Minolta MD a Fotocamere Sony E Mount" [ref=e1754]
+                - generic [ref=e1755]:
+                  - link "Adattatore per Obiettivi Minolta MD a Fotocamere Sony E Mount" [ref=e1757] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF06.308_minolta-md-obiettivi-per-sony-nex-e-adattatore
+                  - generic [ref=e1758]:
+                    - generic [ref=e1760]: 
+                    - generic [ref=e1762]: 
+                    - generic [ref=e1764]: 
+                    - generic [ref=e1766]: 
+                    - generic [ref=e1768]: 
+                    - text: "138"
+                  - generic [ref=e1769]:
+                    - text: 69,99€
+                    - generic [ref=e1770]: 42,99€
+              - generic [ref=e1772]:
+                - link "Caricabatterie K&F Concept Osmo Action 5 Pro/4/3, confezione da 3 batterie Action 5 Pro da 2100 mAh e caricabatterie rapido a 3 slot compatibile con DJI OSMO Action 5 Pro, Osmo Action 4, Osmo Action 3" [ref=e1774] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF28.0086_caricabatterie-kf-concept-osmo-action-5-pro-4-3-confezione-d
+                  - img "Caricabatterie K&F Concept Osmo Action 5 Pro/4/3, confezione da 3 batterie Action 5 Pro da 2100 mAh e caricabatterie rapido a 3 slot compatibile con DJI OSMO Action 5 Pro, Osmo Action 4, Osmo Action 3" [ref=e1775]
+                - generic [ref=e1776]:
+                  - link "Caricabatterie K&F Concept Osmo Action 5 Pro/4/3, confezione da 3 batterie Action 5 Pro da 2100 mAh e caricabatterie rapido a 3 slot compatibile con DJI OSMO Action 5 Pro, Osmo Action 4, Osmo Action 3" [ref=e1778] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF28.0086_caricabatterie-kf-concept-osmo-action-5-pro-4-3-confezione-d
+                  - generic [ref=e1779]:
+                    - generic [ref=e1781]: 
+                    - generic [ref=e1783]: 
+                    - generic [ref=e1785]: 
+                    - generic [ref=e1787]: 
+                    - generic [ref=e1789]: 
+                    - text: "14"
+                  - generic [ref=e1790]:
+                    - text: 89,99€
+                    - generic [ref=e1791]: 49,99€
+              - generic [ref=e1793]:
+                - link "72mm Filtro per obiettivi ND variabile ND2-400 (1-9 Stop) Tappo Obiettivo Copriobiettivo per 72mm,Serie Nano-K" [ref=e1795] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/KF01.1731_filtro-variabile-nd2-400-da-72-mm-con-cappuccio-k-pro-fader-da-nd2-a-nd400-9-stop
+                  - img "72mm Filtro per obiettivi ND variabile ND2-400 (1-9 Stop) Tappo Obiettivo Copriobiettivo per 72mm,Serie Nano-K" [ref=e1796]
+                - generic [ref=e1797]:
+                  - link "72mm Filtro per obiettivi ND variabile ND2-400 (1-9 Stop) Tappo Obiettivo Copriobiettivo per 72mm,Serie Nano-K" [ref=e1799] [cursor=pointer]:
+                    - /url: https://www.kentfaith.it/KF01.1731_filtro-variabile-nd2-400-da-72-mm-con-cappuccio-k-pro-fader-da-nd2-a-nd400-9-stop
+                  - generic [ref=e1800]:
+                    - generic [ref=e1802]: 
+                    - generic [ref=e1804]: 
+                    - generic [ref=e1806]: 
+                    - generic [ref=e1808]: 
+                    - generic [ref=e1810]: 
+                    - text: "16"
+                  - generic [ref=e1811]:
+                    - text: 55,49€
+                    - generic [ref=e1812]: 35,99€
+            - generic:
+              - generic: 
+              - generic [ref=e1813] [cursor=pointer]: 
+    - contentinfo [ref=e1814]:
+      - generic [ref=e1815]:
+        - generic [ref=e1818] [cursor=pointer]: 
+        - list [ref=e1826]:
+          - listitem [ref=e1827]:
+            - generic [ref=e1828]: 
+            - paragraph [ref=e1829]:
+              - generic [ref=e1830]: Pagamento facile
+              - generic [ref=e1831]: Molteplici opzioni di pagamento
+          - listitem [ref=e1832]:
+            - generic [ref=e1833]: 
+            - paragraph [ref=e1834]:
+              - generic [ref=e1835]: Spedizione gratuita
+              - generic [ref=e1836]: nel magazzino globale
+          - listitem [ref=e1837]:
+            - generic [ref=e1838]: 
+            - paragraph [ref=e1839]:
+              - generic [ref=e1840]: Nessun rischio
+              - generic [ref=e1841]: 30 giorni senza motivo Restituzione
+          - listitem [ref=e1842]:
+            - generic [ref=e1843]: 
+            - paragraph [ref=e1844]:
+              - generic [ref=e1845]: Offerte limitate
+              - generic [ref=e1846]: Acquista di più, risparmia di più
+          - listitem [ref=e1847]:
+            - generic [ref=e1848]: 
+            - paragraph [ref=e1849]:
+              - generic [ref=e1850]: Tax Free
+              - generic [ref=e1851]: Nessun supplemento o tassa
+        - generic [ref=e1855]:
+          - generic [ref=e1858]:
+            - generic [ref=e1859] [cursor=pointer]: Informazione
+            - list [ref=e1860]:
+              - listitem [ref=e1861]:
+                - link "Riguardo a noi" [ref=e1862] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/about-us
+              - listitem [ref=e1863]:
+                - link "Contattaci" [ref=e1864] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/contact
+              - listitem [ref=e1865]:
+                - link "Mappa del Sito" [ref=e1866] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/sitemap
+              - listitem [ref=e1867]:
+                - link "Blog" [ref=e1868] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/blog
+              - listitem [ref=e1869]:
+                - link "Video" [ref=e1870] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/video
+              - listitem [ref=e1871]:
+                - link "Galleria" [ref=e1872] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/gallery
+              - listitem [ref=e1873]:
+                - link "Premi per l'abbonamento VIP" [ref=e1874] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/membership
+          - generic [ref=e1877]:
+            - generic [ref=e1878] [cursor=pointer]: Supporto
+            - list [ref=e1879]:
+              - listitem [ref=e1880]:
+                - link "Il mio account" [ref=e1881] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/account
+              - listitem [ref=e1882]:
+                - link "Cronologia ordini" [ref=e1883] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/order
+              - listitem [ref=e1884]:
+                - link "Domande frequenti" [ref=e1885] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/faqs
+          - generic [ref=e1888]:
+            - generic [ref=e1889] [cursor=pointer]: Servizio
+            - list [ref=e1890]:
+              - listitem [ref=e1891]:
+                - link "Termini & Condizioni" [ref=e1892] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/terms
+              - listitem [ref=e1893]:
+                - link "Politica sulla riservatezza" [ref=e1894] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/privacy
+              - listitem [ref=e1895]:
+                - link "Informazioni di consegna" [ref=e1896] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/index.php?route=information/information&information_id=6
+              - listitem [ref=e1897]:
+                - link "www.kentfaith.com" [ref=e1898] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/warranty
+              - listitem [ref=e1899]:
+                - link "Diritti di proprietà intellettuale" [ref=e1900] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/intellectual-property-rights
+              - listitem [ref=e1901]:
+                - link "Affiliati" [ref=e1902] [cursor=pointer]:
+                  - /url: https://www.kentfaith.it/affiliate
+          - generic [ref=e1904]:
+            - generic [ref=e1905]:
+              - generic [ref=e1906] [cursor=pointer]: Seguici
+              - list [ref=e1908]:
+                - link "" [ref=e1909] [cursor=pointer]:
+                  - /url: https://www.facebook.com/Kentfaith.offcial/
+                  - generic [ref=e1910]: 
+                - link "" [ref=e1911] [cursor=pointer]:
+                  - /url: https://www.instagram.com/kentfaith.official/
+                  - generic [ref=e1912]: 
+                - link "" [ref=e1913] [cursor=pointer]:
+                  - /url: https://twitter.com/Kentfaithglobal
+                  - generic [ref=e1914]: 
+                - link "" [ref=e1915] [cursor=pointer]:
+                  - /url: https://www.youtube.com/@kentfaith.official
+                  - generic [ref=e1916]: 
+                - link "" [ref=e1917] [cursor=pointer]:
+                  - /url: https://www.tiktok.com/@kentfaith.official
+                  - generic [ref=e1918]: 
+            - generic [ref=e1919]:
+              - generic [ref=e1920] [cursor=pointer]: NewsLetter
+              - generic [ref=e1921]:
+                - paragraph [ref=e1922]: Ottieni l'ultimo prodotto, K & F Concept rispetta la tua privacy.
+                - generic [ref=e1924]:
+                  - textbox "Inserisci la tua e-mail" [ref=e1925]
+                  - generic [ref=e1926]:
+                    - button "" [ref=e1927] [cursor=pointer]:
+                      - generic [ref=e1928]: 
+                    - text: 
+      - text: 
+      - generic [ref=e1929]:
+        - generic [ref=e1931] [cursor=pointer]: 
+        - generic [ref=e1933] [cursor=pointer]: 
+        - generic [ref=e1935] [cursor=pointer]: 
+        - generic [ref=e1937] [cursor=pointer]: 
+        - link "Whatsapp With us " [ref=e1939] [cursor=pointer]:
+          - /url: https://wa.me/8615875550933
+          - generic: Whatsapp With us
+          - generic [ref=e1940]: 
+        - link "Chatta con noi" [ref=e1942] [cursor=pointer]:
+          - /url: https://www.messenger.com/t/Kentfaith.offcial
+          - generic: Chatta con noi
+          - img [ref=e1943]: 
+        - link "Get Coupon" [ref=e1946] [cursor=pointer]:
+          - /url: /coupon
+          - img [ref=e1947]
+          - generic: Get Coupon
+        - link " Contatto" [ref=e1950] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e1951]: 
+          - generic: Contatto
+        - generic [ref=e1953] [cursor=pointer]:
+          - generic [ref=e1954]: 
+          - generic: Chiudi
+        - generic: 
+      - button " Live Chat" [ref=e1955] [cursor=pointer]:
+        - generic [ref=e1956]:
+          - generic [ref=e1957]: 
+          - text: Live Chat
+      - generic:
+        - generic:
+          - generic [ref=e1958]:
+            - generic [ref=e1959]:
+              - generic [ref=e1960]: 
+              - text: Live Chat
+            - generic [ref=e1961] [cursor=pointer]: 
+          - generic [ref=e1963]:
+            - generic [ref=e1964]: Hi! Please select the social media and chat with us for more.
+            - generic [ref=e1965]:
+              - link "Messenger With us" [ref=e1966] [cursor=pointer]:
+                - /url: https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2Fkfconceptglobal
+              - link "Whatsapp With us" [ref=e1967] [cursor=pointer]:
+                - /url: https://wa.me/message/8615875550933
+              - link "Contact" [ref=e1968] [cursor=pointer]:
+                - /url: /contact
+      - generic [ref=e1971]: Powered By K&F Concept © 2026
+  - text: 
+  - list [ref=e1977]:
+    - generic [ref=e1978] [cursor=pointer]: 
+    - listitem [ref=e1979]:
+      - link "Filtro Lente " [ref=e1980] [cursor=pointer]:
+        - /url: https://www.kentfaith.it/filtro-lente
+        - text: Filtro Lente
+        - generic [ref=e1981]: 
+    - listitem [ref=e1982]:
+      - link "Treppiede " [ref=e1983] [cursor=pointer]:
+        - /url: https://www.kentfaith.it/treppiede
+        - text: Treppiede
+        - generic [ref=e1984]: 
+    - listitem [ref=e1985]:
+      - link "Borsa Fotografia " [ref=e1986] [cursor=pointer]:
+        - /url: https://www.kentfaith.it/borsa-fotografia
+        - text: Borsa Fotografia
+        - generic [ref=e1987]: 
+    - listitem [ref=e1988]:
+      - link "Batteria Fotocamera " [ref=e1989] [cursor=pointer]:
+        - /url: https://www.kentfaith.it/batteria-fotocamera
+        - text: Batteria Fotocamera
+        - generic [ref=e1990]: 
+    - listitem [ref=e1991]:
+      - link "Anello adattatore " [ref=e1992] [cursor=pointer]:
+        - /url: https://www.kentfaith.it/anello-adattatore
+        - text: Anello adattatore
+        - generic [ref=e1993]: 
+    - listitem [ref=e1994]:
+      - link "Fotocamera " [ref=e1995] [cursor=pointer]:
+        - /url: https://www.kentfaith.it/fotocamera
+        - text: Fotocamera
+        - generic [ref=e1996]: 
+    - listitem [ref=e1997]:
+      - link "Astronomia e ottica " [ref=e1998] [cursor=pointer]:
+        - /url: https://www.kentfaith.it/astronomia-e-ottica
+        - text: Astronomia e ottica
+        - generic [ref=e1999]: 
+    - listitem [ref=e2000]:
+      - link "Endoscopio " [ref=e2001] [cursor=pointer]:
+        - /url: https://www.kentfaith.it/Endoscopio
+        - text: Endoscopio
+        - generic [ref=e2002]: 
+    - listitem [ref=e2003]:
+      - link "Di più" [ref=e2004] [cursor=pointer]:
+        - /url: https://www.kentfaith.it/di-più
+    - listitem [ref=e2005]:
+      - link " Deals " [ref=e2006] [cursor=pointer]:
+        - /url: /specials
+        - generic [ref=e2007]: 
+        - text: Deals
+        - generic [ref=e2008]: 
+    - generic [ref=e2009]:
+      - generic [ref=e2010]:
+        - generic [ref=e2011]: 
+        - link "Home" [ref=e2012] [cursor=pointer]:
+          - /url: /
+      - generic [ref=e2013]:
+        - generic [ref=e2014]: 
+        - link "Account" [ref=e2015] [cursor=pointer]:
+          - /url: javascript:void(0)
+      - generic [ref=e2016]:
+        - generic [ref=e2017]: 
+        - link "Preferito" [ref=e2018] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - generic [ref=e2019]:
+        - generic [ref=e2020]: 
+        - link "Compare" [ref=e2021] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - generic [ref=e2022]:
+        - generic [ref=e2023]: 
+        - link "VISTI DI RECENTE" [ref=e2024] [cursor=pointer]:
+          - /url: javascript:void(0);

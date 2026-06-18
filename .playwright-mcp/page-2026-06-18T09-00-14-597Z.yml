@@ -1,0 +1,1867 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - img "oma-with-cookies" [ref=e5]
+    - generic [ref=e6]:
+      - heading "Servito con amore!" [level=4] [ref=e7]
+      - generic [ref=e8]:
+        - text: Con i nostri cookie, vorremmo offrirti la migliore esperienza di shopping possibile, con tutto ciò che ne consegue. Questo include, ad esempio, offerte adatte, annunci personalizzati e il salvataggio delle preferenze. Se per te va bene, acconsenti semplicemente all'uso dei cookie per preferenze, statistiche e marketing cliccando su 'Va bene!' (show all).
+        - text: Il consenso può essere revocato in qualsiasi momento tramite le impostazioni dei cookie (qui)
+      - generic [ref=e9]:
+        - button "small Procediamo!" [ref=e10] [cursor=pointer]:
+          - img "small" [ref=e11]
+          - generic [ref=e13]: Procediamo!
+        - button "Rifiuta i cookies" [ref=e14] [cursor=pointer]
+        - button "Ulteriori Informazioni" [ref=e15] [cursor=pointer]
+      - generic [ref=e16]:
+        - link "Imprint" [ref=e17] [cursor=pointer]:
+          - /url: compinfo_imprint.html
+        - text: ·
+        - link "Privacy" [ref=e18] [cursor=pointer]:
+          - /url: compinfo_privacy.html
+  - link "Al contenuto della pagina":
+    - /url: "#main"
+  - banner [ref=e20]:
+    - generic [ref=e22]:
+      - link "Alla home page." [ref=e24] [cursor=pointer]:
+        - /url: index.html
+      - list [ref=e25]:
+        - listitem [ref=e26]:
+          - link "Servizio Riparazioni" [ref=e27] [cursor=pointer]:
+            - /url: helpdesk_repair.html
+            - img [ref=e29]
+            - paragraph [ref=e32]: Servizio Riparazioni
+        - listitem [ref=e33]:
+          - link "spedizioni gratuite da € 99" [ref=e34] [cursor=pointer]:
+            - /url: helpdesk_shipping.html
+            - img [ref=e36]
+            - paragraph [ref=e38]: spedizioni gratuite da € 99
+      - list [ref=e39]:
+        - listitem [ref=e40]:
+          - link "Alla pagina dei contatti generali" [ref=e41] [cursor=pointer]:
+            - /url: compinfo_contact.html
+            - paragraph [ref=e42]: Contattaci
+        - listitem [ref=e43]:
+          - link "Vai alla pagina con le informazioni sull'azienda Thomann" [ref=e44] [cursor=pointer]:
+            - /url: compinfo.html
+            - paragraph [ref=e45]: Su di noi
+        - listitem [ref=e46]:
+          - button "Cambia paese, lingua e valuta" [ref=e47] [cursor=pointer]:
+            - generic: it / €
+            - generic:
+              - img
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - button "Scopri e acquista i prodotti" [ref=e51] [cursor=pointer]:
+          - text: Shop
+          - img
+        - button "Apri Menu di Servizio" [ref=e53] [cursor=pointer]:
+          - text: Service
+          - img
+      - generic [ref=e56]:
+        - combobox "Ricerca" [ref=e57]
+        - 'button "Avviare la ricerca con il termine di ricerca {searchTerm}" [ref=e59] [cursor=pointer]':
+          - generic [ref=e60]: "Avviare la ricerca con il termine di ricerca {searchTerm}"
+          - img [ref=e64]
+      - generic [ref=e66]:
+        - link "Accesso al centro clienti" [ref=e67] [cursor=pointer]:
+          - /url: mythomann.html
+          - img [ref=e70]
+        - link "Lista dei desideri" [ref=e72] [cursor=pointer]:
+          - /url: wishlist.html
+          - img [ref=e75]
+        - link "Carrello" [ref=e77] [cursor=pointer]:
+          - /url: basket.html
+          - img [ref=e80]
+  - main [ref=e82]:
+    - generic [ref=e84]:
+      - generic [ref=e86]:
+        - navigation [ref=e88]:
+          - list [ref=e89]:
+            - listitem [ref=e90]:
+              - link "Pagina principale" [ref=e91] [cursor=pointer]:
+                - /url: index.html
+                - img [ref=e92]
+            - listitem [ref=e94]:
+              - link "Tutte le Categorie" [ref=e95] [cursor=pointer]:
+                - /url: cat.html
+            - listitem [ref=e96]:
+              - link "Accessori" [ref=e97] [cursor=pointer]:
+                - /url: accessori.html
+            - listitem [ref=e98]:
+              - link "Supporti e Leggii" [ref=e99] [cursor=pointer]:
+                - /url: leggii.html
+            - listitem [ref=e100]:
+              - link "Aste Microfoniche" [ref=e101] [cursor=pointer]:
+                - /url: supporto_microfono.html
+            - listitem [ref=e102]:
+              - link "Millenium" [ref=e103] [cursor=pointer]:
+                - /url: millenium_supporto_microfono.html
+            - listitem [ref=e104]:
+              - generic [ref=e105]: MS 2003
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - heading "Millenium MS 2003" [level=1] [ref=e108]
+            - link "4.0 su 5 stelle su 9564 valutazioni dei clienti ()" [ref=e109] [cursor=pointer]:
+              - /url: "#bewertung"
+              - generic [ref=e110]:
+                - generic [ref=e111]:
+                  - img [ref=e112]
+                  - img [ref=e114]
+                  - img [ref=e116]
+                  - img [ref=e118]
+                  - img [ref=e120]
+                  - generic:
+                    - img
+                    - img
+                    - img
+                    - img
+                    - img
+                - generic [ref=e122]:
+                  - generic [ref=e123]: 4.0 su 5 stelle su 9564 valutazioni dei clienti
+                  - text: (9564)
+          - generic [ref=e124]:
+            - link "Millenium" [ref=e126] [cursor=pointer]:
+              - /url: millenium.html
+              - img "Millenium" [ref=e127]
+            - img "Millenium MS 2003" [ref=e133]
+            - generic [ref=e135]:
+              - img [ref=e137] [cursor=pointer]
+              - img "Millenium MS 2003" [ref=e140]
+              - img "Millenium MS 2003" [ref=e142] [cursor=pointer]
+              - img "Millenium MS 2003" [ref=e144] [cursor=pointer]
+              - img "Millenium MS 2003" [ref=e146] [cursor=pointer]
+              - img "Millenium MS 2003" [ref=e148] [cursor=pointer]
+              - img "Millenium MS 2003" [ref=e150] [cursor=pointer]
+              - img "Millenium MS 2003" [ref=e152] [cursor=pointer]
+              - img "Millenium MS 2003" [ref=e154] [cursor=pointer]
+              - img "Millenium MS 2003" [ref=e156] [cursor=pointer]
+          - generic [ref=e157]:
+            - generic [ref=e158]:
+              - heading "Asta microfonica con braccio" [level=2] [ref=e159]
+              - list [ref=e160]:
+                - listitem [ref=e161]: Base pressofusa con gambe pieghevoli
+                - listitem [ref=e162]: Vite di regolazione in metallo sullo snodo dell'asta
+                - listitem [ref=e163]: Filettatura da 3/8" per pinze microfoniche
+                - listitem [ref=e164]: Altezza regolabile da 105 a 170 cm
+                - listitem [ref=e165]: "Braccio girevole: 75 cm"
+                - listitem [ref=e166]: "Colore: nero"
+                - listitem [ref=e167]: Include adattatore per filettatura da 3/8" a 5/8"
+            - generic [ref=e168]:
+              - link "30 giorni soddisfatti o rimborsati" [ref=e170] [cursor=pointer]:
+                - /url: helpdesk_moneyback.html
+                - generic [ref=e171]: "30"
+                - text: 30 giorni soddisfatti o rimborsati
+              - link "3 anni di garanzia Thomann" [ref=e173] [cursor=pointer]:
+                - /url: helpdesk_warranty.html
+                - generic [ref=e174]: "3"
+                - text: 3 anni di garanzia Thomann
+            - list [ref=e175]:
+              - listitem [ref=e176]:
+                - generic [ref=e177]:
+                  - generic [ref=e178]: In catalogo dal
+                  - generic [ref=e179]: Dicembre 1999
+              - listitem [ref=e180]:
+                - generic [ref=e181]:
+                  - generic [ref=e182]: Numero di articolo
+                  - generic [ref=e183]: "133136"
+              - listitem [ref=e184]:
+                - generic [ref=e185]:
+                  - generic [ref=e186]: Unità incluse
+                  - generic [ref=e187]: 1 Pezzo
+              - listitem [ref=e188]:
+                - generic [ref=e189]:
+                  - generic [ref=e190]: Tipo di treppiede
+                  - generic [ref=e191]: Supporto del braccio
+              - listitem [ref=e192]:
+                - generic [ref=e193]:
+                  - generic [ref=e194]: Colore
+                  - generic [ref=e195]: Nero
+              - listitem [ref=e196]:
+                - generic [ref=e197]:
+                  - generic [ref=e198]: Piede
+                  - generic [ref=e199]: teppiedi
+              - listitem [ref=e200]:
+                - generic [ref=e201]:
+                  - generic [ref=e202]: Lunghezza del braccio - lunghezza minima del braccio
+                  - generic [ref=e203]: 750 mm
+              - listitem [ref=e204]:
+                - generic [ref=e205]:
+                  - generic [ref=e206]: Altezza
+                  - generic [ref=e207]: 1050 mm – 1700 mm
+              - listitem [ref=e208]:
+                - generic [ref=e209]:
+                  - generic [ref=e210]: Regolazione
+                  - generic [ref=e211]: "0"
+              - listitem [ref=e212]:
+                - button "Mostra altro" [ref=e214] [cursor=pointer]:
+                  - img [ref=e215]
+                  - img [ref=e216]
+                  - generic [ref=e218]: Mostra altro
+        - generic [ref=e220]:
+          - generic [ref=e221]:
+            - generic [ref=e222]:
+              - generic [ref=e225]: € 17,30
+              - generic [ref=e227]: Tutti i prezzi incl. IVA
+              - generic "tooltip" [ref=e229] [cursor=pointer]:
+                - generic [ref=e232]: Disponibile
+            - generic [ref=e234]:
+              - generic [ref=e236]:
+                - generic [ref=e237]: "1"
+                - combobox [ref=e238] [cursor=pointer]:
+                  - option "1" [selected]
+                  - option "2"
+                  - option "3"
+                  - option "4"
+                  - option "5"
+                  - option "6"
+                  - option "7"
+                  - option "8"
+                  - option "9"
+                  - option "10+"
+                - img [ref=e239]
+              - button "Aggiungi al carrello" [ref=e242] [cursor=pointer]
+          - generic [ref=e243]:
+            - link "Salvare" [ref=e244] [cursor=pointer]:
+              - /url: wishlist.html
+              - img [ref=e245]
+              - generic [ref=e247]: Salvare
+            - link "Confronta" [ref=e248] [cursor=pointer]:
+              - /url: search_compare.html
+              - img [ref=e249]
+              - generic [ref=e251]: Confronta
+            - link "Condividi" [ref=e252] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e253]
+              - generic [ref=e255]: Condividi
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - img [ref=e260]
+              - generic [ref=e262]:
+                - generic [ref=e263]:
+                  - generic [ref=e264]: Consegna standard
+                  - generic [ref=e265]: € 5,90
+                - paragraph [ref=e267]: Questo articolo è disponibile in magazzino e può essere spedito a breve.
+            - generic [ref=e268]:
+              - img [ref=e269]
+              - generic [ref=e273]:
+                - generic [ref=e274]:
+                  - generic [ref=e275]: Consegna espressa
+                  - generic [ref=e276]: Prezzo calcolato al checkout
+                - paragraph [ref=e278]: Ordina entro 2 hr per ricevere la consegna il prima possibile. Per la data di consegna prevista, consulta la pagina di checkout.
+            - link "Informazioni di consegna" [ref=e280] [cursor=pointer]:
+              - /url: helpdesk_shipping.html
+              - paragraph [ref=e281]: Informazioni di consegna
+              - img [ref=e283]
+          - link "3 Classifica vendite in Aste Microfoniche" [ref=e286] [cursor=pointer]:
+            - /url: cat_rank.html?ar=133136&gk=ZUSTMI
+            - img [ref=e287]
+            - generic [ref=e289]: "3"
+            - generic [ref=e290]:
+              - generic [ref=e291]: Classifica vendite
+              - generic [ref=e292]: in Aste Microfoniche
+          - button "Consulenza Contatto Contatto Contatto" [ref=e295] [cursor=pointer]:
+            - generic [ref=e296]: Consulenza
+            - generic [ref=e297]:
+              - img "Contatto" [ref=e299]
+              - img "Contatto" [ref=e301]
+              - img "Contatto" [ref=e303]
+          - generic [ref=e304]:
+            - button "Apri Informazioni sul produttore" [ref=e306] [cursor=pointer]:
+              - img [ref=e307]
+              - text: Informazioni sul produttore
+            - button "Apri Avvertenze di Sicurezza" [ref=e310] [cursor=pointer]:
+              - img [ref=e311]
+              - text: Avvertenze di Sicurezza
+      - generic [ref=e314]:
+        - generic [ref=e315]: Bundles & offerte
+        - link "Crea tu il bundle +1 Crea tu il bundle a partire da € 21,10 Fino a 8% di sconto" [ref=e317] [cursor=pointer]:
+          - /url: prod_cbundle_1354.html?art=20370&cbcid=10042&gk=zustmi
+          - generic [ref=e318]:
+            - img "Crea tu il bundle" [ref=e320]
+            - generic [ref=e321]: "+1"
+          - generic [ref=e322]:
+            - generic [ref=e323]: Crea tu il bundle
+            - generic [ref=e324]: a partire da € 21,10
+            - generic [ref=e325]: Fino a 8% di sconto
+      - generic [ref=e329]:
+        - heading "Comprati dai clienti che hanno visto questo prodotto" [level=2] [ref=e330]
+        - generic [ref=e336]:
+          - link "Millenium MS 2003 53% comprato Esattamente questo prodotto € 17,30" [ref=e338] [cursor=pointer]:
+            - /url: millenium_ms2003.htm
+            - generic [ref=e339]:
+              - img "Millenium MS 2003" [ref=e341]
+              - generic: 53%
+            - generic [ref=e342]:
+              - generic [ref=e343]: comprato
+              - generic [ref=e344]: Esattamente questo prodotto
+              - generic [ref=e347]: € 17,30
+          - link "Millenium MS 2002 Mic Stand 7% comprato Millenium MS 2002 Mic Stand € 16,30" [ref=e349] [cursor=pointer]:
+            - /url: millenium_ms2002.htm
+            - generic [ref=e350]:
+              - img "Millenium MS 2002 Mic Stand" [ref=e352]
+              - generic: 7%
+            - generic [ref=e353]:
+              - generic [ref=e354]: comprato
+              - generic [ref=e355]: Millenium MS 2002 Mic Stand
+              - generic [ref=e358]: € 16,30
+          - link "Fun Generation Mic Stand 6% comprato Fun Generation Mic Stand € 10,30" [ref=e360] [cursor=pointer]:
+            - /url: fun_generation_mic_stand.htm
+            - generic [ref=e361]:
+              - img "Fun Generation Mic Stand" [ref=e363]
+              - generic: 6%
+            - generic [ref=e364]:
+              - generic [ref=e365]: comprato
+              - generic [ref=e366]: Fun Generation Mic Stand
+              - generic [ref=e369]: € 10,30
+          - link "Roadworx Mic Stand + Cable 10 m Pack 6% comprato Roadworx Mic Stand + Cable 10 m Pack € 22,30" [ref=e371] [cursor=pointer]:
+            - /url: roadworx_mic_stand_cable_10_m_pack.htm
+            - generic [ref=e372]:
+              - img "Roadworx Mic Stand + Cable 10 m Pack" [ref=e374]
+              - generic: 6%
+            - generic [ref=e375]:
+              - generic [ref=e376]: comprato
+              - generic [ref=e377]: Roadworx Mic Stand + Cable 10 m Pack
+              - generic [ref=e380]: € 22,30
+          - link "K&M 210/30 BK 4% comprato K&M 210/30 BK € 38" [ref=e382] [cursor=pointer]:
+            - /url: km_210_30_bk.htm
+            - generic [ref=e383]:
+              - img "K&M 210/30 BK" [ref=e385]
+              - generic: 4%
+            - generic [ref=e386]:
+              - generic [ref=e387]: comprato
+              - generic [ref=e388]: K&M 210/30 BK
+              - generic [ref=e391]: € 38
+        - button "Compara" [ref=e395] [cursor=pointer]:
+          - img [ref=e396]
+          - text: Compara
+      - generic [ref=e400]:
+        - heading "Accessori e articoli coordinati" [level=2] [ref=e401]
+        - generic [ref=e403]:
+          - generic [ref=e405]:
+            - generic [ref=e406]:
+              - link "the t.bone Microphone Holder M 4223 Match perfetto the t.bone Microphone Holder M € 3,55" [ref=e408] [cursor=pointer]:
+                - /url: the_tbone_mikrohalterung.htm
+                - img "the t.bone Microphone Holder M" [ref=e412]
+                - generic [ref=e414]:
+                  - generic [ref=e415]:
+                    - img [ref=e416]
+                    - img [ref=e418]
+                    - img [ref=e420]
+                    - img [ref=e422]
+                    - img [ref=e424]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e426]: "4223"
+                - generic [ref=e429]: Match perfetto
+                - generic [ref=e430]: the t.bone Microphone Holder M
+                - generic [ref=e433]: € 3,55
+              - link "the t.bone Microphone Holder L 1212 Match perfetto the t.bone Microphone Holder L € 3,99" [ref=e435] [cursor=pointer]:
+                - /url: the_tbone_mikrohalterung_150793.htm
+                - img "the t.bone Microphone Holder L" [ref=e439]
+                - generic [ref=e441]:
+                  - generic [ref=e442]:
+                    - img [ref=e443]
+                    - img [ref=e445]
+                    - img [ref=e447]
+                    - img [ref=e449]
+                    - img [ref=e451]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e453]: "1212"
+                - generic [ref=e456]: Match perfetto
+                - generic [ref=e457]: the t.bone Microphone Holder L
+                - generic [ref=e460]: € 3,99
+              - link "Flyht Pro Gorilla Bag SB-S 24 Match perfetto Flyht Pro Gorilla Bag SB-S € 12,90" [ref=e462] [cursor=pointer]:
+                - /url: flyht_pro_gorilla_bag_sb_s.htm
+                - img "Flyht Pro Gorilla Bag SB-S" [ref=e466]
+                - generic [ref=e468]:
+                  - generic [ref=e469]:
+                    - img [ref=e470]
+                    - img [ref=e472]
+                    - img [ref=e474]
+                    - img [ref=e476]
+                    - img [ref=e478]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e480]: "24"
+                - generic [ref=e483]: Match perfetto
+                - generic [ref=e484]: Flyht Pro Gorilla Bag SB-S
+                - generic [ref=e487]: € 12,90
+              - link "the t.bone Microphone Holder S 577 Match perfetto the t.bone Microphone Holder S € 3,77" [ref=e489] [cursor=pointer]:
+                - /url: the_tbone_mikrohalterung_s.htm
+                - img "the t.bone Microphone Holder S" [ref=e493]
+                - generic [ref=e495]:
+                  - generic [ref=e496]:
+                    - img [ref=e497]
+                    - img [ref=e499]
+                    - img [ref=e501]
+                    - img [ref=e503]
+                    - img [ref=e505]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e507]: "577"
+                - generic [ref=e510]: Match perfetto
+                - generic [ref=e511]: the t.bone Microphone Holder S
+                - generic [ref=e514]: € 3,77
+              - link "Rode NT1-A Complete Vocal Recording 5283 Rode NT1-A Complete Vocal Recording € 179" [ref=e516] [cursor=pointer]:
+                - /url: rode_nt1a_complete_vocal_recording.htm
+                - img "Rode NT1-A Complete Vocal Recording" [ref=e520]
+                - generic [ref=e522]:
+                  - generic [ref=e523]:
+                    - img [ref=e524]
+                    - img [ref=e526]
+                    - img [ref=e528]
+                    - img [ref=e530]
+                    - img [ref=e532]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e534]: "5283"
+                - generic [ref=e535]: Rode NT1-A Complete Vocal Recording
+                - generic [ref=e538]: € 179
+            - generic [ref=e539]:
+              - link "Rode NT1-A Complete Vocal Bundle 164 Rode NT1-A Complete Vocal Bundle € 189" [ref=e541] [cursor=pointer]:
+                - /url: rode_nt1a_complete_vocal_bundle.htm
+                - img "Rode NT1-A Complete Vocal Bundle" [ref=e545]
+                - generic [ref=e547]:
+                  - generic [ref=e548]:
+                    - img [ref=e549]
+                    - img [ref=e551]
+                    - img [ref=e553]
+                    - img [ref=e555]
+                    - img [ref=e557]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e559]: "164"
+                - generic [ref=e560]: Rode NT1-A Complete Vocal Bundle
+                - generic [ref=e563]: € 189
+              - link "Rode NT1-A Compl. Micscreen Bundle Rode NT1-A Compl. Micscreen Bundle € 244" [ref=e565] [cursor=pointer]:
+                - /url: rode_nt1_a_compl._micscreen_bundle.htm
+                - img "Rode NT1-A Compl. Micscreen Bundle" [ref=e569]
+                - generic [ref=e570]: Rode NT1-A Compl. Micscreen Bundle
+                - generic [ref=e573]: € 244
+              - link "the sssnake SM10BK 10296 the sssnake SM10BK € 7,90" [ref=e575] [cursor=pointer]:
+                - /url: the_sssnake_sm10_bk.htm
+                - img "the sssnake SM10BK" [ref=e579]
+                - generic [ref=e581]:
+                  - generic [ref=e582]:
+                    - img [ref=e583]
+                    - img [ref=e585]
+                    - img [ref=e587]
+                    - img [ref=e589]
+                    - img [ref=e591]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e593]: "10296"
+                - generic [ref=e594]: the sssnake SM10BK
+                - generic [ref=e597]: € 7,90
+              - link "the t.bone Micscreen XL 733 the t.bone Micscreen XL € 79" [ref=e599] [cursor=pointer]:
+                - /url: the_t.bone_micscreen_xl.htm
+                - img "the t.bone Micscreen XL" [ref=e603]
+                - generic [ref=e605]:
+                  - generic [ref=e606]:
+                    - img [ref=e607]
+                    - img [ref=e609]
+                    - img [ref=e611]
+                    - img [ref=e613]
+                    - img [ref=e615]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e617]: "733"
+                - generic [ref=e618]: the t.bone Micscreen XL
+                - generic [ref=e621]: € 79
+              - link "Millenium MS 2002 Mic Stand 4666 Millenium MS 2002 Mic Stand € 16,30" [ref=e623] [cursor=pointer]:
+                - /url: millenium_ms2002.htm
+                - img "Millenium MS 2002 Mic Stand" [ref=e627]
+                - generic [ref=e629]:
+                  - generic [ref=e630]:
+                    - img [ref=e631]
+                    - img [ref=e633]
+                    - img [ref=e635]
+                    - img [ref=e637]
+                    - img [ref=e639]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e641]: "4666"
+                - generic [ref=e642]: Millenium MS 2002 Mic Stand
+                - generic [ref=e645]: € 16,30
+            - generic [ref=e646]:
+              - link "Thomann Home Studio Bundle Thomann Home Studio Bundle € 149" [ref=e648] [cursor=pointer]:
+                - /url: thomann_home_studio_bundle.htm
+                - img "Thomann Home Studio Bundle" [ref=e652]
+                - generic [ref=e653]: Thomann Home Studio Bundle
+                - generic [ref=e656]: € 149
+              - link "Swissonic Audio 2 101 Swissonic Audio 2 € 59" [ref=e658] [cursor=pointer]:
+                - /url: swissonic_audio_2.htm
+                - img "Swissonic Audio 2" [ref=e662]
+                - generic [ref=e664]:
+                  - generic [ref=e665]:
+                    - img [ref=e666]
+                    - img [ref=e668]
+                    - img [ref=e670]
+                    - img [ref=e672]
+                    - img [ref=e674]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e676]: "101"
+                - generic [ref=e677]: Swissonic Audio 2
+                - generic [ref=e680]: € 59
+              - link "the sssnake SM6BK 12316 the sssnake SM6BK € 5,90" [ref=e682] [cursor=pointer]:
+                - /url: the_sssnake_sk233-6_mikrokabel.htm
+                - img "the sssnake SM6BK" [ref=e686]
+                - generic [ref=e688]:
+                  - generic [ref=e689]:
+                    - img [ref=e690]
+                    - img [ref=e692]
+                    - img [ref=e694]
+                    - img [ref=e696]
+                    - img [ref=e698]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e700]: "12316"
+                - generic [ref=e701]: the sssnake SM6BK
+                - generic [ref=e704]: € 5,90
+              - link "Fun Generation Pop1 480 Fun Generation Pop1 € 10,30" [ref=e706] [cursor=pointer]:
+                - /url: fun_generation_pop1.htm
+                - img "Fun Generation Pop1" [ref=e710]
+                - generic [ref=e712]:
+                  - generic [ref=e713]:
+                    - img [ref=e714]
+                    - img [ref=e716]
+                    - img [ref=e718]
+                    - img [ref=e720]
+                    - img [ref=e722]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e724]: "480"
+                - generic [ref=e725]: Fun Generation Pop1
+                - generic [ref=e728]: € 10,30
+              - link "the t.bone SC 400 3026 the t.bone SC 400 € 49" [ref=e730] [cursor=pointer]:
+                - /url: the_tbone_sc400_grossmembranmikro.htm
+                - img "the t.bone SC 400" [ref=e734]
+                - generic [ref=e736]:
+                  - generic [ref=e737]:
+                    - img [ref=e738]
+                    - img [ref=e740]
+                    - img [ref=e742]
+                    - img [ref=e744]
+                    - img [ref=e746]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e748]: "3026"
+                - generic [ref=e749]: the t.bone SC 400
+                - generic [ref=e752]: € 49
+            - generic [ref=e753]:
+              - link "Thomann Orchestra Music Stand 7912 Thomann Orchestra Music Stand € 21,30" [ref=e755] [cursor=pointer]:
+                - /url: thomann_orchesterpult.htm
+                - img "Thomann Orchestra Music Stand" [ref=e759]
+                - generic [ref=e761]:
+                  - generic [ref=e762]:
+                    - img [ref=e763]
+                    - img [ref=e765]
+                    - img [ref=e767]
+                    - img [ref=e769]
+                    - img [ref=e771]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e773]: "7912"
+                - generic [ref=e774]: Thomann Orchestra Music Stand
+                - generic [ref=e777]: € 21,30
+              - link "K&M 23956 Popkiller 2460 K&M 23956 Popkiller € 21,90" [ref=e779] [cursor=pointer]:
+                - /url: km_23956_plopkiller.htm
+                - img "K&M 23956 Popkiller" [ref=e783]
+                - generic [ref=e785]:
+                  - generic [ref=e786]:
+                    - img [ref=e787]
+                    - img [ref=e789]
+                    - img [ref=e791]
+                    - img [ref=e793]
+                    - img [ref=e795]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e797]: "2460"
+                - generic [ref=e798]: K&M 23956 Popkiller
+                - generic [ref=e801]: € 21,90
+              - link "pro snake TPM 3,0 CC Micro Cable white 807 pro snake TPM 3,0 CC Micro Cable white € 7,30" [ref=e803] [cursor=pointer]:
+                - /url: pro_snake_tpm_30_cc_micro_cable_white.htm
+                - img "pro snake TPM 3,0 CC Micro Cable white" [ref=e807]
+                - generic [ref=e809]:
+                  - generic [ref=e810]:
+                    - img [ref=e811]
+                    - img [ref=e813]
+                    - img [ref=e815]
+                    - img [ref=e817]
+                    - img [ref=e819]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e821]: "807"
+                - generic [ref=e822]: pro snake TPM 3,0 CC Micro Cable white
+                - generic [ref=e825]: € 7,30
+              - link "pro snake TPM 10 5030 pro snake TPM 10 € 11" [ref=e827] [cursor=pointer]:
+                - /url: pro_snake_tpm_10.htm
+                - img "pro snake TPM 10" [ref=e831]
+                - generic [ref=e833]:
+                  - generic [ref=e834]:
+                    - img [ref=e835]
+                    - img [ref=e837]
+                    - img [ref=e839]
+                    - img [ref=e841]
+                    - img [ref=e843]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e845]: "5030"
+                - generic [ref=e846]: pro snake TPM 10
+                - generic [ref=e849]: € 11
+              - link "Superlux HD-681 6251 Superlux HD-681 € 22,90" [ref=e851] [cursor=pointer]:
+                - /url: superlux_hd681.htm
+                - img "Superlux HD-681" [ref=e855]
+                - generic [ref=e857]:
+                  - generic [ref=e858]:
+                    - img [ref=e859]
+                    - img [ref=e861]
+                    - img [ref=e863]
+                    - img [ref=e865]
+                    - img [ref=e867]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e869]: "6251"
+                - generic [ref=e870]: Superlux HD-681
+                - generic [ref=e873]: € 22,90
+            - generic [ref=e874]:
+              - link "pro snake TPM 6 3226 pro snake TPM 6 € 8,30" [ref=e876] [cursor=pointer]:
+                - /url: pro_snake_tpm_6.htm
+                - img "pro snake TPM 6" [ref=e880]
+                - generic [ref=e882]:
+                  - generic [ref=e883]:
+                    - img [ref=e884]
+                    - img [ref=e886]
+                    - img [ref=e888]
+                    - img [ref=e890]
+                    - img [ref=e892]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e894]: "3226"
+                - generic [ref=e895]: pro snake TPM 6
+                - generic [ref=e898]: € 8,30
+              - link "Focusrite Scarlett Solo 3rd Gen 2634 Focusrite Scarlett Solo 3rd Gen € 88" [ref=e900] [cursor=pointer]:
+                - /url: focusrite_scarlett_solo_3rd_gen.htm
+                - img "Focusrite Scarlett Solo 3rd Gen" [ref=e904]
+                - generic [ref=e906]:
+                  - generic [ref=e907]:
+                    - img [ref=e908]
+                    - img [ref=e910]
+                    - img [ref=e912]
+                    - img [ref=e914]
+                    - img [ref=e916]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e918]: "2634"
+                - generic [ref=e919]: Focusrite Scarlett Solo 3rd Gen
+                - generic [ref=e922]: € 88
+              - link "the t.bone MS 180 6656 the t.bone MS 180 € 14,90" [ref=e924] [cursor=pointer]:
+                - /url: t-bone_ms180.htm
+                - img "the t.bone MS 180" [ref=e928]
+                - generic [ref=e930]:
+                  - generic [ref=e931]:
+                    - img [ref=e932]
+                    - img [ref=e934]
+                    - img [ref=e936]
+                    - img [ref=e938]
+                    - img [ref=e940]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e942]: "6656"
+                - generic [ref=e943]: the t.bone MS 180
+                - generic [ref=e946]: € 14,90
+              - link "beyerdynamic DT-770 Pro 80 Ohm 5291 beyerdynamic DT-770 Pro 80 Ohm € 149" [ref=e948] [cursor=pointer]:
+                - /url: beyerdynamic_dt770_pro80_ohm.htm
+                - img "beyerdynamic DT-770 Pro 80 Ohm" [ref=e952]
+                - generic [ref=e954]:
+                  - generic [ref=e955]:
+                    - img [ref=e956]
+                    - img [ref=e958]
+                    - img [ref=e960]
+                    - img [ref=e962]
+                    - img [ref=e964]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e966]: "5291"
+                - generic [ref=e967]: beyerdynamic DT-770 Pro 80 Ohm
+                - generic [ref=e970]: € 149
+              - link "K&M 85055 965 K&M 85055 € 3,33" [ref=e972] [cursor=pointer]:
+                - /url: km_85055.htm
+                - img "K&M 85055" [ref=e976]
+                - generic [ref=e978]:
+                  - generic [ref=e979]:
+                    - img [ref=e980]
+                    - img [ref=e982]
+                    - img [ref=e984]
+                    - img [ref=e986]
+                    - img [ref=e988]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e990]: "965"
+                - generic [ref=e991]: K&M 85055
+                - generic [ref=e994]: € 3,33
+            - generic [ref=e995]:
+              - link "the t.bone Headphone Adapter 5618 the t.bone Headphone Adapter € 3,05" [ref=e997] [cursor=pointer]:
+                - /url: the_tbone_headphone_adapter.htm
+                - img "the t.bone Headphone Adapter" [ref=e1001]
+                - generic [ref=e1003]:
+                  - generic [ref=e1004]:
+                    - img [ref=e1005]
+                    - img [ref=e1007]
+                    - img [ref=e1009]
+                    - img [ref=e1011]
+                    - img [ref=e1013]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e1015]: "5618"
+                - generic [ref=e1016]: the t.bone Headphone Adapter
+                - generic [ref=e1019]: € 3,05
+              - link "Focusrite Scarlett 2i2 4th Generation 277 Focusrite Scarlett 2i2 4th Generation € 177" [ref=e1021] [cursor=pointer]:
+                - /url: focusrite_scarlett_2i2_4th_generation.htm
+                - img "Focusrite Scarlett 2i2 4th Generation" [ref=e1025]
+                - generic [ref=e1027]:
+                  - generic [ref=e1028]:
+                    - img [ref=e1029]
+                    - img [ref=e1031]
+                    - img [ref=e1033]
+                    - img [ref=e1035]
+                    - img [ref=e1037]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e1039]: "277"
+                - generic [ref=e1040]: Focusrite Scarlett 2i2 4th Generation
+                - generic [ref=e1043]: € 177
+              - link "Shure SM58 LC 5751 Shure SM58 LC € 115" [ref=e1045] [cursor=pointer]:
+                - /url: shure_sm58.htm
+                - img "Shure SM58 LC" [ref=e1049]
+                - generic [ref=e1051]:
+                  - generic [ref=e1052]:
+                    - img [ref=e1053]
+                    - img [ref=e1055]
+                    - img [ref=e1057]
+                    - img [ref=e1059]
+                    - img [ref=e1061]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e1063]: "5751"
+                - generic [ref=e1064]: Shure SM58 LC
+                - generic [ref=e1067]: € 115
+              - link "Shure SM57 LC 5843 Shure SM57 LC € 111" [ref=e1069] [cursor=pointer]:
+                - /url: shure_sm57_lc.htm
+                - img "Shure SM57 LC" [ref=e1073]
+                - generic [ref=e1075]:
+                  - generic [ref=e1076]:
+                    - img [ref=e1077]
+                    - img [ref=e1079]
+                    - img [ref=e1081]
+                    - img [ref=e1083]
+                    - img [ref=e1085]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e1087]: "5843"
+                - generic [ref=e1088]: Shure SM57 LC
+                - generic [ref=e1091]: € 111
+              - link "Shure A25D Microphone Clamp 1600 Shure A25D Microphone Clamp € 7,50" [ref=e1093] [cursor=pointer]:
+                - /url: shure_a25d_mikrohalter.htm
+                - img "Shure A25D Microphone Clamp" [ref=e1097]
+                - generic [ref=e1099]:
+                  - generic [ref=e1100]:
+                    - img [ref=e1101]
+                    - img [ref=e1103]
+                    - img [ref=e1105]
+                    - img [ref=e1107]
+                    - img [ref=e1109]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e1111]: "1600"
+                - generic [ref=e1112]: Shure A25D Microphone Clamp
+                - generic [ref=e1115]: € 7,50
+          - generic [ref=e1116]:
+            - list [ref=e1118] [cursor=pointer]:
+              - listitem [ref=e1119]
+              - listitem [ref=e1121]
+              - listitem [ref=e1122]
+              - listitem [ref=e1123]
+              - listitem [ref=e1124]
+              - listitem [ref=e1125]
+            - button [ref=e1126] [cursor=pointer]:
+              - img [ref=e1127]
+      - generic [ref=e1130]:
+        - generic [ref=e1132]:
+          - heading "9564 Valutazioni dei clienti" [level=2] [ref=e1133]
+          - generic [ref=e1134]:
+            - generic [ref=e1136]:
+              - link "5 3546 Clienti" [ref=e1137] [cursor=pointer]:
+                - /url: millenium_ms2003_reviews.htm?rating=5
+                - generic [ref=e1138]: "5"
+                - img [ref=e1139]
+                - generic [ref=e1141]: 3546 Clienti
+              - link "4 3506 Clienti" [ref=e1142] [cursor=pointer]:
+                - /url: millenium_ms2003_reviews.htm?rating=4
+                - generic [ref=e1143]: "4"
+                - img [ref=e1144]
+                - generic [ref=e1146]: 3506 Clienti
+              - link "3 1832 Clienti" [ref=e1147] [cursor=pointer]:
+                - /url: millenium_ms2003_reviews.htm?rating=3
+                - generic [ref=e1148]: "3"
+                - img [ref=e1149]
+                - generic [ref=e1151]: 1832 Clienti
+              - link "2 483 Clienti" [ref=e1152] [cursor=pointer]:
+                - /url: millenium_ms2003_reviews.htm?rating=2
+                - generic [ref=e1153]: "2"
+                - img [ref=e1154]
+                - generic [ref=e1156]: 483 Clienti
+              - link "1 197 Clienti" [ref=e1157] [cursor=pointer]:
+                - /url: millenium_ms2003_reviews.htm?rating=1
+                - generic [ref=e1158]: "1"
+                - img [ref=e1159]
+                - generic [ref=e1161]: 197 Clienti
+            - generic [ref=e1162]:
+              - generic [ref=e1163]:
+                - generic [ref=e1164]:
+                  - generic [ref=e1166]:
+                    - img [ref=e1167]
+                    - img [ref=e1169]
+                    - img [ref=e1171]
+                    - img [ref=e1173]
+                    - img [ref=e1175]
+                    - generic:
+                      - img
+                      - img
+                      - img
+                      - img
+                      - img
+                  - generic [ref=e1177]: "4"
+                  - text: / 5
+                - generic "tooltip" [ref=e1179] [cursor=pointer]:
+                  - generic [ref=e1182]: Valuta ora
+              - generic [ref=e1183]:
+                - paragraph [ref=e1185]: manipolazione
+                - paragraph [ref=e1195]: stabilitá
+                - paragraph [ref=e1205]: Qualità
+          - link "Linee guida per la valutazione" [ref=e1215] [cursor=pointer]:
+            - /url: faq_question_come_viene_moderato_il_contenuto_delle_recensioni.html
+        - heading "3680 Recensioni" [level=3] [ref=e1216]
+        - generic [ref=e1217]:
+          - generic [ref=e1220]:
+            - generic [ref=e1221]:
+              - generic [ref=e1222]:
+                - generic [ref=e1223]:
+                  - generic [ref=e1224]: A
+                  - generic [ref=e1225]:
+                    - generic [ref=e1226]: Ottimo per Versatilità, Rapporto Qualità-Prezzo. Necessita del Supporto Microfono. Per uso non Professionale
+                    - generic [ref=e1228]:
+                      - img [ref=e1229]
+                      - img [ref=e1231]
+                      - img [ref=e1233]
+                      - img [ref=e1235]
+                      - img [ref=e1237]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1239]: Anonimo 26.10.2016
+                - generic [ref=e1242]:
+                  - generic [ref=e1244]:
+                    - text: Se uno stand costa circa 15 EUR intuisci che si tratta di un prodotto per un uso non professionale (da registrazione o da palco).
+                    - text: Faccio questa premessa per dire che chi resta DELUSO di questo prodotto si era un pò, prima dell'acquisto, ILLUSO non considerando il prezzo, leggendo le caratteristiche con attenzione o solo osservando le chiare foto
+                  - button "Mostra altro" [ref=e1248] [cursor=pointer]:
+                    - img [ref=e1249]
+                    - generic [ref=e1251]: Mostra altro
+              - generic [ref=e1254]:
+                - generic [ref=e1255]: manipolazione
+                - generic [ref=e1256]: stabilitá
+                - generic [ref=e1257]: Qualità
+              - generic [ref=e1281]:
+                - generic [ref=e1282] [cursor=pointer]:
+                  - img [ref=e1283]
+                  - generic [ref=e1285]: "4"
+                - generic [ref=e1286] [cursor=pointer]:
+                  - img [ref=e1287]
+                  - generic [ref=e1289]: "0"
+                - generic [ref=e1290] [cursor=pointer]:
+                  - img [ref=e1291]
+                  - generic [ref=e1293]: Segnala un abuso
+            - generic [ref=e1294]:
+              - generic [ref=e1295]:
+                - generic [ref=e1296]:
+                  - generic [ref=e1297]: B
+                  - generic [ref=e1298]:
+                    - generic [ref=e1299]: Asta la victoria
+                    - generic [ref=e1301]:
+                      - img [ref=e1302]
+                      - img [ref=e1304]
+                      - img [ref=e1306]
+                      - img [ref=e1308]
+                      - img [ref=e1310]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1312]: BobArt 03.07.2024
+                - generic [ref=e1315]:
+                  - generic [ref=e1317]:
+                    - text: L'asta porta microfono che dominava il palco del "Sabor Revolución" era molto più di un semplice oggetto pratico. Era un simbolo di resistenza e di libertà per il popolo cubano. Realizzata in serie, in metallo robusto e di colore nero satianto, l'asta trasmetteva un senso di orgoglio e di appartenenza a chiunque posasse gli occhi su di essa.
+                    - text: Al di là della
+                  - button "Mostra altro" [ref=e1321] [cursor=pointer]:
+                    - img [ref=e1322]
+                    - generic [ref=e1324]: Mostra altro
+              - generic [ref=e1327]:
+                - generic [ref=e1328]: manipolazione
+                - generic [ref=e1329]: stabilitá
+                - generic [ref=e1330]: Qualità
+              - generic [ref=e1354]:
+                - generic [ref=e1355] [cursor=pointer]:
+                  - img [ref=e1356]
+                  - generic [ref=e1358]: "3"
+                - generic [ref=e1359] [cursor=pointer]:
+                  - img [ref=e1360]
+                  - generic [ref=e1362]: "0"
+                - generic [ref=e1363] [cursor=pointer]:
+                  - img [ref=e1364]
+                  - generic [ref=e1366]: Segnala un abuso
+            - generic [ref=e1367]:
+              - generic [ref=e1368]:
+                - generic [ref=e1369]:
+                  - generic [ref=e1370]: P
+                  - generic [ref=e1371]:
+                    - generic [ref=e1372]: Ben fatto
+                    - generic [ref=e1374]:
+                      - img [ref=e1375]
+                      - img [ref=e1377]
+                      - img [ref=e1379]
+                      - img [ref=e1381]
+                      - img [ref=e1383]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1385]: PhoenixRising 17.12.2021
+                - generic [ref=e1388]: Questo supporto microfonico è incredibilmente ben fatto per quello che costa, si può estendere, alzare, inclinare, ha un sacco di caratteristiche funzionali essenziali per un'asta microfonica. Il fissaggio va stretto molto con microfoni pesanti, ma basta inclinare il supporto nel modo corretto per bilanciarne il peso. Ottimo prodotto.
+              - generic [ref=e1391]:
+                - generic [ref=e1392]: manipolazione
+                - generic [ref=e1393]: stabilitá
+                - generic [ref=e1394]: Qualità
+              - generic [ref=e1418]:
+                - generic [ref=e1419] [cursor=pointer]:
+                  - img [ref=e1420]
+                  - generic [ref=e1422]: "0"
+                - generic [ref=e1423] [cursor=pointer]:
+                  - img [ref=e1424]
+                  - generic [ref=e1426]: "0"
+                - generic [ref=e1427] [cursor=pointer]:
+                  - img [ref=e1428]
+                  - generic [ref=e1430]: Segnala un abuso
+            - generic [ref=e1431]:
+              - generic [ref=e1432]:
+                - generic [ref=e1433]:
+                  - generic [ref=e1434]: L
+                  - generic [ref=e1435]:
+                    - generic [ref=e1436]: Buona maneggevolezza, abbastanza stabile
+                    - generic [ref=e1438]:
+                      - img [ref=e1439]
+                      - img [ref=e1441]
+                      - img [ref=e1443]
+                      - img [ref=e1445]
+                      - img [ref=e1447]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1449]: Lucazes 19.03.2024
+                - generic [ref=e1452]:
+                  - text: Buon rapporto qualità/prezzo. Non è un'asta di livello professionale ma la uso da circa 3 anni e fa egregiamente il suo lavoro. Usata sia come asta microfonica per serate dal vivo che come reggi-microfono per casse amplificate.
+                  - text: La riacquisterei.
+              - generic [ref=e1455]:
+                - generic [ref=e1456]: manipolazione
+                - generic [ref=e1457]: stabilitá
+                - generic [ref=e1458]: Qualità
+              - generic [ref=e1482]:
+                - generic [ref=e1483] [cursor=pointer]:
+                  - img [ref=e1484]
+                  - generic [ref=e1486]: "0"
+                - generic [ref=e1487] [cursor=pointer]:
+                  - img [ref=e1488]
+                  - generic [ref=e1490]: "0"
+                - generic [ref=e1491] [cursor=pointer]:
+                  - img [ref=e1492]
+                  - generic [ref=e1494]: Segnala un abuso
+          - link "Leggi tutte le recensioni" [ref=e1496] [cursor=pointer]:
+            - /url: millenium_ms2003_reviews.htm
+      - generic [ref=e1498]:
+        - heading "Lo sapevi?" [level=2] [ref=e1499]
+        - generic [ref=e1500]:
+          - tablist "Lo sapevi?" [ref=e1503]:
+            - tab "Tutti" [selected] [ref=e1504] [cursor=pointer]
+            - tab "Guide online" [ref=e1505] [cursor=pointer]
+          - tabpanel "Tutti" [ref=e1506]:
+            - generic [ref=e1507]:
+              - link "Guide Accessori per microfono" [ref=e1508] [cursor=pointer]:
+                - /url: onlineexpert_topic_accessori_per_microfono.html
+                - generic [ref=e1509]:
+                  - generic [ref=e1513]:
+                    - generic [ref=e1514]: Guide
+                    - img [ref=e1516]
+                  - generic [ref=e1518]: Accessori per microfono
+              - link "Guide Come microfonare la batteria" [ref=e1519] [cursor=pointer]:
+                - /url: onlineexpert_topic_come_microfonare_la_batteria.html
+                - generic [ref=e1520]:
+                  - generic [ref=e1524]:
+                    - generic [ref=e1525]: Guide
+                    - img [ref=e1527]
+                  - generic [ref=e1529]: Come microfonare la batteria
+      - generic [ref=e1534]:
+        - heading "Confronta alternative" [level=2] [ref=e1535]
+        - generic [ref=e1537]:
+          - generic [ref=e1539]:
+            - generic [ref=e1540]:
+              - generic [ref=e1541]:
+                - link "Millenium MS 2003 Prodotto attuale 9564 Millenium MS 2003 € 17,30" [ref=e1542] [cursor=pointer]:
+                  - /url: millenium_ms2003.htm
+                  - generic [ref=e1543]:
+                    - img "Millenium MS 2003" [ref=e1546]
+                    - generic [ref=e1548]: Prodotto attuale
+                  - generic [ref=e1550]:
+                    - generic [ref=e1551]:
+                      - img [ref=e1552]
+                      - img [ref=e1554]
+                      - img [ref=e1556]
+                      - img [ref=e1558]
+                      - img [ref=e1560]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1562]: "9564"
+                  - generic [ref=e1563]: Millenium MS 2003
+                  - generic [ref=e1566]: € 17,30
+                - generic [ref=e1567]:
+                  - link [ref=e1568] [cursor=pointer]:
+                    - /url: millenium_ms2003.htm
+                  - generic [ref=e1569] [cursor=pointer]:
+                    - img [ref=e1570]
+                    - text: Compara
+              - generic [ref=e1572]:
+                - link "Millenium MS 2004 2581 Millenium MS 2004 € 17,30" [ref=e1573] [cursor=pointer]:
+                  - /url: millenium_ms2004.htm
+                  - img "Millenium MS 2004" [ref=e1577]
+                  - generic [ref=e1579]:
+                    - generic [ref=e1580]:
+                      - img [ref=e1581]
+                      - img [ref=e1583]
+                      - img [ref=e1585]
+                      - img [ref=e1587]
+                      - img [ref=e1589]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1591]: "2581"
+                  - generic [ref=e1592]: Millenium MS 2004
+                  - generic [ref=e1595]: € 17,30
+                - generic [ref=e1596]:
+                  - link [ref=e1597] [cursor=pointer]:
+                    - /url: millenium_ms2004.htm
+                  - generic [ref=e1598] [cursor=pointer]:
+                    - img [ref=e1599]
+                    - text: Compara
+              - generic [ref=e1601]:
+                - link "Millenium MS 2002 Mic Stand 4666 Millenium MS 2002 Mic Stand € 16,30" [ref=e1602] [cursor=pointer]:
+                  - /url: millenium_ms2002.htm
+                  - img "Millenium MS 2002 Mic Stand" [ref=e1606]
+                  - generic [ref=e1608]:
+                    - generic [ref=e1609]:
+                      - img [ref=e1610]
+                      - img [ref=e1612]
+                      - img [ref=e1614]
+                      - img [ref=e1616]
+                      - img [ref=e1618]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1620]: "4666"
+                  - generic [ref=e1621]: Millenium MS 2002 Mic Stand
+                  - generic [ref=e1624]: € 16,30
+                - generic [ref=e1625]:
+                  - link [ref=e1626] [cursor=pointer]:
+                    - /url: millenium_ms2002.htm
+                  - generic [ref=e1627] [cursor=pointer]:
+                    - img [ref=e1628]
+                    - text: Compara
+              - generic [ref=e1630]:
+                - link "Millenium DS-30 675 Millenium DS-30 € 15,30" [ref=e1631] [cursor=pointer]:
+                  - /url: millenium_ds_30.htm
+                  - img "Millenium DS-30" [ref=e1635]
+                  - generic [ref=e1637]:
+                    - generic [ref=e1638]:
+                      - img [ref=e1639]
+                      - img [ref=e1641]
+                      - img [ref=e1643]
+                      - img [ref=e1645]
+                      - img [ref=e1647]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1649]: "675"
+                  - generic [ref=e1650]: Millenium DS-30
+                  - generic [ref=e1653]: € 15,30
+                - generic [ref=e1654]:
+                  - link [ref=e1655] [cursor=pointer]:
+                    - /url: millenium_ds_30.htm
+                  - generic [ref=e1656] [cursor=pointer]:
+                    - img [ref=e1657]
+                    - text: Compara
+              - generic [ref=e1659]:
+                - link "Millenium BD 100 1698 Millenium BD 100 € 18,30" [ref=e1660] [cursor=pointer]:
+                  - /url: millenium_bd_100.htm
+                  - img "Millenium BD 100" [ref=e1664]
+                  - generic [ref=e1666]:
+                    - generic [ref=e1667]:
+                      - img [ref=e1668]
+                      - img [ref=e1670]
+                      - img [ref=e1672]
+                      - img [ref=e1674]
+                      - img [ref=e1676]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1678]: "1698"
+                  - generic [ref=e1679]: Millenium BD 100
+                  - generic [ref=e1682]: € 18,30
+                - generic [ref=e1683]:
+                  - link [ref=e1684] [cursor=pointer]:
+                    - /url: millenium_bd_100.htm
+                  - generic [ref=e1685] [cursor=pointer]:
+                    - img [ref=e1686]
+                    - text: Compara
+            - generic [ref=e1688]:
+              - generic [ref=e1689]:
+                - link "Millenium MS 2005 13309 Millenium MS 2005 € 14,30" [ref=e1690] [cursor=pointer]:
+                  - /url: millenium_ms2005_mic_stand.htm
+                  - img "Millenium MS 2005" [ref=e1694]
+                  - generic [ref=e1696]:
+                    - generic [ref=e1697]:
+                      - img [ref=e1698]
+                      - img [ref=e1700]
+                      - img [ref=e1702]
+                      - img [ref=e1704]
+                      - img [ref=e1706]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1708]: "13309"
+                  - generic [ref=e1709]: Millenium MS 2005
+                  - generic [ref=e1712]: € 14,30
+                - generic [ref=e1713]:
+                  - link [ref=e1714] [cursor=pointer]:
+                    - /url: millenium_ms2005_mic_stand.htm
+                  - generic [ref=e1715] [cursor=pointer]:
+                    - img [ref=e1716]
+                    - text: Compara
+              - generic [ref=e1718]:
+                - link "Millenium DS-10 1139 Millenium DS-10 € 9,90" [ref=e1719] [cursor=pointer]:
+                  - /url: millenium_ds10.htm
+                  - img "Millenium DS-10" [ref=e1723]
+                  - generic [ref=e1725]:
+                    - generic [ref=e1726]:
+                      - img [ref=e1727]
+                      - img [ref=e1729]
+                      - img [ref=e1731]
+                      - img [ref=e1733]
+                      - img [ref=e1735]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1737]: "1139"
+                  - generic [ref=e1738]: Millenium DS-10
+                  - generic [ref=e1741]: € 9,90
+                - generic [ref=e1742]:
+                  - link [ref=e1743] [cursor=pointer]:
+                    - /url: millenium_ds10.htm
+                  - generic [ref=e1744] [cursor=pointer]:
+                    - img [ref=e1745]
+                    - text: Compara
+              - generic [ref=e1747]:
+                - link "Roadworx Mic Stand Stack Base 11 Roadworx Mic Stand Stack Base € 18,90" [ref=e1748] [cursor=pointer]:
+                  - /url: roadworx_mic_stand_stack_base.htm
+                  - img "Roadworx Mic Stand Stack Base" [ref=e1752]
+                  - generic [ref=e1754]:
+                    - generic [ref=e1755]:
+                      - img [ref=e1756]
+                      - img [ref=e1758]
+                      - img [ref=e1760]
+                      - img [ref=e1762]
+                      - img [ref=e1764]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1766]: "11"
+                  - generic [ref=e1767]: Roadworx Mic Stand Stack Base
+                  - generic [ref=e1770]: € 18,90
+                - generic [ref=e1771]:
+                  - link [ref=e1772] [cursor=pointer]:
+                    - /url: roadworx_mic_stand_stack_base.htm
+                  - generic [ref=e1773] [cursor=pointer]:
+                    - img [ref=e1774]
+                    - text: Compara
+              - generic [ref=e1776]:
+                - link "Roadworx Mic Stand Tripod Boom Small 218 Roadworx Mic Stand Tripod Boom Small € 18,90" [ref=e1777] [cursor=pointer]:
+                  - /url: roadworx_mic_stand_tripod_boom_small.htm
+                  - img "Roadworx Mic Stand Tripod Boom Small" [ref=e1781]
+                  - generic [ref=e1783]:
+                    - generic [ref=e1784]:
+                      - img [ref=e1785]
+                      - img [ref=e1787]
+                      - img [ref=e1789]
+                      - img [ref=e1791]
+                      - img [ref=e1793]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1795]: "218"
+                  - generic [ref=e1796]: Roadworx Mic Stand Tripod Boom Small
+                  - generic [ref=e1799]: € 18,90
+                - generic [ref=e1800]:
+                  - link [ref=e1801] [cursor=pointer]:
+                    - /url: roadworx_mic_stand_tripod_boom_small.htm
+                  - generic [ref=e1802] [cursor=pointer]:
+                    - img [ref=e1803]
+                    - text: Compara
+              - generic [ref=e1805]:
+                - link "Millenium MS 2006 841 Millenium MS 2006 € 26" [ref=e1806] [cursor=pointer]:
+                  - /url: millenium_ms2006.htm
+                  - img "Millenium MS 2006" [ref=e1810]
+                  - generic [ref=e1812]:
+                    - generic [ref=e1813]:
+                      - img [ref=e1814]
+                      - img [ref=e1816]
+                      - img [ref=e1818]
+                      - img [ref=e1820]
+                      - img [ref=e1822]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1824]: "841"
+                  - generic [ref=e1825]: Millenium MS 2006
+                  - generic [ref=e1828]: € 26
+                - generic [ref=e1829]:
+                  - link [ref=e1830] [cursor=pointer]:
+                    - /url: millenium_ms2006.htm
+                  - generic [ref=e1831] [cursor=pointer]:
+                    - img [ref=e1832]
+                    - text: Compara
+            - generic [ref=e1834]:
+              - generic [ref=e1835]:
+                - link "K&M 25400 365 K&M 25400 € 22,90" [ref=e1836] [cursor=pointer]:
+                  - /url: km_25400.htm
+                  - img "K&M 25400" [ref=e1840]
+                  - generic [ref=e1842]:
+                    - generic [ref=e1843]:
+                      - img [ref=e1844]
+                      - img [ref=e1846]
+                      - img [ref=e1848]
+                      - img [ref=e1850]
+                      - img [ref=e1852]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1854]: "365"
+                  - generic [ref=e1855]: K&M 25400
+                  - generic [ref=e1858]: € 22,90
+                - generic [ref=e1859]:
+                  - link [ref=e1860] [cursor=pointer]:
+                    - /url: km_25400.htm
+                  - generic [ref=e1861] [cursor=pointer]:
+                    - img [ref=e1862]
+                    - text: Compara
+              - generic [ref=e1864]:
+                - link "Roadworx Mic Stand Round Base BoomSmall 63 Roadworx Mic Stand Round Base BoomSmall € 19,90" [ref=e1865] [cursor=pointer]:
+                  - /url: roadworx_mic_stand_round_base_boomsmall.htm
+                  - img "Roadworx Mic Stand Round Base BoomSmall" [ref=e1869]
+                  - generic [ref=e1871]:
+                    - generic [ref=e1872]:
+                      - img [ref=e1873]
+                      - img [ref=e1875]
+                      - img [ref=e1877]
+                      - img [ref=e1879]
+                      - img [ref=e1881]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1883]: "63"
+                  - generic [ref=e1884]: Roadworx Mic Stand Round Base BoomSmall
+                  - generic [ref=e1887]: € 19,90
+                - generic [ref=e1888]:
+                  - link [ref=e1889] [cursor=pointer]:
+                    - /url: roadworx_mic_stand_round_base_boomsmall.htm
+                  - generic [ref=e1890] [cursor=pointer]:
+                    - img [ref=e1891]
+                    - text: Compara
+              - generic [ref=e1893]:
+                - link "Superlux MS-108E 1035 Superlux MS-108E € 22,90" [ref=e1894] [cursor=pointer]:
+                  - /url: superlux_ms_108e.htm
+                  - img "Superlux MS-108E" [ref=e1898]
+                  - generic [ref=e1900]:
+                    - generic [ref=e1901]:
+                      - img [ref=e1902]
+                      - img [ref=e1904]
+                      - img [ref=e1906]
+                      - img [ref=e1908]
+                      - img [ref=e1910]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1912]: "1035"
+                  - generic [ref=e1913]: Superlux MS-108E
+                  - generic [ref=e1916]: € 22,90
+                - generic [ref=e1917]:
+                  - link [ref=e1918] [cursor=pointer]:
+                    - /url: superlux_ms_108e.htm
+                  - generic [ref=e1919] [cursor=pointer]:
+                    - img [ref=e1920]
+                    - text: Compara
+              - generic [ref=e1922]:
+                - link "Millenium MS 2007 Red 217 Millenium MS 2007 Red € 24,50" [ref=e1923] [cursor=pointer]:
+                  - /url: millenium_ms_2007_red.htm
+                  - img "Millenium MS 2007 Red" [ref=e1927]
+                  - generic [ref=e1929]:
+                    - generic [ref=e1930]:
+                      - img [ref=e1931]
+                      - img [ref=e1933]
+                      - img [ref=e1935]
+                      - img [ref=e1937]
+                      - img [ref=e1939]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1941]: "217"
+                  - generic [ref=e1942]: Millenium MS 2007 Red
+                  - generic [ref=e1945]: € 24,50
+                - generic [ref=e1946]:
+                  - link [ref=e1947] [cursor=pointer]:
+                    - /url: millenium_ms_2007_red.htm
+                  - generic [ref=e1948] [cursor=pointer]:
+                    - img [ref=e1949]
+                    - text: Compara
+              - generic [ref=e1951]:
+                - link "Millenium MS 2013 119 Millenium MS 2013 € 24,90" [ref=e1952] [cursor=pointer]:
+                  - /url: millenium_ms_2013.htm
+                  - img "Millenium MS 2013" [ref=e1956]
+                  - generic [ref=e1958]:
+                    - generic [ref=e1959]:
+                      - img [ref=e1960]
+                      - img [ref=e1962]
+                      - img [ref=e1964]
+                      - img [ref=e1966]
+                      - img [ref=e1968]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e1970]: "119"
+                  - generic [ref=e1971]: Millenium MS 2013
+                  - generic [ref=e1974]: € 24,90
+                - generic [ref=e1975]:
+                  - link [ref=e1976] [cursor=pointer]:
+                    - /url: millenium_ms_2013.htm
+                  - generic [ref=e1977] [cursor=pointer]:
+                    - img [ref=e1978]
+                    - text: Compara
+            - generic [ref=e1980]:
+              - generic [ref=e1981]:
+                - link "Roadworx Mic Stand Tripod Boom 275 Roadworx Mic Stand Tripod Boom € 19,90" [ref=e1982] [cursor=pointer]:
+                  - /url: roadworx_mic_stand_tripod_boom.htm
+                  - img "Roadworx Mic Stand Tripod Boom" [ref=e1986]
+                  - generic [ref=e1988]:
+                    - generic [ref=e1989]:
+                      - img [ref=e1990]
+                      - img [ref=e1992]
+                      - img [ref=e1994]
+                      - img [ref=e1996]
+                      - img [ref=e1998]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e2000]: "275"
+                  - generic [ref=e2001]: Roadworx Mic Stand Tripod Boom
+                  - generic [ref=e2004]: € 19,90
+                - generic [ref=e2005]:
+                  - link [ref=e2006] [cursor=pointer]:
+                    - /url: roadworx_mic_stand_tripod_boom.htm
+                  - generic [ref=e2007] [cursor=pointer]:
+                    - img [ref=e2008]
+                    - text: Compara
+              - generic [ref=e2010]:
+                - link "Millenium MS 2007 Black 253 Millenium MS 2007 Black € 24,50" [ref=e2011] [cursor=pointer]:
+                  - /url: millenium_ms_2007_black.htm
+                  - img "Millenium MS 2007 Black" [ref=e2015]
+                  - generic [ref=e2017]:
+                    - generic [ref=e2018]:
+                      - img [ref=e2019]
+                      - img [ref=e2021]
+                      - img [ref=e2023]
+                      - img [ref=e2025]
+                      - img [ref=e2027]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e2029]: "253"
+                  - generic [ref=e2030]: Millenium MS 2007 Black
+                  - generic [ref=e2033]: € 24,50
+                - generic [ref=e2034]:
+                  - link [ref=e2035] [cursor=pointer]:
+                    - /url: millenium_ms_2007_black.htm
+                  - generic [ref=e2036] [cursor=pointer]:
+                    - img [ref=e2037]
+                    - text: Compara
+              - generic [ref=e2039]:
+                - link "Fun Generation Mic Stand 2685 Fun Generation Mic Stand € 10,30" [ref=e2040] [cursor=pointer]:
+                  - /url: fun_generation_mic_stand.htm
+                  - img "Fun Generation Mic Stand" [ref=e2044]
+                  - generic [ref=e2046]:
+                    - generic [ref=e2047]:
+                      - img [ref=e2048]
+                      - img [ref=e2050]
+                      - img [ref=e2052]
+                      - img [ref=e2054]
+                      - img [ref=e2056]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e2058]: "2685"
+                  - generic [ref=e2059]: Fun Generation Mic Stand
+                  - generic [ref=e2062]: € 10,30
+                - generic [ref=e2063]:
+                  - link [ref=e2064] [cursor=pointer]:
+                    - /url: fun_generation_mic_stand.htm
+                  - generic [ref=e2065] [cursor=pointer]:
+                    - img [ref=e2066]
+                    - text: Compara
+              - generic [ref=e2068]:
+                - link "Roadworx Mic Stand Round Base 54 Roadworx Mic Stand Round Base € 22,90" [ref=e2069] [cursor=pointer]:
+                  - /url: roadworx_mic_stand_round_base.htm
+                  - img "Roadworx Mic Stand Round Base" [ref=e2073]
+                  - generic [ref=e2075]:
+                    - generic [ref=e2076]:
+                      - img [ref=e2077]
+                      - img [ref=e2079]
+                      - img [ref=e2081]
+                      - img [ref=e2083]
+                      - img [ref=e2085]
+                      - generic:
+                        - img
+                        - img
+                        - img
+                        - img
+                        - img
+                    - generic [ref=e2087]: "54"
+                  - generic [ref=e2088]: Roadworx Mic Stand Round Base
+                  - generic [ref=e2091]: € 22,90
+                - generic [ref=e2092]:
+                  - link [ref=e2093] [cursor=pointer]:
+                    - /url: roadworx_mic_stand_round_base.htm
+                  - generic [ref=e2094] [cursor=pointer]:
+                    - img [ref=e2095]
+                    - text: Compara
+          - generic [ref=e2097]:
+            - list [ref=e2099] [cursor=pointer]:
+              - listitem [ref=e2100]
+              - listitem [ref=e2102]
+              - listitem [ref=e2103]
+              - listitem [ref=e2104]
+            - button [ref=e2105] [cursor=pointer]:
+              - img [ref=e2106]
+      - list [ref=e2110]:
+        - heading "Navigatore intelligente" [level=2] [ref=e2111]
+        - listitem [ref=e2112]:
+          - link "Millenium Aste Microfoniche in mostra" [ref=e2113] [cursor=pointer]:
+            - /url: millenium_supporto_microfono.html
+            - img [ref=e2114]
+            - generic [ref=e2116]: Millenium Aste Microfoniche in mostra
+        - listitem [ref=e2117]:
+          - link "Vai al gruppo del prodotto Aste Microfoniche" [ref=e2118] [cursor=pointer]:
+            - /url: supporto_microfono.html
+            - img [ref=e2119]
+            - generic [ref=e2121]: Vai al gruppo del prodotto Aste Microfoniche
+        - listitem [ref=e2122]:
+          - link "Vai al gruppo del prodotto Supporti e Leggii" [ref=e2123] [cursor=pointer]:
+            - /url: leggii.html
+            - img [ref=e2124]
+            - generic [ref=e2126]: Vai al gruppo del prodotto Supporti e Leggii
+        - listitem [ref=e2127]:
+          - link "Vai al gruppo del prodotto Accessori" [ref=e2128] [cursor=pointer]:
+            - /url: accessori.html
+            - img [ref=e2129]
+            - generic [ref=e2131]: Vai al gruppo del prodotto Accessori
+        - listitem [ref=e2132]:
+          - link "Mostra le informazioni del produttore per Millenium" [ref=e2133] [cursor=pointer]:
+            - /url: millenium.html
+            - img [ref=e2134]
+            - generic [ref=e2136]: Mostra le informazioni del produttore per Millenium
+        - listitem [ref=e2137]:
+          - link "Millenium Accessori in generale" [ref=e2138] [cursor=pointer]:
+            - /url: millenium_accessori.html
+            - img [ref=e2139]
+            - generic [ref=e2141]: Millenium Accessori in generale
+  - contentinfo [ref=e2142]:
+    - generic [ref=e2143]:
+      - heading "Ti piace ciò che vedi?" [level=2] [ref=e2144]
+      - generic [ref=e2145]:
+        - button "Condividi" [ref=e2146] [cursor=pointer]:
+          - img [ref=e2147]
+          - text: Condividi
+        - button "Lascia un feedback" [ref=e2150] [cursor=pointer]:
+          - generic [ref=e2152]:
+            - img [ref=e2154]
+            - text: Aiuto e Commenti
+    - generic [ref=e2156]:
+      - heading "Prodotti visti di recente" [level=2] [ref=e2157]
+      - link "Vai a Millenium MS 2003" [ref=e2159] [cursor=pointer]:
+        - /url: millenium_ms2003.htm
+        - img "Millenium MS 2003" [ref=e2161]
+    - generic [ref=e2163]:
+      - generic [ref=e2166]:
+        - heading "Thomann Newsletter" [level=3] [ref=e2167]
+        - generic [ref=e2168]: Iscriviti alla newsletter di Thomann, e con un po' di fortuna potrai vincere uno dei 50 buoni del valore di 50 euro ciascuno!
+        - list [ref=e2169]:
+          - listitem [ref=e2170]:
+            - img [ref=e2171]
+            - generic [ref=e2173]: Contributi d'ispirazione
+          - listitem [ref=e2174]:
+            - img [ref=e2175]
+            - generic [ref=e2177]: Offerte
+          - listitem [ref=e2178]:
+            - img [ref=e2179]
+            - generic [ref=e2181]: Approfondimenti Thomann
+      - generic [ref=e2182]:
+        - generic [ref=e2184]:
+          - generic [ref=e2186]:
+            - generic: Indirizzo e-mail*
+            - textbox "Indirizzo e-mail*" [ref=e2187]
+          - button "Iscriviti ora" [ref=e2188] [cursor=pointer]:
+            - generic [ref=e2190]: Iscriviti ora
+        - paragraph [ref=e2191]:
+          - text: Cliccando su "Iscriviti ora", lei accetta di ricevere pubblicità via e-mail. È possibile annullare l'iscrizione in qualsiasi momento. Può trovare ulteriori informazioni sulla newsletter nelle nostre linee guida per la protezione dei dati
+          - link "data protection guideline" [ref=e2192] [cursor=pointer]:
+            - /url: compinfo_privacy.html#privacy_newsletter
+          - text: .
+        - paragraph [ref=e2193]: "* Richiesto"
+    - generic [ref=e2196]:
+      - generic [ref=e2197]:
+        - heading "Acquisti e pagamenti sicuri" [level=2] [ref=e2198]
+        - link "Panoramica delle opzioni di pagamento" [ref=e2199] [cursor=pointer]:
+          - /url: helpdesk_paymentmethods.html
+          - img [ref=e2201]
+          - img [ref=e2204]
+          - img [ref=e2207]
+          - img [ref=e2210]
+          - img [ref=e2213]
+          - img [ref=e2216]
+          - img [ref=e2219]
+          - img [ref=e2222]
+          - img [ref=e2225]
+          - img [ref=e2228]
+        - paragraph [ref=e2230]: Paga in tutta sicurezza con Contanti alla consegna, Bonifico bancario, PayPal, Amazon Pay, Klarna Paga Ora, Klarna Paga in 3 rate oppure Carta di credito.
+      - generic [ref=e2231]:
+        - heading "I tuoi vantaggi" [level=2] [ref=e2232]
+        - list [ref=e2233]:
+          - listitem [ref=e2234]:
+            - link "3 anni di garanzia Thomann" [ref=e2235] [cursor=pointer]:
+              - /url: helpdesk_warranty.html
+              - img [ref=e2236]
+              - text: 3 anni di garanzia Thomann
+          - listitem [ref=e2238]:
+            - link "30 giorni di garanzia soddisfatti o rimborsati" [ref=e2239] [cursor=pointer]:
+              - /url: helpdesk_moneyback.html
+              - img [ref=e2240]
+              - text: 30 giorni di garanzia soddisfatti o rimborsati
+          - listitem [ref=e2242]:
+            - link "Servizio Riparazioni" [ref=e2243] [cursor=pointer]:
+              - /url: helpdesk_repair.html
+              - img [ref=e2244]
+              - text: Servizio Riparazioni
+          - listitem [ref=e2246]:
+            - link "Consigli degli esperti" [ref=e2247] [cursor=pointer]:
+              - /url: compinfo_contact.html
+              - img [ref=e2248]
+              - text: Consigli degli esperti
+          - listitem [ref=e2250]:
+            - link "Soddisfazione Garantita" [ref=e2251] [cursor=pointer]:
+              - /url: helpdesk_satisfaction.html
+              - img [ref=e2252]
+              - text: Soddisfazione Garantita
+          - listitem [ref=e2254]:
+            - link "Il magazzino più grande d'Europa" [ref=e2255] [cursor=pointer]:
+              - /url: helpdesk_warehouse.html
+              - img [ref=e2256]
+              - text: Il magazzino più grande d'Europa
+      - generic [ref=e2258]:
+        - heading "Servizi" [level=2] [ref=e2259]
+        - list [ref=e2260]:
+          - listitem [ref=e2261]:
+            - link "Costi di trasporto e tempi di consegna" [ref=e2262] [cursor=pointer]:
+              - /url: helpdesk_shipping.html
+          - listitem [ref=e2263]:
+            - link "Aiuto" [ref=e2264] [cursor=pointer]:
+              - /url: helpdesk.html
+          - listitem [ref=e2265]:
+            - link "Vouchers" [ref=e2266] [cursor=pointer]:
+              - /url: voucher_regalo.html
+          - listitem [ref=e2267]:
+            - link "Contattaci" [ref=e2268] [cursor=pointer]:
+              - /url: compinfo_contact.html
+          - listitem [ref=e2269]:
+            - link "Entra nel negozio" [ref=e2270] [cursor=pointer]:
+              - /url: compinfo_route.html
+          - listitem [ref=e2271]:
+            - link "Panoramica dei servizi" [ref=e2272] [cursor=pointer]:
+              - /url: helpdesk_service.html
+    - generic [ref=e2275]:
+      - generic [ref=e2276]:
+        - list [ref=e2277]:
+          - listitem [ref=e2278]:
+            - link "Termini & Condizioni" [ref=e2280] [cursor=pointer]:
+              - /url: compinfo_terms.html
+            - generic [ref=e2281]: /
+            - link "Stampa" [ref=e2283] [cursor=pointer]:
+              - /url: compinfo_imprint.html
+          - listitem [ref=e2284]:
+            - link "Privacy" [ref=e2285] [cursor=pointer]:
+              - /url: compinfo_privacy.html
+          - listitem [ref=e2286]:
+            - button "Impostazione Cookie" [ref=e2287] [cursor=pointer]
+          - listitem [ref=e2288]:
+            - link "Diritto di recesso" [ref=e2289] [cursor=pointer]:
+              - /url: compinfo_cancellation.html
+          - listitem [ref=e2290]:
+            - link "Procedura per ordinare" [ref=e2291] [cursor=pointer]:
+              - /url: compinfo_orders.html
+          - listitem [ref=e2292]:
+            - link "Diritti di garanzia legale" [ref=e2293] [cursor=pointer]:
+              - /url: compinfo_liability.html
+          - listitem [ref=e2294]:
+            - link "Dichiarazione di accessibilità" [ref=e2295] [cursor=pointer]:
+              - /url: compinfo_accessibilityStatement.html
+        - link "Revoca dell'ordine" [ref=e2296] [cursor=pointer]:
+          - /url: withdraw.html
+          - generic [ref=e2297]: Revoca dell'ordine
+      - generic [ref=e2299]:
+        - generic [ref=e2300]:
+          - link "Facebook" [ref=e2301] [cursor=pointer]:
+            - /url: https://www.facebook.com/thomannitalia
+            - img [ref=e2302]
+          - link "YouTube" [ref=e2304] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCxcO3VWjuUlX7mQV_f5cMhg
+            - img [ref=e2305]
+          - link "Instagram" [ref=e2307] [cursor=pointer]:
+            - /url: https://instagram.com/thomann.music/
+            - img [ref=e2308]
+        - generic [ref=e2310]:
+          - link "Pinterest" [ref=e2311] [cursor=pointer]:
+            - /url: https://www.pinterest.com/thomannde/
+            - img [ref=e2312]
+          - link "Tiktok" [ref=e2314] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@thomann.music
+            - img [ref=e2315]
+      - list [ref=e2318]:
+        - listitem [ref=e2319]:
+          - link "Su di noi" [ref=e2320] [cursor=pointer]:
+            - /url: compinfo.html
+        - listitem [ref=e2321]:
+          - link "Lavora con noi" [ref=e2322] [cursor=pointer]:
+            - /url: compinfo_youatthomann.html
+        - listitem [ref=e2323]:
+          - link "Blog" [ref=e2324] [cursor=pointer]:
+            - /url: https://www.thomann.de/blog/it/
+        - listitem [ref=e2325]:
+          - link "Annunci" [ref=e2326] [cursor=pointer]:
+            - /url: classified.html
+        - listitem [ref=e2327]:
+          - link "Sistema di segnalazione" [ref=e2328] [cursor=pointer]:
+            - /url: compinfo_compliance.html
+      - generic [ref=e2330]:
+        - link "La nostra app su App Store." [ref=e2331] [cursor=pointer]:
+          - /url: https://apps.apple.com/it/app/id1035256782
+          - img "La nostra app su App Store." [ref=e2332]
+        - link "La nostra app su Google Play." [ref=e2333] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=de.thomann
+          - img "La nostra app su Google Play." [ref=e2334]
+      - generic [ref=e2336]:
+        - generic [ref=e2337]: © 1996–2026 Thomann GmbH.
+        - generic [ref=e2338]: Thomann loves you, because you rock!
+  - generic [ref=e2339]:
+    - iframe [ref=e2340]
+    - iframe [ref=e2341]

@@ -1,0 +1,144 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - heading "Hercules Stands International" [level=1] [ref=e5]:
+          - link "Hercules Stands International" [ref=e6] [cursor=pointer]:
+            - /url: https://herculesstands.com/international
+            - img "Hercules Stands International" [ref=e7]
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - generic [ref=e12]:
+              - textbox "Search…" [ref=e14]
+              - button "Search" [ref=e16] [cursor=pointer]
+          - listitem [ref=e17]:
+            - link "Change Location" [ref=e18] [cursor=pointer]:
+              - /url: javascript:;
+              - generic [ref=e19]: 
+              - text: Change Location
+        - navigation [ref=e20]:
+          - list [ref=e22]:
+            - listitem [ref=e23]:
+              - link "Products" [ref=e24] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=e25]:
+              - link "Artists" [ref=e26] [cursor=pointer]:
+                - /url: https://herculesstands.com/international/artists
+            - listitem [ref=e27]:
+              - link "Media" [ref=e28] [cursor=pointer]:
+                - /url: https://herculesstands.com/international/media
+            - listitem [ref=e29]:
+              - link "Support" [ref=e30] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=e31]:
+              - link "Company" [ref=e32] [cursor=pointer]:
+                - /url: javascript:void(0);
+    - text:      
+    - generic [ref=e34]:
+      - generic [ref=e36]:
+        - heading "Products" [level=2] [ref=e38]
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - link "Home" [ref=e43] [cursor=pointer]:
+              - /url: https://herculesstands.com/international
+          - listitem [ref=e44]:
+            - link "Products" [ref=e45] [cursor=pointer]:
+              - /url: https://herculesstands.com/international/products
+          - listitem [ref=e46]:
+            - link "Keyboard" [ref=e47] [cursor=pointer]:
+              - /url: https://herculesstands.com/international/products/keyboard
+          - listitem [ref=e48]:
+            - link "Z Stands" [ref=e49] [cursor=pointer]:
+              - /url: https://herculesstands.com/international/products/keyboard/z-stands
+          - listitem [ref=e50]:
+            - link "KS400B" [ref=e51] [cursor=pointer]:
+              - /url: /international/products/keyboard/z-stands/ks400b
+      - generic [ref=e52]:
+        - link "Previous Page" [ref=e54] [cursor=pointer]:
+          - /url: javascript:history.back();
+          - text: 
+          - text: Previous Page
+        - generic [ref=e56]:
+          - term [ref=e57]: Share to：
+          - definition [ref=e58]:
+            - link " Facebook" [ref=e59] [cursor=pointer]:
+              - /url: "#"
+          - definition [ref=e60]:
+            - link "Twitter" [ref=e61] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e62]:
+        - generic [ref=e64]:
+          - textbox "Keyword" [ref=e67]:
+            - /placeholder: Search by instrument, stand, or accessory
+          - button "GO" [ref=e71] [cursor=pointer]
+        - generic [ref=e72]:
+          - generic:
+            - generic [ref=e73]:
+              - listbox [ref=e76]:
+                - option [ref=e77] [cursor=pointer]
+                - option [ref=e78] [cursor=pointer]
+                - option [ref=e79] [cursor=pointer]
+                - option [ref=e80] [cursor=pointer]
+                - option [ref=e81] [cursor=pointer]
+              - generic [ref=e82]:
+                - button "Previous" [disabled] [ref=e83]
+                - listbox [ref=e85]:
+                  - option [ref=e86] [cursor=pointer]
+                  - option [ref=e87] [cursor=pointer]
+                  - option [ref=e88] [cursor=pointer]
+                  - option [ref=e89] [cursor=pointer]
+                  - option [ref=e90] [cursor=pointer]
+                - button "Next" [ref=e91] [cursor=pointer]
+            - generic [ref=e92]:
+              - generic [ref=e93]:
+                - generic [ref=e94]: KS400B
+                - heading "AUTOLOCK Z-KEYBOARD STAND" [level=3] [ref=e95]
+              - heading [level=3]
+              - generic [ref=e96]:
+                - generic [ref=e97]:
+                  - generic [ref=e98]: Description
+                  - generic [ref=e99]: The HERCULES Z-Style Keyboard Stand KS400B has a built-in AutoLock system for easy height adjustment and has a one-piece compact folding design.
+                - generic [ref=e100]:
+                  - generic [ref=e101]: Features
+                  - list [ref=e103]:
+                    - listitem [ref=e104]: "- AutoLock System with AutoLock Lever adjusts height setting easily and is safe and secure."
+                    - listitem [ref=e105]: "- Locking Pins and adjustable moving arms for easy set up and tear down."
+                    - listitem [ref=e106]: "- The Adjustable Rubber Foot fine tunes height and levels the KS400B for maximum stability."
+                - generic [ref=e107]:
+                  - generic [ref=e108]: Specs
+                  - list [ref=e110]:
+                    - listitem [ref=e111]: "- Height: 605 mm - 930 mm (23.8\" - 36.6\")"
+                    - listitem [ref=e112]: "- Width: 510 mm - 850 mm (20\" - 33.5\")"
+                    - listitem [ref=e113]: "- Load Capacity: 130 kg (286 lbs.)"
+                    - listitem [ref=e114]: "- Folded Size: 705 mm x 605 mm x 175 mm (27.7\" x 23.8\" x 6.9\")"
+                    - listitem [ref=e115]: "- Support Depth: 450 mm (17.7”)"
+    - contentinfo [ref=e116]:
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - link "" [ref=e119] [cursor=pointer]:
+            - /url: https://www.facebook.com/HERCULES.STANDS
+            - generic [ref=e120]: 
+          - link "" [ref=e121] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCQTp3RDETepHjQGvIjpcpLA/
+            - generic [ref=e122]: 
+          - link "Twitter" [ref=e123] [cursor=pointer]:
+            - /url: https://twitter.com/hercules_stands?lang=en
+          - link "" [ref=e125] [cursor=pointer]:
+            - /url: https://www.instagram.com/herculesstands/
+            - generic [ref=e126]: 
+        - generic [ref=e127]:
+          - list
+  - dialog "We use cookies!" [ref=e129]:
+    - generic [ref=e130]:
+      - generic [ref=e131]:
+        - heading "We use cookies!" [level=2] [ref=e132]
+        - generic [ref=e133]:
+          - paragraph [ref=e134]:
+            - text: This site uses cookies. Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is being used. For more detailed information on the cookies we use, please check our
+            - link "Privacy Policy" [ref=e135] [cursor=pointer]:
+              - /url: ../../../hercules-international/privacy
+            - text: .
+          - button "Individual Cookie Setting" [ref=e137] [cursor=pointer]
+      - generic [ref=e138]:
+        - button "Accept All" [ref=e139] [cursor=pointer]
+        - button "Reject All" [ref=e140] [cursor=pointer]
