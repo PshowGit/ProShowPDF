@@ -42,8 +42,8 @@ rebuild.bat
    - `errors.py` — Typed exception hierarchy
    - `url_utils.py` — URL validation, normalization, parsing (txt/csv/xlsx/xls)
    - `naming.py` — Windows-safe filenames, collision resolution, custom filename sanitization
-   - `cookie_banner.py` — Heuristic banner dismissal (euristiques for common consent platforms)
-   - `page_converter.py` — Per-page conversion: navigate → dismiss cookies → scroll lazy-load → measure height → render PDF → trim trailing whitespace; supports optional custom_filename for per-URL naming
+   - `cookie_banner.py` — Best-effort consent/overlay handling: `dismiss_cookie_banner` (known selectors + exact-text accept buttons + popup close affordances) and `remove_blocking_overlays` (generic fixed-overlay stripping). See "Overlay & Consent Handling" below.
+   - `page_converter.py` — Per-page conversion: navigate → clear anti-bot challenge → dismiss cookies/overlays (with navigation safety net) → scroll lazy-load → measure height → render PDF → trim trailing whitespace; supports optional custom_filename for per-URL naming
    - `pdf_postprocess.py` — Post-render PDF cleanup: rasterize the page, find the bottom of the main content block (stopping at the first large whitespace gap) and crop the page to it, removing the blank band Chromium's printToPDF leaves after the footer along with any `position: fixed` widgets baked into it (PyMuPDF)
    - `browser_pool.py` — Single Chromium instance + isolated BrowserContext per URL + viewport sizing
    - `converter_engine.py` — Batch orchestration: asyncio.Semaphore for concurrency cap, retry/backoff, progress callbacks, cancellation, supports optional custom_filenames for per-URL PDF naming
@@ -52,7 +52,7 @@ rebuild.bat
    - `controller.py` — ConversionController(QObject): QThread hosting asyncio event loop, emits Qt signals (progress, finished, failed, cancelled), accepts commands (start, cancel, shutdown)
 
 3. **UI (`proshowpdf/ui/`)** — Pure PySide6
-   - `main_window.py` — Assembles widgets, wires controller signals/slots
+   - `main_window.py` — Assembles widgets, wires controller signals/slots; on batch end/failure/cancel pops a system-tray toast + taskbar flash + beep (`_notify`, degrades gracefully when no system tray)
    - `widgets/` — UrlInput (drag-drop txt/csv/xlsx/xls with optional custom filenames in column 2, real-time URL counter), OptionsPanel (settings form), ProgressView (realtime bar + status list), ResultsPanel (summary + CSV export + open-folder)
    - `theme.py` — Apply dark/light QSS stylesheets from `resources/qss/`
    - `animations.py` — fade_in helper (micro-interactions)
@@ -75,6 +75,16 @@ rebuild.bat
 - Margin=0 — edge-to-edge PDF.
 - Dynamic height: measure `scrollHeight` after `networkidle` + scroll lazy-load + `document.fonts.ready`.
 - Trailing-whitespace trim: Chromium's `printToPDF` can lay a page out shorter than the measured `scrollHeight` (large image/gallery sections re-flow shorter in the PDF pass), leaving a blank band after the footer with `position: fixed` widgets baked into it. `pdf_postprocess.trim_trailing_whitespace` crops the rendered PDF to its real content bottom (best-effort; never fails the conversion).
+
+### Overlay & Consent Handling (`cookie_banner.py` + `convert_page`)
+Three escalating, best-effort tiers, all gated by `ConversionSettings.handle_cookie_banners`:
+1. **Known selectors** (`_KNOWN_SELECTORS`) — accept buttons of common platforms (OneTrust, Cookiebot, Didomi, Amazon `#sp-cc-accept`, …) and `_CLOSE_SELECTORS` for popup/modal close affordances.
+2. **Exact-text accept buttons** — `:text-is` on `button`/`[role=button]`/`input` only. **Exact, not substring, and never `<a>` links** — substring `:has-text` made "OK" match "informativa sui c**ook**ie" and links navigate to policy pages. Do NOT reintroduce `:has-text` here.
+3. **Generic overlay removal** (`remove_blocking_overlays`) — strips the top-most large `position:fixed` element at the viewport centre (consent walls / region dialogs in any language) via `elementFromPoint`, then clears `overflow`/`position` scroll locks so the revealed page measures correctly.
+
+**Navigation safety net:** if a dismissal click still leaves the requested page (`_navigated_away` compares host+path, ignoring query/fragment), `convert_page` re-opens the target URL and only re-runs overlay removal (which never navigates).
+
+`_try_click` clicks the first *visible* match (not just `.first`) so hidden duplicate buttons don't shadow the live one.
 
 ### Windows x64 Only
 - `proshowpdf/__main__.py` checks architecture at startup; exits with error dialog on 32-bit systems (Playwright Chromium is x64-only).
@@ -110,9 +120,11 @@ rebuild.bat
 - Column 2 (optional): Custom PDF filename (without .pdf extension)
 - Header row is auto-detected and skipped if it contains "url", "name", "filename"
 
-### Improve Cookie Banner Heuristics
-- Edit `_KNOWN_SELECTORS` and `_ACCEPT_TEXTS` (proshowpdf/core/cookie_banner.py).
-- Test by rendering a known consent-banner site and checking logs for "Dismissed banner via ...".
+### Improve Cookie Banner / Overlay Heuristics
+- Prefer a platform-specific entry in `_KNOWN_SELECTORS` (a real accept button id/class) over text — it runs first and is unambiguous.
+- `_ACCEPT_TEXTS` are matched **exactly** (`:text-is`) on buttons only; add the full button label, not a fragment. Never switch back to substring/`:has-text` or to clicking `<a>` links (see "Overlay & Consent Handling").
+- For blocking modals without a clean accept button, rely on `remove_blocking_overlays` (no edit needed) rather than adding fragile selectors.
+- Test by rendering the site and checking logs for "Dismissed banner/overlay via …" / "Removed N blocking overlay(s)".
 
 ### Style UI Components
 - Dark theme: `proshowpdf/resources/qss/dark.qss`
@@ -137,7 +149,11 @@ pytest --cov=proshowpdf tests/
 **Test Structure:**
 - `tests/test_url_utils.py` — URL validation/parsing
 - `tests/test_naming.py` — Filename sanitization, collision resolution
-- `tests/test_page_converter.py` — Height measurement logic (with AsyncMock page)
+- `tests/test_page_converter.py` — Height/dimension logic, `_navigated_away`, convert_page (AsyncMock page)
+- `tests/test_cookie_banner.py` — dismissal click flow + `remove_blocking_overlays` (mock page)
+- `tests/test_pdf_postprocess.py` — whitespace-trim row scan + crop (synthetic PyMuPDF PDFs)
+
+Note: UI/notification paths use modal `QMessageBox`/system tray; smoke-test with `QT_QPA_PLATFORM=offscreen` and avoid calling the modal slots (`_on_failed`/`_on_cancelled`) headless — they block.
 
 ---
 
