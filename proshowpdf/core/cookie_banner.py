@@ -53,6 +53,62 @@ _CLOSE_SELECTORS = [
 ]
 
 
+# Generic, language/site-agnostic removal of modal overlays that cover the
+# page. Whatever paints on top at the viewport centre is almost always a
+# blocking overlay (consent wall, welcome/region dialog) rather than page
+# content: sticky headers are too short to reach the centre and the article
+# body is not position:fixed. We strip the top-most large fixed ancestor at a
+# few centre samples, then clear scroll locks so the revealed page measures
+# correctly.
+_REMOVE_OVERLAYS_JS = """
+() => {
+  const vw = window.innerWidth, vh = window.innerHeight;
+  if (!vw || !vh) return [];
+  const removed = [];
+  const samples = [[vw/2, vh/2], [vw/2, vh*0.35], [vw/2, vh*0.65]];
+  for (let pass = 0; pass < 6; pass++) {
+    let overlay = null;
+    for (const [x, y] of samples) {
+      let node = document.elementFromPoint(x, y);
+      let candidate = null;
+      while (node && node !== document.body && node !== document.documentElement) {
+        const cs = getComputedStyle(node);
+        if (cs.position === 'fixed') {
+          const r = node.getBoundingClientRect();
+          if (r.width >= vw * 0.5 && r.height >= vh * 0.4) candidate = node;
+        }
+        node = node.parentElement;
+      }
+      if (candidate) { overlay = candidate; break; }
+    }
+    if (!overlay) break;
+    const cls = (overlay.className && overlay.className.toString)
+      ? overlay.className.toString() : '';
+    removed.push((overlay.id || cls || overlay.tagName).slice(0, 60));
+    overlay.remove();
+  }
+  if (removed.length) {
+    for (const el of [document.documentElement, document.body]) {
+      el.style.setProperty('overflow', 'visible', 'important');
+      el.style.setProperty('position', 'static', 'important');
+    }
+  }
+  return removed;
+}
+"""
+
+
+async def remove_blocking_overlays(page) -> int:
+    """Strip modal overlays covering the page centre; return how many. Best effort."""
+    try:
+        removed = await page.evaluate(_REMOVE_OVERLAYS_JS)
+    except Exception:
+        return 0
+    if removed:
+        log.debug("Removed %d blocking overlay(s): %s", len(removed), removed)
+    return len(removed)
+
+
 async def dismiss_cookie_banner(page, timeout_ms: int = 1000, rounds: int = 4) -> int:
     """Click accept/close on consent banners; return how many were dismissed.
 

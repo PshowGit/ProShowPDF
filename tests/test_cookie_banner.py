@@ -2,7 +2,10 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from proshowpdf.core.cookie_banner import dismiss_cookie_banner
+from proshowpdf.core.cookie_banner import (
+    dismiss_cookie_banner,
+    remove_blocking_overlays,
+)
 
 
 def _page_with_counts(counts: list[int]):
@@ -38,3 +41,24 @@ async def test_dismisses_one_banner_then_stops():
     page = _page_with_counts([1])
     assert await dismiss_cookie_banner(page) == 1
     page._candidate.click.assert_awaited()
+
+
+@pytest.mark.asyncio
+async def test_remove_blocking_overlays_counts_removed():
+    page = MagicMock()
+    page.evaluate = AsyncMock(return_value=["spicy-consent-wrapper", "backdrop"])
+    assert await remove_blocking_overlays(page) == 2
+
+
+@pytest.mark.asyncio
+async def test_remove_blocking_overlays_handles_no_overlay():
+    page = MagicMock()
+    page.evaluate = AsyncMock(return_value=[])
+    assert await remove_blocking_overlays(page) == 0
+
+
+@pytest.mark.asyncio
+async def test_remove_blocking_overlays_swallows_errors():
+    page = MagicMock()
+    page.evaluate = AsyncMock(side_effect=RuntimeError("evaluate failed"))
+    assert await remove_blocking_overlays(page) == 0
