@@ -1,12 +1,12 @@
 @echo off
 REM ProShow PDF - Rebuild and Create ZIP Script
-REM Ricompila l'applicazione e crea il nuovo ZIP
+REM Ricompila l'applicazione e crea il nuovo ZIP (nome fisso, versione automatica)
 
 setlocal enabledelayedexpansion
 
 echo.
 echo ===============================================
-echo ProShow PDF - Rebuild & Create ZIP
+echo ProShow PDF - Rebuild ^& Create ZIP
 echo ===============================================
 echo.
 
@@ -33,6 +33,21 @@ if not exist ".venv\Scripts\pyinstaller.exe" (
     exit /b 1
 )
 
+REM Legge la versione da proshowpdf\__init__.py (singola fonte di verita')
+set "VERSION="
+for /f "usebackq delims=" %%v in (`.venv\Scripts\python.exe -c "import proshowpdf; print(proshowpdf.__version__)" 2^>nul`) do set "VERSION=%%v"
+if not defined VERSION (
+    echo Error: impossibile leggere __version__ da proshowpdf\__init__.py
+    echo.
+    pause
+    exit /b 1
+)
+echo Versione rilevata: v%VERSION%
+echo.
+
+REM Nome ZIP FISSO (senza versione): la landing page punta sempre allo stesso file
+set "ZIP=ProShowPDF-windows-x64.zip"
+
 REM Step 1: Compilazione
 echo [1/3] Compilazione con PyInstaller...
 echo.
@@ -41,28 +56,28 @@ call .venv\Scripts\pyinstaller packaging\proshowpdf.spec --noconfirm
 
 if errorlevel 1 (
     echo.
-    echo ❌ Compilazione fallita!
+    echo Compilazione fallita!
     echo.
     pause
     exit /b 1
 )
 
 echo.
-echo ✅ Compilazione completata
+echo Compilazione completata
 echo.
 
 REM Verifica eseguibile
 if not exist "dist\ProShowPDF\ProShowPDF.exe" (
-    echo ❌ Eseguibile non trovato!
+    echo Eseguibile non trovato!
     echo.
     pause
     exit /b 1
 )
 
-REM Step 2: Backup ZIP vecchio
+REM Step 2: Elimina ZIP precedente (stesso nome fisso)
 echo [2/3] Preparazione del ZIP...
-if exist "ProShowPDF-v1.0.0-windows-x64.zip" (
-    del "ProShowPDF-v1.0.0-windows-x64.zip"
+if exist "%ZIP%" (
+    del "%ZIP%"
     echo ZIP precedente eliminato
 )
 
@@ -73,49 +88,42 @@ echo.
 
 powershell -NoProfile -Command ^
     "cd dist; " ^
-    "Compress-Archive -Path 'ProShowPDF' -DestinationPath '..\ProShowPDF-v1.0.0-windows-x64.zip' -Force; " ^
+    "Compress-Archive -Path 'ProShowPDF' -DestinationPath '..\%ZIP%' -Force; " ^
     "cd .."
 
 if errorlevel 1 (
     echo.
-    echo ❌ Creazione ZIP fallita!
+    echo Creazione ZIP fallita!
     echo.
     pause
     exit /b 1
 )
 
 REM Verifica ZIP
-if not exist "ProShowPDF-v1.0.0-windows-x64.zip" (
+if not exist "%ZIP%" (
     echo.
-    echo ❌ ZIP non creato!
+    echo ZIP non creato!
     echo.
     pause
     exit /b 1
 )
 
-REM Mostra informazioni file
-for %%I in ("ProShowPDF-v1.0.0-windows-x64.zip") do (
-    set "size=%%~zI"
-)
-
-setlocal enabledelayedexpansion
+REM Mostra dimensione
+for %%I in ("%ZIP%") do set "size=%%~zI"
 set /a size_mb=!size! / 1048576
-setlocal disabledelayedexpansion
 
 echo.
 echo ===============================================
-echo ✅ BUILD COMPLETATO!
+echo BUILD COMPLETATO!  (v%VERSION%)
 echo ===============================================
 echo.
-echo 📦 File ZIP pronto:
-echo    D:\Programmi\ProShowPDF\ProShowPDF-v1.0.0-windows-x64.zip
+echo File ZIP pronto:
+echo    %CD%\%ZIP%
 echo    Dimensione: %size_mb% MB
 echo.
-echo 📍 Prossimo passo:
-echo    1. Apri: https://github.com/PshowGit/ProShowPDF/releases/tag/v1.0.0
-echo    2. Clicca "Edit release"
-echo    3. Carica il nuovo ZIP in Assets
-echo    4. Clicca "Update release"
+echo Prossimo passo: pubblica la release con
+echo    deploy.bat
+echo (creera' il tag v%VERSION% e caricara' %ZIP%)
 echo.
 echo ===============================================
 echo.
