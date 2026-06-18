@@ -36,20 +36,24 @@ if not exist "%ZIP%" (
 )
 
 echo [1/4] Checking GitHub CLI (gh)...
-where gh >nul 2>&1
-if errorlevel 1 (
+REM Cerca gh nel PATH; se assente, usa il percorso d'installazione di default
+REM (winget non aggiorna il PATH dei terminali gia' aperti / del doppio click).
+set "GH="
+where gh >nul 2>&1 && set "GH=gh"
+if not defined GH if exist "%ProgramFiles%\GitHub CLI\gh.exe" set "GH=%ProgramFiles%\GitHub CLI\gh.exe"
+if not defined GH (
     echo.
-    echo Error: GitHub CLI gh not found!
-    echo Installa con: choco install gh   - oppure https://github.com/cli/cli/releases
+    echo Error: GitHub CLI gh non trovato.
+    echo Installa con: winget install --id GitHub.cli   e poi RIAPRI il terminale.
     echo.
     pause
     exit /b 1
 )
-echo OK - gh CLI found
+echo OK - gh trovato
 
 echo.
 echo [2/4] Verifying authentication...
-gh auth status >nul 2>&1
+"%GH%" auth status >nul 2>&1
 if errorlevel 1 (
     echo.
     echo GitHub authentication required. Run: gh auth login
@@ -61,7 +65,7 @@ echo OK - Authenticated to GitHub
 
 echo.
 echo [3/4] Controllo tag esistente %TAG%...
-gh release view %TAG% >nul 2>&1
+"%GH%" release view %TAG% >nul 2>&1
 if not errorlevel 1 (
     echo.
     echo La release %TAG% esiste gia'.
@@ -76,7 +80,7 @@ echo.
 echo [4/4] Creazione release %TAG%...
 echo.
 
-gh release create %TAG% ^
+"%GH%" release create %TAG% ^
   --title "ProShow PDF %TAG%" ^
   --notes "Web-to-PDF Converter for Windows x64" ^
   "%ZIP%"
