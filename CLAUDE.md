@@ -57,6 +57,7 @@ rebuild.bat
    - `theme.py` — Apply dark/light QSS stylesheets from `resources/qss/`
    - `animations.py` — fade_in helper (micro-interactions)
 
+**Update check:** `proshowpdf/update_checker.py` — `UpdateChecker` (QThread) polls the GitHub Releases API on startup and signals `main_window` to offer a download link when a newer tag than `__version__` exists. Silent on offline/up-to-date.
 **Persistence:** `proshowpdf/persistence/settings_store.py` (QSettings wrapper)
 **Logging:** `proshowpdf/logging_setup.py` (RotatingFileHandler to `%LOCALAPPDATA%/ProShowPDF/logs/`)
 
@@ -210,6 +211,8 @@ Compress-Archive -Path "ProShowPDF" -DestinationPath "..\ProShowPDF-v1.0.0-windo
 **Bundling:** The spec resolves pinned Chromium revision from `playwright/driver/package/browsers.json` and bundles only the active browser + headless shell + ffmpeg, then uses `packaging/rthook_playwright.py` to redirect `PLAYWRIGHT_BROWSERS_PATH` at runtime.
 
 **Distribution:** Deliver ProShowPDF-v1.0.0-windows-x64.zip (312 MB); users extract and run ProShowPDF.exe with no installation needed. See DOWNLOAD_GUIDE.html for user instructions.
+
+**Releasing:** Bump `proshowpdf/__init__.py:__version__` AND tag the GitHub Release `vX.Y.Z` together — the in-app update check compares the running `__version__` against the latest release tag, so they must stay in sync.
 
 ---
 
