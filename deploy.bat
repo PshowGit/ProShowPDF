@@ -39,8 +39,8 @@ echo [1/4] Checking GitHub CLI (gh)...
 where gh >nul 2>&1
 if errorlevel 1 (
     echo.
-    echo Error: GitHub CLI (gh) not found!
-    echo Installa con: choco install gh   (oppure https://github.com/cli/cli/releases)
+    echo Error: GitHub CLI gh not found!
+    echo Installa con: choco install gh   - oppure https://github.com/cli/cli/releases
     echo.
     pause
     exit /b 1
@@ -83,7 +83,7 @@ gh release create %TAG% ^
 
 if errorlevel 1 (
     echo.
-    echo Error: Release creation failed (rete o autenticazione?)
+    echo Error: Release creation failed - rete o autenticazione?
     echo.
     pause
     exit /b 1
