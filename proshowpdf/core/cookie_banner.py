@@ -117,10 +117,9 @@ async def remove_blocking_overlays(page) -> int:
     return len(removed)
 
 
-# Containers of well-known floating chat/support widgets. These dock to a
-# screen corner (position:fixed) and get baked into the PDF as a stray bubble.
-# Each selector is vendor-specific and unambiguous, so hiding it can't drop real
-# page content.
+# Containers of well-known floating chat/support widgets. Vendor-specific and
+# unambiguous, so hiding them can't drop real content — used as a precise pass
+# on top of the generic geometric detection below (which catches the rest).
 _WIDGET_SELECTORS = [
     "#hubspot-messages-iframe-container",                  # HubSpot
     "#intercom-container", ".intercom-lightweight-app",    # Intercom
@@ -138,30 +137,58 @@ _WIDGET_SELECTORS = [
     "#beacon-container",                                   # Help Scout Beacon
 ]
 
-_HIDE_WIDGETS_JS = """
+# Generic floating-widget removal. Two passes: (1) the known vendor containers
+# above; (2) geometric detection of any `position:fixed` element docked to a
+# viewport edge that is neither a full-width bar (header / announcement / cookie
+# bar — left to the consent logic) nor a full-height side panel (could be real
+# nav). That signature — edge-docked, not spanning a whole side — is what chat
+# bubbles, social rails, "contact us" tabs, back-to-top and floating CTAs share,
+# and they otherwise bake into the PDF as stray objects. Centre-covering modals
+# are handled separately by `remove_blocking_overlays`.
+_REMOVE_WIDGETS_JS = """
 (selectors) => {
+  const vw = window.innerWidth, vh = window.innerHeight;
   let n = 0;
+  const hide = (el) => { el.style.setProperty('display', 'none', 'important'); n++; };
   for (const sel of selectors) {
     let els;
     try { els = document.querySelectorAll(sel); } catch (e) { continue; }
-    for (const el of els) {
-      el.style.setProperty('display', 'none', 'important');
-      n++;
-    }
+    for (const el of els) hide(el);
+  }
+  if (!vw || !vh) return n;
+  const EDGE = 40;
+  const cand = [];
+  for (const el of document.querySelectorAll('body *')) {
+    const cs = getComputedStyle(el);
+    if (cs.position !== 'fixed') continue;
+    if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) === 0) continue;
+    const r = el.getBoundingClientRect();
+    if (r.width < 16 || r.height < 16) continue;
+    if (r.width >= vw * 0.6) continue;     // full-width bar / header
+    if (r.height >= vh * 0.8) continue;    // full-height side panel
+    const docked = r.left <= EDGE || (vw - r.right) <= EDGE
+                || r.top <= EDGE || (vh - r.bottom) <= EDGE;
+    if (!docked) continue;
+    cand.push(el);
+  }
+  for (const el of cand) {
+    if (cand.some(o => o !== el && o.contains(el))) continue;  // keep outermost
+    hide(el);
   }
   return n;
 }
 """
 
 
-async def hide_chat_widgets(page) -> int:
-    """Hide known floating chat/support widgets so they don't bake into the PDF."""
+async def remove_floating_widgets(page) -> int:
+    """Hide floating widgets — known chat/support vendors plus generic
+    edge-docked fixed widgets — so they don't bake into the PDF. Best effort."""
     try:
-        n = await page.evaluate(_HIDE_WIDGETS_JS, _WIDGET_SELECTORS)
+        n = await page.evaluate(_REMOVE_WIDGETS_JS, _WIDGET_SELECTORS)
     except Exception:
         return 0
     if n:
-        log.debug("Hid %d chat/support widget element(s)", n)
+        log.debug("Hid %d floating widget(s)", n)
     return n
 
 
