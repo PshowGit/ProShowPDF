@@ -4,6 +4,7 @@ import pytest
 
 from proshowpdf.core.cookie_banner import (
     dismiss_cookie_banner,
+    hide_chat_widgets,
     remove_blocking_overlays,
 )
 
@@ -62,3 +63,17 @@ async def test_remove_blocking_overlays_swallows_errors():
     page = MagicMock()
     page.evaluate = AsyncMock(side_effect=RuntimeError("evaluate failed"))
     assert await remove_blocking_overlays(page) == 0
+
+
+@pytest.mark.asyncio
+async def test_hide_chat_widgets_counts_hidden():
+    page = MagicMock()
+    page.evaluate = AsyncMock(return_value=2)
+    assert await hide_chat_widgets(page) == 2
+
+
+@pytest.mark.asyncio
+async def test_hide_chat_widgets_swallows_errors():
+    page = MagicMock()
+    page.evaluate = AsyncMock(side_effect=RuntimeError("boom"))
+    assert await hide_chat_widgets(page) == 0
