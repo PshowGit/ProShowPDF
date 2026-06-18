@@ -12,6 +12,7 @@ from PySide6.QtWidgets import (
     QPushButton, QSystemTrayIcon, QVBoxLayout, QWidget,
 )
 
+from proshowpdf import __version__
 from proshowpdf.bridge.controller import ConversionController
 from proshowpdf.core.models import ConversionSettings, JobResult, JobStatus
 from proshowpdf.persistence.settings_store import SettingsStore
@@ -36,7 +37,7 @@ class MainWindow(QMainWindow):
         self._controller = controller
         self._store = store
         self._theme = store.load_theme()
-        self.setWindowTitle("ProShow PDF")
+        self.setWindowTitle(f"ProShow PDF v{__version__}")
         icon_path = _RESOURCES / "ProShowPDF.ico"
         if icon_path.exists():
             self.setWindowIcon(QIcon(str(icon_path)))
@@ -115,7 +116,7 @@ class MainWindow(QMainWindow):
 
         titles = QVBoxLayout()
         titles.setSpacing(1)
-        title = QLabel("ProShow PDF")
+        title = QLabel(f"ProShow PDF v{__version__}")
         title.setObjectName("appTitle")
         subtitle = QLabel("Converti pagine web in PDF ad alta fedeltà")
         subtitle.setObjectName("appSubtitle")
