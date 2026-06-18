@@ -1,0 +1,5 @@
+# Windows batch scripts must stay CRLF or cmd.exe misparses if(...) blocks
+# ("not was unexpected at this time"). Force CRLF on checkout regardless of
+# the contributor's core.autocrlf.
+*.bat text eol=crlf
+*.cmd text eol=crlf
