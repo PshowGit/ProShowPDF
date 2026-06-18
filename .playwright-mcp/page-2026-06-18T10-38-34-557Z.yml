@@ -1,0 +1,522 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e8]:
+        - link "Play Hero — Now In Stock" [ref=e11] [cursor=pointer]:
+          - /url: https://www.kelvinlight.com/product/play_hero_rgbacl_led_panel_pocket_light_with_wireless_dmx/
+        - text: "| Free shipping over $499 to US, EU, UK | Try risk free 180 days"
+      - generic [ref=e12]:
+        - navigation "Menu1" [ref=e16]:
+          - text:  
+          - generic "Menu Toggle" [ref=e17]:
+            - list [ref=e18]:
+              - listitem [ref=e19]:
+                - generic [ref=e20]:
+                  - generic [ref=e22]: Shop
+                  - button "Open Shop" [ref=e23] [cursor=pointer]:
+                    - text: 
+                    - generic [ref=e24]:
+                      - generic [ref=e25]: 
+                      - generic [ref=e26]: Open Shop
+                - generic:      
+              - listitem [ref=e27]:
+                - generic [ref=e28]:
+                  - generic [ref=e30]: About
+                  - button "Open About" [ref=e31] [cursor=pointer]:
+                    - text: 
+                    - generic [ref=e32]:
+                      - generic [ref=e33]: 
+                      - generic [ref=e34]: Open About
+                - generic:    
+        - link [ref=e38] [cursor=pointer]:
+          - /url: /home
+        - generic [ref=e39]:
+          - navigation "Menu2" [ref=e42]:
+            - text:  
+            - generic "Menu Toggle" [ref=e43]:
+              - list [ref=e44]:
+                - listitem [ref=e45]:
+                  - link "Dealers & Rental" [ref=e47] [cursor=pointer]:
+                    - /url: /authorized_kelvin_dealers_rental_service/
+                    - generic [ref=e48]: Dealers & Rental
+                - listitem [ref=e49]:
+                  - generic [ref=e50]:
+                    - generic [ref=e52]: Community
+                    - button "Open Community" [ref=e53] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=e54]:
+                        - generic [ref=e55]: 
+                        - generic [ref=e56]: Open Community
+                  - generic:    
+          - link [ref=e60] [cursor=pointer]:
+            - /url: /my-account/
+            - img [ref=e61]
+          - link "Cart" [ref=e71] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e72]:
+              - img [ref=e73]
+              - generic [ref=e79]: Cart
+  - generic [ref=e80]:
+    - generic [ref=e82]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - link "1003 K-Play-Grid-40 Play Accessories -Mounted Honeycomb 40" [ref=e94] [cursor=pointer]:
+            - /url: https://www.kelvinlight.com/wp-content/uploads/2023/03/1003-K-Play-Grid-40-Play-Accessories-Mounted-Honeycomb-40.png
+            - img "1003 K-Play-Grid-40 Play Accessories -Mounted Honeycomb 40" [ref=e95]
+          - link "1001 Play Accessories -Offset Honeycomb 40" [ref=e98] [cursor=pointer]:
+            - /url: https://www.kelvinlight.com/wp-content/uploads/2023/03/1001-Play-Accessories-Offset-Honeycomb-40.png
+            - img "1001 Play Accessories -Offset Honeycomb 40" [ref=e99]
+          - link "1002 K-Play-Grid-40 Play Accessories -Only H40" [ref=e102] [cursor=pointer]:
+            - /url: https://www.kelvinlight.com/wp-content/uploads/2023/03/1002-K-Play-Grid-40-Play-Accessories-Only-H40.png
+            - img "1002 K-Play-Grid-40 Play Accessories -Only H40" [ref=e103]
+          - link "1003 K-Play-Grid-40 Play Accessories -Mounted Honeycomb 40" [ref=e106] [cursor=pointer]:
+            - /url: https://www.kelvinlight.com/wp-content/uploads/2023/03/1003-K-Play-Grid-40-Play-Accessories-Mounted-Honeycomb-40.png
+            - img "1003 K-Play-Grid-40 Play Accessories -Mounted Honeycomb 40" [ref=e107]
+          - link "1001 Play Accessories -Offset Honeycomb 40" [ref=e110] [cursor=pointer]:
+            - /url: https://www.kelvinlight.com/wp-content/uploads/2023/03/1001-Play-Accessories-Offset-Honeycomb-40.png
+            - img "1001 Play Accessories -Offset Honeycomb 40" [ref=e111]
+        - button "Previous slide" [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]: 
+        - button "Next slide" [ref=e114] [cursor=pointer]:
+          - generic [ref=e115]: 
+        - generic [ref=e116]: 1 / 3
+      - generic [ref=e117]:
+        - heading "Honeycomb Grid 40 for Play Series" [level=1] [ref=e120]
+        - paragraph [ref=e123]:
+          - generic [ref=e125]: €39.00
+          - text: excl. tax
+        - paragraph [ref=e130]: Out of stock
+        - generic [ref=e132]:
+          - paragraph [ref=e133]:
+            - generic [ref=e134]: Narrow the light beam, control spill and enhance depth.
+          - paragraph [ref=e135]: Focused light allows for dispersing light in a directional beam and hardens shadows. In general, it adds drama and depth to your image.
+          - paragraph [ref=e136]:
+            - generic [ref=e137]: The Kelvin Play Honeycomb Grid 40 narrows the light beam to 40 degrees, hardering the light to create a spotlight effect. Perfect when you want to give direction, prevent light spill or add shadows to your story.
+          - paragraph [ref=e138]
+          - paragraph [ref=e139]:
+            - generic [ref=e140]: "Key features:"
+          - list [ref=e141]:
+            - listitem [ref=e142]: Focused directional light
+            - listitem [ref=e143]: 40 degree light beam spread
+            - listitem [ref=e144]: Magnetic mounting
+    - generic "Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys" [ref=e149]:
+      - group [ref=e150]:
+        - generic "Technical Specifications" [ref=e151] [cursor=pointer]:
+          - generic [ref=e153]: Technical Specifications
+          - generic [ref=e154]:
+            - text: 
+            - generic [ref=e156]: 
+      - group [ref=e157]:
+        - generic "What comes in the box?" [ref=e158] [cursor=pointer]:
+          - generic [ref=e160]: What comes in the box?
+          - generic [ref=e161]:
+            - text: 
+            - generic [ref=e163]: 
+    - generic [ref=e165]:
+      - heading "Accessories" [level=2] [ref=e168]
+      - generic [ref=e171]:
+        - button [ref=e172] [cursor=pointer]:
+          - generic [ref=e173]: 
+        - generic [ref=e175]:
+          - generic [ref=e180]:
+            - link [ref=e183] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_honeycomb_grid_60_for/
+            - heading [level=2] [ref=e187]:
+              - link [ref=e188] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_honeycomb_grid_60_for/
+                - text: Honeycomb Grid 60 for Play Series
+            - generic [ref=e189]:
+              - paragraph [ref=e192]:
+                - generic [ref=e194]: €39.00
+                - text: excl. tax
+              - button [ref=e198] [cursor=pointer]:
+                - generic [ref=e200]: Add to cart
+          - generic [ref=e205]:
+            - link [ref=e208] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_heavy_diffuser_d75_for/
+            - heading [level=2] [ref=e212]:
+              - link [ref=e213] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_heavy_diffuser_d75_for/
+                - text: Heavy Diffuser D75 for Play Series
+            - generic [ref=e214]:
+              - paragraph [ref=e217]:
+                - generic [ref=e219]: €29.00
+                - text: excl. tax
+              - button [ref=e223] [cursor=pointer]:
+                - generic [ref=e225]: Add to cart
+          - generic [ref=e230]:
+            - link [ref=e233] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_medium_diffuser_d90_for/
+            - heading [level=2] [ref=e237]:
+              - link [ref=e238] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_medium_diffuser_d90_for/
+                - text: Medium Diffuser D90 for Play Series
+            - generic [ref=e239]:
+              - paragraph [ref=e242]:
+                - generic [ref=e244]: €29.00
+                - text: excl. tax
+              - button [ref=e248] [cursor=pointer]:
+                - generic [ref=e250]: Add to cart
+          - generic [ref=e255]:
+            - link [ref=e258] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_light_diffuser_d100_for/
+            - heading [level=2] [ref=e262]:
+              - link [ref=e263] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_light_diffuser_d100_for/
+                - text: Light Diffuser D100 for Play Series
+            - generic [ref=e264]:
+              - paragraph [ref=e267]:
+                - generic [ref=e269]: €29.00
+                - text: excl. tax
+              - button [ref=e273] [cursor=pointer]:
+                - generic [ref=e275]: Add to cart
+          - generic [ref=e280]:
+            - link [ref=e283] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_hip_pouch_for/
+            - heading "Hip Pouch for Play Series" [level=2] [ref=e287]:
+              - link "Hip Pouch for Play Series" [ref=e288] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_hip_pouch_for/
+            - generic [ref=e289]:
+              - paragraph [ref=e292]:
+                - generic [ref=e294]: €19.00
+                - text: excl. tax
+              - button "Add to cart" [ref=e298] [cursor=pointer]:
+                - generic [ref=e300]: Add to cart
+          - generic [ref=e305]:
+            - link [ref=e308] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_light_modifier_kit_1_for/
+            - heading "Light Modifier Kit for Play Series" [level=2] [ref=e312]:
+              - link "Light Modifier Kit for Play Series" [ref=e313] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_light_modifier_kit_1_for/
+            - generic [ref=e314]:
+              - paragraph [ref=e317]:
+                - generic [ref=e319]: €149.00
+                - text: excl. tax
+              - button "Add to cart" [ref=e323] [cursor=pointer]:
+                - generic [ref=e325]: Add to cart
+          - generic [ref=e330]:
+            - link [ref=e333] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_spacer_for/
+            - heading "Spacer for Play Series" [level=2] [ref=e337]:
+              - link "Spacer for Play Series" [ref=e338] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_spacer_for/
+            - generic [ref=e339]:
+              - paragraph [ref=e342]:
+                - generic [ref=e344]: €29.00
+                - text: excl. tax
+              - button "Add to cart" [ref=e348] [cursor=pointer]:
+                - generic [ref=e350]: Add to cart
+          - generic [ref=e355]:
+            - link [ref=e358] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_honeycomb_grid_60_for/
+            - heading "Honeycomb Grid 60 for Play Series" [level=2] [ref=e362]:
+              - link "Honeycomb Grid 60 for Play Series" [ref=e363] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_honeycomb_grid_60_for/
+            - generic [ref=e364]:
+              - paragraph [ref=e367]:
+                - generic [ref=e369]: €39.00
+                - text: excl. tax
+              - button "Add to cart" [ref=e373] [cursor=pointer]:
+                - generic [ref=e375]: Add to cart
+          - generic [ref=e380]:
+            - link [ref=e383] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_heavy_diffuser_d75_for/
+            - heading [level=2] [ref=e387]:
+              - link [ref=e388] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_heavy_diffuser_d75_for/
+                - text: Heavy Diffuser D75 for Play Series
+            - generic [ref=e389]:
+              - paragraph [ref=e392]:
+                - generic [ref=e394]: €29.00
+                - text: excl. tax
+              - button [ref=e398] [cursor=pointer]:
+                - generic [ref=e400]: Add to cart
+          - generic [ref=e405]:
+            - link [ref=e408] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_medium_diffuser_d90_for/
+            - heading [level=2] [ref=e412]:
+              - link [ref=e413] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_medium_diffuser_d90_for/
+                - text: Medium Diffuser D90 for Play Series
+            - generic [ref=e414]:
+              - paragraph [ref=e417]:
+                - generic [ref=e419]: €29.00
+                - text: excl. tax
+              - button [ref=e423] [cursor=pointer]:
+                - generic [ref=e425]: Add to cart
+          - generic [ref=e430]:
+            - link [ref=e433] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_light_diffuser_d100_for/
+            - heading [level=2] [ref=e437]:
+              - link [ref=e438] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_light_diffuser_d100_for/
+                - text: Light Diffuser D100 for Play Series
+            - generic [ref=e439]:
+              - paragraph [ref=e442]:
+                - generic [ref=e444]: €29.00
+                - text: excl. tax
+              - button [ref=e448] [cursor=pointer]:
+                - generic [ref=e450]: Add to cart
+          - generic [ref=e455]:
+            - link [ref=e458] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_hip_pouch_for/
+            - heading [level=2] [ref=e462]:
+              - link [ref=e463] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_hip_pouch_for/
+                - text: Hip Pouch for Play Series
+            - generic [ref=e464]:
+              - paragraph [ref=e467]:
+                - generic [ref=e469]: €19.00
+                - text: excl. tax
+              - button [ref=e473] [cursor=pointer]:
+                - generic [ref=e475]: Add to cart
+          - generic [ref=e480]:
+            - link [ref=e483] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_light_modifier_kit_1_for/
+            - heading [level=2] [ref=e487]:
+              - link [ref=e488] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_light_modifier_kit_1_for/
+                - text: Light Modifier Kit for Play Series
+            - generic [ref=e489]:
+              - paragraph [ref=e492]:
+                - generic [ref=e494]: €149.00
+                - text: excl. tax
+              - button [ref=e498] [cursor=pointer]:
+                - generic [ref=e500]: Add to cart
+          - generic [ref=e505]:
+            - link [ref=e508] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_spacer_for/
+            - heading [level=2] [ref=e512]:
+              - link [ref=e513] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_spacer_for/
+                - text: Spacer for Play Series
+            - generic [ref=e514]:
+              - paragraph [ref=e517]:
+                - generic [ref=e519]: €29.00
+                - text: excl. tax
+              - button [ref=e523] [cursor=pointer]:
+                - generic [ref=e525]: Add to cart
+          - generic [ref=e530]:
+            - link [ref=e533] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_honeycomb_grid_60_for/
+            - heading [level=2] [ref=e537]:
+              - link [ref=e538] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_honeycomb_grid_60_for/
+                - text: Honeycomb Grid 60 for Play Series
+            - generic [ref=e539]:
+              - paragraph [ref=e542]:
+                - generic [ref=e544]: €39.00
+                - text: excl. tax
+              - button [ref=e548] [cursor=pointer]:
+                - generic [ref=e550]: Add to cart
+          - generic [ref=e555]:
+            - link [ref=e558] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_heavy_diffuser_d75_for/
+            - heading [level=2] [ref=e562]:
+              - link [ref=e563] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_heavy_diffuser_d75_for/
+                - text: Heavy Diffuser D75 for Play Series
+            - generic [ref=e564]:
+              - paragraph [ref=e567]:
+                - generic [ref=e569]: €29.00
+                - text: excl. tax
+              - button [ref=e573] [cursor=pointer]:
+                - generic [ref=e575]: Add to cart
+          - generic [ref=e580]:
+            - link [ref=e583] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_medium_diffuser_d90_for/
+            - heading [level=2] [ref=e587]:
+              - link [ref=e588] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_medium_diffuser_d90_for/
+                - text: Medium Diffuser D90 for Play Series
+            - generic [ref=e589]:
+              - paragraph [ref=e592]:
+                - generic [ref=e594]: €29.00
+                - text: excl. tax
+              - button [ref=e598] [cursor=pointer]:
+                - generic [ref=e600]: Add to cart
+          - generic [ref=e605]:
+            - link [ref=e608] [cursor=pointer]:
+              - /url: https://www.kelvinlight.com/product/play_light_diffuser_d100_for/
+            - heading [level=2] [ref=e612]:
+              - link [ref=e613] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_light_diffuser_d100_for/
+                - text: Light Diffuser D100 for Play Series
+            - generic [ref=e614]:
+              - paragraph [ref=e617]:
+                - generic [ref=e619]: €29.00
+                - text: excl. tax
+              - button [ref=e623] [cursor=pointer]:
+                - generic [ref=e625]: Add to cart
+        - button [ref=e626] [cursor=pointer]:
+          - generic [ref=e627]: 
+  - contentinfo [ref=e628]:
+    - generic [ref=e630]:
+      - heading "© 2026 Kelvin" [level=2] [ref=e637]
+      - generic [ref=e639]:
+        - heading "Shop" [level=3] [ref=e642]
+        - navigation "Menu" [ref=e645]:
+          - list [ref=e646]:
+            - listitem [ref=e647]:
+              - link "All Products" [ref=e648] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/products/
+            - listitem [ref=e649]:
+              - link "Play Hero" [ref=e650] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play_hero_rgbacl_led_panel_pocket_light_with_wireless_dmx/
+            - listitem [ref=e651]:
+              - link "Play Air" [ref=e652] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/play-air/
+            - listitem [ref=e653]:
+              - link "Epos 300" [ref=e654] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/epos-300/
+            - listitem [ref=e655]:
+              - link "Epos 600" [ref=e656] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/epos_600_full_color_spectrum_rgbacl_led_studio_light/
+            - listitem [ref=e657]:
+              - link "Versa 10 Fresnel" [ref=e658] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/product/versa_10_fresnel_for_epos_600_300/
+            - listitem [ref=e659]:
+              - link "Light Kits" [ref=e660] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/products/category/light-kits/
+            - listitem [ref=e661]:
+              - link "Accessories" [ref=e662] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/products/category/accessories/
+            - listitem [ref=e663]:
+              - link "Narrator App" [ref=e664] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/app-narrator/
+      - generic [ref=e666]:
+        - heading "About Us" [level=3] [ref=e669]
+        - navigation "Menu" [ref=e672]:
+          - list [ref=e673]:
+            - listitem [ref=e674]:
+              - link "Our Story" [ref=e675] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/about/
+            - listitem [ref=e676]:
+              - link "Ambassadors" [ref=e677] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/ambassadors/
+            - listitem [ref=e678]:
+              - link "Team" [ref=e679] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/team/
+            - listitem [ref=e680]:
+              - link "Stories" [ref=e681] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/stories/
+            - listitem [ref=e682]:
+              - link "Dealers & Rental" [ref=e683] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/authorized_kelvin_dealers_rental_service/
+            - listitem [ref=e684]:
+              - link "Media Kit" [ref=e685] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/media-kit/
+            - listitem [ref=e686]:
+              - link "Technology" [ref=e687] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/technology/
+            - listitem [ref=e688]:
+              - link "Events" [ref=e689] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/events/
+            - listitem [ref=e690]:
+              - link "Sustainability" [ref=e691] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/sustainability/
+      - generic [ref=e693]:
+        - heading "Support" [level=3] [ref=e696]
+        - navigation "Menu" [ref=e699]:
+          - list [ref=e700]:
+            - listitem [ref=e701]:
+              - link "Help Center" [ref=e702] [cursor=pointer]:
+                - /url: https://help.kelvinlight.com/knowledge
+            - listitem [ref=e703]:
+              - link "Service" [ref=e704] [cursor=pointer]:
+                - /url: https://share-eu1.hsforms.com/16GX8-J0-Qn6uqAlmsRbvJQfbv3x
+            - listitem [ref=e705]:
+              - link "Keep Rolling Warranty" [ref=e706] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/keep-rolling/
+            - listitem [ref=e707]:
+              - link "Returns" [ref=e708] [cursor=pointer]:
+                - /url: https://help.kelvinlight.com/knowledge/return-policy
+            - listitem [ref=e709]:
+              - link "My Account" [ref=e710] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/my-account/
+            - listitem [ref=e711]:
+              - link "Downloads" [ref=e712] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/support/download/
+            - listitem [ref=e713]:
+              - link "FAQ" [ref=e714] [cursor=pointer]:
+                - /url: https://help.kelvinlight.com/knowledge/faq
+            - listitem [ref=e715]:
+              - link "Contact Us" [ref=e716] [cursor=pointer]:
+                - /url: https://www.kelvinlight.com/support/contact-us/
+            - listitem [ref=e717]:
+              - link "+1 929 531 69 22" [ref=e718] [cursor=pointer]:
+                - /url: tel:+1%20929%20531%2069%2022
+      - generic [ref=e720]:
+        - heading "Subscribe to our Newsletter" [level=2] [ref=e723]
+        - form "Footer Newsletter" [ref=e726]:
+          - generic [ref=e727]:
+            - textbox "Email Address" [ref=e729]
+            - textbox "First Name" [ref=e731]
+            - textbox "Last Name" [ref=e733]
+            - button "Submit" [ref=e735] [cursor=pointer]:
+              - generic [ref=e737]: Submit
+        - paragraph [ref=e740]:
+          - text: By subscribing to our newsletter, you are agreeing to our
+          - link "Privacy Policy" [ref=e742] [cursor=pointer]:
+            - /url: https://help.kelvinlight.com/knowledge/privacy-policy
+          - text: .
+        - heading "Follow Us" [level=3] [ref=e745]
+        - list [ref=e748]:
+          - listitem [ref=e749]:
+            - link [ref=e750] [cursor=pointer]:
+              - /url: https://www.instagram.com/kelvin.lighting
+              - img [ref=e752]
+          - listitem [ref=e754]:
+            - link [ref=e755] [cursor=pointer]:
+              - /url: https://www.facebook.com/Kelvin.lighting/
+              - img [ref=e757]
+          - listitem [ref=e761]:
+            - link [ref=e762] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/kelvinlight
+              - img [ref=e764]
+          - listitem [ref=e766]:
+            - link [ref=e767] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UC41ZSw4-gYHZehUQUkcYRVA
+              - img [ref=e769]
+    - generic [ref=e772]:
+      - list [ref=e777]:
+        - listitem [ref=e778]:
+          - img [ref=e780]
+        - listitem [ref=e791]:
+          - img [ref=e793]
+        - listitem [ref=e799]:
+          - img [ref=e801]
+        - listitem [ref=e810]:
+          - img [ref=e812]
+      - generic [ref=e818]:
+        - heading "Terms & Conditions" [level=2] [ref=e821]:
+          - link "Terms & Conditions" [ref=e822] [cursor=pointer]:
+            - /url: https://help.kelvinlight.com/knowledge/terms-of-solution
+        - heading "Cookie Policy" [level=2] [ref=e825]:
+          - link "Cookie Policy" [ref=e826] [cursor=pointer]:
+            - /url: https://help.kelvinlight.com/knowledge/cookie-policy
+        - heading "Privacy Policy" [level=2] [ref=e829]:
+          - link "Privacy Policy" [ref=e830] [cursor=pointer]:
+            - /url: https://help.kelvinlight.com/knowledge/privacy-policy
+    - generic [ref=e834]:
+      - heading "Copyright © 2019 -" [level=2] [ref=e837]
+      - heading "2026" [level=2] [ref=e840]
+      - heading "by Kelvin Group AS. All rights reserved. Designed and developed by Studio Organic" [level=2] [ref=e843]:
+        - text: by Kelvin Group AS. All rights reserved. Designed and developed by
+        - link "Studio Organic" [ref=e844] [cursor=pointer]:
+          - /url: https://www.organic.as
+  - generic [ref=e847]:
+    - generic [ref=e848]: We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept All”, you consent to the use of ALL the cookies. However, you may visit "Cookie Settings" to provide a controlled consent.
+    - generic [ref=e849]:
+      - button "Cookie Settings" [ref=e850] [cursor=pointer]
+      - button "Accept All" [ref=e851] [cursor=pointer]
+  - text: Show more Disabled Disabled Disabled Disabled Disabled
+  - generic [ref=e853]: desktop
+  - status [ref=e854]
+  - region "Widget chat" [ref=e855]:
+    - iframe [ref=e856]:
+      - button "Open live chat" [ref=f4e5]:
+        - img [ref=f4e8]
+        - img [ref=f4e15]

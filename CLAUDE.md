@@ -42,7 +42,7 @@ rebuild.bat
    - `errors.py` — Typed exception hierarchy
    - `url_utils.py` — URL validation, normalization, parsing (txt/csv/xlsx/xls)
    - `naming.py` — Windows-safe filenames, collision resolution, custom filename sanitization
-   - `cookie_banner.py` — Best-effort consent/overlay handling: `dismiss_cookie_banner` (known selectors + exact-text accept buttons + popup close affordances) and `remove_blocking_overlays` (generic fixed-overlay stripping). See "Overlay & Consent Handling" below.
+   - `cookie_banner.py` — Best-effort consent/overlay handling: `dismiss_cookie_banner` (known selectors + exact-text accept buttons + popup close affordances), `remove_blocking_overlays` (centre-covering modals), and `remove_floating_widgets` (chat bubbles + edge-docked widgets). See "Overlay & Consent Handling" below.
    - `page_converter.py` — Per-page conversion: navigate → clear anti-bot challenge → dismiss cookies/overlays (with navigation safety net) → scroll lazy-load → measure height → render PDF → trim trailing whitespace; supports optional custom_filename for per-URL naming
    - `pdf_postprocess.py` — Post-render PDF cleanup: rasterize the page, find the bottom of the main content block (stopping at the first large whitespace gap) and crop the page to it, removing the blank band Chromium's printToPDF leaves after the footer along with any `position: fixed` widgets baked into it (PyMuPDF)
    - `browser_pool.py` — Single Chromium instance + isolated BrowserContext per URL + viewport sizing
@@ -76,12 +76,14 @@ rebuild.bat
 - Margin=0 — edge-to-edge PDF.
 - Dynamic height: measure `scrollHeight` after `networkidle` + scroll lazy-load + `document.fonts.ready`.
 - Trailing-whitespace trim: Chromium's `printToPDF` can lay a page out shorter than the measured `scrollHeight` (large image/gallery sections re-flow shorter in the PDF pass), leaving a blank band after the footer with `position: fixed` widgets baked into it. `pdf_postprocess.trim_trailing_whitespace` crops the rendered PDF to its real content bottom (best-effort; never fails the conversion).
+- Single page: `page.pdf(..., page_ranges="1")` — sub-pixel rounding can spill a blank second page; that both ships an empty page and makes the output multi-page, so the (single-page-only) trim would be skipped.
 
 ### Overlay & Consent Handling (`cookie_banner.py` + `convert_page`)
 Three escalating, best-effort tiers, all gated by `ConversionSettings.handle_cookie_banners`:
 1. **Known selectors** (`_KNOWN_SELECTORS`) — accept buttons of common platforms (OneTrust, Cookiebot, Didomi, Amazon `#sp-cc-accept`, …) and `_CLOSE_SELECTORS` for popup/modal close affordances.
 2. **Exact-text accept buttons** — `:text-is` on `button`/`[role=button]`/`input` only. **Exact, not substring, and never `<a>` links** — substring `:has-text` made "OK" match "informativa sui c**ook**ie" and links navigate to policy pages. Do NOT reintroduce `:has-text` here.
 3. **Generic overlay removal** (`remove_blocking_overlays`) — strips the top-most large `position:fixed` element at the viewport centre (consent walls / region dialogs in any language) via `elementFromPoint`, then clears `overflow`/`position` scroll locks so the revealed page measures correctly.
+4. **Floating-widget removal** (`remove_floating_widgets`) — hides known chat/support vendor containers (HubSpot, Intercom, …) plus, geometrically, any `position:fixed` element docked to a viewport edge that is **neither** a full-width bar (header/cookie) **nor** a full-height side panel — the signature of chat bubbles, social rails, back-to-top and floating CTAs. Run **twice** (before scrolling and again right before measuring) because these scripts mount late.
 
 **Navigation safety net:** if a dismissal click still leaves the requested page (`_navigated_away` compares host+path, ignoring query/fragment), `convert_page` re-opens the target URL and only re-runs overlay removal (which never navigates).
 
@@ -151,8 +153,9 @@ pytest --cov=proshowpdf tests/
 - `tests/test_url_utils.py` — URL validation/parsing
 - `tests/test_naming.py` — Filename sanitization, collision resolution
 - `tests/test_page_converter.py` — Height/dimension logic, `_navigated_away`, convert_page (AsyncMock page)
-- `tests/test_cookie_banner.py` — dismissal click flow + `remove_blocking_overlays` (mock page)
+- `tests/test_cookie_banner.py` — dismissal click flow + `remove_blocking_overlays` + `remove_floating_widgets` (mock page)
 - `tests/test_pdf_postprocess.py` — whitespace-trim row scan + crop (synthetic PyMuPDF PDFs)
+- `tests/test_update_checker.py` — version compare + GitHub API parsing (mocked `urlopen`)
 
 Note: UI/notification paths use modal `QMessageBox`/system tray; smoke-test with `QT_QPA_PLATFORM=offscreen` and avoid calling the modal slots (`_on_failed`/`_on_cancelled`) headless — they block.
 
@@ -212,7 +215,9 @@ Compress-Archive -Path "ProShowPDF" -DestinationPath "..\ProShowPDF-windows-x64.
 
 **Distribution:** Deliver `ProShowPDF-windows-x64.zip` (312 MB); users extract and run ProShowPDF.exe with no installation needed. The fixed asset name keeps a stable landing-page link: `https://github.com/PshowGit/ProShowPDF/releases/latest/download/ProShowPDF-windows-x64.zip` always serves the newest release. See DOWNLOAD_GUIDE.html for user instructions.
 
-**Releasing:** Bump `proshowpdf/__init__.py:__version__`, then run `rebuild.bat` (builds the zip) and `deploy.bat` (creates GitHub Release `vX.Y.Z`). Both read the tag from `__version__`, so the build and the release tag can't drift — and the in-app update check compares the running `__version__` against the latest release tag. `deploy.bat` refuses to publish if that tag already exists (a reminder that `__version__` wasn't bumped).
+**Releasing:** Bump `proshowpdf/__init__.py:__version__`, then run `rebuild.bat` (builds the zip) and `deploy.bat` (creates GitHub Release `vX.Y.Z`). Both read the tag from `__version__`, so the build and the release tag can't drift — and the in-app update check compares the running `__version__` against the latest release tag. `deploy.bat` refuses to publish if that tag already exists (a reminder that `__version__` wasn't bumped). `deploy.bat` needs the GitHub CLI; it locates `gh` via PATH and falls back to `%ProgramFiles%\GitHub CLI\gh.exe`.
+
+**Editing the `.bat` scripts (gotcha):** they must keep **CRLF** line endings — `cmd.exe` misparses `if(...)` blocks in LF files ("not was unexpected at this time"), and the Edit/Write tools write LF. `.gitattributes` enforces `*.bat eol=crlf`; if a tool rewrites a script as LF, convert it back (`read bytes → replace \r\n with \n → \n with \r\n`) before it ships. Also never put unescaped parentheses in an `echo` **inside** an `if(...)` block — the `)` closes the block early.
 
 ---
 

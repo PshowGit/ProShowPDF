@@ -1,0 +1,467 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - link "ORIVISION video streaming hardware manufacturer logo" [ref=e15] [cursor=pointer]:
+      - /url: /index.html
+      - img "ORIVISION video streaming hardware manufacturer logo" [ref=e16]
+    - list [ref=e27]:
+      - listitem [ref=e28]:
+        - link "Home" [ref=e29] [cursor=pointer]:
+          - /url: /
+          - text: Home
+      - listitem [ref=e30]:
+        - link "Product" [ref=e31] [cursor=pointer]:
+          - /url: /product
+          - text: Product
+      - listitem [ref=e32]:
+        - link "Hot" [ref=e33]:
+          - /url: javascript:;
+          - text: Hot
+      - listitem [ref=e34]:
+        - link "About Us" [ref=e35]:
+          - /url: javascript:;
+          - text: About Us
+      - listitem [ref=e36]:
+        - link "Solution" [ref=e37] [cursor=pointer]:
+          - /url: /solutions
+          - text: Solution
+      - listitem [ref=e38]:
+        - link "Services & Support" [ref=e39]:
+          - /url: javascript:;
+          - text: Services & Support
+      - listitem [ref=e40]:
+        - link "Contact" [ref=e41] [cursor=pointer]:
+          - /url: /contactus.html
+          - text: Contact
+    - img [ref=e52] [cursor=pointer]
+    - generic [ref=e59]:
+      - button "Hot Keywords:" [ref=e60] [cursor=pointer]:
+        - img [ref=e61]
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic:
+            - textbox "Please Search..."
+            - button "Hot Keywords:" [ref=e65] [cursor=pointer]:
+              - img [ref=e66]
+        - blockquote
+  - generic [ref=e68]:
+    - generic [ref=e73]:
+      - generic [ref=e80]: PRODUCTIONS
+      - generic [ref=e83]: All kind of ORIVISION's video encoder decoder, audio video extender, converter.
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - generic [ref=e98]: 
+        - text: "You are here:"
+      - link "Home" [ref=e100] [cursor=pointer]:
+        - /url: /
+      - text: »
+      - link "Product" [ref=e102] [cursor=pointer]:
+        - /url: /product
+      - text: »
+      - link "Optical Fiber Extender" [ref=e104] [cursor=pointer]:
+        - /url: /product/Optical-Fiber-Extender
+      - text: »
+      - link "SDI Optical Fiber Extender" [ref=e106] [cursor=pointer]:
+        - /url: /product/sdi-optical-fiber-extender
+      - text: » Uncompressed 1920x1080@60 SDI Optical Fiber Extender
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e123]:
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - generic:
+                - generic [ref=e127]:
+                  - link:
+                    - /url: //imrorwxhmpjklo5p.leadongcdn.com/cloud/lmBpkKoilmSRklrpnkmjkq/SDI-Fiber-Optic-Extender-OS401.png
+                - generic [ref=e130]:
+                  - link:
+                    - /url: //imrorwxhmpjklo5p.leadongcdn.com/cloud/lmBpkKoilmSRklnopljjkq/sdi-extender.jpg
+                - generic [ref=e133]:
+                  - link:
+                    - /url: //imrorwxhmpjklo5p.leadongcdn.com/cloud/lrBpkKoilmSRklnoplkjkp/fiber-to-sdi-converter_1662622369.jpg
+                - generic [ref=e136]:
+                  - link:
+                    - /url: //imrorwxhmpjklo5p.leadongcdn.com/cloud/liBpkKoilmSRklnoplljkp/sdi-to-fiber-converter_1662622369.jpg
+                - generic [ref=e139]:
+                  - link:
+                    - /url: //imrorwxhmpjklo5p.leadongcdn.com/cloud/ljBpkKoilmSRklnoplnjkp/honeyviewconnection-diagram_1666169682.jpg
+                - generic [ref=e142]:
+                  - link:
+                    - /url: //imrorwxhmpjklo5p.leadongcdn.com/cloud/llBpkKoilmSRklnonlqnkp/of401box.jpg
+            - text: next prev
+          - generic [ref=e145]:
+            - generic:
+              - generic [ref=e146] [cursor=pointer]:
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e147]
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e148]
+              - generic [ref=e149] [cursor=pointer]:
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e150]
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e151]
+              - generic [ref=e152] [cursor=pointer]:
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e153]
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e154]
+              - generic [ref=e155] [cursor=pointer]:
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e156]
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e157]
+              - generic [ref=e158] [cursor=pointer]:
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e159]
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e160]
+              - generic [ref=e161] [cursor=pointer]:
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e162]
+                - img "ORIVISION Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [ref=e163]
+        - generic [ref=e168]:
+          - heading "Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [level=1] [ref=e169]:
+            - text: Uncompressed 1920x1080@60 SDI Optical Fiber Extender
+            - generic [ref=e171] [cursor=pointer]: 
+          - generic [ref=e173]:
+            - generic [ref=e176]: Full digital, no compression hd fiber transmission
+            - generic [ref=e179]: Standard distance transmission 10KM, distance can be customized
+            - generic [ref=e182]: SFP (LC) optical attenuation -3db
+            - generic [ref=e185]: 1 chnnel analog audio(3.5mm)/RS232/RS485 optional
+            - generic [ref=e188]: Support SD-SDI,HD-SDI,3G-SDI protocal
+            - generic [ref=e191]: Built-in ESD protection
+            - generic [ref=e194]: Plug-and-play operation with no software required for easy, immediate installation
+            - paragraph [ref=e195]
+          - table [ref=e196]:
+            - rowgroup [ref=e197]:
+              - row [ref=e198]:
+                - cell [ref=e199]
+              - row [ref=e200]:
+                - cell [ref=e201]
+              - row "Inquire" [ref=e202]:
+                - cell "Inquire" [ref=e203]:
+                  - generic [ref=e204]:
+                    - link "Inquire" [ref=e205] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                      - text: Inquire
+                      - generic [ref=e206]: 
+                    - paragraph
+              - row [ref=e207]:
+                - columnheader [ref=e208]
+              - row [ref=e209]:
+                - cell [ref=e210]
+          - generic [ref=e211]:
+            - img "facebook sharing button" [ref=e213] [cursor=pointer]
+            - img "twitter sharing button" [ref=e215] [cursor=pointer]
+            - img "line sharing button" [ref=e217] [cursor=pointer]
+            - img "wechat sharing button" [ref=e219] [cursor=pointer]
+            - img "linkedin sharing button" [ref=e221] [cursor=pointer]
+            - img "pinterest sharing button" [ref=e223] [cursor=pointer]
+            - img "whatsapp sharing button" [ref=e225] [cursor=pointer]
+            - img "kakao sharing button" [ref=e227] [cursor=pointer]
+            - img "snapchat sharing button" [ref=e229] [cursor=pointer]
+            - img "sharethis sharing button" [ref=e231] [cursor=pointer]
+      - list [ref=e235]:
+        - listitem [ref=e236]:
+          - generic [ref=e237]: "Model:"
+          - paragraph [ref=e238]: OS401
+    - generic [ref=e264]:
+      - generic [ref=e265]:
+        - generic [ref=e267] [cursor=pointer]: Description
+        - generic [ref=e268] [cursor=pointer]: Introduction
+        - generic [ref=e269] [cursor=pointer]: Parameters
+        - generic [ref=e270] [cursor=pointer]: Diagram
+      - generic [ref=e271]:
+        - paragraph [ref=e275]:
+          - img "OS401-01" [ref=e276]
+        - generic [ref=e284]:
+          - strong [ref=e289]: Introduction
+          - list [ref=e295]:
+            - listitem [ref=e296]:
+              - img "<span style=\"color:#333333;\"><span style=\"font-size:24px;\"><strong>Mini SDI Fiber Optical Extender</strong></span></span>" [ref=e298]
+              - generic [ref=e299]:
+                - strong [ref=e305]: Mini SDI Fiber Optical Extender
+                - generic [ref=e308]: This is a mini type SDI Optical Fiber Transmitter and Receiver Set. HD SDI video signal can be transmitted through one single fiber with non-distortion, high-quality, long-distance transmission. This series of video to fiber converter is with stable performance, clear picture quality,and high stability for LED status indication on the body of device. The working status of devices can be visually observed.
+            - listitem [ref=e309]:
+              - img "<span style=\"color:#333333;\"><span style=\"font-size:24px;\"><strong>High Availability and Friendly Design</strong></span></span>" [ref=e311]
+              - generic [ref=e312]:
+                - strong [ref=e318]: High Availability and Friendly Design
+                - generic [ref=e321]: The aluminum shell design protects the interior and provides excellent heat dissipation, further enhancing durability for reliable performance and long life.
+            - listitem [ref=e322]:
+              - img "<span style=\"color:#333333;\"><strong><span style=\"font-size:24px;\">Professional for HD Video Extender</span></strong></span>" [ref=e324]
+              - generic [ref=e325]:
+                - strong [ref=e330]: Professional for HD Video Extender
+                - generic [ref=e334]:
+                  - text: Delivers HD picture quality at resolutions up to 1920*1080@60Hz.
+                  - text: Enjoy bright, clear video with accurate color rendition and sharpness, even when long distance transmission.
+            - listitem [ref=e335]:
+              - img "<span style=\"color:#333333;\"><span style=\"font-size:24px;\"><strong>Uncompression transmission</strong></span></span>" [ref=e337]
+              - generic [ref=e338]:
+                - strong [ref=e344]: Uncompression transmission
+                - generic [ref=e347]: Full digital, uncompression hd fiber transmission, SFP (LC) optical attenuation -3db
+            - listitem [ref=e348]:
+              - img "<span style=\"color:#333333;\"><span style=\"font-size:24px;\"><strong>RS232/RS485/Audio optional</strong></span></span>" [ref=e350]
+              - generic [ref=e351]:
+                - strong [ref=e357]: RS232/RS485/Audio optional
+                - generic [ref=e360]: 1 chnnel analog audio(3.5mm)/RS232/RS485 optional, default RS232
+            - listitem [ref=e361]:
+              - img "<span style=\"color:#333333;\"><span style=\"font-size:24px;\"><strong>Single-mode and Multi-mode Optional</strong></span></span>" [ref=e363]
+              - generic [ref=e364]:
+                - strong [ref=e370]: Single-mode and Multi-mode Optional
+                - generic [ref=e374]:
+                  - text: Default:Single model 1-core (10km)
+                  - text: Multimode Dual-Core Module (300m)
+                  - text: Spport 20KM, 60KM,80KM OEM
+            - listitem [ref=e375]:
+              - img "<span style=\"color:#333333;\"><span style=\"font-size:24px;\"><strong>Plug and Play</strong></span></span>" [ref=e377]
+              - generic [ref=e378]:
+                - strong [ref=e384]: Plug and Play
+                - generic [ref=e387]: Plug-and-play operation with no software required for easy, immediate installation
+        - generic [ref=e392]:
+          - heading "Parameters of Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [level=2] [ref=e393]:
+            - strong [ref=e395]: Parameters of Uncompressed 1920x1080@60 SDI Optical Fiber Extender
+          - generic [ref=e396]:
+            - table [ref=e398]:
+              - rowgroup [ref=e402]:
+                - row "Name SDI Optical Extender" [ref=e403]:
+                  - cell "Name" [ref=e404]
+                  - cell "SDI Optical Extender" [ref=e405]
+                - row "Model ZY-OS401" [ref=e406]:
+                  - cell "Model" [ref=e407]
+                  - cell "ZY-OS401" [ref=e408]
+                - row "Transmitter Input SD/HD/3G-SDI *1" [ref=e409]:
+                  - cell "Transmitter Input" [ref=e410]
+                  - cell "SD/HD/3G-SDI *1" [ref=e411]
+                - row "Transmitter Output SD/HD/3G-SDI Loop-out *1 , LC *1, RS232/485" [ref=e412]:
+                  - cell "Transmitter Output" [ref=e413]
+                  - cell "SD/HD/3G-SDI Loop-out *1 , LC *1, RS232/485" [ref=e414]
+                - row "Recevier Input LC*1,RS232/485" [ref=e415]:
+                  - cell "Recevier Input" [ref=e416]
+                  - cell "LC*1,RS232/485" [ref=e417]
+                - row "Recevier Output SD/HD/3G-SDI*2" [ref=e418]:
+                  - cell "Recevier Output" [ref=e419]
+                  - cell "SD/HD/3G-SDI*2" [ref=e420]
+                - row "Resolutuion SD-SDI:576I /480I HD-SDI:720P50 / 720P60/1080P24/ 1080P25 1080P30/1080I50/ 1080I60 3G-SDI:1080P50 1080P60" [ref=e421]:
+                  - cell "Resolutuion" [ref=e422]
+                  - cell "SD-SDI:576I /480I HD-SDI:720P50 / 720P60/1080P24/ 1080P25 1080P30/1080I50/ 1080I60 3G-SDI:1080P50 1080P60" [ref=e423]:
+                    - text: SD-SDI:576I /480I
+                    - text: HD-SDI:720P50 / 720P60/1080P24/ 1080P25
+                    - text: 1080P30/1080I50/ 1080I60
+                    - text: 3G-SDI:1080P50 1080P60
+                - row "Audio Format:44.1K,48K,96K,176K,192K" [ref=e424]:
+                  - cell "Audio" [ref=e425]
+                  - cell "Format:44.1K,48K,96K,176K,192K" [ref=e426]
+                - row "SFP Default:Single model 1-core (10km) Multimode Dual-Core Module (300m) Spport 20KM, 60KM,80KM OEM" [ref=e427]:
+                  - cell "SFP" [ref=e428]
+                  - cell "Default:Single model 1-core (10km) Multimode Dual-Core Module (300m) Spport 20KM, 60KM,80KM OEM" [ref=e429]:
+                    - text: Default:Single model 1-core (10km)
+                    - text: Multimode Dual-Core Module (300m)
+                    - text: Spport 20KM, 60KM,80KM OEM
+                - row "RS232 bidirectional transmission Interface:DB9 Baudrate:11520 Data-Bits:8bit" [ref=e430]:
+                  - cell "RS232" [ref=e431]
+                  - cell "bidirectional transmission Interface:DB9 Baudrate:11520 Data-Bits:8bit" [ref=e432]:
+                    - text: bidirectional transmission
+                    - text: Interface:DB9
+                    - text: Baudrate:11520
+                    - text: Data-Bits:8bit
+                - row "Temperature -20℃ to +75℃" [ref=e433]:
+                  - cell "Temperature" [ref=e434]
+                  - cell "-20℃ to +75℃" [ref=e435]
+                - row "Humidity ≤90%" [ref=e436]:
+                  - cell "Humidity" [ref=e437]
+                  - cell "≤90%" [ref=e438]
+                - row "Power Consumption ＜4W" [ref=e439]:
+                  - cell "Power Consumption" [ref=e440]
+                  - cell "＜4W" [ref=e441]
+                - row "Power 12V/DC 1A" [ref=e442]:
+                  - cell "Power" [ref=e443]
+                  - cell "12V/DC 1A" [ref=e444]
+                - row "Size 116*110*25mm" [ref=e445]:
+                  - cell "Size" [ref=e446]
+                  - cell "116*110*25mm" [ref=e447]
+                - row "Weight 0.13KG/unit" [ref=e448]:
+                  - cell "Weight" [ref=e449]
+                  - cell "0.13KG/unit" [ref=e450]
+            - paragraph [ref=e451]
+            - paragraph [ref=e452]
+            - paragraph [ref=e453]
+        - generic [ref=e458]:
+          - heading "Diagram of Uncompressed 1920x1080@60 SDI Optical Fiber Extender" [level=2] [ref=e459]:
+            - strong [ref=e461]: Diagram of Uncompressed 1920x1080@60 SDI Optical Fiber Extender
+          - generic [ref=e463]:
+            - paragraph [ref=e464]: It is ideal for a wide range of applications requiring long distance transmission of high resolution content with the highest quality.
+            - paragraph [ref=e465]
+            - paragraph [ref=e466]:
+              - img "Sdi Fiber Extender" [ref=e467]
+            - paragraph [ref=e468]
+            - paragraph [ref=e469]
+    - generic [ref=e474]:
+      - generic [ref=e482]: Need More Info About Our System?
+      - generic [ref=e490]: Orivision Is Here To Help!
+      - group "Get Touch With Us" [ref=e499]:
+        - textbox "Name" [ref=e502]
+        - textbox "*Email" [ref=e505]
+        - textbox "Phone" [ref=e508]
+        - textbox "Company" [ref=e511]
+        - textbox "*How Can We Help" [ref=e514]
+        - generic [ref=e516]:
+          - textbox "Verify Code" [ref=e517]
+          - link "Verify Code" [ref=e518] [cursor=pointer]:
+            - /url: javascript:;
+            - img "Verify Code" [ref=e519]
+        - button "Submit" [ref=e522] [cursor=pointer]
+    - generic [ref=e544]: Related Products
+    - paragraph [ref=e557]: content is empty!
+  - generic [ref=e566]:
+    - generic [ref=e572]:
+      - generic [ref=e574]:
+        - generic [ref=e577]: ORIVISION Electronics Co., Ltd.
+        - generic [ref=e584]:
+          - generic [ref=e586]: 
+          - text: "Email:"
+          - link "info@orivision.cn" [ref=e587] [cursor=pointer]:
+            - /url: mailto:info@orivision.cn
+          - generic [ref=e588]:
+            - generic [ref=e589]: 
+            - text: "WhatsApp: +8618862979053"
+          - generic [ref=e590]:
+            - generic [ref=e592]: 
+            - text: "Tel:"
+            - generic [ref=e593]: +86-0513-8102-0080
+        - generic [ref=e600]:
+          - generic [ref=e602]: 
+          - text: "Add: 807, Kelunte Building, No. 1, Ganli 5th Road, Buji Street, Longgang District, Shenzhen City"
+        - list [ref=e609]:
+          - listitem [ref=e610]:
+            - link [ref=e611] [cursor=pointer]:
+              - /url: javascript:;
+              - generic [ref=e614]: 
+            - list:
+              - listitem [ref=e615]:
+                - link "+8618862979053" [ref=e616] [cursor=pointer]:
+                  - /url: https://api.whatsapp.com/send?phone=8618862979053
+              - listitem [ref=e617]:
+                - link "+8615150669687" [ref=e618] [cursor=pointer]:
+                  - /url: https://api.whatsapp.com/send?phone=8615150669687
+            - text: 
+          - listitem [ref=e619]:
+            - link [ref=e620] [cursor=pointer]:
+              - /url: tel:+86-0513-8102-0080
+              - generic [ref=e623]: 
+            - list:
+              - listitem [ref=e624]:
+                - link "+86-0513-8102-0080" [ref=e625] [cursor=pointer]:
+                  - /url: tel:+86-0513-8102-0080
+            - text: 
+          - listitem [ref=e626]:
+            - link [ref=e627] [cursor=pointer]:
+              - /url: javascript:;
+              - generic [ref=e630]: 
+            - list:
+              - listitem [ref=e631]:
+                - link "lyy@orivision.cn" [ref=e632] [cursor=pointer]:
+                  - /url: mailto:lyy@orivision.cn
+              - listitem [ref=e633]:
+                - link "teresa@orivision.cn" [ref=e634] [cursor=pointer]:
+                  - /url: mailto:teresa@orivision.cn
+              - listitem [ref=e635]:
+                - link "info@orivision.cn" [ref=e636] [cursor=pointer]:
+                  - /url: mailto:info@orivision.cn
+            - text: 
+          - text: 
+        - generic [ref=e637] [cursor=pointer]:
+          - generic: Leave a Message
+          - generic [ref=e638]: 
+          - text: Get Touch With Us
+      - generic [ref=e642]:
+        - heading "Quick Links" [level=2] [ref=e644]: Quick Links 
+        - list [ref=e646]:
+          - listitem [ref=e647]:
+            - link "Home" [ref=e648] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e649]:
+            - link "Product" [ref=e650] [cursor=pointer]:
+              - /url: /product
+          - listitem [ref=e651]:
+            - link "About Us" [ref=e652] [cursor=pointer]:
+              - /url: /our-company
+          - listitem [ref=e653]:
+            - link "OEM/ODM" [ref=e654] [cursor=pointer]:
+              - /url: /oem-odm
+          - listitem [ref=e655]:
+            - link "Services & Support" [ref=e656] [cursor=pointer]:
+              - /url: /after-sales-service
+          - listitem [ref=e657]:
+            - link "Contact" [ref=e658] [cursor=pointer]:
+              - /url: /contactus.html
+      - generic [ref=e666]:
+        - heading "Products" [level=2] [ref=e668]: Products 
+        - list [ref=e670]:
+          - listitem [ref=e671]:
+            - link "NDI SERIES" [ref=e672] [cursor=pointer]:
+              - /url: /product/ndi-series
+          - listitem [ref=e673]:
+            - link "Video Encoder" [ref=e674] [cursor=pointer]:
+              - /url: /product/video-encoder
+          - listitem [ref=e675]:
+            - link "Video Decoder" [ref=e676] [cursor=pointer]:
+              - /url: /product/video-decoder
+          - listitem [ref=e677]:
+            - link "Optical Fiber Extender" [ref=e678] [cursor=pointer]:
+              - /url: /product/Optical-Fiber-Extender
+          - listitem [ref=e679]:
+            - link "Video Extender" [ref=e680] [cursor=pointer]:
+              - /url: /product/video-extender
+          - listitem [ref=e681]:
+            - link "USB Capture Card" [ref=e682] [cursor=pointer]:
+              - /url: /product/usb-capture-card
+          - listitem [ref=e683]:
+            - link "SDI HDMI Converter" [ref=e684] [cursor=pointer]:
+              - /url: /product/sdi-hdmi-converter
+          - listitem [ref=e685]:
+            - link "Wireless Video Extender" [ref=e686] [cursor=pointer]:
+              - /url: /product/wireless-video-extender
+      - generic [ref=e694]:
+        - heading "Support" [level=2] [ref=e696]: Support 
+        - list [ref=e698]:
+          - listitem [ref=e699]:
+            - link "Solution" [ref=e700] [cursor=pointer]:
+              - /url: /Solution
+          - listitem [ref=e701]:
+            - link "Technical Support" [ref=e702] [cursor=pointer]:
+              - /url: /technical-support
+          - listitem [ref=e703]:
+            - link "After-sales Service" [ref=e704] [cursor=pointer]:
+              - /url: /after-sales-service
+          - listitem [ref=e705]:
+            - link "FAQS" [ref=e706] [cursor=pointer]:
+              - /url: /faqlist.html
+          - listitem [ref=e707]:
+            - link "Videos" [ref=e708] [cursor=pointer]:
+              - /url: /videos.html
+      - generic [ref=e714]:
+        - generic [ref=e716]:
+          - heading "About Us" [level=2] [ref=e718]: About Us 
+          - list [ref=e720]:
+            - listitem [ref=e721]:
+              - link "Our Company" [ref=e722] [cursor=pointer]:
+                - /url: /our-company
+            - listitem [ref=e723]:
+              - link "News" [ref=e724] [cursor=pointer]:
+                - /url: /news.html
+        - link "ORIVISION video streaming hardware manufacturer logo" [ref=e734] [cursor=pointer]:
+          - /url: /index.html
+          - img "ORIVISION video streaming hardware manufacturer logo" [ref=e735]
+        - generic [ref=e742]:
+          - link "Facebook" [ref=e743] [cursor=pointer]:
+            - /url: https://www.facebook.com/profile.php?id=100067002337003#
+            - generic [ref=e745]: 
+          - link "Linkedin" [ref=e746] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/79758026
+            - generic [ref=e748]: 
+          - link "Youtube" [ref=e749] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCKs2dvVfnmvZH0dZ7qeKX5A
+            - generic [ref=e751]: 
+          - link "Instagram" [ref=e752] [cursor=pointer]:
+            - /url: https://www.instagram.com/orivisiontech/
+            - generic [ref=e754]: 
+    - generic [ref=e773]:
+      - text: Copyright © 2026 ORIVISION Electronics Co., Ltd. All Rights Reserved.
+      - link "Sitemap" [ref=e774] [cursor=pointer]:
+        - /url: /sitemap.html
+      - text: "|"
+      - link "Privacy Policy" [ref=e775] [cursor=pointer]:
+        - /url: /privacy-policy.html
+      - link "苏ICP备05018767号-5" [ref=e776] [cursor=pointer]:
+        - /url: https://beian.miit.gov.cn/#/Integrated/index
+  - button "Open chat window" [ref=e781] [cursor=pointer]:
+    - img [ref=e782]
