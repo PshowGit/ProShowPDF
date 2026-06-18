@@ -13,8 +13,10 @@ import logging
 
 log = logging.getLogger(__name__)
 
-# Text labels (case-insensitive substring, matched via Playwright :has-text)
-# commonly used by accept/close buttons.
+# Text labels matched EXACTLY (case-insensitive, trimmed) against button text.
+# Exact, not substring: substring matching makes "OK" hit "Informativa sui
+# cOOKie" and "Accetta" hit "Non accettare". Links are never clicked by text —
+# only buttons — because accept-ish links usually navigate to policy pages.
 _ACCEPT_TEXTS = [
     "Accetta tutti i cookie", "Accetta tutto", "Accetta tutti",
     "Accetto", "Accetta", "Acconsento", "Consenti tutti",
@@ -29,6 +31,8 @@ _KNOWN_SELECTORS = [
     "button#didomi-notice-agree-button",
     "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
     "#CybotCookiebotDialogBodyButtonAccept",
+    "#sp-cc-accept",  # Amazon consent
+    "input#sp-cc-accept",
     'button[class*="x13eucookies__btn--accept"]',
     'button[class*="accept-all"]',
     'button[class*="acceptAll"]',
@@ -133,9 +137,16 @@ async def _dismiss_once(page, timeout_ms: int) -> bool:
         if await _try_click(page, selector, timeout_ms):
             return True
     for text in _ACCEPT_TEXTS:
-        if await _try_click(page, f"button:has-text('{text}')", timeout_ms):
+        if await _try_click(page, f"button:text-is('{text}')", timeout_ms):
             return True
-        if await _try_click(page, f"a:has-text('{text}')", timeout_ms):
+        if await _try_click(page, f"[role='button']:text-is('{text}')", timeout_ms):
+            return True
+        if await _try_click(
+            page,
+            f"input[type='submit'][value='{text}' i], "
+            f"input[type='button'][value='{text}' i]",
+            timeout_ms,
+        ):
             return True
     for selector in _CLOSE_SELECTORS:
         if await _try_click(page, selector, timeout_ms):

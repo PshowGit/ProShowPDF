@@ -9,6 +9,7 @@ import asyncio
 import logging
 import os
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from playwright.async_api import Error as PlaywrightError
 from playwright.async_api import TimeoutError as PlaywrightTimeout
@@ -43,6 +44,16 @@ _SCROLL_TOP_JS = "window.scrollTo(0, 0)"
 # Reader treat the file as damaged. Stay just under to absorb rounding.
 _MAX_PDF_INCHES = 199.0
 _CSS_PX_PER_INCH = 96.0
+
+
+def _navigated_away(current: str, original: str) -> bool:
+    """True if a banner click left the originally requested page.
+
+    Compares host and path (ignoring query/fragment) so a consent click that
+    only tweaks query params is not mistaken for navigating off the page.
+    """
+    a, b = urlsplit(current), urlsplit(original)
+    return (a.netloc, a.path) != (b.netloc, b.path)
 
 
 def compute_pdf_height(measured: int, min_height: int) -> int:
@@ -136,6 +147,7 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
         await _await_challenge_cleared(page, settings.timeout_ms)
         await _wait_settled(page, settings.timeout_ms)
         if settings.handle_cookie_banners:
+            target_url = page.url
             if await dismiss_cookie_banner(page):
                 # Accepting can reload the page or load deferred content; wait
                 # for it to settle, then sweep again for banners shown after.
@@ -145,6 +157,17 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
             # walls in any language, region/welcome dialogs blocking the page).
             if await remove_blocking_overlays(page):
                 await _wait_settled(page, settings.timeout_ms)
+            # Safety net: if a misfired consent click navigated off the target
+            # page (e.g. a policy link), restore it and only strip overlays,
+            # which never navigate, so we still render the intended page.
+            if _navigated_away(page.url, target_url):
+                log.debug("Banner click left %s; restoring %s", page.url, url)
+                await page.goto(
+                    url, wait_until="domcontentloaded", timeout=settings.timeout_ms
+                )
+                await _await_challenge_cleared(page, settings.timeout_ms)
+                await _wait_settled(page, settings.timeout_ms)
+                await remove_blocking_overlays(page)
         await _scroll_to_bottom(page)
         try:
             await page.wait_for_function("document.fonts.ready", timeout=5000)
