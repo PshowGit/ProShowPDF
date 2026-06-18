@@ -13,7 +13,7 @@ from pathlib import Path
 from playwright.async_api import Error as PlaywrightError
 from playwright.async_api import TimeoutError as PlaywrightTimeout
 
-from .cookie_banner import dismiss_cookie_banner
+from .cookie_banner import dismiss_cookie_banner, remove_blocking_overlays
 from .errors import (
     ConversionTimeoutError,
     NavigationError,
@@ -141,6 +141,10 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
                 # for it to settle, then sweep again for banners shown after.
                 await _wait_settled(page, settings.timeout_ms)
                 await dismiss_cookie_banner(page)
+            # Generic catch-all for anything the semantic clicks missed (consent
+            # walls in any language, region/welcome dialogs blocking the page).
+            if await remove_blocking_overlays(page):
+                await _wait_settled(page, settings.timeout_ms)
         await _scroll_to_bottom(page)
         try:
             await page.wait_for_function("document.fonts.ready", timeout=5000)

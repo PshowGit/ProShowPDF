@@ -8,11 +8,11 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon, QPixmap
 from PySide6.QtWidgets import (
     QApplication, QHBoxLayout, QLabel, QMainWindow, QMessageBox,
-    QPushButton, QVBoxLayout, QWidget,
+    QPushButton, QSystemTrayIcon, QVBoxLayout, QWidget,
 )
 
 from proshowpdf.bridge.controller import ConversionController
-from proshowpdf.core.models import ConversionSettings, JobResult
+from proshowpdf.core.models import ConversionSettings, JobResult, JobStatus
 from proshowpdf.persistence.settings_store import SettingsStore
 from proshowpdf.ui.animations import cross_fade_swap, fade_in, slide_fade_in
 from proshowpdf.ui.theme import apply_theme
@@ -86,6 +86,7 @@ class MainWindow(QMainWindow):
 
         self.setCentralWidget(central)
 
+        self._tray = self._build_tray()
         self._wire_signals(controller)
 
     # ---- Layout builders --------------------------------------------------
@@ -143,6 +144,27 @@ class MainWindow(QMainWindow):
         buttons.addStretch()
         return buttons
 
+    def _build_tray(self) -> QSystemTrayIcon | None:
+        """A tray icon used to pop completion toasts; None if unavailable."""
+        if not QSystemTrayIcon.isSystemTrayAvailable():
+            return None
+        tray = QSystemTrayIcon(self.windowIcon(), self)
+        tray.setToolTip("ProShow PDF")
+        tray.show()
+        return tray
+
+    def _notify(self, title: str, message: str) -> None:
+        """Alert the user that the batch ended, even if the app is in the
+        background: a system toast plus a taskbar flash and a sound."""
+        if self._tray is not None:
+            self._tray.showMessage(
+                title, message, QSystemTrayIcon.MessageIcon.Information, 6000
+            )
+        app = QApplication.instance()
+        if app is not None:
+            app.alert(self, 0)  # flash the taskbar entry when not focused
+            app.beep()
+
     def _wire_signals(self, controller: ConversionController) -> None:
         self._start_btn.clicked.connect(self._on_start)
         self._cancel_btn.clicked.connect(self._controller.cancel)
@@ -180,13 +202,21 @@ class MainWindow(QMainWindow):
         self._set_running(False)
         self._results.show_results(results, self._output_picker.path())
         fade_in(self._results)
+        done = sum(1 for r in results if r.status is JobStatus.DONE)
+        errors = sum(1 for r in results if r.status is JobStatus.ERROR)
+        self._notify(
+            "Conversione completata",
+            f"{done} completate · {errors} errori · {len(results)} totali",
+        )
 
     def _on_failed(self, message: str) -> None:
         self._set_running(False)
+        self._notify("Conversione fallita", message)
         QMessageBox.critical(self, "Errore", message)
 
     def _on_cancelled(self) -> None:
         self._set_running(False)
+        self._notify("Conversione annullata", "Batch annullato.")
         QMessageBox.information(self, "Annullato", "Batch annullato.")
 
     def _on_clear(self) -> None:
