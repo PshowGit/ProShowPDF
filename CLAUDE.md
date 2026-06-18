@@ -199,20 +199,20 @@ os.environ["QT_QPA_PLATFORM"] = "offscreen"
 ```bash
 rebuild.bat
 ```
-Automatically recompiles exe and creates ProShowPDF-v1.0.0-windows-x64.zip (312 MB).
+Recompiles the exe and creates `ProShowPDF-windows-x64.zip` (312 MB, fixed name — no version). The version shown comes from `proshowpdf/__init__.py:__version__`, read automatically by both `rebuild.bat` and `deploy.bat`.
 
 **Build (manual):**
 ```bash
 .venv\Scripts\pyinstaller packaging\proshowpdf.spec --noconfirm
 cd dist
-Compress-Archive -Path "ProShowPDF" -DestinationPath "..\ProShowPDF-v1.0.0-windows-x64.zip" -Force
+Compress-Archive -Path "ProShowPDF" -DestinationPath "..\ProShowPDF-windows-x64.zip" -Force
 ```
 
 **Bundling:** The spec resolves pinned Chromium revision from `playwright/driver/package/browsers.json` and bundles only the active browser + headless shell + ffmpeg, then uses `packaging/rthook_playwright.py` to redirect `PLAYWRIGHT_BROWSERS_PATH` at runtime.
 
-**Distribution:** Deliver ProShowPDF-v1.0.0-windows-x64.zip (312 MB); users extract and run ProShowPDF.exe with no installation needed. See DOWNLOAD_GUIDE.html for user instructions.
+**Distribution:** Deliver `ProShowPDF-windows-x64.zip` (312 MB); users extract and run ProShowPDF.exe with no installation needed. The fixed asset name keeps a stable landing-page link: `https://github.com/PshowGit/ProShowPDF/releases/latest/download/ProShowPDF-windows-x64.zip` always serves the newest release. See DOWNLOAD_GUIDE.html for user instructions.
 
-**Releasing:** Bump `proshowpdf/__init__.py:__version__` AND tag the GitHub Release `vX.Y.Z` together — the in-app update check compares the running `__version__` against the latest release tag, so they must stay in sync.
+**Releasing:** Bump `proshowpdf/__init__.py:__version__`, then run `rebuild.bat` (builds the zip) and `deploy.bat` (creates GitHub Release `vX.Y.Z`). Both read the tag from `__version__`, so the build and the release tag can't drift — and the in-app update check compares the running `__version__` against the latest release tag. `deploy.bat` refuses to publish if that tag already exists (a reminder that `__version__` wasn't bumped).
 
 ---
 

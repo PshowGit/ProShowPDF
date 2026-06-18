@@ -1,37 +1,46 @@
 @echo off
-REM ProShow PDF v1.0.0 Deployment Script
-REM Creates a GitHub release with the compiled executable
+REM ProShow PDF Deployment Script
+REM Pubblica una GitHub Release con tag v<__version__> e lo ZIP a nome fisso
 
 setlocal enabledelayedexpansion
 
 echo.
 echo ===============================================
-echo ProShow PDF v1.0.0 - Deployment Script
+echo ProShow PDF - Deployment Script
 echo ===============================================
 echo.
 
-REM Check if we're in the right directory
-if not exist "ProShowPDF-v1.0.0-windows-x64.zip" (
-    echo Error: ProShowPDF-v1.0.0-windows-x64.zip not found
-    echo.
-    echo Please run this script from: D:\Programmi\ProShowPDF
-    echo And ensure the executable has been compiled with:
-    echo   pyinstaller packaging\proshowpdf.spec --noconfirm
+REM Legge la versione da proshowpdf\__init__.py (stessa fonte della build)
+set "VERSION="
+for /f "usebackq delims=" %%v in (`.venv\Scripts\python.exe -c "import proshowpdf; print(proshowpdf.__version__)" 2^>nul`) do set "VERSION=%%v"
+if not defined VERSION (
+    echo Error: impossibile leggere __version__ da proshowpdf\__init__.py
     echo.
     pause
     exit /b 1
 )
 
-echo [1/3] Checking GitHub CLI (gh)...
+set "ZIP=ProShowPDF-windows-x64.zip"
+set "TAG=v%VERSION%"
+echo Versione: %TAG%
+echo.
+
+REM Verifica presenza ZIP
+if not exist "%ZIP%" (
+    echo Error: %ZIP% non trovato
+    echo.
+    echo Esegui prima rebuild.bat per creare lo ZIP.
+    echo.
+    pause
+    exit /b 1
+)
+
+echo [1/4] Checking GitHub CLI (gh)...
 where gh >nul 2>&1
 if errorlevel 1 (
     echo.
     echo Error: GitHub CLI (gh) not found!
-    echo.
-    echo Install it with:
-    echo   choco install gh
-    echo.
-    echo Or download from: https://github.com/cli/cli/releases
+    echo Installa con: choco install gh   (oppure https://github.com/cli/cli/releases)
     echo.
     pause
     exit /b 1
@@ -39,12 +48,11 @@ if errorlevel 1 (
 echo OK - gh CLI found
 
 echo.
-echo [2/3] Verifying authentication...
+echo [2/4] Verifying authentication...
 gh auth status >nul 2>&1
 if errorlevel 1 (
     echo.
-    echo GitHub authentication required. Run:
-    echo   gh auth login
+    echo GitHub authentication required. Run: gh auth login
     echo.
     pause
     exit /b 1
@@ -52,23 +60,30 @@ if errorlevel 1 (
 echo OK - Authenticated to GitHub
 
 echo.
-echo [3/3] Creating GitHub release v1.0.0...
+echo [3/4] Controllo tag esistente %TAG%...
+gh release view %TAG% >nul 2>&1
+if not errorlevel 1 (
+    echo.
+    echo La release %TAG% esiste gia'.
+    echo Hai dimenticato di aggiornare __version__ in proshowpdf\__init__.py?
+    echo Per ripubblicare lo stesso tag, prima eliminalo:  gh release delete %TAG%
+    echo.
+    pause
+    exit /b 1
+)
+
+echo.
+echo [4/4] Creazione release %TAG%...
 echo.
 
-REM Create the release with the zip file
-gh release create v1.0.0 ^
-  --title "ProShow PDF v1.0.0" ^
-  --notes "Web-to-PDF Converter for Windows x64 - Production Ready" ^
-  ProShowPDF-v1.0.0-windows-x64.zip
+gh release create %TAG% ^
+  --title "ProShow PDF %TAG%" ^
+  --notes "Web-to-PDF Converter for Windows x64" ^
+  "%ZIP%"
 
 if errorlevel 1 (
     echo.
-    echo Error: Release creation failed
-    echo.
-    echo Possible reasons:
-    echo - Tag v1.0.0 already exists (delete it with: gh release delete v1.0.0)
-    echo - Network error
-    echo - Authentication issue
+    echo Error: Release creation failed (rete o autenticazione?)
     echo.
     pause
     exit /b 1
@@ -76,13 +91,16 @@ if errorlevel 1 (
 
 echo.
 echo ===============================================
-echo SUCCESS! Release v1.0.0 created and published
+echo SUCCESS! Release %TAG% pubblicata
 echo ===============================================
 echo.
-echo Download link: https://github.com/PshowGit/ProShowPDF/releases/tag/v1.0.0
+echo Pagina release:
+echo    https://github.com/PshowGit/ProShowPDF/releases/tag/%TAG%
 echo.
-echo Users can now download ProShowPDF-v1.0.0-windows-x64.zip
-echo and run ProShowPDF.exe without any installation!
+echo Link FISSO per la landing page (punta sempre all'ultima):
+echo    https://github.com/PshowGit/ProShowPDF/releases/latest/download/%ZIP%
+echo.
+echo Gli utenti con una versione precedente vedranno l'avviso di aggiornamento.
 echo.
 pause
 exit /b 0
