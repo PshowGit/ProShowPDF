@@ -22,6 +22,7 @@ from .errors import (
 )
 from .models import ConversionSettings
 from .naming import build_pdf_name, resolve_collision
+from .pdf_postprocess import trim_trailing_whitespace
 
 # Substrings in a Playwright error that indicate a filesystem write failure
 # rather than a rendering problem (so we can classify it as OutputError).
@@ -169,6 +170,10 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
             margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
             scale=1.0,
         )
+        # Chromium's PDF layout can render the page shorter than the measured
+        # scrollHeight, leaving a blank band (with stray fixed widgets baked in)
+        # after the footer. Crop it off; best-effort, never fails the conversion.
+        await asyncio.to_thread(trim_trailing_whitespace, str(target))
         return str(target)
     except PlaywrightTimeout as exc:
         raise ConversionTimeoutError(str(exc)) from exc
