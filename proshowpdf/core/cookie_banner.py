@@ -1,8 +1,10 @@
-"""Best-effort dismissal of common cookie/consent banners.
+"""Best-effort dismissal of cookie/consent banners and blocking overlay popups.
 
 Heuristics only — no external dependency. Never raises: failures are swallowed
 so a stubborn banner never aborts a conversion. Dismissal loops a few rounds so
-stacked or re-appearing banners all get clicked.
+stacked or re-appearing banners all get clicked. Beyond consent banners this
+also closes intrusive overlay windows (region/location selectors, welcome
+dialogs) that sit over the page via their explicit close affordance.
 """
 from __future__ import annotations
 
@@ -36,6 +38,20 @@ _KNOWN_SELECTORS = [
     "[aria-label='Accept all']",
 ]
 
+# Close affordances for blocking overlay popups/modals that sit over the page
+# (region/location selectors, welcome dialogs, newsletter boxes). Scoped to
+# popup/modal/dialog containers so we click an explicit close control rather
+# than page content; case-insensitive so PopupBox/popupbox both match.
+_CLOSE_SELECTORS = [
+    '[class*="popup" i] a.close',
+    '[class*="popup" i] .close',
+    '[class*="modal" i] [class*="close" i]',
+    '[role="dialog"] [class*="close" i]',
+    "[role='dialog'] [aria-label='Close' i]",
+    "[aria-label='Close' i]",
+    "button.close",
+]
+
 
 async def dismiss_cookie_banner(page, timeout_ms: int = 1000, rounds: int = 4) -> int:
     """Click accept/close on consent banners; return how many were dismissed.
@@ -56,7 +72,7 @@ async def dismiss_cookie_banner(page, timeout_ms: int = 1000, rounds: int = 4) -
 
 
 async def _dismiss_once(page, timeout_ms: int) -> bool:
-    """One pass: try known selectors, then accept-text buttons, then iframes."""
+    """One pass: known selectors, accept-text buttons, overlay-close, iframes."""
     for selector in _KNOWN_SELECTORS:
         if await _try_click(page, selector, timeout_ms):
             return True
@@ -64,6 +80,9 @@ async def _dismiss_once(page, timeout_ms: int) -> bool:
         if await _try_click(page, f"button:has-text('{text}')", timeout_ms):
             return True
         if await _try_click(page, f"a:has-text('{text}')", timeout_ms):
+            return True
+    for selector in _CLOSE_SELECTORS:
+        if await _try_click(page, selector, timeout_ms):
             return True
     # Some consent UIs live in an iframe (e.g. Didomi/Sourcepoint).
     for frame in page.frames:
@@ -74,17 +93,26 @@ async def _dismiss_once(page, timeout_ms: int) -> bool:
 
 
 async def _try_click(target, selector: str, timeout_ms: int) -> bool:
-    """Click the first matching visible element; swallow any error.
+    """Click the first *visible* matching element; swallow any error.
 
-    Skips the timed click entirely when the selector matches no element, which
-    keeps the common (no-banner) path fast.
+    Skips entirely when the selector matches no element (keeps the common,
+    no-banner path fast). Iterates over matches because broad selectors (e.g. a
+    popup's close button) can match several hidden duplicates before the live
+    one; the bound caps how long a single stubborn selector can take.
     """
     try:
         locator = target.locator(selector)
-        if await locator.count() == 0:
-            return False
-        await locator.first.click(timeout=timeout_ms)
-        log.debug("Dismissed banner via %s", selector)
-        return True
+        count = await locator.count()
     except Exception:
         return False
+    for i in range(min(count, 6)):
+        candidate = locator.nth(i)
+        try:
+            if not await candidate.is_visible():
+                continue
+            await candidate.click(timeout=timeout_ms)
+            log.debug("Dismissed banner/overlay via %s", selector)
+            return True
+        except Exception:
+            continue
+    return False
