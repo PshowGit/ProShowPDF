@@ -38,7 +38,7 @@ class MainWindow(QMainWindow):
         icon_path = _RESOURCES / "ProShowPDF.ico"
         if icon_path.exists():
             self.setWindowIcon(QIcon(str(icon_path)))
-        self.resize(1000, 940)
+        self.resize(1000, 1200)
         self.setMinimumSize(880, 780)
 
         self._url_input = UrlInput()
