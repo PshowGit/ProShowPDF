@@ -5,7 +5,8 @@ import logging
 from pathlib import Path
 
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QIcon, QPixmap
+from PySide6.QtCore import QUrl
+from PySide6.QtGui import QDesktopServices, QIcon, QPixmap
 from PySide6.QtWidgets import (
     QApplication, QHBoxLayout, QLabel, QMainWindow, QMessageBox,
     QPushButton, QSystemTrayIcon, QVBoxLayout, QWidget,
@@ -14,6 +15,7 @@ from PySide6.QtWidgets import (
 from proshowpdf.bridge.controller import ConversionController
 from proshowpdf.core.models import ConversionSettings, JobResult, JobStatus
 from proshowpdf.persistence.settings_store import SettingsStore
+from proshowpdf.update_checker import UpdateChecker
 from proshowpdf.ui.animations import cross_fade_swap, fade_in, slide_fade_in
 from proshowpdf.ui.theme import apply_theme
 from proshowpdf.ui.widgets.card import Card
@@ -88,6 +90,12 @@ class MainWindow(QMainWindow):
 
         self._tray = self._build_tray()
         self._wire_signals(controller)
+
+        # Check GitHub for a newer release in the background; silent if offline
+        # or up to date.
+        self._update_checker = UpdateChecker()
+        self._update_checker.update_available.connect(self._on_update_available)
+        self._update_checker.start()
 
     # ---- Layout builders --------------------------------------------------
     def _build_header(self) -> QHBoxLayout:
@@ -219,6 +227,18 @@ class MainWindow(QMainWindow):
         self._notify("Conversione annullata", "Batch annullato.")
         QMessageBox.information(self, "Annullato", "Batch annullato.")
 
+    def _on_update_available(self, version: str, url: str) -> None:
+        box = QMessageBox(self)
+        box.setWindowTitle("Aggiornamento disponibile")
+        box.setText(f"È disponibile la versione {version}.")
+        box.setInformativeText("Vuoi aprire la pagina di download?")
+        box.setStandardButtons(
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+        )
+        box.setDefaultButton(QMessageBox.StandardButton.Yes)
+        if box.exec() == QMessageBox.StandardButton.Yes:
+            QDesktopServices.openUrl(QUrl(url))
+
     def _on_clear(self) -> None:
         """Reset form to default values."""
         self._url_input._editor.clear()
@@ -247,4 +267,6 @@ class MainWindow(QMainWindow):
 
     def closeEvent(self, event) -> None:  # noqa: N802 — Qt override
         self._controller.shutdown()
+        if self._update_checker.isRunning():
+            self._update_checker.wait(2000)
         super().closeEvent(event)

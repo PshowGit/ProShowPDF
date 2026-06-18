@@ -16,8 +16,8 @@ from playwright.async_api import TimeoutError as PlaywrightTimeout
 
 from .cookie_banner import (
     dismiss_cookie_banner,
-    hide_chat_widgets,
     remove_blocking_overlays,
+    remove_floating_widgets,
 )
 from .errors import (
     ConversionTimeoutError,
@@ -172,13 +172,19 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
                 await _await_challenge_cleared(page, settings.timeout_ms)
                 await _wait_settled(page, settings.timeout_ms)
                 await remove_blocking_overlays(page)
-            # Hide floating chat/support widgets so they don't bake into the PDF.
-            await hide_chat_widgets(page)
+            # Hide floating widgets (chat bubbles, side rails, CTAs) so they
+            # don't bake into the PDF.
+            await remove_floating_widgets(page)
         await _scroll_to_bottom(page)
         try:
             await page.wait_for_function("document.fonts.ready", timeout=5000)
         except PlaywrightTimeout:
             log.debug("fonts.ready timed out for %s", url)
+
+        # Sweep widgets again right before measuring: chat/support scripts often
+        # mount their bubble/panel late (after load and scrolling).
+        if settings.handle_cookie_banners:
+            await remove_floating_widgets(page)
 
         measured = await page.evaluate(_HEIGHT_JS)
         pdf_width, pdf_height = compute_pdf_dimensions(
@@ -202,6 +208,10 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
             print_background=True,
             margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
             scale=1.0,
+            # Sub-pixel rounding can spill a blank second page; we sized the
+            # paper to hold everything, so keep only the first page. This also
+            # ensures a single-page PDF for the whitespace trim downstream.
+            page_ranges="1",
         )
         # Chromium's PDF layout can render the page shorter than the measured
         # scrollHeight, leaving a blank band (with stray fixed widgets baked in)
