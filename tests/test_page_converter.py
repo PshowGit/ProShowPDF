@@ -4,10 +4,27 @@ import pytest
 
 from proshowpdf.core.models import ConversionSettings
 from proshowpdf.core.page_converter import (
+    _navigated_away,
     compute_pdf_dimensions,
     compute_pdf_height,
     convert_page,
 )
+
+
+def test_navigated_away_detects_different_path():
+    assert _navigated_away(
+        "https://www.amazon.it/gp/help/customer/display.html",
+        "https://www.amazon.it/DJI-drone/dp/B0CXJ9GM3G",
+    )
+
+
+def test_navigated_away_ignores_query_and_fragment_changes():
+    base = "https://www.amazon.it/DJI-drone/dp/B0CXJ9GM3G"
+    assert not _navigated_away(base + "?th=1#reviews", base)
+
+
+def test_navigated_away_detects_host_change():
+    assert _navigated_away("https://other.example/x", "https://www.amazon.it/x")
 
 
 def test_compute_pdf_height_uses_measured_value():
