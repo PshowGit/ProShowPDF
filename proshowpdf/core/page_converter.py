@@ -14,7 +14,11 @@ from urllib.parse import urlsplit
 from playwright.async_api import Error as PlaywrightError
 from playwright.async_api import TimeoutError as PlaywrightTimeout
 
-from .cookie_banner import dismiss_cookie_banner, remove_blocking_overlays
+from .cookie_banner import (
+    dismiss_cookie_banner,
+    hide_chat_widgets,
+    remove_blocking_overlays,
+)
 from .errors import (
     ConversionTimeoutError,
     NavigationError,
@@ -168,6 +172,8 @@ async def convert_page(page, url: str, settings: ConversionSettings, custom_file
                 await _await_challenge_cleared(page, settings.timeout_ms)
                 await _wait_settled(page, settings.timeout_ms)
                 await remove_blocking_overlays(page)
+            # Hide floating chat/support widgets so they don't bake into the PDF.
+            await hide_chat_widgets(page)
         await _scroll_to_bottom(page)
         try:
             await page.wait_for_function("document.fonts.ready", timeout=5000)
