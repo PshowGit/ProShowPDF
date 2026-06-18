@@ -49,7 +49,7 @@ a = Analysis(
         ("..\\proshowpdf\\resources", "proshowpdf/resources"),
         *browser_datas,
     ],
-    hiddenimports=["playwright"],
+    hiddenimports=["playwright", "fitz", "pymupdf"],
     hookspath=[],
     runtime_hooks=["packaging\\rthook_playwright.py"],
     excludes=[],

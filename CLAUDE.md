@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Purpose:** Desktop application (PySide6 GUI + Playwright/Chromium headless) that converts web pages to single-page continuous PDFs with high visual fidelity.
 
-**Stack:** Python 3.13, PySide6 6.8.1, Playwright 1.49 (Chromium headless), asyncio, pytest, PyInstaller (onedir), openpyxl 3.1.2, xlrd 2.0.1.
+**Stack:** Python 3.13, PySide6 6.8.1, Playwright 1.49 (Chromium headless), asyncio, pytest, PyInstaller (onedir), openpyxl 3.1.2, xlrd 2.0.1, PyMuPDF 1.27.2.3.
 
 ---
 
@@ -43,7 +43,8 @@ rebuild.bat
    - `url_utils.py` — URL validation, normalization, parsing (txt/csv/xlsx/xls)
    - `naming.py` — Windows-safe filenames, collision resolution, custom filename sanitization
    - `cookie_banner.py` — Heuristic banner dismissal (euristiques for common consent platforms)
-   - `page_converter.py` — Per-page conversion: navigate → dismiss cookies → scroll lazy-load → measure height → render PDF; supports optional custom_filename for per-URL naming
+   - `page_converter.py` — Per-page conversion: navigate → dismiss cookies → scroll lazy-load → measure height → render PDF → trim trailing whitespace; supports optional custom_filename for per-URL naming
+   - `pdf_postprocess.py` — Post-render PDF cleanup: rasterize the page, find the bottom of the main content block (stopping at the first large whitespace gap) and crop the page to it, removing the blank band Chromium's printToPDF leaves after the footer along with any `position: fixed` widgets baked into it (PyMuPDF)
    - `browser_pool.py` — Single Chromium instance + isolated BrowserContext per URL + viewport sizing
    - `converter_engine.py` — Batch orchestration: asyncio.Semaphore for concurrency cap, retry/backoff, progress callbacks, cancellation, supports optional custom_filenames for per-URL PDF naming
 
@@ -73,6 +74,7 @@ rebuild.bat
 - `print_background=True` — preserve CSS colors/gradients.
 - Margin=0 — edge-to-edge PDF.
 - Dynamic height: measure `scrollHeight` after `networkidle` + scroll lazy-load + `document.fonts.ready`.
+- Trailing-whitespace trim: Chromium's `printToPDF` can lay a page out shorter than the measured `scrollHeight` (large image/gallery sections re-flow shorter in the PDF pass), leaving a blank band after the footer with `position: fixed` widgets baked into it. `pdf_postprocess.trim_trailing_whitespace` crops the rendered PDF to its real content bottom (best-effort; never fails the conversion).
 
 ### Windows x64 Only
 - `proshowpdf/__main__.py` checks architecture at startup; exits with error dialog on 32-bit systems (Playwright Chromium is x64-only).
